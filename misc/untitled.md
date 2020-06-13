@@ -1,10 +1,10 @@
 # 内部泄露版！互联网大厂的薪资和职级一览
 
-[https://wemp.app/posts/047d4578-f8a1-463d-b96b-4720abc931d7](https://wemp.app/posts/047d4578-f8a1-463d-b96b-4720abc931d7)
+{% embed url="https://wemp.app/posts/047d4578-f8a1-463d-b96b-4720abc931d7" %}
+
+{% embed url="https://mp.weixin.qq.com/s/l7FsUwQ3Y\_FCAZaWkgTGVg" %}
 
 
-
-[https://mp.weixin.qq.com/s/l7FsUwQ3Y\_FCAZaWkgTGVg](https://mp.weixin.qq.com/s/l7FsUwQ3Y_FCAZaWkgTGVg)
 
 
 

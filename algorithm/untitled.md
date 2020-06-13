@@ -1,4 +1,4 @@
-# 差分数组是个啥？能干啥？怎么用？（差分详解+例题）\_网络\_From now on...的Blogs-CSDN博客
+# 差分数组是个啥？能干啥？怎么用？（差分详解+例题）
 
 ## [https://blog.csdn.net/qq\_44786250/article/details/100056975](https://blog.csdn.net/qq_44786250/article/details/100056975)
 
