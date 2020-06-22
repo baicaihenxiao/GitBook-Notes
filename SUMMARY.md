@@ -12,6 +12,7 @@
   * [为什么synchronized无法禁止指令重排，却能保证有序性？](java/basic-concept/wei-shen-me-synchronized-wu-fa-jin-zhi-zhi-ling-zhong-pai-que-neng-bao-zheng-you-xu-xing.md)
   * [Thread.Sleep\(0\)](java/basic-concept/thread.sleep-0.md)
   * [一个HashMap跟面试官扯了半个小时](java/basic-concept/untitled-1.md)
+  * [知道Java中的回调机制吗？](java/basic-concept/zhi-dao-java-zhong-de-hui-tiao-ji-zhi-ma.md)
 * [开源工具类](java/kai-yuan-gong-ju-lei.md)
 * [因为知道了30+款在线工具，我的工作效率提升500%!](java/untitled-5.md)
 * [科普 \| Shell中傻傻分不清楚的TOP3](java/untitled-6.md)
