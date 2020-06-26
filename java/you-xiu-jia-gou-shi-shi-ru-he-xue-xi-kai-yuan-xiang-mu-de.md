@@ -1,8 +1,8 @@
 # 优秀架构师是如何学习开源项目的？
 
-### [https://mp.weixin.qq.com/s?\_\_biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e52fdf1b5fbaf8173d1ae6b5ce3&chksm=8f7c6404b80bed12bfef6734f7b70b50b446638406471741a2198f0659b626d6c4be409c93ef&mpshare=1&scene=1&srcid=&sharer\_sharetime=1593079301398&sharer\_shareid=393f249533d421d13c2402bd43e74356&key=2f78cc4ea892a1565725eaadb3f674fc6b2a79fd6ba1ec22e6b403b86501bd864073a11b91906045fd888a50e8133d3ceaefe936771d920938dec92d9d19686522a84d00045390efa9d4711ebf1d8525&ascene=1&uin=MjY3NTU5NjEwMg%3D%3D&devicetype=Windows+10+x64&version=62090070&lang=en&exportkey=AcyNlEi3sF4K79WGxYg9V68%3D&pass\_ticket=5zdXd0x7OjF0Kpii6FC%2FcloE20lFFaUWRlKL3mM45%2FnnHgRTF44c0yArq7a8eulz](https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e52fdf1b5fbaf8173d1ae6b5ce3&chksm=8f7c6404b80bed12bfef6734f7b70b50b446638406471741a2198f0659b626d6c4be409c93ef&mpshare=1&scene=1&srcid=&sharer_sharetime=1593079301398&sharer_shareid=393f249533d421d13c2402bd43e74356&key=2f78cc4ea892a1565725eaadb3f674fc6b2a79fd6ba1ec22e6b403b86501bd864073a11b91906045fd888a50e8133d3ceaefe936771d920938dec92d9d19686522a84d00045390efa9d4711ebf1d8525&ascene=1&uin=MjY3NTU5NjEwMg%3D%3D&devicetype=Windows+10+x64&version=62090070&lang=en&exportkey=AcyNlEi3sF4K79WGxYg9V68%3D&pass_ticket=5zdXd0x7OjF0Kpii6FC%2FcloE20lFFaUWRlKL3mM45%2FnnHgRTF44c0yArq7a8eulz)
-
-### 
+```text
+https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e52fdf1b5fbaf8173d1ae6b5ce3&chksm=8f7c6404b80bed12bfef6734f7b70b50b446638406471741a2198f0659b626d6c4be409c93ef&mpshare=1&scene=1&srcid=&sharer_sharetime=1593079301398&sharer_shareid=393f249533d421d13c2402bd43e74356&key=2f78cc4ea892a1565725eaadb3f674fc6b2a79fd6ba1ec22e6b403b86501bd864073a11b91906045fd888a50e8133d3ceaefe936771d920938dec92d9d19686522a84d00045390efa9d4711ebf1d8525&ascene=1&uin=MjY3NTU5NjEwMg%3D%3D&devicetype=Windows+10+x64&version=62090070&lang=en&exportkey=AcyNlEi3sF4K79WGxYg9V68%3D&pass_ticket=5zdXd0x7OjF0Kpii6FC%2FcloE20lFFaUWRlKL3mM45%2FnnHgRTF44c0yArq7a8eulz
+```
 
 ### 一、前言
 
