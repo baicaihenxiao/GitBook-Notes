@@ -11,6 +11,7 @@
   * [我会手动创建线程，为什么让我使用线程池？ new Object vs new Thread](java/basic-concept/wo-hui-shou-dong-chuang-jian-xian-cheng-wei-shen-me-rang-wo-shi-yong-xian-cheng-chi-new-object-vs-ne.md)
   * [为什么synchronized无法禁止指令重排，却能保证有序性？](java/basic-concept/wei-shen-me-synchronized-wu-fa-jin-zhi-zhi-ling-zhong-pai-que-neng-bao-zheng-you-xu-xing.md)
   * [Thread.Sleep\(0\)](java/basic-concept/thread.sleep-0.md)
+  * [面试： String 五连杀 ！你还满血吗 ？](java/basic-concept/mian-shi-string-wu-lian-sha-ni-hai-man-xie-ma.md)
   * [一个HashMap跟面试官扯了半个小时](java/basic-concept/untitled-1.md)
   * [知道Java中的回调机制吗？](java/basic-concept/zhi-dao-java-zhong-de-hui-tiao-ji-zhi-ma.md)
 * [开源工具类](java/kai-yuan-gong-ju-lei.md)
