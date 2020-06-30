@@ -39,6 +39,11 @@
   * [因为知道了30+款在线工具，我的工作效率提升500%!](gong-ju/untitled-5.md)
   * [程序员好货网站大盘点](gong-ju/cheng-xu-yuan-hao-huo-wang-zhan-da-pan-dian.md)
 
+## NETWORK
+
+* [你了解HTTPS工作原理吗？](network/ni-le-jie-https-gong-zuo-yuan-li-ma.md)
+* [TCP三次握手和四次挥手以及11种状态](network/tcp-san-ci-wo-shou-he-si-ci-hui-shou-yi-ji-11-zhong-zhuang-tai.md)
+
 ## Design Pattern
 
 * [docs](design-pattern/docs.md)
