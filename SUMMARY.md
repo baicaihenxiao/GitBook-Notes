@@ -16,6 +16,8 @@
   * [Map 集合坑](java/basic-concept/bian-cheng-keng-tai-duo-map-ji-he-zen-me-ye-you-zhe-me-duo-keng-yi-bu-xiao-xin-you-cai-le-hao-ji-ge.md)
   * [五个 List 的大坑](java/basic-concept/wu-ge-list-de-da-keng.md)
   * [知道Java中的回调机制吗？](java/basic-concept/zhi-dao-java-zhong-de-hui-tiao-ji-zhi-ma.md)
+* [SpringBoot](java/springboot/README.md)
+  * [面试官：为什么SpringBoot的 jar 可以直接运行？](java/springboot/untitled-2.md)
 * [开源工具类](java/kai-yuan-gong-ju-lei.md)
 * [科普 \| Shell中傻傻分不清楚的TOP3](java/untitled-6.md)
 * [你必须掌握的 21 个 Java 核心技术！](java/untitled.md)
@@ -28,22 +30,24 @@
 * [Service Mesh for Microservices](java/service-mesh-for-microservices.md)
 * [InnoDB 中一棵 B+ 树能存多少行数据？](java/innodb-zhong-yi-ke-b+-shu-neng-cun-duo-shao-hang-shu-ju.md)
 * [我，带崩了一个项目！](java/untitled-3.md)
-* [&lt;好文&gt;工作方法，职场交流、晋升](java/hao-wen-gong-zuo-fang-fa-zhi-chang-jiao-liu-jin-sheng.md)
 * [一文搞定分布式系统ID生成方案](java/yi-wen-gao-ding-fen-bu-shi-xi-tong-id-sheng-cheng-fang-an.md)
-* [SpringBoot](java/springboot/README.md)
-  * [面试官：为什么SpringBoot的 jar 可以直接运行？](java/springboot/untitled-2.md)
-  * [芋道 Spring Boot 对象转换 MapStruct 入门](java/springboot/untitled.md)
 
----
+## Tools
 
-* [工具](gong-ju/README.md)
-  * [因为知道了30+款在线工具，我的工作效率提升500%!](gong-ju/untitled-5.md)
-  * [程序员好货网站大盘点](gong-ju/cheng-xu-yuan-hao-huo-wang-zhan-da-pan-dian.md)
+* [因为知道了30+款在线工具，我的工作效率提升500%!](tools/untitled-5.md)
+* [程序员好货网站大盘点](tools/cheng-xu-yuan-hao-huo-wang-zhan-da-pan-dian.md)
+* [Git 看这一篇就够了](tools/git-kan-zhe-yi-pian-jiu-gou-le.md)
 
 ## NETWORK
 
 * [你了解HTTPS工作原理吗？](network/ni-le-jie-https-gong-zuo-yuan-li-ma.md)
 * [TCP三次握手和四次挥手以及11种状态](network/tcp-san-ci-wo-shou-he-si-ci-hui-shou-yi-ji-11-zhong-zhuang-tai.md)
+
+## CAREER
+
+* [✅&lt;好文&gt;工作方法，职场交流、晋升](career/hao-wen-gong-zuo-fang-fa-zhi-chang-jiao-liu-jin-sheng.md)
+* [程序员一般可以从什么平台接私活？](career/untitled-1-1.md)
+* [内部泄露版！互联网大厂的薪资和职级一览](career/untitled-1.md)
 
 ## Design Pattern
 
@@ -64,12 +68,6 @@
   * [迪米特原则](design-pattern/principles/di-mi-te-yuan-ze.md)
   * [合成复用原则](design-pattern/principles/he-cheng-fu-yong-yuan-ze.md)
 
-## Misc
-
-* [markdown test](misc/markdown-test.md)
-* [内部泄露版！互联网大厂的薪资和职级一览](misc/untitled.md)
-* [程序员一般可以从什么平台接私活？](misc/untitled-1.md)
-
 ## Algorithm
 
 * [差分数组是个啥？能干啥？怎么用？（差分详解+例题）](algorithm/untitled.md)
@@ -78,4 +76,8 @@
 
 * [熵增理论为什么让好多人一下子就领悟了？ - 知乎](sicence/untitled.md)
 * [1000桶水，其中一桶有毒，猪喝毒水后会在15分钟内死去，想用一个小时找到这桶毒水，至少需要几头猪？ - 知乎](sicence/untitled-1.md)
+
+## Misc
+
+* [markdown test](misc/markdown-test.md)
 
