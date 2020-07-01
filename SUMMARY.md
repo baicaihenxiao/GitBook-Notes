@@ -81,4 +81,5 @@
 ## Misc
 
 * [markdown test](misc/markdown-test.md)
+* [test file](misc/test-file.md)
 
