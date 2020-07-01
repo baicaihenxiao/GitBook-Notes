@@ -1,11 +1,11 @@
-# Table of contents
+# Contents
 
-* [Welcome to My Notes](README.md)
+* [Welcome to My Notes](./)
 * [Contents](summary.md)
 
 ## java
 
-* [Basic Concept](java/basic-concept/README.md)
+* [Basic Concept](java/basic-concept/)
   * [static filed是否会被gc](java/basic-concept/static-filed-shi-fou-hui-bei-gc.md)
   * [Java中new对象的过程问题](java/basic-concept/java-zhong-new-dui-xiang-de-guo-cheng-wen-ti.md)
   * [Java中的Checked Exception——美丽世界中潜藏的恶魔？ - loveis715 - 博客园](java/basic-concept/untitled.md)
@@ -17,7 +17,7 @@
   * [Map 集合坑](java/basic-concept/bian-cheng-keng-tai-duo-map-ji-he-zen-me-ye-you-zhe-me-duo-keng-yi-bu-xiao-xin-you-cai-le-hao-ji-ge.md)
   * [五个 List 的大坑](java/basic-concept/wu-ge-list-de-da-keng.md)
   * [知道Java中的回调机制吗？](java/basic-concept/zhi-dao-java-zhong-de-hui-tiao-ji-zhi-ma.md)
-* [SpringBoot](java/springboot/README.md)
+* [SpringBoot](java/springboot/)
   * [面试官：为什么SpringBoot的 jar 可以直接运行？](java/springboot/untitled-2.md)
 * [开源工具类](java/kai-yuan-gong-ju-lei.md)
 * [科普 \| Shell中傻傻分不清楚的TOP3](java/untitled-6.md)
@@ -54,13 +54,13 @@
 
 * [docs](design-pattern/docs.md)
 * [常用设计模式的代码实战教程](design-pattern/chang-yong-she-ji-mo-shi-de-dai-ma-shi-zhan-jiao-cheng.md)
-* [Patterns](design-pattern/patterns/README.md)
-  * [Singleton](design-pattern/patterns/singleton/README.md)
+* [Patterns](design-pattern/patterns/)
+  * [Singleton](design-pattern/patterns/singleton/)
     * [Java实现单例模式的9种方法](design-pattern/patterns/singleton/java-shi-xian-dan-li-mo-shi-de-9-zhong-fang-fa.md)
-    * [（设计模式）单例模式的双重检查](design-pattern/patterns/singleton/untitled/README.md)
+    * [（设计模式）单例模式的双重检查](design-pattern/patterns/singleton/untitled/)
       * [Understanding intra-thread semantics](design-pattern/patterns/singleton/untitled/untitled-1.md)
       * [Memory Model java se1.7](design-pattern/patterns/singleton/untitled/memory-model-java-se1.7.md)
-* [Principles](design-pattern/principles/README.md)
+* [Principles](design-pattern/principles/)
   * [单一职责原则](design-pattern/principles/dan-yi-zhi-ze-yuan-ze.md)
   * [接口隔离原则](design-pattern/principles/jie-kou-ge-li-yuan-ze.md)
   * [依赖倒置原则](design-pattern/principles/yi-lai-dao-zhi-yuan-ze.md)
