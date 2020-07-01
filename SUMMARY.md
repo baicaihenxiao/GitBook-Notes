@@ -29,6 +29,7 @@
 * [InnoDB 中一棵 B+ 树能存多少行数据？](java/innodb-zhong-yi-ke-b+-shu-neng-cun-duo-shao-hang-shu-ju.md)
 * [我，带崩了一个项目！](java/untitled-3.md)
 * [&lt;好文&gt;工作方法，职场交流、晋升](java/hao-wen-gong-zuo-fang-fa-zhi-chang-jiao-liu-jin-sheng.md)
+* [一文搞定分布式系统ID生成方案](java/yi-wen-gao-ding-fen-bu-shi-xi-tong-id-sheng-cheng-fang-an.md)
 * [SpringBoot](java/springboot/README.md)
   * [面试官：为什么SpringBoot的 jar 可以直接运行？](java/springboot/untitled-2.md)
   * [芋道 Spring Boot 对象转换 MapStruct 入门](java/springboot/untitled.md)
