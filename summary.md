@@ -29,7 +29,7 @@
 * [Apache 架构师的 30 条设计原则！](java/untitled-2.md)
 * [优秀架构师是如何学习开源项目的？](java/you-xiu-jia-gou-shi-shi-ru-he-xue-xi-kai-yuan-xiang-mu-de.md)
 * [Service Mesh for Microservices](java/service-mesh-for-microservices.md)
-* [InnoDB 中一棵 B+ 树能存多少行数据？](java/innodb-zhong-yi-ke-b+-shu-neng-cun-duo-shao-hang-shu-ju.md)
+* [InnoDB 中一棵 B+ 树能存多少行数据？](database/innodb-zhong-yi-ke-b+-shu-neng-cun-duo-shao-hang-shu-ju.md)
 * [我，带崩了一个项目！](java/untitled-3.md)
 * [一文搞定分布式系统ID生成方案](java/yi-wen-gao-ding-fen-bu-shi-xi-tong-id-sheng-cheng-fang-an.md)
 
