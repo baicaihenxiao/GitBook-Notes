@@ -19,6 +19,7 @@
   * [知道Java中的回调机制吗？](java/basic-concept/zhi-dao-java-zhong-de-hui-tiao-ji-zhi-ma.md)
 * [SpringBoot](java/springboot/README.md)
   * [面试官：为什么SpringBoot的 jar 可以直接运行？](java/springboot/untitled-2.md)
+  * [在 Spring Boot 中，如何干掉 if else！](java/springboot/zai-spring-boot-zhong-ru-he-gan-diao-if-else.md)
 * [开源工具类](java/kai-yuan-gong-ju-lei.md)
 * [科普 \| Shell中傻傻分不清楚的TOP3](java/untitled-6.md)
 * [你必须掌握的 21 个 Java 核心技术！](java/untitled.md)
