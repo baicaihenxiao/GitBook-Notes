@@ -29,9 +29,13 @@
 * [一个秒杀系统的设计思考](java/yi-ge-miao-sha-xi-tong-de-she-ji-si-kao.md)
 * [Apache 架构师的 30 条设计原则！](java/untitled-2.md)
 * [优秀架构师是如何学习开源项目的？](java/you-xiu-jia-gou-shi-shi-ru-he-xue-xi-kai-yuan-xiang-mu-de.md)
-* [Service Mesh for Microservices](java/service-mesh-for-microservices.md)
 * [我，带崩了一个项目！](java/untitled-3.md)
 * [一文搞定分布式系统ID生成方案](java/yi-wen-gao-ding-fen-bu-shi-xi-tong-id-sheng-cheng-fang-an.md)
+
+## 组件
+
+* [Service Mesh for Microservices](zu-jian/service-mesh-for-microservices.md)
+* [springboot + rabbitmq 用了消息确认机制，感觉掉坑里了](zu-jian/springboot-+-rabbitmq-yong-le-xiao-xi-que-ren-ji-zhi-gan-jue-diao-keng-li-le.md)
 
 ## DataBase
 
