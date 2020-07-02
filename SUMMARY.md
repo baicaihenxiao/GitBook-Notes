@@ -17,9 +17,6 @@
   * [Map 集合坑](java/basic-concept/bian-cheng-keng-tai-duo-map-ji-he-zen-me-ye-you-zhe-me-duo-keng-yi-bu-xiao-xin-you-cai-le-hao-ji-ge.md)
   * [五个 List 的大坑](java/basic-concept/wu-ge-list-de-da-keng.md)
   * [知道Java中的回调机制吗？](java/basic-concept/zhi-dao-java-zhong-de-hui-tiao-ji-zhi-ma.md)
-* [SpringBoot](java/springboot/README.md)
-  * [面试官：为什么SpringBoot的 jar 可以直接运行？](java/springboot/untitled-2.md)
-  * [在 Spring Boot 中，如何干掉 if else！](java/springboot/zai-spring-boot-zhong-ru-he-gan-diao-if-else.md)
 * [开源工具类](java/kai-yuan-gong-ju-lei.md)
 * [科普 \| Shell中傻傻分不清楚的TOP3](java/untitled-6.md)
 * [你必须掌握的 21 个 Java 核心技术！](java/untitled.md)
@@ -31,6 +28,13 @@
 * [优秀架构师是如何学习开源项目的？](java/you-xiu-jia-gou-shi-shi-ru-he-xue-xi-kai-yuan-xiang-mu-de.md)
 * [我，带崩了一个项目！](java/untitled-3.md)
 * [一文搞定分布式系统ID生成方案](java/yi-wen-gao-ding-fen-bu-shi-xi-tong-id-sheng-cheng-fang-an.md)
+
+## Spring
+
+* [SpringBoot](spring/springboot/README.md)
+  * [面试官：为什么SpringBoot的 jar 可以直接运行？](spring/springboot/untitled-2.md)
+  * [在 Spring Boot 中，如何干掉 if else！](spring/springboot/zai-spring-boot-zhong-ru-he-gan-diao-if-else.md)
+* [SSO 单点登录 芋道 Spring Security OAuth2 单点登录](spring/sso-dan-dian-deng-lu-yu-dao-spring-security-oauth2-dan-dian-deng-lu.md)
 
 ## 组件
 
