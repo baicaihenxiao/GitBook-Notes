@@ -21,6 +21,7 @@
 * [科普 \| Shell中傻傻分不清楚的TOP3](java/untitled-6.md)
 * [你必须掌握的 21 个 Java 核心技术！](java/untitled.md)
 * [Java Concurrency Interview Questions \| Java Code Geeks - 2020](java/untitled-1.md)
+* [写给大忙人看的死锁详解](java/xie-gei-da-mang-ren-kan-de-si-suo-xiang-jie.md)
 * [JAVA 线上故障排查](java/java-xian-shang-gu-zhang-pai-cha.md)
 * [什么是Java内存模型](java/untitled-4.md)
 * [一个秒杀系统的设计思考](java/yi-ge-miao-sha-xi-tong-de-she-ji-si-kao.md)
@@ -40,6 +41,7 @@
 
 * [Service Mesh for Microservices](zu-jian/service-mesh-for-microservices.md)
 * [springboot + rabbitmq 用了消息确认机制，感觉掉坑里了](zu-jian/springboot-+-rabbitmq-yong-le-xiao-xi-que-ren-ji-zhi-gan-jue-diao-keng-li-le.md)
+* [面试官：你对Kafka比较熟？ 那说说kafka日志段如何读写的吧？](zu-jian/mian-shi-guan-ni-dui-kafka-bi-jiao-shou-na-shuo-shuo-kafka-ri-zhi-duan-ru-he-du-xie-de-ba.md)
 
 ## DataBase
 
