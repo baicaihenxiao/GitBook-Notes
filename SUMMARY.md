@@ -18,17 +18,16 @@
   * [五个 List 的大坑](java/basic-concept/wu-ge-list-de-da-keng.md)
   * [知道Java中的回调机制吗？](java/basic-concept/zhi-dao-java-zhong-de-hui-tiao-ji-zhi-ma.md)
 * [开源工具类](java/kai-yuan-gong-ju-lei.md)
-* [科普 \| Shell中傻傻分不清楚的TOP3](java/untitled-6.md)
 * [你必须掌握的 21 个 Java 核心技术！](java/untitled.md)
-* [Java Concurrency Interview Questions \| Java Code Geeks - 2020](java/untitled-1.md)
-* [写给大忙人看的死锁详解](java/xie-gei-da-mang-ren-kan-de-si-suo-xiang-jie.md)
 * [JAVA 线上故障排查](java/java-xian-shang-gu-zhang-pai-cha.md)
 * [什么是Java内存模型](java/untitled-4.md)
 * [一个秒杀系统的设计思考](java/yi-ge-miao-sha-xi-tong-de-she-ji-si-kao.md)
 * [Apache 架构师的 30 条设计原则！](java/untitled-2.md)
-* [优秀架构师是如何学习开源项目的？](java/you-xiu-jia-gou-shi-shi-ru-he-xue-xi-kai-yuan-xiang-mu-de.md)
 * [我，带崩了一个项目！](java/untitled-3.md)
 * [一文搞定分布式系统ID生成方案](java/yi-wen-gao-ding-fen-bu-shi-xi-tong-id-sheng-cheng-fang-an.md)
+* [并发](java/bing-fa/README.md)
+  * [Java Concurrency Interview Questions \| Java Code Geeks - 2020](java/bing-fa/untitled-1.md)
+  * [写给大忙人看的死锁详解](java/bing-fa/xie-gei-da-mang-ren-kan-de-si-suo-xiang-jie.md)
 
 ## Spring
 
@@ -39,6 +38,7 @@
 
 ## 组件
 
+* [优秀架构师是如何学习开源项目的？](zu-jian/you-xiu-jia-gou-shi-shi-ru-he-xue-xi-kai-yuan-xiang-mu-de.md)
 * [Service Mesh for Microservices](zu-jian/service-mesh-for-microservices.md)
 * [springboot + rabbitmq 用了消息确认机制，感觉掉坑里了](zu-jian/springboot-+-rabbitmq-yong-le-xiao-xi-que-ren-ji-zhi-gan-jue-diao-keng-li-le.md)
 * [面试官：你对Kafka比较熟？ 那说说kafka日志段如何读写的吧？](zu-jian/mian-shi-guan-ni-dui-kafka-bi-jiao-shou-na-shuo-shuo-kafka-ri-zhi-duan-ru-he-du-xie-de-ba.md)
@@ -53,6 +53,7 @@
 * [因为知道了30+款在线工具，我的工作效率提升500%!](tools/untitled-5.md)
 * [程序员好货网站大盘点](tools/cheng-xu-yuan-hao-huo-wang-zhan-da-pan-dian.md)
 * [Git 看这一篇就够了](tools/git-kan-zhe-yi-pian-jiu-gou-le.md)
+* [科普 \| Shell中傻傻分不清楚的TOP3](tools/untitled-6.md)
 
 ## NETWORK
 
