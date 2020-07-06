@@ -27,7 +27,6 @@
 * [一个秒杀系统的设计思考](java/yi-ge-miao-sha-xi-tong-de-she-ji-si-kao.md)
 * [Apache 架构师的 30 条设计原则！](java/untitled-2.md)
 * [我，带崩了一个项目！](java/untitled-3.md)
-* [提升系统 10 倍性能的 10 个建议！](java/ti-sheng-xi-tong-10-bei-xing-neng-de-10-ge-jian-yi.md)
 
 ## Spring
 
@@ -52,6 +51,7 @@
 
 ## 排查问题 调优
 
+* [提升系统 10 倍性能的 10 个建议！](pai-cha-wen-ti-tiao-you/ti-sheng-xi-tong-10-bei-xing-neng-de-10-ge-jian-yi.md)
 * [JAVA 线上故障排查](pai-cha-wen-ti-tiao-you/java-xian-shang-gu-zhang-pai-cha.md)
 * [Spring Boot“内存泄漏”？看看美团大牛是如何排查的](pai-cha-wen-ti-tiao-you/spring-boot-nei-cun-xie-lou-kan-kan-mei-tuan-da-niu-shi-ru-he-pai-cha-de.md)
 
