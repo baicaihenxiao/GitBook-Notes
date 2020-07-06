@@ -22,13 +22,12 @@
   * [写给大忙人看的死锁详解](java/bing-fa/xie-gei-da-mang-ren-kan-de-si-suo-xiang-jie.md)
 * [开源工具类](java/kai-yuan-gong-ju-lei.md)
 * [你必须掌握的 21 个 Java 核心技术！](java/untitled.md)
-* [JAVA 线上故障排查](java/java-xian-shang-gu-zhang-pai-cha.md)
 * [什么是Java内存模型](java/untitled-4.md)
 * [用Java的时候，你是如何实现时间控制的？](java/yong-java-de-shi-hou-ni-shi-ru-he-shi-xian-shi-jian-kong-zhi-de.md)
 * [一个秒杀系统的设计思考](java/yi-ge-miao-sha-xi-tong-de-she-ji-si-kao.md)
 * [Apache 架构师的 30 条设计原则！](java/untitled-2.md)
 * [我，带崩了一个项目！](java/untitled-3.md)
-* [一文搞定分布式系统ID生成方案](java/yi-wen-gao-ding-fen-bu-shi-xi-tong-id-sheng-cheng-fang-an.md)
+* [提升系统 10 倍性能的 10 个建议！](java/ti-sheng-xi-tong-10-bei-xing-neng-de-10-ge-jian-yi.md)
 
 ## Spring
 
@@ -44,11 +43,17 @@
 * [Service Mesh for Microservices](zu-jian/service-mesh-for-microservices.md)
 * [springboot + rabbitmq 用了消息确认机制，感觉掉坑里了](zu-jian/springboot-+-rabbitmq-yong-le-xiao-xi-que-ren-ji-zhi-gan-jue-diao-keng-li-le.md)
 * [面试官：你对Kafka比较熟？ 那说说kafka日志段如何读写的吧？](zu-jian/mian-shi-guan-ni-dui-kafka-bi-jiao-shou-na-shuo-shuo-kafka-ri-zhi-duan-ru-he-du-xie-de-ba.md)
+* [一文搞定分布式系统ID生成方案](zu-jian/yi-wen-gao-ding-fen-bu-shi-xi-tong-id-sheng-cheng-fang-an.md)
 
 ## DataBase
 
 * [InnoDB 中一棵 B+ 树能存多少行数据？](database/innodb-zhong-yi-ke-b+-shu-neng-cun-duo-shao-hang-shu-ju.md)
 * [explain都不懂，还说会SQL调优?](database/explain-du-bu-dong-hai-shuo-hui-sql-tiao-you.md)
+
+## 排查问题 调优
+
+* [JAVA 线上故障排查](pai-cha-wen-ti-tiao-you/java-xian-shang-gu-zhang-pai-cha.md)
+* [Spring Boot“内存泄漏”？看看美团大牛是如何排查的](pai-cha-wen-ti-tiao-you/spring-boot-nei-cun-xie-lou-kan-kan-mei-tuan-da-niu-shi-ru-he-pai-cha-de.md)
 
 ## Tools
 
