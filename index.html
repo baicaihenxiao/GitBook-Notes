@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+    <title>Notes -baicaihenxiao</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" title="vue">
+    <link rel="stylesheet" href="./assets/css/baicaiDocsStyle.css">
+
+
+    <!-- Alternate Stylesheets -->
+    <link rel="stylesheet alternate" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css" title="Defaults">
+    <link rel="stylesheet alternate" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css" title="Simple Dark">
+
+    <link rel="shortcut icon" type="image/jpg" href="./assets/icon/luxun.jpg">
+    <!-- Test Stylesheets -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/buble.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/dark.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/pure.css"> -->
+
+    <!-- https://github.com/upupming/docsify-katex -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+
+        <!-- support math latex -->
+    <!--     <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+              inlineMath: [['$','$']]
+            }
+          });
+        </script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>  -->
+
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <!-- JavaScript -->
+    <script>
+        // Docsify
+        window.$docsify = {
+            // GENERAL
+            // -----------------------------------------------------------------
+            name       : 'Notes',
+            // repo       : 'https://github.com/baicaihenxiao', 注释掉这个可以去掉右上角的github corner
+            // logo: '/assets/icon/luxun.jpg',
+            // coverpage  : 'coverpage.md',
+            homepage   : 'README.md',
+            loadSidebar: 'SUMMARY.md',
+
+            // NAVIGATION
+            // -----------------------------------------------------------------
+            // alias: {
+            //     '.*?/changelog': 'https://cdn.jsdelivr.net/npm/docsify-themeable@0/CHANGELOG.md',
+            // },
+            auto2top   : false,
+            maxLevel   : 4,
+            subMaxLevel: 5,
+
+            // PLUGINS
+            // -----------------------------------------------------------------
+            executeScript: true,
+            // ga    : 'UA-153486679-2',
+            search: {
+                depth      : 5,
+                noData     : 'No results!',
+                placeholder: 'Search...'
+            },
+
+            // {docsify-updated} 这个变量显示的格式
+            formatUpdated: '{MM}.{DD}, {YYYY}',
+
+            // 可以使用相对路径 https://docsify.js.org/#/configuration?id=relativepath 
+            // relativePath: true, 不要用这个,会使绝对路径失效
+
+            plugins: [
+                function(hook, vm) {
+                  hook.init(function() {
+                    // Called when the script starts running, only trigger once, no arguments,
+                  });
+
+                  hook.beforeEach(function(content) {
+                    // Invoked each time before parsing the Markdown file.
+                    // ...
+                    return content + '\n\n----\n\n' + '<p style="color: inherit; font-weight: normal; text-decoration: none; color: #828282;">Last updated <b>{docsify-updated}</b></p>';
+
+                     //每一个页面添加底部license，不好看就不加了 + '<p style="font-size:12px;text-align: center;color: #828282;"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br/> The content of this site is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a></p>';
+                  });
+
+                  hook.afterEach(function(html, next) {
+                    // Invoked each time after the Markdown file is parsed.
+                    // beforeEach and afterEach support asynchronous。
+                    // ...
+                    // call `next(html)` when task is done.
+                    next(html);
+                  });
+
+                  hook.doneEach(function() {
+                    // Invoked each time after the data is fully loaded, no arguments,
+                    // ...
+                  });
+
+                  hook.mounted(function() {
+                    // Called after initial completion. Only trigger once, no arguments.
+                  });
+
+                  hook.ready(function() {
+                    // Called after initial completion, no arguments.
+                  });
+                }
+              ]
+        };
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+    <!-- 使用分页 https://github.com/imyelo/docsify-pagination <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+
+    <!-- highlight codes 其他语言参考 https://github.com/PrismJS/prism/tree/gh-pages/components -->
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-latex.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-git.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script> 原生支持，但要写javascript，不能JavaScript-->
+
+    <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+
+</body>
+</html>

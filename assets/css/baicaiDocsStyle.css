@@ -1,0 +1,168 @@
+/* [hover to see](#spoiler "Spoiler Filled Text") */
+.spoiler {
+  text-decoration: none !important;
+  cursor: default;
+  padding: 8px;
+  background-color: #FFF8DC;
+  border-left: 2px solid #ffeb8e;
+  border-right: 2px solid #ffeb8e;
+  display: inline-block;
+  color: #FFF8DC;
+  text-align: center;
+  font-size: 20px;
+}
+
+.spoiler:hover {
+  cursor: auto;
+  color: black;
+  transition: color .5s ease-in-out;
+}
+
+
+
+/*各种icon*/
+.check {
+  color: black;
+  background-color: #C0C0C0;
+  font-size: 100%;
+  font-style: bold;
+  padding-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+.check:hover {
+  text-decoration: none;
+  color: black;
+}
+.check:before {
+  content: "✔️";
+  background-color: white;
+  font-size: 120%;
+  margin-right: 10px;
+}
+
+
+.icon {
+  color: black;
+  background-color: #F5F5F5;
+  font-size: 100%;
+  border-left: 5px solid yellow;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-indent: -60px;
+  padding-left: 63px;
+}
+.icon:hover {
+  text-decoration: none;
+  color: black;
+}
+.icon:before {
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: white;
+  font-size: 165%;
+}
+
+.tips {
+  border-left: 5px solid yellowgreen;
+}
+.tips:before {
+  content: "💡";
+}
+
+p.notice {
+  border-left: 5px solid gold;
+}
+p.notice:before {
+  content: "⚠️";
+}
+
+
+p.question {
+  border-left: 5px solid lightpink;
+  /*font-style: italic;*/
+}
+p.question:before {
+  content: "❓ ";
+  font-size: 140%;
+}
+
+p.todo {
+  border-left: 5px solid gray;
+  background-color: #ffeb8e;
+}
+p.todo:before {
+  content: "☐ TODO: ";
+  /*font-weight: bold;*/
+  font-size: 120%;
+  /*font-style: italic;*/
+  background-color: #ffeb8e;
+}
+
+p.label {
+  border-left: 5px solid gray;
+  background-color: lightskyblue;
+
+}
+p.label:before {
+  content: "🏷️";
+  background-color: lightskyblue;
+}
+
+
+p.star {
+  border-left: 5px solid gray;
+  background-color: #CCE8C1;
+
+}
+p.star:before {
+  content: "⭐";
+  background-color: #CCE8C1;
+}
+
+p.warning {
+  border-left: 5px solid gray;
+  background-color: mistyrose;
+}
+p.warning:before {
+  content: "❗";
+  background-color: mistyrose;
+}
+
+p.no {
+  border-left: 5px solid gray;
+  background-color: lightcoral;
+
+}
+p.no:before {
+  content: "🚫";
+  background-color: lightcoral;
+}
+
+
+/* 折叠 */
+details > summary {
+  background-color: #FFF8DC;
+  color: black;
+  cursor: pointer;
+  padding: 8px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  border-left: 6px solid gold;
+}
+
+details > summary:hover {
+  background-color: #98EA70;
+}
+
+details {
+  padding: 0px;
+  padding-left: 20px;
+  /*max-height: 0;*/
+  overflow: hidden;
+  border-left: 2px solid gold;
+}
