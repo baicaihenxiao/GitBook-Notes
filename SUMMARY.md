@@ -108,9 +108,3 @@
 * [markdown test](misc/markdown-test.md)
 * [test file](misc/test-file.md)
 
-## Links
-
-* [Homepage](https://www.cser.club)
-* [Github](https://github.com/baicaihenxiao)
-* [Docsify Docs](http://docs.cser.club/)
-* [GitBook](http://note.cser.club/)
