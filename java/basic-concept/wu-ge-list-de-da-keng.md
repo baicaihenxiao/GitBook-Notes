@@ -9,45 +9,49 @@
 > 点赞再看，养成习惯，微信搜索『**程序通事**』,关注就完事了！  
 >  [点击查看更多历史文章](https://sourl.cn/GgbWZN)
 
+
+
 List 可谓是我们经常使用的集合类之一，几乎所有业务代码都离不开 List。既然天天在用，那就没准就会踩中这几个 List 常见坑。
 
 今天我们就来总结这些常见的坑在哪里，捞自己一手，防止后续同学再继续踩坑。
 
 本文设计知识点如下：
 
-![List &#x8E29;&#x5751;&#x5927;&#x5168;](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHplbzF0YzUwajMxZzMwN2ZkaHUuanBn?x-oss-process=image/format,png)
+List 踩坑大全
 
-## ArrayList 这是李逵，还是李鬼？
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185149507-185149.jpg)
+
+### ArrayList 这是李逵，还是李鬼？
 
 以前实习的时候，写过这样一段简单代码，通过 `Arrays#asList` 将数组转化为 List 集合。
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHoydjI4YW9lajMwZGowNjVnbTkuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185149597-185149.jpg)
 
 这段代码表面看起来没有任何问题，编译也能通过，但是真正测试运行的时候将会在第 4 行抛出 `UnsupportedOperationException`。
 
 刚开始很不解，`Arrays#asList` 返回明明也是一个 `ArrayList`，为什么添加一个元素就会报错？这以后还能好好新增元素吗？
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHoyeTczbm4zajMwdHkwNTBqcnouanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185149676-185149.jpg)
 
 最后通过 Debug 才发现这个`Arrays#asList` 返回的 `ArrayList` 其实是个**李鬼**，仅仅只是 Arrays 一个内部类，并非真正的 `java.util.ArrayList`。
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHpld2MwbWxkZzMwOGEwNTQ0ajYuZ2lm)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/gif/2020/07/08/640-185151.gif)
 
 通过 IDEA，生成这两个的类图，如下：
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHozaHNzZTIwajMwdTAxNWk0N20uanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185151642-185151.jpg)
 
-从上图我们发现，`add/remove` 等方法实际都成自 `AbstractList`，而 `java.util.Arrays$ArrayList` 并没有重写父类的方法。而父类方法恰恰都会抛出 `UnsupportedOperationException`。
+从上图我们发现，`add/remove` 等方法实际都来自 `AbstractList`，而 `java.util.Arrays$ArrayList` 并没有重写父类的方法。而父类方法恰恰都会抛出 `UnsupportedOperationException`。
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHozZTAweW5vajMwcjIwNThxM2guanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185151728-185151.jpg)
 
 这就是为什么这个李鬼 `ArrayList` 不支持的增删的实际原因。
 
-## 你用你的新 List，为什么却还互相影响
+### 你用你的新 List，为什么却还互相影响
 
 李鬼 `ArrayList` 除了不支持增删操作这个坑以外，还存在另外一个大坑，改动内部元素将会同步影响原数组。
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHozdmIzNjkzajMwZ2gwNm9qc2IuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185151810-185151.jpg)
 
 输出结果：
 
@@ -60,7 +64,7 @@ list:[modify_1, modify_2, 3]
 
 查看 `java.util.Arrays$ArrayList` 实现，我们可以发现底层实际使用了原始数组。
 
-![image-20200419152911334](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHozejFsaXJtajMxNDgwY203NmwuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185151898-185152.jpg)
 
 知道了实际原因，修复的办法也很简单，套娃一层 `ArrayList` 呗！
 
@@ -80,7 +84,7 @@ List<String> list = Lists.newArrayList(arrays);
 
 我们来看一个例子：
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo1cWl4NWllajMwZmgwOWJteWkuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185152027-185152.jpg)
 
 日志输出结果：
 
@@ -91,11 +95,11 @@ subList:[10, 20]
 
 查看 `List#subList` 实现方式，可以发现这个 SubList 内部有一个 `parent` 字段保存保存最原始 List 。
 
-![image-20200419163334939](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo1dTF4NmkyajMxYzYwZTRnbnguanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185152148-185152.jpg)
 
 所有外部读写动作看起来是在操作 `SubList` ，实际上底层动作却都发生在原始 List 中，比如 `add` 方法：
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo1d20zZjlpajMxMWUwOGdqc3UuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185152300-185152.jpg)
 
 另外由于 `SubList` 实际上还在引用原始 List，业务开发中，如果不注意，很可能产生 **OOM** 问题。
 
@@ -118,31 +122,31 @@ private static void oom() {
 
 这里修复的办法也很简单，跟上面一样，也来个套娃呗，加一层 `ArrayList` 。
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo2OXlpc2JvajMwNzEwNWpteDIuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185152416-185152.jpg)
 
-## 不可变集合，说好不变，你怎么就变了
+### 不可变集合，说好不变，你怎么就变了
 
 为了防止 List 集合被误操作，我们可以使用 `Collections#unmodifiableList` 生成一个不可变（**immutable**）集合，进行防御性编程。
 
 这个不可变集合只能被读取，不能做任何修改，包括增加，删除，修改，从而保护不可变集合的安全。
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo2aHFmcHQ0ajMwbGIwNm8wdTAuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185152709-185152.jpg)
 
 上面最后三行写操作都将会抛出 `UnsupportedOperationException` 异常
 
 但是你以为这样就安全了吗？
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo2ajd1M2RsajMwNzMwNzM3NGEuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185152792-185152.jpg)
 
 如果有谁不小心改动原始 List，你就会发现这个不可变集合，竟然就变了。。。
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo2bjJ2ZGp0ajMwbGIwOWJqdGguanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185152911-185153.jpg)
 
 上面单元测试结果将会全部通过，这就代表 `Collections#unmodifiableList` 产生不可变集合将会被原始 List 所影响。
 
 查看 `Collections#unmodifiableList` 底层实现方法：
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo2b3U1NTNtajMxM20wZ3V0YmYuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185153051-185153.jpg)
 
 可以看到这跟上面 `SubList` 其实是同一个问题，新集合底层实际使用了**原始 List**。
 
@@ -166,7 +170,7 @@ List<String> unmodifiableList = ImmutableList.copyOf(list);
 
 相比而言 Guava 方式比较清爽，使用也比较简单，推荐使用 Guava 这种方式生成不可变集合。
 
-## foreach 增加/删除元素大坑
+### foreach 增加/删除元素大坑
 
 先来看一段代码：
 
@@ -186,8 +190,8 @@ for (String str : list) {
 
 ```text
 java.util.ConcurrentModificationException
-	at java.base/java.util.ArrayList$Itr.checkForComodification(ArrayList.java:939)
-	at java.base/java.util.ArrayList$Itr.next(ArrayList.java:893)
+    at java.base/java.util.ArrayList$Itr.checkForComodification(ArrayList.java:939)
+    at java.base/java.util.ArrayList$Itr.next(ArrayList.java:893)
 ```
 
 可以看到程序最终错误是由 `ArrayList$Itr.next` 处的代码抛出，但是代码中我们并没有调用该方法，为什么会这样?
@@ -196,27 +200,27 @@ java.util.ConcurrentModificationException
 
 我们将上面的代码产生 class 文件反编来看下最后代码长的啥样。
 
-![fanbainyi](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo3ZnY2NjdiajMwaDcwODlqc2cuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185153134-185153.jpg)
 
 可以看到 `foreach` 这种方式实际就是 `Iterator` 迭代器实现方式，这就是为什么 `foreach` 被遍历的类需要实现 `Iterator`接口的原因。
 
 接着我们来看下抛出异常方法：
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo3cDFhZ2RyajMxMDIwNmt0OW0uanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185153214-185153.jpg)
 
 `expectedModCount` 来源于 `list#iterator` 方法：
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo3c3V5N2drajMwc3cwaWVtemwuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185153368-185153.jpg)
 
 也就是说刚开始遍历循环的时候 `expectedModCount==modCount`，下面我们来看下 `modCount`。
 
 `modCount` 来源于 `ArrayList` 的父类 `AbstractList`，可以用来记录 List 集合被修改的次数。
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo3eDhtOTEwajMxd28wNXMzenMuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185153458-185153.jpg)
 
 `ArrayList#remove` 之后将会使 `modCount` 加一，`expectedModCount`与 `modCount` 将会不相等，这就导致迭代器遍历时将会抛错。
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo4MDRtYmp3ajMxNDUwdTBqeGYuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185153604-185153.jpg)
 
 > `modCount` 计数操作将会交子类自己操作，`ArrayList` 每次修改操作（增、删）都会使 `modCount` 加 1。但是如 `CopyOnWriteArrayList` 并不会使用 `modCount` 计数。
 >
@@ -226,11 +230,13 @@ java.util.ConcurrentModificationException
 
 **使用 Iterator\#remove 删除元素**
 
-![iterator](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo4N3lqbXN0ajMwaHAwODkzemwuanBn?x-oss-process=image/format,png)
+iterator
+
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185153690-185153.jpg)
 
 **JDK1.8 List\#removeIf**
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo4OXN2bWc3ajMwaHAwNTNteHAuanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185153778-185153.jpg)
 
 推荐使用 JDK1.8 这种方式，简洁明了。
 
@@ -238,16 +244,17 @@ java.util.ConcurrentModificationException
 
 如果我将上面 `foreach` 代码判断条件简单修改一下：
 
-![remove](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHo4aTh2NWttajMwaHAwNzd0OWguanBn?x-oss-process=image/format,png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/08/640-20200708185153894-185154.jpg)
 
 运行这段代码，可以发现这段代码又不会报错了，有没有很意外？
 
 感兴趣的同学可以自行研究源码，或者直接查看 **@why技术**的文章：
 
-[这道Java基础题真的有坑！我求求你，认真思考后再回答](https://mp.weixin.qq.com/s/IM9soRRCWrYwpJi4l3EAkw)  
- [这道Java基础题真的有坑！我也没想到还有续集。](https://mp.weixin.qq.com/s/RRsPnPnwL8v8ZE7VzzcdbQ)
+[这道Java基础题真的有坑！我求求你，认真思考后再回答。](http://mp.weixin.qq.com/s?__biz=MzIxNTQ4MzE1NA==&mid=2247484039&idx=1&sn=d2b51c5b8b203256d977802ca6754873&chksm=9796d4faa0e15decaf5f9add93a30f94677e0cf54ecaac36588e7fb4dbba175dd14e0c0a4e57&scene=21#wechat_redirect)
 
-## 总结
+[这道Java基础题真的有坑！我也没想到还有续集。](http://mp.weixin.qq.com/s?__biz=MzIxNTQ4MzE1NA==&mid=2247484200&idx=1&sn=9f19621b8563ee724f843d9e3960acf4&chksm=9796d555a0e15c43e839a5b037205c7b761dcf6301a4215ebc7f6234265bf63b74ed4971ce8c&scene=21#wechat_redirect)
+
+### 总结
 
 第一，我们不要先入为主，想当然就认为 `Arrays.asList` 和 `List.subList` 就是一个普通，独立的 `ArrayList`。
 
@@ -257,13 +264,9 @@ java.util.ConcurrentModificationException
 
 最后，切记，不要随便在 `foreach`增加/删除元素。
 
-## 最后（求点赞，求关注）
+### 最后（求点赞，求关注）
 
 你在 List 集合使用过程还踩过什么坑，欢迎留言讨论。
 
 我是楼下小黑哥，我们下篇文章再见~
-
-> 记住我们的约定，微信搜索『程序通事』，快来关注哦！
-
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly90dmExLnNpbmFpbWcuY24vbGFyZ2UvMDA3UzhaSWxseTFnZHpmejFmenZvZzMwNjQwNjR3ZnouZ2lm)
 
