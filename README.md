@@ -8,6 +8,18 @@
 
 ✅   好文
 
+🏷️
+
+⭐
+
+❓
+
+⚠️
+
+❗
+
+🚫
+
 ## [Homepage](https://www.cser.club/)
 
 ## [Github](https://github.com/baicaihenxiao/gitbooknotes)
