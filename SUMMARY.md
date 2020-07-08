@@ -34,6 +34,7 @@
   * [面试官：为什么SpringBoot的 jar 可以直接运行？](spring/springboot/untitled-2.md)
   * [在 Spring Boot 中，如何干掉 if else！](spring/springboot/zai-spring-boot-zhong-ru-he-gan-diao-if-else.md)
   * [SpringBoot中的条件注解底层是如何实现的？](spring/springboot/springboot-zhong-de-tiao-jian-zhu-jie-di-ceng-shi-ru-he-shi-xian-de.md)
+  * [Spring Boot读取配置属性的常用方式](spring/springboot/spring-boot-du-qu-pei-zhi-shu-xing-de-chang-yong-fang-shi.md)
 * [SSO 单点登录 芋道 Spring Security OAuth2 单点登录](spring/sso-dan-dian-deng-lu-yu-dao-spring-security-oauth2-dan-dian-deng-lu.md)
 
 ## 组件
