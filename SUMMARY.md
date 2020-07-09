@@ -62,6 +62,7 @@
 * [因为知道了30+款在线工具，我的工作效率提升500%!](tools/untitled-5.md)
 * [程序员好货网站大盘点](tools/cheng-xu-yuan-hao-huo-wang-zhan-da-pan-dian.md)
 * [Git 看这一篇就够了](tools/git-kan-zhe-yi-pian-jiu-gou-le.md)
+* [持续集成利器，GitHub Actions](tools/chi-xu-ji-cheng-li-qi-github-actions.md)
 * [科普 \| Shell中傻傻分不清楚的TOP3](tools/untitled-6.md)
 
 ## NETWORK
