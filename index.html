@@ -42,6 +42,9 @@
 <body>
     <div id="app"></div>
 
+<!-- github 编辑   https://github.com/njleonzhang/docsify-edit-on-github -->
+    <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+
     <!-- JavaScript -->
     <script>
         // Docsify
@@ -82,6 +85,11 @@
 
             plugins: [
                 function(hook, vm) {
+                
+                // tree 的效果是跳到该文件但不编辑，blob会自动编辑
+                // https://github.com/njleonzhang/docsify-edit-on-github
+                EditOnGithubPlugin.create('https://github.com/baicaihenxiao/GitBook-Notes/tree/master/', null, function(file) {return 'Edit on GitHub'}),
+
                   hook.init(function() {
                     // Called when the script starts running, only trigger once, no arguments,
                   });

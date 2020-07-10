@@ -18,6 +18,11 @@
   transition: color .5s ease-in-out;
 }
 
+/* 去掉页面上部的空白，因为edit on github 插件增加了空白，就把默认的空白去掉。 */
+section.content {
+  padding-top: 0px;
+}
+
 
 
 /*各种icon*/
