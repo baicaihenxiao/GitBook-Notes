@@ -7,6 +7,7 @@
 * [Basic Concept](java/basic-concept/README.md)
   * [static filed是否会被gc](java/basic-concept/static-filed-shi-fou-hui-bei-gc.md)
   * [Java中new对象的过程问题](java/basic-concept/java-zhong-new-dui-xiang-de-guo-cheng-wen-ti.md)
+  * [说说 Object 类下面有几种方法呢？](java/basic-concept/shuo-shuo-object-lei-xia-mian-you-ji-zhong-fang-fa-ne.md)
   * [Java中的Checked Exception——美丽世界中潜藏的恶魔？ - loveis715 - 博客园](java/basic-concept/untitled.md)
   * [面试： String 五连杀 ！你还满血吗 ？](java/basic-concept/mian-shi-string-wu-lian-sha-ni-hai-man-xie-ma.md)
   * [一个HashMap跟面试官扯了半个小时](java/basic-concept/untitled-1.md)
