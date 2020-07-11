@@ -60,6 +60,7 @@
 
 * [InnoDB 中一棵 B+ 树能存多少行数据？](database/innodb-zhong-yi-ke-b+-shu-neng-cun-duo-shao-hang-shu-ju.md)
 * [explain都不懂，还说会SQL调优?](database/explain-du-bu-dong-hai-shuo-hui-sql-tiao-you.md)
+* [生产环境下到底应该如何优化MySQL锁等待？](database/sheng-chan-huan-jing-xia-dao-di-ying-gai-ru-he-you-hua-mysql-suo-deng-dai.md)
 
 ## 排查问题 调优
 
