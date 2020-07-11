@@ -98,14 +98,6 @@
     * [（设计模式）单例模式的双重检查](design-pattern/patterns/singleton/untitled/README.md)
       * [Understanding intra-thread semantics](design-pattern/patterns/singleton/untitled/untitled-1.md)
       * [Memory Model java se1.7](design-pattern/patterns/singleton/untitled/memory-model-java-se1.7.md)
-* [Principles](design-pattern/principles/README.md)
-  * [单一职责原则](design-pattern/principles/dan-yi-zhi-ze-yuan-ze.md)
-  * [接口隔离原则](design-pattern/principles/jie-kou-ge-li-yuan-ze.md)
-  * [依赖倒置原则](design-pattern/principles/yi-lai-dao-zhi-yuan-ze.md)
-  * [里氏替换原则](design-pattern/principles/li-shi-ti-huan-yuan-ze.md)
-  * [开闭原则](design-pattern/principles/kai-bi-yuan-ze.md)
-  * [迪米特原则](design-pattern/principles/di-mi-te-yuan-ze.md)
-  * [合成复用原则](design-pattern/principles/he-cheng-fu-yong-yuan-ze.md)
 
 ## Algorithm
 
