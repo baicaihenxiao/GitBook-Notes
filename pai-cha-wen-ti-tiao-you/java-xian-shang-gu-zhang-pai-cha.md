@@ -6,8 +6,6 @@
 
 
 
-来源丨8rr.co/kV3R
-
 线上故障主要会包括 CPU、磁盘、内存以及网络问题，而大多数故障可能会包含不止一个层面的问题，所以进行排查时候尽量四个方面依次排查一遍。同时例如 jstack、jmap 等工具也是不囿于一个方面的问题的，基本上出问题就是 df、free、top 三连，然后依次 jstack、jmap 伺候，具体问题具体分析即可。
 
 ## CPU
@@ -20,73 +18,73 @@
 
 接着用top -H -p pid来找到 CPU 使用率比较高的一些线程
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811101-091811.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092342598-092342.jpg)
 
 然后将占用最高的 pid 转换为 16 进制printf '%x\n' pid得到 nid
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092342656-092342.jpg)
 
 接着直接在 jstack 中找到相应的堆栈信息jstack pid \|grep 'nid' -C5 –color
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092342820-092342.jpg)
 
 可以看到我们已经找到了 nid 为 0x42 的堆栈信息，接着只要仔细分析一番即可。
 
 当然更常见的是我们对整个 jstack 文件进行分析，通常我们会比较关注 WAITING 和 TIMED\_WAITING 的部分，BLOCKED 就不用说了。我们可以使用命令cat jstack.log \| grep "java.lang.Thread.State" \| sort -nr \| uniq -c来对 jstack 的状态有一个整体的把握，如果 WAITING 之类的特别多，那么多半是有问题啦。
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092342879-092342.jpg)
 
 频繁 gc
 
 当然我们还是会使用 jstack 来分析问题，但有时候我们可以先确定下 gc 是不是太频繁，使用jstat -gc pid 1000命令来对 gc 分代变化情况进行观察，1000 表示采样间隔\(ms\)，S0C/S1C、S0U/S1U、EC/EU、OC/OU、MC/MU 分别代表两个 Survivor 区、Eden 区、老年代、元数据区的容量和使用量。YGC/YGT、FGC/FGCT、GCT 则代表 YoungGc、FullGc 的耗时和次数以及总耗时。如果看到 gc 比较频繁，再针对 gc 方面做进一步分析，具体可以参考一下 gc 章节的描述。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811162-091811.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092500369-092500.jpg)
 
 上下文切换
 
 针对频繁上下文问题，我们可以使用vmstat命令来进行查看
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811219-091811.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092500430-092500.jpg)
 
 cs\(context switch\)一列则代表了上下文切换的次数。
 
 如果我们希望对特定的 pid 进行监控那么可以使用 pidstat -w pid命令，cswch 和 nvcswch 表示自愿及非自愿切换。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811277-091811.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092342937-092343.jpg)
 
 ## 磁盘
 
 磁盘问题和 CPU 一样是属于比较基础的。首先是磁盘空间方面，我们直接使用df -hl来查看文件系统状态
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811335-091811.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343000-092343.jpg)
 
 更多时候，磁盘问题还是性能上的问题。我们可以通过 iostatiostat -d -k -x来进行分析
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343061-092343.jpg)
 
 最后一列%util可以看到每块磁盘写入的程度，而rrqpm/s以及wrqm/s分别表示读写速度，一般就能帮助定位到具体哪块磁盘出现问题了。
 
 另外我们还需要知道是哪个进程在进行读写，一般来说开发自己心里有数，或者用 iotop 命令来进行定位文件读写的来源。
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343127-092343.jpg)
 
 不过这边拿到的是 tid，我们要转换成 pid，可以通过 readlink 来找到 pidreadlink -f /proc/\*/task/tid/../..。
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343192-092343.jpg)
 
 找到 pid 之后就可以看这个进程具体的读写情况cat /proc/pid/io
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343252-092343.jpg)
 
 我们还可以通过 lsof 命令来确定具体的文件读写情况lsof -p pid
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811440-091811.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343398-092343.jpg)
 
 ## **内存**
 
 内存问题排查起来相对比 CPU 麻烦一些，场景也比较多。主要包括 OOM、GC 问题和堆外内存。一般来讲，我们会先用free命令先来检查一发内存的各种情况。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811497-091811.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343462-092343.jpg)
 
 堆内内存
 
@@ -100,7 +98,7 @@ JMV 中的内存不足，OOM 大致可以分为以下几种：
 
 这个意思是没有足够的内存空间给线程分配 Java 栈，基本上还是线程池代码写的有问题，比如说忘记 shutdown，所以说应该首先从代码层面来寻找问题，使用 jstack 或者 jmap。如果一切都正常，JVM 方面可以通过指定Xss来减少单个 thread stack 的大小。另外也可以在系统层面，可以通过修改/etc/security/limits.confnofile 和 nproc 来增大 os 对线程的限制
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811616-091811.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343522-092343.jpg)
 
 **Exception in thread "main" java.lang.OutOfMemoryError: Java heap space**
 
@@ -122,11 +120,11 @@ Stack Overflow
 
 上述关于 OOM 和 Stack Overflo 的代码排查方面，我们一般使用 JMAPjmap -dump:format=b,file=filename pid来导出 dump 文件
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343579-092343.jpg)
 
 通过 mat\(Eclipse Memory Analysis Tools\)导入 dump 文件进行分析，内存泄漏问题一般我们直接选 Leak Suspects 即可，mat 给出了内存泄漏的建议。另外也可以选择 Top Consumers 来查看最大对象报告。和线程相关的问题可以选择 thread overview 进行分析。除此之外就是选择 Histogram 类概览来自己慢慢分析，大家可以搜搜 mat 的相关教程。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811673-091811.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343638-092343.jpg)
 
 日常开发中，代码产生内存泄漏是比较常见的事，并且比较隐蔽，需要开发者更加关注细节。比如说每次请求都 new 对象，导致大量重复创建对象；进行文件流操作但未正确关闭；手动不当触发 gc；ByteBuffer 缓存分配不合理等都会造成代码 OOM。
 
@@ -138,11 +136,11 @@ gc 问题除了影响 CPU 也会影响内存，排查思路也是一致的。一
 
 线程的话太多而且不被及时 gc 也会引发 oom，大部分就是之前说的unable to create new native thread。除了 jstack 细细分析 dump 文件外，我们一般先会看下总体线程，通过pstreee -p pid \|wc -l。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811728-091811.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343695-092343.jpg)
 
 或者直接通过查看/proc/pid/task的数量即为线程数量。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811786-091811.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343754-092343.jpg)
 
 堆外内存
 
@@ -150,11 +148,11 @@ gc 问题除了影响 CPU 也会影响内存，排查思路也是一致的。一
 
 堆外内存溢出往往是和 NIO 的使用相关，一般我们先通过 pmap 来查看下进程占用的内存情况pmap -x pid \| sort -rn -k3 \| head -30，这段意思是查看对应 pid 倒序前 30 大的内存段。这边可以再一段时间后再跑一次命令看看内存增长情况，或者和正常机器比较可疑的内存段在哪里。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811856-091811.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343821-092343.jpg)
 
 我们如果确定有可疑的内存端，需要通过 gdb 来分析gdb --batch --pid {pid} -ex "dump memory filename.dump {内存起始地址} {内存起始地址+内存块大小}"
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343878-092344.jpg)
 
 获取 dump 文件后可用 heaxdump 进行查看hexdump -C filename \| less，不过大多数看到的都是二进制乱码。
 
@@ -162,25 +160,25 @@ NMT 是 Java7U40 引入的 HotSpot 新特性，配合 jcmd 命令我们就可以
 
 一般对于堆外内存缓慢增长直到爆炸的情况来说，可以先设一个基线jcmd pid VM.native\_memory baseline。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811913-091812.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343963-092344.jpg)
 
 然后等放一段时间后再去看看内存增长的情况，通过jcmd pid VM.native\_memory detail.diff\(summary.diff\)做一下 summary 或者 detail 级别的 diff。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091811970-091812.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344020-092344.jpg)
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091812031-091812.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344082-092344.jpg)
 
 可以看到 jcmd 分析出来的内存十分详细，包括堆内、线程以及 gc\(所以上述其他内存异常其实都可以用 nmt 来分析\)，这边堆外内存我们重点关注 Internal 的内存增长，如果增长十分明显的话那就是有问题了。
 
 detail 级别的话还会有具体内存段的增长情况，如下图。
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344140-092344.jpg)
 
 此外在系统层面，我们还可以使用 strace 命令来监控内存分配 strace -f -e "brk,mmap,munmap" -p pid
 
 这边内存分配信息主要包括了 pid 和内存地址。
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344209-092344.jpg)
 
 不过其实上面那些操作也很难定位到具体的问题点，关键还是要看错误日志栈，找到可疑的对象，搞清楚它的回收机制，然后去分析对应的对象。比如 DirectByteBuffer 分配内存的话，是需要 full GC 或者手动 system.gc 来进行回收的\(所以最好不要使用-XX:+DisableExplicitGC\)。那么其实我们可以跟踪一下 DirectByteBuffer 对象的内存情况，通过jmap -histo:live pid手动触发 fullGC 来看看堆外内存有没有被回收。如果被回收了，那么大概率是堆外内存本身分配的太小了，通过-XX:MaxDirectMemorySize进行调整。如果没有什么变化，那就要使用 jmap 去分析那些不能被 gc 的对象，以及和 DirectByteBuffer 之间的引用关系了。
 
@@ -202,7 +200,7 @@ youngGC 频繁一般是短周期小对象较多，先考虑是不是 Eden 区/�
 
 耗时过长问题就要看 GC 日志里耗时耗在哪一块了。以 G1 日志为例，可以关注 Root Scanning、Object Copy、Ref Proc 等阶段。Ref Proc 耗时长，就要注意引用相关的对象。Root Scanning 耗时长，就要注意线程数、跨代引用。Object Copy 则需要关注对象生存周期。而且耗时分析它需要横向比较，就是和其他项目或者正常时间段的耗时比较。比如说图中的 Root Scanning 和正常时间段比增长较多，那就是起的线程太多了。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091812108-091812.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344276-092344.jpg)
 
 **触发 fullGC**
 
@@ -251,7 +249,7 @@ TCP 队列溢出
 
 tcp 队列溢出是个相对底层的错误，它可能会造成超时、rst 等更表层的错误。因此错误也更隐蔽，所以我们单独说一说。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091812165-091812.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344338-092344.jpg)
 
 如上图所示，这里有两个队列：syns queue\(半连接队列）、accept queue（全连接队列）。三次握手，在 server 收到 client 的 syn 后，把消息放到 syns queue，回复 syn+ack 给 client，server 收到 client 的 ack，如果这时 accept queue 没满，那就从 syns queue 拿出暂存的信息放入 accept queue 中，否则按 tcp\_abort\_on\_overflow 指示的执行。
 
@@ -261,13 +259,13 @@ tcp\_abort\_on\_overflow 0 表示如果三次握手第三步的时候 accept que
 
 **netstat 命令，执行 netstat -s \| egrep "listen\|LISTEN"**
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344395-092344.jpg)
 
 如上图所示，overflowed 表示全连接队列溢出的次数，sockets dropped 表示半连接队列溢出的次数。
 
 **ss 命令，执行 ss -lnt**
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344451-092344.jpg)
 
 上面看到 Send-Q 表示第三列的 listen 端口上的全连接队列最大为 5，第一列 Recv-Q 为全连接队列当前使用了多少。
 
@@ -307,11 +305,11 @@ RST 包表示连接重置，用于关闭一些无用的连接，通常表示异�
 
 我们在排查故障时候怎么确定有 RST 包的存在呢？当然是使用 tcpdump 命令进行抓包，并使用 wireshark 进行简单分析了。tcpdump -i en0 tcp -w xxx.cap，en0 表示监听的网卡。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091812224-091812.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344509-092344.jpg)
 
 接下来我们通过 wireshark 打开抓到的包，可能就能看到如下图所示，红色的就表示 RST 包了。
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344576-092344.jpg)
 
 TIME\_WAIT 和 CLOSE\_WAIT
 
@@ -321,7 +319,7 @@ TIME\_WAIT 和 CLOSE\_WAIT 是啥意思相信大家都知道。
 
 用 ss 命令会更快ss -ant \| awk '{++S\[$1\]} END {for\(a in S\) print a, S\[a\]}'
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711091812283-091812.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344633-092344.jpg)
 
 TIME\_WAIT
 
