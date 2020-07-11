@@ -55,6 +55,7 @@
 * [一文搞定分布式系统ID生成方案](zu-jian/yi-wen-gao-ding-fen-bu-shi-xi-tong-id-sheng-cheng-fang-an.md)
 * [搞了那么久分布式，不知道一致性哈希算法？](zu-jian/gao-le-na-me-jiu-fen-bu-shi-bu-zhi-dao-yi-zhi-xing-ha-xi-suan-fa.md)
 * [Java开发常用技术栈盘点](zu-jian/java-kai-fa-chang-yong-ji-shu-zhan-pan-dian.md)
+* [如何实现一个可复用的分布式事务消息架构方案？](zu-jian/ru-he-shi-xian-yi-ge-ke-fu-yong-de-fen-bu-shi-shi-wu-xiao-xi-jia-gou-fang-an.md)
 
 ## DataBase
 
