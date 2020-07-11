@@ -54,6 +54,7 @@
 * [面试官：你对Kafka比较熟？ 那说说kafka日志段如何读写的吧？](zu-jian/mian-shi-guan-ni-dui-kafka-bi-jiao-shou-na-shuo-shuo-kafka-ri-zhi-duan-ru-he-du-xie-de-ba.md)
 * [一文搞定分布式系统ID生成方案](zu-jian/yi-wen-gao-ding-fen-bu-shi-xi-tong-id-sheng-cheng-fang-an.md)
 * [搞了那么久分布式，不知道一致性哈希算法？](zu-jian/gao-le-na-me-jiu-fen-bu-shi-bu-zhi-dao-yi-zhi-xing-ha-xi-suan-fa.md)
+* [Java开发常用技术栈盘点](zu-jian/java-kai-fa-chang-yong-ji-shu-zhan-pan-dian.md)
 
 ## DataBase
 
@@ -73,6 +74,8 @@
 * [Git 看这一篇就够了](tools/git-kan-zhe-yi-pian-jiu-gou-le.md)
 * [持续集成利器，GitHub Actions](tools/chi-xu-ji-cheng-li-qi-github-actions.md)
 * [科普 \| Shell中傻傻分不清楚的TOP3](tools/untitled-6.md)
+* [原来这就是Java代码生成器的原理啊，太简单了](tools/yuan-lai-zhe-jiu-shi-java-dai-ma-sheng-cheng-qi-de-yuan-lia-tai-jian-dan-le.md)
+* [让程序员爱不释手的6大代码对比工具！](tools/rang-cheng-xu-yuan-ai-bu-shi-shou-de-6-da-dai-ma-dui-bi-gong-ju.md)
 
 ## NETWORK
 
