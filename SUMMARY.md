@@ -30,6 +30,7 @@
 * [开源工具类](java/kai-yuan-gong-ju-lei.md)
 * [你必须掌握的 21 个 Java 核心技术！](java/untitled.md)
 * [什么是Java内存模型](java/untitled-4.md)
+* [Java 处理 Exception 的 9 个最佳实践！](java/java-chu-li-exception-de-9-ge-zui-jia-shi-jian.md)
 * [如果面试被问“零拷贝”，你会怎么办？](java/untitled-1.md)
 * [用Java的时候，你是如何实现时间控制的？](java/yong-java-de-shi-hou-ni-shi-ru-he-shi-xian-shi-jian-kong-zhi-de.md)
 * [一个秒杀系统的设计思考](java/yi-ge-miao-sha-xi-tong-de-she-ji-si-kao.md)
