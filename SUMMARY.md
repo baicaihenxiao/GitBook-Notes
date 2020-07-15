@@ -59,6 +59,8 @@
 * [搞了那么久分布式，不知道一致性哈希算法？](zu-jian/gao-le-na-me-jiu-fen-bu-shi-bu-zhi-dao-yi-zhi-xing-ha-xi-suan-fa.md)
 * [Java开发常用技术栈盘点](zu-jian/java-kai-fa-chang-yong-ji-shu-zhan-pan-dian.md)
 * [如何实现一个可复用的分布式事务消息架构方案？](zu-jian/ru-he-shi-xian-yi-ge-ke-fu-yong-de-fen-bu-shi-shi-wu-xiao-xi-jia-gou-fang-an.md)
+* [如何设计一个本地缓存](zu-jian/ru-he-she-ji-yi-ge-ben-di-huan-cun.md)
+* [在Redis中设置了过期时间的Key，需要注意哪些问题？](zu-jian/zai-redis-zhong-she-zhi-le-guo-qi-shi-jian-de-key-xu-yao-zhu-yi-na-xie-wen-ti.md)
 
 ## DataBase
 
