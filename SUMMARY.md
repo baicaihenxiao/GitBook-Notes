@@ -111,8 +111,7 @@
 
 ## Algorithm
 
-* [差分数组是个啥？能干啥？怎么用？（差分详解+例题）](algorithm/untitled.md)
-* [红黑树](algorithm/red-black-tree.md)
+* [差分数组（差分详解+例题）](algorithm/untitled.md)
 
 ## Sicence
 
