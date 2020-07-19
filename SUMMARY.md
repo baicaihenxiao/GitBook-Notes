@@ -17,6 +17,7 @@
   * [赶紧减少该死的 if else 嵌套？](java/basic-concept/gan-jin-jian-shao-gai-si-de-if-else-qian-tao.md)
   * [Java反射是什么？看这篇绝对会了！](java/basic-concept/java-fan-she-shi-shen-me-kan-zhe-pian-jue-dui-hui-le.md)
 * [并发](java/bing-fa/README.md)
+  * [Untitled](java/bing-fa/untitled-5.md)
   * [Java 并发源码合集-芋道源码](java/bing-fa/java-bing-fa-yuan-ma-he-ji-yu-dao-yuan-ma/README.md)
     * [【死磕Java并发】—–深入分析synchronized的实现原理](java/bing-fa/java-bing-fa-yuan-ma-he-ji-yu-dao-yuan-ma/si-ke-java-bing-fa-shen-ru-fen-xi-synchronized-de-shi-xian-yuan-li.md)
     * [【死磕Java并发】—–深入分析volatile的实现原理](java/bing-fa/java-bing-fa-yuan-ma-he-ji-yu-dao-yuan-ma/si-ke-java-bing-fa-shen-ru-fen-xi-volatile-de-shi-xian-yuan-li.md)
@@ -97,6 +98,7 @@
 
 * [✅&lt;好文&gt;工作方法，职场交流、晋升](career/hao-wen-gong-zuo-fang-fa-zhi-chang-jiao-liu-jin-sheng.md)
 * [程序员一般可以从什么平台接私活？](career/untitled-1-1.md)
+* [前同事通过接私活年入 60W，他常用 19 个私活平台汇总！](career/qian-tong-shi-tong-guo-jie-si-huo-nian-ru-60w-ta-chang-yong-19-ge-si-huo-ping-tai-hui-zong.md)
 * [内部泄露版！互联网大厂的薪资和职级一览](career/untitled-1.md)
 
 ## Design Pattern
