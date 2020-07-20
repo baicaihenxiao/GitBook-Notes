@@ -104,6 +104,7 @@
 ## Design Pattern
 
 * [docs](design-pattern/docs.md)
+* [设计模式总结](design-pattern/she-ji-mo-shi-zong-jie.md)
 * [常用设计模式的代码实战教程](design-pattern/chang-yong-she-ji-mo-shi-de-dai-ma-shi-zhan-jiao-cheng.md)
 * [Patterns](design-pattern/patterns/README.md)
   * [Singleton](design-pattern/patterns/singleton/README.md)
