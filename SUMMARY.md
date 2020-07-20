@@ -28,6 +28,7 @@
   * [Thread.Sleep\(0\)](java/bing-fa/thread.sleep-0.md)
   * [我会手动创建线程，为什么让我使用线程池？ new Object vs new Thread](java/bing-fa/wo-hui-shou-dong-chuang-jian-xian-cheng-wei-shen-me-rang-wo-shi-yong-xian-cheng-chi-new-object-vs-ne.md)
   * [为什么synchronized无法禁止指令重排，却能保证有序性？](java/bing-fa/wei-shen-me-synchronized-wu-fa-jin-zhi-zhi-ling-zhong-pai-que-neng-bao-zheng-you-xu-xing.md)
+  * [写的很好！细数 Java 线程池的原理](java/bing-fa/xie-de-hen-hao-xi-shu-java-xian-cheng-chi-de-yuan-li.md)
 * [开源工具类](java/kai-yuan-gong-ju-lei.md)
 * [你必须掌握的 21 个 Java 核心技术！](java/untitled.md)
 * [什么是Java内存模型](java/untitled-4.md)
@@ -96,7 +97,7 @@
 
 ## CAREER
 
-* [✅&lt;好文&gt;工作方法，职场交流、晋升](career/hao-wen-gong-zuo-fang-fa-zhi-chang-jiao-liu-jin-sheng.md)
+* [⭐✔️ &lt;好文&gt;工作方法，职场交流、晋升](career/hao-wen-gong-zuo-fang-fa-zhi-chang-jiao-liu-jin-sheng.md)
 * [程序员一般可以从什么平台接私活？](career/untitled-1-1.md)
 * [前同事通过接私活年入 60W，他常用 19 个私活平台汇总！](career/qian-tong-shi-tong-guo-jie-si-huo-nian-ru-60w-ta-chang-yong-19-ge-si-huo-ping-tai-hui-zong.md)
 * [内部泄露版！互联网大厂的薪资和职级一览](career/untitled-1.md)
