@@ -1,6 +1,6 @@
 # 什么是乐观锁，什么是悲观锁
 
-[https://www.jianshu.com/p/d2ac26ca6525](https://www.jianshu.com/p/d2ac26ca6525)
+{% embed url="https://www.jianshu.com/p/d2ac26ca6525" %}
 
 **使用select…for update会把数据给锁住，不过需要注意一些锁的级别，MySQL InnoDB默认行级锁。行级锁都是基于索引的，如果一条SQL语句用不到索引是不会使用行级锁的，会使用表级锁把整张表锁住，这点需要注意。**
 
