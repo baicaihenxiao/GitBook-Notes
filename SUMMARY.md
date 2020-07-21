@@ -75,7 +75,7 @@
 * [explain都不懂，还说会SQL调优?](database/explain-du-bu-dong-hai-shuo-hui-sql-tiao-you.md)
 * [生产环境下到底应该如何优化MySQL锁等待？](database/sheng-chan-huan-jing-xia-dao-di-ying-gai-ru-he-you-hua-mysql-suo-deng-dai.md)
 * [永远不要在 MySQL 中使用 UTF-8](database/yong-yuan-bu-yao-zai-mysql-zhong-shi-yong-utf8.md)
-* [什么是乐观锁，什么是悲观锁](database/shen-me-shi-le-guan-suo-shen-me-shi-bei-guan-suo.md)
+* [✔️什么是乐观锁，什么是悲观锁](database/shen-me-shi-le-guan-suo-shen-me-shi-bei-guan-suo.md)
 
 ## 排查问题 调优
 
