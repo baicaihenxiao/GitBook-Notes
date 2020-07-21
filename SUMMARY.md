@@ -33,6 +33,7 @@
 * [你必须掌握的 21 个 Java 核心技术！](java/untitled.md)
 * [什么是Java内存模型](java/untitled-4.md)
 * [Java 处理 Exception 的 9 个最佳实践！](java/java-chu-li-exception-de-9-ge-zui-jia-shi-jian.md)
+* [你说，一个Java字符串到底有多少个字符?](java/ni-shuo-yi-ge-java-zi-fu-chuan-dao-di-you-duo-shao-ge-zi-fu.md)
 * [如果面试被问“零拷贝”，你会怎么办？](java/untitled-1.md)
 * [用Java的时候，你是如何实现时间控制的？](java/yong-java-de-shi-hou-ni-shi-ru-he-shi-xian-shi-jian-kong-zhi-de.md)
 * [⭐ 一个秒杀系统的设计思考](java/yi-ge-miao-sha-xi-tong-de-she-ji-si-kao.md)
@@ -64,6 +65,7 @@
 * [如何设计一个本地缓存](zu-jian/ru-he-she-ji-yi-ge-ben-di-huan-cun.md)
 * [在Redis中设置了过期时间的Key，需要注意哪些问题？](zu-jian/zai-redis-zhong-she-zhi-le-guo-qi-shi-jian-de-key-xu-yao-zhu-yi-na-xie-wen-ti.md)
 * [SpringCloud 妹子图之 Redis 高可用集群](zu-jian/springcloud-mei-zi-tu-zhi-redis-gao-ke-yong-ji-qun.md)
+* [Mybatis 框架下 SQL 注入攻击的 3 种方式，真是防不胜防！](zu-jian/mybatis-kuang-jia-xia-sql-zhu-ru-gong-ji-de-3-zhong-fang-shi-zhen-shi-fang-bu-sheng-fang.md)
 
 ## DataBase
 
