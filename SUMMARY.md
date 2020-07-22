@@ -42,6 +42,7 @@
 * [分布式系统的CAP理论](java/fen-bu-shi-xi-tong-de-cap-li-lun.md)
 * [【高并发】高并发秒杀系统架构解密，不是所有的秒杀都是秒杀！](java/gao-bing-fa-gao-bing-fa-miao-sha-xi-tong-jia-gou-jie-mi-bu-shi-suo-you-de-miao-sha-du-shi-miao-sha.md)
 * [Apache 架构师的 30 条设计原则！](java/untitled-2.md)
+* [OpenAPI 标准规范](java/openapi-biao-zhun-gui-fan.md)
 * [我，带崩了一个项目！](java/untitled-3.md)
 
 ## Spring
@@ -66,8 +67,10 @@
 * [搞了那么久分布式，不知道一致性哈希算法？](zu-jian/gao-le-na-me-jiu-fen-bu-shi-bu-zhi-dao-yi-zhi-xing-ha-xi-suan-fa.md)
 * [Java开发常用技术栈盘点](zu-jian/java-kai-fa-chang-yong-ji-shu-zhan-pan-dian.md)
 * [如何实现一个可复用的分布式事务消息架构方案？](zu-jian/ru-he-shi-xian-yi-ge-ke-fu-yong-de-fen-bu-shi-shi-wu-xiao-xi-jia-gou-fang-an.md)
-* [如何设计一个本地缓存](zu-jian/ru-he-she-ji-yi-ge-ben-di-huan-cun.md)
-* [在Redis中设置了过期时间的Key，需要注意哪些问题？](zu-jian/zai-redis-zhong-she-zhi-le-guo-qi-shi-jian-de-key-xu-yao-zhu-yi-na-xie-wen-ti.md)
+* [redis](zu-jian/redis/README.md)
+  * [在Redis中设置了过期时间的Key，需要注意哪些问题？](zu-jian/redis/zai-redis-zhong-she-zhi-le-guo-qi-shi-jian-de-key-xu-yao-zhu-yi-na-xie-wen-ti.md)
+  * [如何设计一个本地缓存](zu-jian/redis/ru-he-she-ji-yi-ge-ben-di-huan-cun.md)
+  * [Spring Boot 中 Redis 的使用](zu-jian/redis/spring-boot-zhong-redis-de-shi-yong.md)
 * [SpringCloud 妹子图之 Redis 高可用集群](zu-jian/springcloud-mei-zi-tu-zhi-redis-gao-ke-yong-ji-qun.md)
 * [Mybatis 框架下 SQL 注入攻击的 3 种方式，真是防不胜防！](zu-jian/mybatis-kuang-jia-xia-sql-zhu-ru-gong-ji-de-3-zhong-fang-shi-zhen-shi-fang-bu-sheng-fang.md)
 * [MyBatis 动态 SQL（认真看看， 以后写 SQL 就爽多了）](zu-jian/mybatis-dong-tai-sql-ren-zhen-kan-kan-yi-hou-xie-sql-jiu-shuang-duo-le.md)
