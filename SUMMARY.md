@@ -60,7 +60,6 @@
 
 * [优秀架构师是如何学习开源项目的？](zu-jian/you-xiu-jia-gou-shi-shi-ru-he-xue-xi-kai-yuan-xiang-mu-de.md)
 * [Service Mesh for Microservices](zu-jian/service-mesh-for-microservices.md)
-* [Docker+Jenkins+Nginx+SpringBoot自动化部署项目](zu-jian/docker+jenkins+nginx+springboot-zi-dong-hua-bu-shu-xiang-mu.md)
 * [springboot + rabbitmq 用了消息确认机制，感觉掉坑里了](zu-jian/springboot-+-rabbitmq-yong-le-xiao-xi-que-ren-ji-zhi-gan-jue-diao-keng-li-le.md)
 * [面试官：你对Kafka比较熟？ 那说说kafka日志段如何读写的吧？](zu-jian/mian-shi-guan-ni-dui-kafka-bi-jiao-shou-na-shuo-shuo-kafka-ri-zhi-duan-ru-he-du-xie-de-ba.md)
 * [一文搞定分布式系统ID生成方案](zu-jian/yi-wen-gao-ding-fen-bu-shi-xi-tong-id-sheng-cheng-fang-an.md)
@@ -104,6 +103,12 @@
 * [你观察过么？从输入网址到显示网页，这个过程究竟发生了什么？](network/ni-guan-cha-guo-me-cong-shu-ru-wang-zhi-dao-xian-shi-wang-ye-zhe-ge-guo-cheng-jiu-jing-fa-sheng-le-s.md)
 * [谈谈 Tomcat 请求处理流程](network/tan-tan-tomcat-qing-qiu-chu-li-liu-cheng.md)
 * [✔️ 新手入门：Nginx详解](network/xin-shou-ru-men-nginx-xiang-jie.md)
+
+## PROJECT
+
+* [Docker+Jenkins+Nginx+SpringBoot自动化部署项目](project/docker+jenkins+nginx+springboot-zi-dong-hua-bu-shu-xiang-mu.md)
+* [Jenkins安装并部署Java项目完整流程](project/jenkins-an-zhuang-bing-bu-shu-java-xiang-mu-wan-zheng-liu-cheng.md)
+* [项目参考](project/xiang-mu-can-kao.md)
 
 ## CAREER
 
