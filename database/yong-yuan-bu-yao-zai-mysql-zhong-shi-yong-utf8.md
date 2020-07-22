@@ -2,8 +2,6 @@
 
 [https://mp.weixin.qq.com/s/hP0C52gFdYG7Zgpyc34y2w](https://mp.weixin.qq.com/s/hP0C52gFdYG7Zgpyc34y2w)
 
-
-
 * 那么什么是编码？什么是 UTF-8？
 * MySQL 简史
 * 为什么这件事情会让人如此抓狂
@@ -91,7 +89,7 @@ MySQL 开发者在最开始尝试 UTF-8 时使用了每个字符 6 个字节，C
 
 ## 总结
 
-如果你在使用 MySQL 或 MariaDB，不要用“utf8”编码，改用“utf8mb4”。这里 <https://mathiasbynens.be/notes/mysql-utf8mb4#utf8-to-utf8mb4> 提供了一个指南用于将现有数据库的字符编码从"utf8"转成"utf8mb4"。
+如果你在使用 MySQL 或 MariaDB，不要用“utf8”编码，改用“utf8mb4”。这里 [https://mathiasbynens.be/notes/mysql-utf8mb4\#utf8-to-utf8mb4](https://mathiasbynens.be/notes/mysql-utf8mb4#utf8-to-utf8mb4) 提供了一个指南用于将现有数据库的字符编码从"utf8"转成"utf8mb4"。
 
 **英文原文：**[https://medium.com/@adamhooper/in-mysql-never-use-utf8-use-utf8mb4-11761243e434](https://medium.com/@adamhooper/in-mysql-never-use-utf8-use-utf8mb4-11761243e434)
 

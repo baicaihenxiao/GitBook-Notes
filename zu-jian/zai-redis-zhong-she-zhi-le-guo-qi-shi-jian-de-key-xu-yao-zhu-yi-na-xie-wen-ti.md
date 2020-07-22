@@ -2,13 +2,15 @@
 
 [https://mp.weixin.qq.com/s/hJ4Z4L5GEs2QkfvQHmt2Fg](https://mp.weixin.qq.com/s/hJ4Z4L5GEs2QkfvQHmt2Fg)
 
+作者 \| 千山qianshan
 
+来源 \| juejin.im/post/5d6bda096fb9a06acc009dc8
 
 熟悉Redis的同学应该知道，Redis的每个Key都可以设置一个过期时间，当达到过期时间的时候，这个key就会被自动删除。
 
-### 在为key设置过期时间需要注意的事项
+## **在为key设置过期时间需要注意的事项**
 
-**1、 DEL/SET/GETSET等命令会清除过期时间**
+### **1、 DEL/SET/GETSET等命令会清除过期时间**
 
 在使用DEL、SET、GETSET等会覆盖key对应value的命令操作一个设置了过期时间的key的时候，会导致对应的key的过期时间被清除。
 
@@ -27,7 +29,7 @@ OK
 (integer) -1
 ```
 
-**2、INCR/LPUSH/HSET等命令则不会清除过期时间**
+### **2、INCR/LPUSH/HSET等命令则不会清除过期时间**
 
 而在使用INCR/LPUSH/HSET这种只是修改一个key的value，而不是覆盖整个value的命令，则不会清除key的过期时间。
 
@@ -73,7 +75,7 @@ LPUSH：
 (integer) 252
 ```
 
-**3、PERSIST命令会清除过期时间**
+### **3、PERSIST命令会清除过期时间**
 
 当使用PERSIST命令将一个设置了过期时间的key转变成一个持久化的key的时候，也会清除过期时间。
 
@@ -90,7 +92,7 @@ OK
 (integer) -1
 ```
 
-**4、使用RENAME命令，老key的过期时间将会转到新key上**
+### **4、使用RENAME命令，老key的过期时间将会转到新key上**
 
 在使用例如：RENAME KEY\_A KEY\_B命令将KEY\_A重命名为KEY\_B，不管KEY\_B有没有设置过期时间，新的key KEY\_B将会继承KEY\_A的所有特性。
 
@@ -115,7 +117,7 @@ OK
 
 这里篇幅有限，我就不一一将key\_a重命名到key\_b的各个情况列出来，大家可以在自己电脑上试一下key\_a设置了过期时间，key\_b没设置过期时间这种情况。
 
-**5、使用EXPIRE/PEXPIRE设置的过期时间为负数或者使用EXPIREAT/PEXPIREAT设置过期时间戳为过去的时间会导致key被删除**
+### **5、使用EXPIRE/PEXPIRE设置的过期时间为负数或者使用EXPIREAT/PEXPIREAT设置过期时间戳为过去的时间会导致key被删除**
 
 EXPIRE：
 
@@ -147,7 +149,7 @@ OK
 (nil)
 ```
 
-**6、EXPIRE命令可以更新过期时间**
+### **6、EXPIRE命令可以更新过期时间**
 
 对一个已经设置了过期时间的key使用expire命令，可以更新其过期时间。
 
@@ -166,7 +168,7 @@ OK
 
 在Redis2.1.3以下的版本中，使用expire命令更新一个已经设置了过期时间的key的过期时间会失败。并且对一个设置了过期时间的key使用LPUSH/HSET等命令修改其value的时候，会导致Redis删除该key。
 
-### Redis的过期策略
+## Redis的过期策略
 
 那你有没有想过一个问题，Redis里面如果有大量的key，怎样才能高效的找出过期的key并将其删除呢，难道是遍历每一个key吗？假如同一时期过期的key非常多，Redis会不会因为一直处理过期事件，而导致读写指令的卡顿。
 
@@ -174,13 +176,13 @@ OK
 
 实际上Redis使用懒惰删除+定期删除相结合的方式处理过期的key。
 
-#### 懒惰删除
+### **懒惰删除**
 
 所谓懒惰删除就是在客户端访问该key的时候，redis会对key的过期时间进行检查，如果过期了就立即删除。
 
 这种方式看似很完美，在访问的时候检查key的过期时间，不会占用太多的额外CPU资源。但是如果一个key已经过期了，如果长时间没有被访问，那么这个key就会一直存留在内存之中，严重消耗了内存资源。
 
-#### 定期删除
+### **定期删除**
 
 定期删除的原理是，Redis会将所有设置了过期时间的key放入一个字典中，然后每隔一段时间从字典中随机一些key检查过期时间并删除已过期的key。
 
@@ -192,7 +194,7 @@ Redis默认每秒进行10次过期扫描：
 
 同时，为了保证不出现循环过度的情况，Redis还设置了扫描的时间上限，默认不会超过25ms。
 
-### 参考资料
+## 参考资料
 
 > [https://redis.io/commands/expire\#expire-accuracy](https://redis.io/commands/expire#expire-accuracy)
 
