@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Welcome to My Notes](README.md)
-* [➡️　DOCSIFY VERVSION](https://www.cser.club/GitBook-Notes/#/)
+* [➡️　GITBOOK VERSION](https://note.cser.club/)
+* [➡️　DOCSIFY VERSION](https://www.cser.club/GitBook-Notes/#/)
 * [➡️　SUMMARY](https://github.com/baicaihenxiao/GitBook-Notes/blob/master/SUMMARY.md)
 
 ## java
