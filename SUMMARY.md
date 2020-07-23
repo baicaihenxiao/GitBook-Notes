@@ -32,7 +32,9 @@
   * [我会手动创建线程，为什么让我使用线程池？ new Object vs new Thread](java/bing-fa/wo-hui-shou-dong-chuang-jian-xian-cheng-wei-shen-me-rang-wo-shi-yong-xian-cheng-chi-new-object-vs-ne.md)
   * [为什么synchronized无法禁止指令重排，却能保证有序性？](java/bing-fa/wei-shen-me-synchronized-wu-fa-jin-zhi-zhi-ling-zhong-pai-que-neng-bao-zheng-you-xu-xing.md)
   * [写的很好！细数 Java 线程池的原理](java/bing-fa/xie-de-hen-hao-xi-shu-java-xian-cheng-chi-de-yuan-li.md)
-* [开源工具类](java/kai-yuan-gong-ju-lei.md)
+* [工具类](java/gong-ju-lei/README.md)
+  * [两难！到底用Apache BeanUtils还是Spring BeanUtils？](java/gong-ju-lei/liang-nan-dao-di-yong-apache-beanutils-hai-shi-spring-beanutils.md)
+  * [开源工具类](java/gong-ju-lei/kai-yuan-gong-ju-lei.md)
 * [你必须掌握的 21 个 Java 核心技术！](java/untitled.md)
 * [什么是Java内存模型](java/untitled-4.md)
 * [Java 处理 Exception 的 9 个最佳实践！](java/java-chu-li-exception-de-9-ge-zui-jia-shi-jian.md)
@@ -152,4 +154,5 @@
 
 * [markdown test](misc/markdown-test.md)
 * [test file](misc/test-file.md)
+* [未分类文章](misc/wei-fen-lei-wen-zhang.md)
 
