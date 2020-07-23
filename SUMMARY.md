@@ -61,11 +61,13 @@
 
 * [优秀架构师是如何学习开源项目的？](zu-jian/you-xiu-jia-gou-shi-shi-ru-he-xue-xi-kai-yuan-xiang-mu-de.md)
 * [Service Mesh for Microservices](zu-jian/service-mesh-for-microservices.md)
-* [springboot + rabbitmq 用了消息确认机制，感觉掉坑里了](zu-jian/springboot-+-rabbitmq-yong-le-xiao-xi-que-ren-ji-zhi-gan-jue-diao-keng-li-le.md)
 * [一文搞定分布式系统ID生成方案](zu-jian/yi-wen-gao-ding-fen-bu-shi-xi-tong-id-sheng-cheng-fang-an.md)
 * [搞了那么久分布式，不知道一致性哈希算法？](zu-jian/gao-le-na-me-jiu-fen-bu-shi-bu-zhi-dao-yi-zhi-xing-ha-xi-suan-fa.md)
 * [Java开发常用技术栈盘点](zu-jian/java-kai-fa-chang-yong-ji-shu-zhan-pan-dian.md)
 * [如何实现一个可复用的分布式事务消息架构方案？](zu-jian/ru-he-shi-xian-yi-ge-ke-fu-yong-de-fen-bu-shi-shi-wu-xiao-xi-jia-gou-fang-an.md)
+* [mq](zu-jian/mq/README.md)
+  * [springboot + rabbitmq 用了消息确认机制，感觉掉坑里了](zu-jian/mq/springboot-+-rabbitmq-yong-le-xiao-xi-que-ren-ji-zhi-gan-jue-diao-keng-li-le.md)
+  * [✔️消息队列满了以后该怎么处理](zu-jian/mq/xiao-xi-dui-lie-man-le-yi-hou-gai-zen-me-chu-li.md)
 * [kafka](zu-jian/kafka/README.md)
   * [面试官：你对Kafka比较熟？ 那说说kafka日志段如何读写的吧？](zu-jian/kafka/mian-shi-guan-ni-dui-kafka-bi-jiao-shou-na-shuo-shuo-kafka-ri-zhi-duan-ru-he-du-xie-de-ba.md)
   * [SpringBoot开发案例之整合Kafka实现消息队列](zu-jian/kafka/springboot-kai-fa-an-li-zhi-zheng-he-kafka-shi-xian-xiao-xi-dui-lie.md)
@@ -74,6 +76,7 @@
   * [在Redis中设置了过期时间的Key，需要注意哪些问题？](zu-jian/redis/zai-redis-zhong-she-zhi-le-guo-qi-shi-jian-de-key-xu-yao-zhu-yi-na-xie-wen-ti.md)
   * [如何设计一个本地缓存](zu-jian/redis/ru-he-she-ji-yi-ge-ben-di-huan-cun.md)
   * [Spring Boot 中 Redis 的使用](zu-jian/redis/spring-boot-zhong-redis-de-shi-yong.md)
+  * [✔️实战 \| SpringBoot + Redis 分布式锁：模拟抢单](zu-jian/redis/shi-zhan-springboot-+-redis-fen-bu-shi-suo-mo-ni-qiang-dan.md)
 * [Mybatis 框架下 SQL 注入攻击的 3 种方式，真是防不胜防！](zu-jian/mybatis-kuang-jia-xia-sql-zhu-ru-gong-ji-de-3-zhong-fang-shi-zhen-shi-fang-bu-sheng-fang.md)
 * [MyBatis 动态 SQL（认真看看， 以后写 SQL 就爽多了）](zu-jian/mybatis-dong-tai-sql-ren-zhen-kan-kan-yi-hou-xie-sql-jiu-shuang-duo-le.md)
 
