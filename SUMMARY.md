@@ -98,6 +98,7 @@
 * [JAVA 线上故障排查](pai-cha-wen-ti-tiao-you/java-xian-shang-gu-zhang-pai-cha.md)
 * [Spring Boot“内存泄漏”？看看美团大牛是如何排查的](pai-cha-wen-ti-tiao-you/spring-boot-nei-cun-xie-lou-kan-kan-mei-tuan-da-niu-shi-ru-he-pai-cha-de.md)
 * [一次 Java 内存泄漏排查过程，值的一看！](pai-cha-wen-ti-tiao-you/yi-ci-java-nei-cun-xie-lou-pai-cha-guo-cheng-zhi-de-yi-kan.md)
+* [YGC问题排查，又让我涨姿势了！](pai-cha-wen-ti-tiao-you/ygc-wen-ti-pai-cha-you-rang-wo-zhang-zi-shi-le.md)
 
 ## Tools
 
