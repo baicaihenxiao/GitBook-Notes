@@ -90,12 +90,14 @@
 * [生产环境下到底应该如何优化MySQL锁等待？](database/sheng-chan-huan-jing-xia-dao-di-ying-gai-ru-he-you-hua-mysql-suo-deng-dai.md)
 * [永远不要在 MySQL 中使用 UTF-8](database/yong-yuan-bu-yao-zai-mysql-zhong-shi-yong-utf8.md)
 * [✔️什么是乐观锁，什么是悲观锁](database/shen-me-shi-le-guan-suo-shen-me-shi-bei-guan-suo.md)
+* [说说你知道的数据库常用架构方案？](database/shuo-shuo-ni-zhi-dao-de-shu-ju-ku-chang-yong-jia-gou-fang-an.md)
 
 ## 排查问题 调优
 
 * [提升系统 10 倍性能的 10 个建议！](pai-cha-wen-ti-tiao-you/ti-sheng-xi-tong-10-bei-xing-neng-de-10-ge-jian-yi.md)
 * [JAVA 线上故障排查](pai-cha-wen-ti-tiao-you/java-xian-shang-gu-zhang-pai-cha.md)
 * [Spring Boot“内存泄漏”？看看美团大牛是如何排查的](pai-cha-wen-ti-tiao-you/spring-boot-nei-cun-xie-lou-kan-kan-mei-tuan-da-niu-shi-ru-he-pai-cha-de.md)
+* [一次 Java 内存泄漏排查过程，值的一看！](pai-cha-wen-ti-tiao-you/yi-ci-java-nei-cun-xie-lou-pai-cha-guo-cheng-zhi-de-yi-kan.md)
 
 ## Tools
 
