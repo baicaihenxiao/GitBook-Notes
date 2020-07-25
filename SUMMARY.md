@@ -56,7 +56,9 @@
   * [SpringBoot中的条件注解底层是如何实现的？](spring/springboot/springboot-zhong-de-tiao-jian-zhu-jie-di-ceng-shi-ru-he-shi-xian-de.md)
   * [Spring Boot读取配置属性的常用方式](spring/springboot/spring-boot-du-qu-pei-zhi-shu-xing-de-chang-yong-fang-shi.md)
   * [Spring Boot 项目中的三种多数据源方案，一个比一个强！](spring/springboot/spring-boot-xiang-mu-zhong-de-san-zhong-duo-shu-ju-yuan-fang-an-yi-ge-bi-yi-ge-qiang.md)
-* [SSO 单点登录 芋道 Spring Security OAuth2 单点登录](spring/sso-dan-dian-deng-lu-yu-dao-spring-security-oauth2-dan-dian-deng-lu.md)
+* [Spring Security](spring/spring-security/README.md)
+  * [SSO 单点登录 芋道 Spring Security OAuth2 单点登录](spring/spring-security/sso-dan-dian-deng-lu-yu-dao-spring-security-oauth2-dan-dian-deng-lu.md)
+  * [Spring Security 实战干货：从零手写一个验证码登录](spring/spring-security/spring-security-shi-zhan-gan-huo-cong-ling-shou-xie-yi-ge-yan-zheng-ma-deng-lu.md)
 * [Spring Boot 2.x基础教程：事务管理入门](spring/spring-boot-2.x-ji-chu-jiao-cheng-shi-wu-guan-li-ru-men.md)
 * [面试问烂的 Spring AOP 原理、SpringMVC 过程](spring/mian-shi-shuo-shuo-spring-mvc-de-zhi-hang-guo-cheng.md)
 
