@@ -20,7 +20,7 @@
 
 🚫
 
-⬜  to read
+◻️ to read
 
 ## [Homepage](https://www.cser.club/)
 
