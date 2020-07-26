@@ -86,6 +86,7 @@
   * [Redis的内存淘汰策略问题](zu-jian/redis/redis-de-nei-cun-tao-tai-ce-lve-wen-ti.md)
 * [Mybatis 框架下 SQL 注入攻击的 3 种方式，真是防不胜防！](zu-jian/mybatis-kuang-jia-xia-sql-zhu-ru-gong-ji-de-3-zhong-fang-shi-zhen-shi-fang-bu-sheng-fang.md)
 * [MyBatis 动态 SQL（认真看看， 以后写 SQL 就爽多了）](zu-jian/mybatis-dong-tai-sql-ren-zhen-kan-kan-yi-hou-xie-sql-jiu-shuang-duo-le.md)
+* [如何干掉恶心的 SQL 注入？](zu-jian/ru-he-gan-diaoexin-de-sql-zhu-ru.md)
 
 ## DataBase
 
