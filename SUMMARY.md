@@ -98,6 +98,7 @@
 * [✔️什么是乐观锁，什么是悲观锁](database/shen-me-shi-le-guan-suo-shen-me-shi-bei-guan-suo.md)
 * [说说你知道的数据库常用架构方案？](database/shuo-shuo-ni-zhi-dao-de-shu-ju-ku-chang-yong-jia-gou-fang-an.md)
 * [为什么要分库分表?](database/wei-shen-me-yao-fen-ku-fen-biao.md)
+* [这次被坑惨了，MySQL的隐式转换导致了一个线上BUG](database/zhe-ci-bei-keng-can-le-mysql-de-yin-shi-zhuan-huan-dao-zhi-le-yi-ge-xian-shang-bug.md)
 
 ## 排查问题 调优
 
