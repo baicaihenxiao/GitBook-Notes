@@ -61,6 +61,7 @@
   * [Spring Security 实战干货：从零手写一个验证码登录](spring/spring-security/spring-security-shi-zhan-gan-huo-cong-ling-shou-xie-yi-ge-yan-zheng-ma-deng-lu.md)
 * [Spring Boot 2.x基础教程：事务管理入门](spring/spring-boot-2.x-ji-chu-jiao-cheng-shi-wu-guan-li-ru-men.md)
 * [面试问烂的 Spring AOP 原理、SpringMVC 过程](spring/mian-shi-shuo-shuo-spring-mvc-de-zhi-hang-guo-cheng.md)
+* [深入理解 Spring 中的各种注解，总有一个你不懂的？](spring/shen-ru-li-jie-spring-zhong-de-ge-zhong-zhu-jie-zong-you-yi-ge-ni-bu-dong-de.md)
 
 ## 组件
 
