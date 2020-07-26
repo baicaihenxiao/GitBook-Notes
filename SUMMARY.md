@@ -96,6 +96,7 @@
 * [永远不要在 MySQL 中使用 UTF-8](database/yong-yuan-bu-yao-zai-mysql-zhong-shi-yong-utf8.md)
 * [✔️什么是乐观锁，什么是悲观锁](database/shen-me-shi-le-guan-suo-shen-me-shi-bei-guan-suo.md)
 * [说说你知道的数据库常用架构方案？](database/shuo-shuo-ni-zhi-dao-de-shu-ju-ku-chang-yong-jia-gou-fang-an.md)
+* [为什么要分库分表?](database/wei-shen-me-yao-fen-ku-fen-biao.md)
 
 ## 排查问题 调优
 
