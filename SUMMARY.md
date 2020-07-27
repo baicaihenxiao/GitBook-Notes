@@ -63,6 +63,7 @@
 * [面试问烂的 Spring AOP 原理、SpringMVC 过程](spring/mian-shi-shuo-shuo-spring-mvc-de-zhi-hang-guo-cheng.md)
 * [深入理解 Spring 中的各种注解，总有一个你不懂的？](spring/shen-ru-li-jie-spring-zhong-de-ge-zhong-zhu-jie-zong-you-yi-ge-ni-bu-dong-de.md)
 * [Spring循环依赖的三种方式，你都清楚吗？](spring/spring-xun-huan-yi-lai-de-san-zhong-fang-shi-ni-du-qing-chu-ma.md)
+* [如果你每次面试前都要去背一篇Spring中Bean的生命周期，请看完这篇文章](spring/ru-guo-ni-mei-ci-mian-shi-qian-du-yao-qu-bei-yi-pian-spring-zhong-bean-de-sheng-ming-zhou-qi-qing-ka.md)
 
 ## 组件
 
