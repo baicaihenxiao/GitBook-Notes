@@ -74,6 +74,7 @@
 * [Java开发常用技术栈盘点](zu-jian/java-kai-fa-chang-yong-ji-shu-zhan-pan-dian.md)
 * [如何实现一个可复用的分布式事务消息架构方案？](zu-jian/ru-he-shi-xian-yi-ge-ke-fu-yong-de-fen-bu-shi-shi-wu-xiao-xi-jia-gou-fang-an.md)
 * [面试官问：Kafka 和 RocketMQ 快的飞起，底层存储有什么不同？](zu-jian/mian-shi-guan-wen-kafka-he-rocketmq-kuai-de-fei-qi-di-ceng-cun-chu-you-shen-me-bu-tong.md)
+* [点赞功能，用mysql还是redis？](zu-jian/dian-zan-gong-neng-yong-mysql-hai-shi-redis.md)
 * [mq](zu-jian/mq/README.md)
   * [springboot + rabbitmq 用了消息确认机制，感觉掉坑里了](zu-jian/mq/springboot-+-rabbitmq-yong-le-xiao-xi-que-ren-ji-zhi-gan-jue-diao-keng-li-le.md)
   * [✔️消息队列满了以后该怎么处理](zu-jian/mq/xiao-xi-dui-lie-man-le-yi-hou-gai-zen-me-chu-li.md)
@@ -130,6 +131,7 @@
 * [你观察过么？从输入网址到显示网页，这个过程究竟发生了什么？](network/ni-guan-cha-guo-me-cong-shu-ru-wang-zhi-dao-xian-shi-wang-ye-zhe-ge-guo-cheng-jiu-jing-fa-sheng-le-s.md)
 * [谈谈 Tomcat 请求处理流程](network/tan-tan-tomcat-qing-qiu-chu-li-liu-cheng.md)
 * [✔️ 新手入门：Nginx详解](network/xin-shou-ru-men-nginx-xiang-jie.md)
+* [一口气说出 4 种分布式一致性 Session 实现方式，面试杠杠的~](network/yi-kou-qi-shuo-chu-4-zhong-fen-bu-shi-yi-zhi-xing-session-shi-xian-fang-shi-mian-shi-gang-gang-de.md)
 
 ## PROJECT
 

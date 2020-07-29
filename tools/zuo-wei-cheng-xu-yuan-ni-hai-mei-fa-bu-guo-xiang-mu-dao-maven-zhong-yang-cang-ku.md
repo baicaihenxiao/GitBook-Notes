@@ -1,26 +1,22 @@
 # 作为程序员，你还没发布过项目到Maven中央仓库
 
-https://mp.weixin.qq.com/s/EaBdgdNIuWBNuKwwNRINqw
+[https://mp.weixin.qq.com/s/EaBdgdNIuWBNuKwwNRINqw](https://mp.weixin.qq.com/s/EaBdgdNIuWBNuKwwNRINqw)
 
-
-
-https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NDAzMzIyNQ==&action=getalbum&album_id=1328385793563639809&subscene=159&subscene=&scenenote=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FEaBdgdNIuWBNuKwwNRINqw#wechat_redirect
-
-
+[https://mp.weixin.qq.com/mp/appmsgalbum?\_\_biz=MzI0NDAzMzIyNQ==&action=getalbum&album\_id=1328385793563639809&subscene=159&subscene=&scenenote=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FEaBdgdNIuWBNuKwwNRINqw\#wechat\_redirect](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NDAzMzIyNQ==&action=getalbum&album_id=1328385793563639809&subscene=159&subscene=&scenenote=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FEaBdgdNIuWBNuKwwNRINqw#wechat_redirect)
 
 在Maven项目中，90%以上的jar包是通过pom文件直接从开源仓库中获取依赖jar包文件，然后在项目中进行集成使用。
 
 此时如果你有一个开源项目，那么如何将该开源项目发布到Maven中央仓库，让其他人可以方便的使用，而不是先下载jar，然后install的本地？
 
-本文将通过一步步的操作带领大家讲自己的开源项目发布到Maven中央仓库(Maven Central Repository)中，https://mvnrepository.com/。
+本文将通过一步步的操作带领大家讲自己的开源项目发布到Maven中央仓库\(Maven Central Repository\)中，[https://mvnrepository.com/。](https://mvnrepository.com/。)
 
 Maven中央仓库并不支持直接发布jar包，需要将jar包发布到一些指定的第三方Maven仓库，然后该仓库再将jar包同步到Maven中央仓库，Sonatype便是这样的角色。
 
-本文系统配置如下：1、操作系统macOS 10.14.2；2、JDK1.8.0_192；3、Maven：3.5.4。
+本文系统配置如下：1、操作系统macOS 10.14.2；2、JDK1.8.0\_192；3、Maven：3.5.4。
 
 ## 准备工作
 
-注册GitHub的账户，地址：https://github.com。既然是开源项目，肯定需要有一个地方托管，这里采用GitHub。
+注册GitHub的账户，地址：[https://github.com。既然是开源项目，肯定需要有一个地方托管，这里采用GitHub。](https://github.com。既然是开源项目，肯定需要有一个地方托管，这里采用GitHub。)
 
 然后创建项目，上传对应的项目代码。
 
@@ -30,7 +26,7 @@ Maven中央仓库并不支持直接发布jar包，需要将jar包发布到一些
 
 Sonatype通过JIRA来管理OSSRH仓库。JIRA是一个项目管理服务，类似于国内的Teambition。
 
-注册地址：https://issues.sonatype.org/secure/Signup!default.jspa
+注册地址：[https://issues.sonatype.org/secure/Signup!default.jspa](https://issues.sonatype.org/secure/Signup!default.jspa)
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/29/640-20200729100917391-100917.jpg)
 
@@ -52,13 +48,15 @@ Sonatype通过JIRA来管理OSSRH仓库。JIRA是一个项目管理服务，类�
 
 上图问中文版本时填写信息，其中项目要选择“Community Support”项，对应的问题类型选择“New Project”。按照上述选择，才会在下面展示出对应GroupId和Project信息。
 
-Project URL便是项目的URL地址，也就是你访问到GitHub项目时的浏览器URL，比如：https://github.com/secbr/fastdfs-client-plus
+Project URL便是项目的URL地址，也就是你访问到GitHub项目时的浏览器URL，比如：[https://github.com/secbr/fastdfs-client-plus](https://github.com/secbr/fastdfs-client-plus)
 
-SCM url是基于Https形式访问源代码的链接。我们知道获取GitHub的源代码可以有多种形式，下载zip包、通过“Use ssh”，“Use Https”等形式下载，这里的SCM URL便是Https的url地址，比如：https://github.com/secbr/fastdfs-client-plus.git
+SCM url是基于Https形式访问源代码的链接。我们知道获取GitHub的源代码可以有多种形式，下载zip包、通过“Use ssh”，“Use Https”等形式下载，这里的SCM URL便是Https的url地址，比如：[https://github.com/secbr/fastdfs-client-plus.git](https://github.com/secbr/fastdfs-client-plus.git)
 
 其他非必填信息根据需要选择填写即可。
 
-提交完成之后，会创建一个Issues，内容显示如下： ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/29/640-20200729100917752-100917.jpg)
+提交完成之后，会创建一个Issues，内容显示如下： 
+
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/29/640-20200729100917752-100917.jpg)
 
 很显然，目前处于“待解决”状态，等审核。在写这篇文章十多分钟之后便受到官方审核人员的回复“Waiting for Response”。同时，在Issues下方会出现对应的提示注释信息。
 
@@ -88,7 +86,7 @@ SCM url是基于Https形式访问源代码的链接。我们知道获取GitHub�
 
 本人采用Mac操作系统，关于其他操作系统的安装大家自行搜索。
 
-MacBook安装GPG非常简单，下载并安装GPG Suite即可：https://gpgtools.org/
+MacBook安装GPG非常简单，下载并安装GPG Suite即可：[https://gpgtools.org/](https://gpgtools.org/)
 
 安装完成可进入创建GPG密钥对的操作界面，Mac下安装完成弹出如下页面：
 
@@ -102,7 +100,7 @@ MacBook安装GPG非常简单，下载并安装GPG Suite即可：https://gpgtools
 
 如果忘记了公钥信息可执行gpg --list-keys命令查看本地公钥信息。
 
-```
+```text
 192:~ zzs$ gpg --list-keys
 /Users/zzs/.gnupg/pubring.kbx
 -----------------------------
@@ -123,7 +121,7 @@ sub   rsa4096 2020-07-27 [E] [有效至：2024-07-27]
 
 也可以通过如下形式将公钥信息上传到服务器：
 
-```
+```text
 gpg --keyserver hkp://keyserver.ubuntu.com:11371 --send-keys B97E9964ACAD1907970D37CC8A9E3745558E41AF
 ```
 
@@ -133,9 +131,9 @@ gpg --keyserver hkp://keyserver.ubuntu.com:11371 --send-keys B97E9964ACAD1907970
 
 ## 配置Maven的setting.xml
 
-setting.xml为Maven的全局配置文件，路径为$MAVEN_HOME/conf/settings.xml，需要注册Sonatype的账户时配置的Username和Password添加到servers标签中，这样才能将jar包部署到Sonatype OSSRH仓库：
+setting.xml为Maven的全局配置文件，路径为$MAVEN\_HOME/conf/settings.xml，需要注册Sonatype的账户时配置的Username和Password添加到servers标签中，这样才能将jar包部署到Sonatype OSSRH仓库：
 
-```
+```text
 <server>
   <id>sonatype-nexus-snapshots</id>
   <username>Sonatype账号</username>
@@ -147,18 +145,18 @@ setting.xml为Maven的全局配置文件，路径为$MAVEN_HOME/conf/settings.xm
 
 根据Sonatype OSSRH的要求，以下信息都必须配置：
 
-- Supply Javadoc and Sources
-- Sign Files with GPG/PGP
-- Sufficient Metadata
-- Correct Coordinates
-- Project Name, Description and URL
-- License Information
-- Developer Information
-- SCM Information
+* Supply Javadoc and Sources
+* Sign Files with GPG/PGP
+* Sufficient Metadata
+* Correct Coordinates
+* Project Name, Description and URL
+* License Information
+* Developer Information
+* SCM Information
 
 增加开源许可协议，SCM信息，开发者信息等待根据自己信息填写即可。
 
-```
+```text
 <licenses>
     <license>
       <name>BSD 3-Clause</name>
@@ -183,7 +181,7 @@ setting.xml为Maven的全局配置文件，路径为$MAVEN_HOME/conf/settings.xm
 
 如果发布Release版本，需要添加Release的相关profile配置，distributionManagement节和maven-compiler-plugin节的配置信息根据自己的实际情况做修改。
 
-```
+```text
 <profiles>
     <profile>
       <id>release</id>
@@ -294,7 +292,7 @@ setting.xml为Maven的全局配置文件，路径为$MAVEN_HOME/conf/settings.xm
 
 完成上述配置，则可通过命令进行打包上传，即可将jar包发布到Sonatype OSSRH仓库。
 
-```
+```text
 mvn clean deploy -P release
 ```
 
@@ -306,13 +304,13 @@ mvn clean deploy -P release
 
 【友情提示】如果打包过程中出现了401类的错误，可能是因为Maven的配置文件中Server节点配置的用户名和密码不正确，或者Issue还未审核通过。
 
-此时访问上面的任何一个链接，便查询对应的信息。比如将url中的具体文件去掉，只留如下路径：https://oss.sonatype.org/content/repositories/snapshots/com/github/secbr/fastdfs-client-plus/1.0.0-SNAPSHOT/
+此时访问上面的任何一个链接，便查询对应的信息。比如将url中的具体文件去掉，只留如下路径：[https://oss.sonatype.org/content/repositories/snapshots/com/github/secbr/fastdfs-client-plus/1.0.0-SNAPSHOT/](https://oss.sonatype.org/content/repositories/snapshots/com/github/secbr/fastdfs-client-plus/1.0.0-SNAPSHOT/)
 
 访问上述路径，便可查看到所有上传的文件信息。
 
 ## 查看发布jar包
 
-此时进入https://oss.sonatype.org/#stagingRepositories查看发布好的构件，点击左侧的Staging Repositories，可以使用Group Id或其他信息搜索自己的项目。
+此时进入[https://oss.sonatype.org/\#stagingRepositories查看发布好的构件，点击左侧的Staging](https://oss.sonatype.org/#stagingRepositories查看发布好的构件，点击左侧的Staging) Repositories，可以使用Group Id或其他信息搜索自己的项目。
 
 如果弹出用户名或密码，则输入注册sonatype时对应的用户和密码信息。
 
@@ -332,7 +330,9 @@ mvn clean deploy -P release
 
 release成功大概2个小时之后，该构件就会同步到Maven中央仓库，届时会有邮件通知。
 
-实践过程中发现十分钟之内已经成功同步到https://repo1.maven.org/的中央仓库当中。 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/29/640-20200729100920349-100920.jpg)
+实践过程中发现十分钟之内已经成功同步到[https://repo1.maven.org/的中央仓库当中。](https://repo1.maven.org/的中央仓库当中。) 
+
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/29/640-20200729100920349-100920.jpg)
 
 逐步的其他Maven仓库，包括阿里镜像都会进行同步。
 
@@ -341,6 +341,4 @@ release成功大概2个小时之后，该构件就会同步到Maven中央仓库�
 当发布到Maven中央仓库完成，可以看到对应的Jar包时，可以对自己提交的Issue增加Comment，留言致谢并表示发布已经完成，请工作人员关闭Issue。有始有终。
 
 作为程序员，终于在Maven中央仓库有一套自己的代码是不是很兴奋的一件事！分享、点赞、在看来一波。
-
-
 
