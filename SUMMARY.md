@@ -83,6 +83,7 @@
   * [面试官：你对Kafka比较熟？ 那说说kafka日志段如何读写的吧？](zu-jian/kafka/mian-shi-guan-ni-dui-kafka-bi-jiao-shou-na-shuo-shuo-kafka-ri-zhi-duan-ru-he-du-xie-de-ba.md)
   * [SpringBoot开发案例之整合Kafka实现消息队列](zu-jian/kafka/springboot-kai-fa-an-li-zhi-zheng-he-kafka-shi-xian-xiao-xi-dui-lie.md)
 * [redis](zu-jian/redis/README.md)
+  * [面试官这夺命连环12问](zu-jian/redis/mian-shi-guan-zhe-duo-ming-lian-huan-12-wen.md)
   * [SpringCloud 妹子图之 Redis 高可用集群](zu-jian/redis/springcloud-mei-zi-tu-zhi-redis-gao-ke-yong-ji-qun.md)
   * [在Redis中设置了过期时间的Key，需要注意哪些问题？](zu-jian/redis/zai-redis-zhong-she-zhi-le-guo-qi-shi-jian-de-key-xu-yao-zhu-yi-na-xie-wen-ti.md)
   * [如何设计一个本地缓存](zu-jian/redis/ru-he-she-ji-yi-ge-ben-di-huan-cun.md)
