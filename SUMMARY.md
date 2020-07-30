@@ -143,6 +143,7 @@
 * [Docker+Jenkins+Nginx+SpringBoot自动化部署项目](project/docker+jenkins+nginx+springboot-zi-dong-hua-bu-shu-xiang-mu.md)
 * [Jenkins安装并部署Java项目完整流程](project/jenkins-an-zhuang-bing-bu-shu-java-xiang-mu-wan-zheng-liu-cheng.md)
 * [一款直击痛点的优秀http框架，让我超高效率完成了和第三方接口的对接](project/yi-kuan-zhi-ji-tong-dian-de-you-xiu-http-kuang-jia-rang-wo-chao-gao-xiao-lv-wan-cheng-le-he-di-san-f.md)
+* [✔️⭐\(报价+合同\)程序员接私活完整攻略+赠开源管理系统](project/bao-jia-+-he-tong-cheng-xu-yuan-jie-si-huo-wan-zheng-gong-lve-+-zeng-kai-yuan-guan-li-xi-tong.md)
 * [项目参考](project/xiang-mu-can-kao.md)
 
 ## CAREER
