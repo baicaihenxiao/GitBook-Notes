@@ -1,4 +1,4 @@
-# SpringBoot优雅的全局异常处理
+# ✔️⭐SpringBoot优雅的全局异常处理
 
 [https://mp.weixin.qq.com/s?\_\_biz=MzU0MDEwMjgwNA==&mid=2247489582&idx=1&sn=b13f80ba6ab6fae52b45b0a3036ca6cb&chksm=fb3f01d5cc4888c3f4aec86b079a79501cd18956d909831347a947f104ffa6fb8542a7c4cf55&scene=0&xtrack=1\#rd](https://mp.weixin.qq.com/s?__biz=MzU0MDEwMjgwNA==&mid=2247489582&idx=1&sn=b13f80ba6ab6fae52b45b0a3036ca6cb&chksm=fb3f01d5cc4888c3f4aec86b079a79501cd18956d909831347a947f104ffa6fb8542a7c4cf55&scene=0&xtrack=1#rd)
 
@@ -209,11 +209,11 @@ public class BizException extends RuntimeException {
 }
 ```
 
-**自定义数据格式**
+#### **自定义数据格式**
 
 顺便这里我们定义一下数据的传输格式。**代码如下:**
 
-```text
+```java
 public class ResultBody {
  /**
   * 响应代码
@@ -325,11 +325,11 @@ public class ResultBody {
 }
 ```
 
-**自定义全局异常处理类**
+#### **自定义全局异常处理类**
 
 最后我们在来编写一个自定义全局异常处理的类。**代码如下:**
 
-```text
+```java
 @ControllerAdvice
 public class GlobalExceptionHandler {
  private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
@@ -378,13 +378,13 @@ public class GlobalExceptionHandler {
 
 因为这里我们只是用于做全局异常处理的功能实现以及测试，所以这里我们只需在添加一个实体类和一个控制层类即可。
 
-**实体类**
+#### **实体类**
 
 又是万能的用户表 \(_^▽^_\)
 
 **代码如下：**
 
-```text
+```java
 public class User implements Serializable{
  private static final long serialVersionUID = 1L;
  /** 编号 */
@@ -427,13 +427,13 @@ public class User implements Serializable{
 }
 ```
 
-**Controller 控制层**
+#### **Controller 控制层**
 
 控制层这边也比较简单，使用Restful风格实现的CRUD功能，不同的是这里我故意弄出了一些异常，好让这些异常被捕获到然后处理。这些异常中，有自定义的异常抛出，也有空指针的异常抛出，当然也有不可预知的异常抛出\(这里我用类型转换异常代替\)，那么我们在完成代码编写之后，看看这些异常是否能够被捕获处理成功吧！
 
 **代码如下:**
 
-```text
+```java
 @RestController
 @RequestMapping(value = "/api")
 public class UserRestController {
@@ -480,13 +480,13 @@ public class UserRestController {
 }
 ```
 
-**App 入口**
+#### **App 入口**
 
 和普通的SpringBoot项目基本一样。
 
 **代码如下:**
 
-```text
+```java
 @SpringBootApplication
 public class App 
 {
@@ -530,7 +530,9 @@ Body参数为:
 
 > {"code":"-1","message":"用户姓名不能为空！","result":null}
 
-**示例图:**![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/31/640-20200731093317854-093317.jpg)可以看出将我们抛出的异常进行数据封装，然后将异常返回出来。
+**示例图:**可以看出将我们抛出的异常进行数据封装，然后将异常返回出来。
+
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/31/640-20200731093317854-093317.jpg)
 
 然后我们再来测试下空指针异常是否能够被正确的捕获并处理。在自定义全局异常中，我们除了定义空指针的异常处理，也定义最高级别之一的Exception异常，那么这里发生了空指针异常之后，它是回优先使用哪一个呢？这里我们来测试下。
 
