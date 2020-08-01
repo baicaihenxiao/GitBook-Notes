@@ -100,6 +100,7 @@
 * [MyBatis 动态 SQL（认真看看， 以后写 SQL 就爽多了）](zu-jian/mybatis-dong-tai-sql-ren-zhen-kan-kan-yi-hou-xie-sql-jiu-shuang-duo-le.md)
 * [如何干掉恶心的 SQL 注入？](zu-jian/ru-he-gan-diaoexin-de-sql-zhu-ru.md)
 * [因用了Insert into select语句，同事被开除了！](zu-jian/yin-yong-le-insert-into-select-yu-ju-tong-shi-bei-kai-chu-le.md)
+* [Mybatis 动态SQL（认真看看， 以后写SQL就爽多了）](zu-jian/mybatis-dong-tai-sql-ren-zhen-kan-kan-yi-hou-xie-sql-jiu-shuang-duo-le-1.md)
 
 ## DataBase
 
