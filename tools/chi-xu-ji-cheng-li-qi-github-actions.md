@@ -44,7 +44,7 @@ GitHub Actions 可以理解为提交代码到 GitHub 后 GitHub 直接提供服�
 
 之后每一个操作就可以理解为是一个 action，很多个操作叠加起来就是 actions
 
-官方提供了 actions 市场，可以根据自己的需求选择，`https://github.com/marketplace?type=actions`
+官方提供了 actions 市场，可以根据自己的需求选择，[https://github.com/marketplace?type=actions](https://github.com/marketplace?type=actions)
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/09/640-20200709105937131-105937.png)
 
