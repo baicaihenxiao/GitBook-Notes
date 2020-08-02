@@ -2,7 +2,8 @@
 
 * [Welcome to My Notes](README.md)
 * [➡️　GITBOOK VERSION](https://note.cser.club/)
-* [➡️　DOCSIFY VERSION](https://www.cser.club/GitBook-Notes/#/)
+* [➡️　DOCSIFY GITHUB VERSION](https://www.cser.club/GitBook-Notes/#/)
+* [➡️　DOCSIFY GITEE VERSION](https://baicaihenxiao.gitee.io/gitbook-notes/#/)
 * [➡️　SUMMARY](https://github.com/baicaihenxiao/GitBook-Notes/blob/master/SUMMARY.md)
 
 ## java
