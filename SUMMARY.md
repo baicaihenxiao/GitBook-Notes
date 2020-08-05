@@ -191,4 +191,5 @@
 * [markdown test](misc/markdown-test.md)
 * [test file](misc/test-file.md)
 * [未分类文章](misc/wei-fen-lei-wen-zhang.md)
+* [一份工具清单就可以令 Python 变快](misc/yi-fen-gong-ju-qing-dan-jiu-ke-yi-ling-python-bian-kuai.md)
 
