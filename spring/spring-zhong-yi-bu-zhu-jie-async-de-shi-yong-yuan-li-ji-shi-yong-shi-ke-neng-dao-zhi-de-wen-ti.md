@@ -16,17 +16,15 @@
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/05/640-20200805155951991-155952.jpg)
 
-## 
-
 ## **@Async的基本使用**
 
 这个注解的作用在于可以让被标注的方法异步执行，但是有两个前提条件
 
-\1. 配置类上添加@EnableAsync注解
+1. 配置类上添加@EnableAsync注解
 
-\2. 需要异步执行的方法的所在类由Spring管理
+2. 需要异步执行的方法的所在类由Spring管理
 
-\3. 需要异步执行的方法上添加了@Async注解
+3. 需要异步执行的方法上添加了@Async注解
 
 我们通过一个Demo体会下这个注解的作用吧
 
@@ -77,13 +75,11 @@ public class Main {
 
 通过上面的例子我们可以发现，`DmzAsyncService`中的`testAsync`方法是异步执行的，那么这背后的原理是什么呢？我们接着分析
 
-## 
-
 ## **原理分析**
 
 我们在分析某一个技术的时候，最重要的事情是，一定一定要找到代码的入口，像Spring这种都很明显，入口必定是在`@EnableAsync`这个注解上面，我们来看看这个注解干了啥事（本文基于`5.2.x`版本）
 
-```text
+```java
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
@@ -109,7 +105,7 @@ public @interface EnableAsync {
 
 上面这个注解做的最重要的事情就是导入了一个`AsyncConfigurationSelector`，这个类的源码如下：
 
-```text
+```java
 public class AsyncConfigurationSelector extends AdviceModeImportSelector<EnableAsync> {
 
  private static final String ASYNC_EXECUTION_ASPECT_CONFIGURATION_CLASS_NAME =
