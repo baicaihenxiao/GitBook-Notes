@@ -95,6 +95,7 @@
 * [kafka](zu-jian/kafka/README.md)
   * [面试官：你对Kafka比较熟？ 那说说kafka日志段如何读写的吧？](zu-jian/kafka/mian-shi-guan-ni-dui-kafka-bi-jiao-shou-na-shuo-shuo-kafka-ri-zhi-duan-ru-he-du-xie-de-ba.md)
   * [SpringBoot开发案例之整合Kafka实现消息队列](zu-jian/kafka/springboot-kai-fa-an-li-zhi-zheng-he-kafka-shi-xian-xiao-xi-dui-lie.md)
+  * [面试官：知道时间轮算法吗？在Netty和Kafka中如何应用的？](zu-jian/kafka/mian-shi-guan-zhi-dao-shi-jian-lun-suan-fa-ma-zai-netty-he-kafka-zhong-ru-he-ying-yong-de.md)
 * [redis](zu-jian/redis/README.md)
   * [面试官这夺命连环12问](zu-jian/redis/mian-shi-guan-zhe-duo-ming-lian-huan-12-wen.md)
   * [SpringCloud 妹子图之 Redis 高可用集群](zu-jian/redis/springcloud-mei-zi-tu-zhi-redis-gao-ke-yong-ji-qun.md)
@@ -121,6 +122,8 @@
 * [说说你知道的数据库常用架构方案？](database/shuo-shuo-ni-zhi-dao-de-shu-ju-ku-chang-yong-jia-gou-fang-an.md)
 * [为什么要分库分表?](database/wei-shen-me-yao-fen-ku-fen-biao.md)
 * [这次被坑惨了，MySQL的隐式转换导致了一个线上BUG](database/zhe-ci-bei-keng-can-le-mysql-de-yin-shi-zhuan-huan-dao-zhi-le-yi-ge-xian-shang-bug.md)
+* [mysql数据库时间类型datetime、bigint、timestamp的查询效率比较](database/mysql-shu-ju-ku-shi-jian-lei-xing-datetimebiginttimestamp-de-cha-xun-xiao-lv-bi-jiao.md)
+* [MySQL 的 Binlog 日志处理工具（Canal/Maxwell/Databus/DTS）对比](database/mysql-de-binlog-ri-zhi-chu-li-gong-ju-canalmaxwelldatabusdts-dui-bi.md)
 
 ## 排查问题 调优
 
