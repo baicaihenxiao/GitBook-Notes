@@ -74,6 +74,7 @@
 * [图解Spring循环依赖，看过之后再也不怕面试被问到了！](spring/tu-jie-spring-xun-huan-yi-lai-kan-guo-zhi-hou-zai-ye-bu-pa-mian-shi-bei-wen-dao-le.md)
 * [如果你每次面试前都要去背一篇Spring中Bean的生命周期，请看完这篇文章](spring/ru-guo-ni-mei-ci-mian-shi-qian-du-yao-qu-bei-yi-pian-spring-zhong-bean-de-sheng-ming-zhou-qi-qing-ka.md)
 * [Spring中异步注解@Async的使用、原理及使用时可能导致的问题](spring/spring-zhong-yi-bu-zhu-jie-async-de-shi-yong-yuan-li-ji-shi-yong-shi-ke-neng-dao-zhi-de-wen-ti.md)
+* [Spring中@Component，@Service等注解如何被解析？](spring/spring-zhong-componentservice-deng-zhu-jie-ru-he-bei-jie-xi.md)
 
 ## 组件
 
