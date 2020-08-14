@@ -108,6 +108,7 @@
   * [Redis的内存淘汰策略问题](zu-jian/redis/redis-de-nei-cun-tao-tai-ce-lve-wen-ti.md)
   * [最全 \| Redis可视化工具横向评测](zu-jian/redis/zui-quan-redis-ke-shi-hua-gong-ju-heng-xiang-ping-ce.md)
   * [因 Redis 分布式锁造成的 P0 级重大事故](zu-jian/redis/yin-redis-fen-bu-shi-suo-zao-cheng-de-p0-ji-zhong-da-shi-gu.md)
+  * [熬了一个通宵，终于把7千万个Key删完了](zu-jian/redis/ao-le-yi-ge-tong-xiao-zhong-yu-ba-7-qian-wan-ge-key-shan-wan-le.md)
 * [Mybatis 框架下 SQL 注入攻击的 3 种方式，真是防不胜防！](zu-jian/mybatis-kuang-jia-xia-sql-zhu-ru-gong-ji-de-3-zhong-fang-shi-zhen-shi-fang-bu-sheng-fang.md)
 * [MyBatis 动态 SQL（认真看看， 以后写 SQL 就爽多了）](zu-jian/mybatis-dong-tai-sql-ren-zhen-kan-kan-yi-hou-xie-sql-jiu-shuang-duo-le.md)
 * [如何干掉恶心的 SQL 注入？](zu-jian/ru-he-gan-diaoexin-de-sql-zhu-ru.md)
