@@ -142,14 +142,16 @@
 
 * [因为知道了30+款在线工具，我的工作效率提升500%!](tools/untitled-5.md)
 * [程序员好货网站大盘点](tools/cheng-xu-yuan-hao-huo-wang-zhan-da-pan-dian.md)
-* [Git 看这一篇就够了](tools/git-kan-zhe-yi-pian-jiu-gou-le.md)
 * [持续集成利器，GitHub Actions](tools/chi-xu-ji-cheng-li-qi-github-actions.md)
 * [科普 \| Shell中傻傻分不清楚的TOP3](tools/untitled-6.md)
 * [原来这就是Java代码生成器的原理啊，太简单了](tools/yuan-lai-zhe-jiu-shi-java-dai-ma-sheng-cheng-qi-de-yuan-lia-tai-jian-dan-le.md)
 * [让程序员爱不释手的6大代码对比工具！](tools/rang-cheng-xu-yuan-ai-bu-shi-shou-de-6-da-dai-ma-dui-bi-gong-ju.md)
 * [作为程序员，你还没发布过项目到Maven中央仓库](tools/zuo-wei-cheng-xu-yuan-ni-hai-mei-fa-bu-guo-xiang-mu-dao-maven-zhong-yang-cang-ku.md)
-* [惊艳！小姐姐用动画图解 Git 的 10 大命令，这也太秀了吧！](tools/jing-yan-xiao-jie-jie-yong-dong-hua-tu-jie-git-de-10-da-ming-ling-zhe-ye-tai-xiu-le-ba.md)
-* [Merging 和 Rebasing 的大比拼](tools/merging-he-rebasing-de-da-bi-pin.md)
+* [git](tools/git/README.md)
+  * [Merging 和 Rebasing 的大比拼](tools/git/merging-he-rebasing-de-da-bi-pin.md)
+  * [Git科普文，Git基本原理&各种骚操作](tools/git/git-ke-pu-wen-git-ji-ben-yuan-li-ge-zhong-sao-cao-zuo.md)
+  * [惊艳！小姐姐用动画图解 Git 的 10 大命令，这也太秀了吧！](tools/git/jing-yan-xiao-jie-jie-yong-dong-hua-tu-jie-git-de-10-da-ming-ling-zhe-ye-tai-xiu-le-ba.md)
+  * [Git 看这一篇就够了](tools/git/git-kan-zhe-yi-pian-jiu-gou-le.md)
 
 ## NETWORK
 
