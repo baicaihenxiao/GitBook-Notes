@@ -128,6 +128,7 @@
 * [mysql数据库时间类型datetime、bigint、timestamp的查询效率比较](database/mysql-shu-ju-ku-shi-jian-lei-xing-datetimebiginttimestamp-de-cha-xun-xiao-lv-bi-jiao.md)
 * [MySQL 的 Binlog 日志处理工具（Canal/Maxwell/Databus/DTS）对比](database/mysql-de-binlog-ri-zhi-chu-li-gong-ju-canalmaxwelldatabusdts-dui-bi.md)
 * [HBase/TiDB都在用的数据结构：LSM Tree，不得了解一下？](database/hbasetidb-du-zai-yong-de-shu-ju-jie-gou-lsm-tree-bu-de-le-jie-yi-xia.md)
+* [必须了解的mysql三大日志-binlog、redo log和undo log](database/bi-xu-le-jie-de-mysql-san-da-ri-zhi-binlogredo-log-he-undo-log.md)
 
 ## 排查问题 调优
 
