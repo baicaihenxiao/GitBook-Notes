@@ -63,6 +63,7 @@
   * [从零搭建Spring Boot脚手架（1）：开篇以及技术选型](spring/springboot/cong-ling-da-jian-spring-boot-jiao-shou-jia-1-kai-pian-yi-ji-ji-shu-xuan-xing.md)
   * [Spring Boot 中 @EnableXXX 注解的驱动逻辑探讨](spring/springboot/spring-boot-zhong-enablexxx-zhu-jie-de-qu-dong-luo-ji-tan-tao.md)
   * [✔️⭐SpringBoot优雅的全局异常处理](spring/springboot/springboot-you-ya-de-quan-ju-yi-chang-chu-li.md)
+  * [IDEA + Spring Boot 的三种热加载方案，看完弄懂，不用加班~](spring/springboot/idea-+-spring-boot-de-san-zhong-re-jia-zai-fang-an-kan-wan-nong-dong-bu-yong-jia-ban.md)
 * [Spring Security](spring/spring-security/README.md)
   * [SSO 单点登录 芋道 Spring Security OAuth2 单点登录](spring/spring-security/sso-dan-dian-deng-lu-yu-dao-spring-security-oauth2-dan-dian-deng-lu.md)
   * [Spring Security 实战干货：从零手写一个验证码登录](spring/spring-security/spring-security-shi-zhan-gan-huo-cong-ling-shou-xie-yi-ge-yan-zheng-ma-deng-lu.md)
