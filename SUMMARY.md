@@ -34,6 +34,7 @@
   * [为什么synchronized无法禁止指令重排，却能保证有序性？](java/bing-fa/wei-shen-me-synchronized-wu-fa-jin-zhi-zhi-ling-zhong-pai-que-neng-bao-zheng-you-xu-xing.md)
   * [写的很好！细数 Java 线程池的原理](java/bing-fa/xie-de-hen-hao-xi-shu-java-xian-cheng-chi-de-yuan-li.md)
   * [搞定ReentrantReadWriteLock 几道小小数学题就够了](java/bing-fa/gao-ding-reentrantreadwritelock-ji-dao-xiao-xiao-shu-xue-ti-jiu-gou-le.md)
+  * [Java之戳中痛点之 synchronized](java/bing-fa/java-zhi-chuo-zhong-tong-dian-zhi-synchronized.md)
 * [工具类](java/gong-ju-lei/README.md)
   * [两难！到底用Apache BeanUtils还是Spring BeanUtils？](java/gong-ju-lei/liang-nan-dao-di-yong-apache-beanutils-hai-shi-spring-beanutils.md)
   * [开源工具类](java/gong-ju-lei/kai-yuan-gong-ju-lei.md)
