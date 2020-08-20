@@ -38,6 +38,7 @@
 * [工具类](java/gong-ju-lei/README.md)
   * [两难！到底用Apache BeanUtils还是Spring BeanUtils？](java/gong-ju-lei/liang-nan-dao-di-yong-apache-beanutils-hai-shi-spring-beanutils.md)
   * [开源工具类](java/gong-ju-lei/kai-yuan-gong-ju-lei.md)
+  * [Java中的BigDecimal，你真的会用吗？](java/gong-ju-lei/java-zhong-de-bigdecimal-ni-zhen-de-hui-yong-ma.md)
 * [一文吃透Java集合框架](java/yi-wen-chi-tou-java-ji-he-kuang-jia.md)
 * [你必须掌握的 21 个 Java 核心技术！](java/untitled.md)
 * [什么是Java内存模型](java/untitled-4.md)
