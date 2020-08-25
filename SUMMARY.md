@@ -92,6 +92,7 @@
 * [面试官问：Kafka 和 RocketMQ 快的飞起，底层存储有什么不同？](zu-jian/mian-shi-guan-wen-kafka-he-rocketmq-kuai-de-fei-qi-di-ceng-cun-chu-you-shen-me-bu-tong.md)
 * [点赞功能，用mysql还是redis？](zu-jian/dian-zan-gong-neng-yong-mysql-hai-shi-redis.md)
 * [每个公司都会用的短 URL 服务，怎么设计与实现？](zu-jian/mei-ge-gong-si-du-hui-yong-de-duan-url-fu-wu-zen-me-she-ji-yu-shi-xian.md)
+* [分布式系统互斥性与幂等性问题的分析与解决](zu-jian/fen-bu-shi-xi-tong-hu-chi-xing-yu-mi-deng-xing-wen-ti-de-fen-xi-yu-jie-jue.md)
 * [cron](zu-jian/cron/README.md)
   * [有个定时任务突然不执行了，别急！原因可能在这](zu-jian/cron/you-ge-ding-shi-ren-wu-tu-ran-bu-zhi-hang-le-bie-ji-yuan-yin-ke-neng-zai-zhe.md)
 * [mq](zu-jian/mq/README.md)
