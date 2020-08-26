@@ -159,6 +159,7 @@
 * [作为程序员，你还没发布过项目到Maven中央仓库](tools/zuo-wei-cheng-xu-yuan-ni-hai-mei-fa-bu-guo-xiang-mu-dao-maven-zhong-yang-cang-ku.md)
 * [grep、sed、awk 高效文件处理 3 剑客！](tools/grepsedawk-gao-xiao-wen-jian-chu-li-3-jian-ke.md)
 * [git](tools/git/README.md)
+  * [后端必备 Git 分支开发：规范指南](tools/git/hou-duan-bi-bei-git-fen-zhi-kai-fa-gui-fan-zhi-nan.md)
   * [Merging 和 Rebasing 的大比拼](tools/git/merging-he-rebasing-de-da-bi-pin.md)
   * [Git科普文，Git基本原理&各种骚操作](tools/git/git-ke-pu-wen-git-ji-ben-yuan-li-ge-zhong-sao-cao-zuo.md)
   * [惊艳！小姐姐用动画图解 Git 的 10 大命令，这也太秀了吧！](tools/git/jing-yan-xiao-jie-jie-yong-dong-hua-tu-jie-git-de-10-da-ming-ling-zhe-ye-tai-xiu-le-ba.md)
