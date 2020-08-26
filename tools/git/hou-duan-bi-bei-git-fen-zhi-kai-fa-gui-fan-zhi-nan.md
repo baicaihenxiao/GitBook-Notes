@@ -4,6 +4,8 @@
 
 
 
+> [https://github.com/angular/angular.js/blob/master/DEVELOPERS.md\#-git-commit-guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)
+
 * 分支管理
 * * 分支命名
     * 常见任务
