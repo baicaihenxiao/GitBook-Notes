@@ -49,6 +49,7 @@
 * [如果面试被问“零拷贝”，你会怎么办？](java/untitled-1.md)
 * [用Java的时候，你是如何实现时间控制的？](java/yong-java-de-shi-hou-ni-shi-ru-he-shi-xian-shi-jian-kong-zhi-de.md)
 * [✔️⭐ 一个秒杀系统的设计思考](java/yi-ge-miao-sha-xi-tong-de-she-ji-si-kao.md)
+* [阿里的秒杀系统是怎么设计的？](java/e-li-de-miao-sha-xi-tong-shi-zen-me-she-ji-de.md)
 * [分布式系统的CAP理论](java/fen-bu-shi-xi-tong-de-cap-li-lun.md)
 * [【高并发】高并发秒杀系统架构解密，不是所有的秒杀都是秒杀！](java/gao-bing-fa-gao-bing-fa-miao-sha-xi-tong-jia-gou-jie-mi-bu-shi-suo-you-de-miao-sha-du-shi-miao-sha.md)
 * [Apache 架构师的 30 条设计原则！](java/untitled-2.md)
