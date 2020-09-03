@@ -40,6 +40,8 @@
   * [两难！到底用Apache BeanUtils还是Spring BeanUtils？](java/gong-ju-lei/liang-nan-dao-di-yong-apache-beanutils-hai-shi-spring-beanutils.md)
   * [开源工具类](java/gong-ju-lei/kai-yuan-gong-ju-lei.md)
   * [Java中的BigDecimal，你真的会用吗？](java/gong-ju-lei/java-zhong-de-bigdecimal-ni-zhen-de-hui-yong-ma.md)
+* [JVM](java/jvm/README.md)
+  * [深入理解堆外内存 Metaspace](java/jvm/shen-ru-li-jie-dui-wai-nei-cun-metaspace.md)
 * [书签](java/untitled-5.md)
 * [✔️⭐ 一文学会注解的正确使用姿势](java/yi-wen-xue-hui-zhu-jie-de-zheng-que-shi-yong-zi-shi.md)
 * [一文吃透Java集合框架](java/yi-wen-chi-tou-java-ji-he-kuang-jia.md)
