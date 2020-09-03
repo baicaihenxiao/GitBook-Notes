@@ -42,6 +42,7 @@
   * [Java中的BigDecimal，你真的会用吗？](java/gong-ju-lei/java-zhong-de-bigdecimal-ni-zhen-de-hui-yong-ma.md)
 * [JVM](java/jvm/README.md)
   * [深入理解堆外内存 Metaspace](java/jvm/shen-ru-li-jie-dui-wai-nei-cun-metaspace.md)
+  * [一次完整的JVM堆外内存泄漏故障排查记录](java/jvm/yi-ci-wan-zheng-de-jvm-dui-wai-nei-cun-xie-lou-gu-zhang-pai-cha-ji-lu.md)
 * [书签](java/untitled-5.md)
 * [✔️⭐ 一文学会注解的正确使用姿势](java/yi-wen-xue-hui-zhu-jie-de-zheng-que-shi-yong-zi-shi.md)
 * [一文吃透Java集合框架](java/yi-wen-chi-tou-java-ji-he-kuang-jia.md)
