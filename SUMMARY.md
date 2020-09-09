@@ -112,6 +112,7 @@
   * [SpringBoot开发案例之整合Kafka实现消息队列](zu-jian/kafka/springboot-kai-fa-an-li-zhi-zheng-he-kafka-shi-xian-xiao-xi-dui-lie.md)
   * [面试官：知道时间轮算法吗？在Netty和Kafka中如何应用的？](zu-jian/kafka/mian-shi-guan-zhi-dao-shi-jian-lun-suan-fa-ma-zai-netty-he-kafka-zhong-ru-he-ying-yong-de.md)
 * [redis](zu-jian/redis/README.md)
+  * [这可能是最中肯的Redis规范了](zu-jian/redis/zhe-ke-neng-shi-zui-zhong-ken-de-redis-gui-fan-le.md)
   * [Redis——由分布式锁造成的重大事故](zu-jian/redis/redis-you-fen-bu-shi-suo-zao-cheng-de-zhong-da-shi-gu.md)
   * [面试官这夺命连环12问](zu-jian/redis/mian-shi-guan-zhe-duo-ming-lian-huan-12-wen.md)
   * [SpringCloud 妹子图之 Redis 高可用集群](zu-jian/redis/springcloud-mei-zi-tu-zhi-redis-gao-ke-yong-ji-qun.md)
