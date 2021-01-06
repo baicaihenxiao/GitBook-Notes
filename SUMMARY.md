@@ -160,6 +160,7 @@
 * [Java 应用线上问题排查思路、常用工具小结](pai-cha-wen-ti-tiao-you/java-ying-yong-xian-shang-wen-ti-pai-cha-si-lu-chang-yong-gong-ju-xiao-jie.md)
 * [记一次线上商城系统高并发的优化](pai-cha-wen-ti-tiao-you/ji-yi-ci-xian-shang-shang-cheng-xi-tong-gao-bing-fa-de-you-hua.md)
 * [记一次订单号重复的事故，快看看你的 uuid 在并发下还正确吗？](pai-cha-wen-ti-tiao-you/ji-yi-ci-ding-dan-hao-zhong-fu-de-shi-gu-kuai-kan-kan-ni-de-uuid-zai-bing-fa-xia-hai-zheng-que-ma.md)
+* [两套详细的设计方案，解决头疼的掉单问题](pai-cha-wen-ti-tiao-you/liang-tao-xiang-xi-de-she-ji-fang-an-jie-jue-tou-teng-de-diao-dan-wen-ti.md)
 
 ## Tools
 
