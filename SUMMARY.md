@@ -199,6 +199,7 @@
 * [✔️⭐\(报价+合同\)程序员接私活完整攻略+赠开源管理系统](project/bao-jia-+-he-tong-cheng-xu-yuan-jie-si-huo-wan-zheng-gong-lve-+-zeng-kai-yuan-guan-li-xi-tong.md)
 * [如何设计 QQ、微信、微博、Github 等等，第三方账号登陆 ？（附表设计）](project/ru-he-she-ji-qq-wei-xin-wei-bo-github-deng-deng-di-san-fang-zhang-hao-deng-lu-fu-biao-she-ji.md)
 * [✔️⭐ MEGAEASE的远程工作文化](project/megaease-de-yuan-cheng-gong-zuo-wen-hua.md)
+* [SpringBoot 项目模板：摆脱步步搭建](project/springboot-xiang-mu-mo-ban-bai-tuo-bu-bu-da-jian.md)
 
 ## CAREER
 
