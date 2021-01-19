@@ -56,7 +56,7 @@ Bean 的定义主要有 BeanDefinition 描述，如下图说明了这些类的�
 
 ![&#x56FE; 4. Bean &#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x5C42;&#x6B21;&#x5173;&#x7CFB;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image004-114838.png)
 
-Bean 的定义就是完整的描述了在 Spring 的配置文件中你定义的 节点中所有的信息，包括各种子节点。当 Spring 成功解析你定义的一个 节点后，在 Spring 的内部就被转化成 BeanDefinition 对象。以后所有的操作都是对这个对象完成的。
+Bean 的定义就是完整的描述了在 Spring 的配置文件中你定义的 节点中所有的信息，包括各种子节点。当 Spring 成功解析你定义的一个 节点后，在 Spring 的内部就被转化成 **BeanDefinition 对象**。以后所有的操作都是对这个对象完成的。
 
 Bean 的解析过程非常复杂，功能被分的很细，因为这里需要被扩展的地方很多，必须保证有足够的灵活性，以应对可能的变化。Bean 的解析主要就是对 Spring 配置文件的解析。这个解析过程主要通过下图中的类完成：
 
