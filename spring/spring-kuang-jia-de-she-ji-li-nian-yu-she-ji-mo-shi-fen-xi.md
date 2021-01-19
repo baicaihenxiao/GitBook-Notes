@@ -42,7 +42,7 @@ Bean 在 Spring 中作用就像 Object 对 OOP 的意义一样，没有对象的
 
 前面已经说明了 Bean 组件对 Spring 的重要性，下面看看 Bean 这个组件式怎么设计的。Bean 组件在 Spring 的 **org.springframework.beans** 包下。这个包下的所有类主要解决了三件事：**Bean 的定义、Bean 的创建以及对 Bean 的解析**。对 Spring 的使用者来说唯一需要关心的就是 Bean 的创建，其他两个由 Spring 在内部帮你完成了，对你来说是透明的。
 
-#### bean创建
+#### 1.bean创建
 
 Spring Bean 的**创建**是典型的**工厂模式**，它的**顶级接口是 BeanFactory**，下图是这个工厂的继承层次关系：
 
@@ -81,7 +81,7 @@ BeanFactory 有三个子类：ListableBeanFactory、HierarchicalBeanFactory 和 
 
 
 
-#### bean定义
+#### 2.bean定义
 
 Bean 的定义主要有 BeanDefinition 描述，如下图说明了这些类的层次关系：
 
@@ -90,6 +90,8 @@ Bean 的定义主要有 BeanDefinition 描述，如下图说明了这些类的�
 ![&#x56FE; 4. Bean &#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x5C42;&#x6B21;&#x5173;&#x7CFB;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image004-114838.png)
 
 Bean 的定义就是完整的描述了在 Spring 的配置文件中你定义的 节点中所有的信息，包括各种子节点。当 Spring 成功解析你定义的一个 节点后，在 Spring 的内部就被转化成 **BeanDefinition 对象**。以后所有的操作都是对这个对象完成的。
+
+#### 3.bean解析
 
 Bean 的解析过程非常复杂，功能被分的很细，因为这里需要被扩展的地方很多，必须保证有足够的灵活性，以应对可能的变化。Bean 的解析主要就是对 Spring 配置文件的解析。这个解析过程主要通过下图中的类完成：
 
