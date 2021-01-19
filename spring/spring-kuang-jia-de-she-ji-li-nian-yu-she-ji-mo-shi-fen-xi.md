@@ -42,6 +42,8 @@ Bean 在 Spring 中作用就像 Object 对 OOP 的意义一样，没有对象的
 
 前面已经说明了 Bean 组件对 Spring 的重要性，下面看看 Bean 这个组件式怎么设计的。Bean 组件在 Spring 的 **org.springframework.beans** 包下。这个包下的所有类主要解决了三件事：**Bean 的定义、Bean 的创建以及对 Bean 的解析**。对 Spring 的使用者来说唯一需要关心的就是 Bean 的创建，其他两个由 Spring 在内部帮你完成了，对你来说是透明的。
 
+#### bean创建
+
 Spring Bean 的**创建**是典型的**工厂模式**，它的**顶级接口是 BeanFactory**，下图是这个工厂的继承层次关系：
 
 **图 3. Bean 工厂的继承关系**
@@ -49,6 +51,37 @@ Spring Bean 的**创建**是典型的**工厂模式**，它的**顶级接口是 
 ![&#x56FE; 3. Bean &#x5DE5;&#x5382;&#x7684;&#x7EE7;&#x627F;&#x5173;&#x7CFB;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image003-114838.png)
 
 BeanFactory 有三个子类：ListableBeanFactory、HierarchicalBeanFactory 和 AutowireCapableBeanFactory。但是从上图中我们可以发现**最终的默认实现类是 DefaultListableBeanFactory**，实现了所有的接口。那为何要定义这么多层次的接口呢？查阅这些接口的源码和说明发现，每个接口都有使用的场合，它主要是**为了区分在 Spring 内部对象的传递和转化过程中，对对象的数据访问所做的限制。例如 ListableBeanFactory 接口表示这些 Bean 是可列表的，而 HierarchicalBeanFactory 表示的这些 Bean 是有继承关系的，也就是每个 Bean 有可能有父 Bean**。AutowireCapableBeanFactory 接口定义 Bean 的自动装配规则。这四个接口共同定义了 Bean 的集合、Bean 之间的关系、以及 Bean 行为。
+
+> **`org.springframework.beans.factory.BeanFactory`**
+>
+> 注释： This interface is implemented by objects that hold a number of bean definitions, each uniquely identified by a String name. Depending on the bean definition, the factory will return either an independent instance of a contained object \(the Prototype design pattern\), or a single shared instance \(a superior alternative to the Singleton design pattern, in which the instance is a singleton in the scope of the factory\). Which type of instance will be returned depends on the bean factory configuration: the API is the same. Since Spring 2.0, further scopes are available depending on the concrete application context
+>
+> Bean factory implementations should support the standard bean lifecycle interfaces as far as possible. The full set of initialization methods and their standard order is:
+>
+> 1. BeanNameAware's {@code setBeanName}
+> 2. BeanClassLoaderAware's {@code setBeanClassLoader}
+> 3. BeanFactoryAware's {@code setBeanFactory}
+> 4. EnvironmentAware's {@code setEnvironment}
+> 5. EmbeddedValueResolverAware's {@code setEmbeddedValueResolver}
+> 6. ResourceLoaderAware's {@code setResourceLoader} \(only applicable when running in an application context\)
+> 7. ApplicationEventPublisherAware's {@code setApplicationEventPublisher} \(only applicable when running in an application context\)
+> 8. MessageSourceAware's {@code setMessageSource} \(only applicable when running in an application context\)
+> 9. ApplicationContextAware's {@code setApplicationContext} \(only applicable when running in an application context\)
+> 10. ServletContextAware's {@code setServletContext} \(only applicable when running in a web application context\)
+> 11. {@code postProcessBeforeInitialization} methods of BeanPostProcessors
+> 12. InitializingBean's {@code afterPropertiesSet}
+> 13. a custom init-method definition
+> 14. {@code postProcessAfterInitialization} methods of BeanPostProcessors
+>
+> On shutdown of a bean factory, the following lifecycle methods apply:
+>
+> 1. {@code postProcessBeforeDestruction} methods of DestructionAwareBeanPostProcessors
+> 2. DisposableBean's {@code destroy}
+> 3. a custom destroy-method definition
+
+
+
+#### bean定义
 
 Bean 的定义主要有 BeanDefinition 描述，如下图说明了这些类的层次关系：
 
