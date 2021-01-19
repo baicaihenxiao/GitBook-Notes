@@ -91,6 +91,32 @@ Bean 的定义主要有 BeanDefinition 描述，如下图说明了这些类的�
 
 Bean 的定义就是完整的描述了在 Spring 的配置文件中你定义的 节点中所有的信息，包括各种子节点。当 Spring 成功解析你定义的一个 节点后，在 Spring 的内部就被转化成 **BeanDefinition 对象**。以后所有的操作都是对这个对象完成的。
 
+> **`org.springframework.beans.factory.support.AbstractBeanDefinition`**
+>
+> Base class for concrete, full-fledged BeanDefinition classes, factoring out common properties of `GenericBeanDefinition`, `RootBeanDefinition`, and `ChildBeanDefinition`.
+>
+> [spring beans源码解读之--Bean的定义及包装](https://www.cnblogs.com/davidwang456/p/4192318.html)
+>
+> 1.4 bean definition实现类ChildBeanDefinition, GenericBeanDefinition, RootBeanDefinition
+>
+> 　1.4.1　ChildBeanDefinition是一种bean definition，它可以继承它父类的设置，即ChildBeanDefinition对RootBeanDefinition有一定的依赖关系。
+>
+> 　　ChildBeanDefinition从父类继承构造参数值，属性值并可以重写父类的方法，同时也可以增加新的属性或者方法。\(类同于java类的继承关系\)。若指定初始化方法，销毁方法或者静态工厂方法，　　ChildBeanDefinition将重写相应父类的设置。depends on，autowire mode，dependency check，sigleton，lazy init 一般由子类自行设定。
+>
+> 注意：从spring 2.5 开始，提供了一个更好的注册bean definition类GenericBeanDefinition，它支持动态定义父依赖，方法是GenericBeanDefinition.setParentName\(java.lang.String\)，GenericBeanDefinition可以有效的替代ChildBeanDefinition的绝大分部使用场合。
+>
+>   1.4.2 GenericBeanDefinition是一站式的标准bean definition，除了具有指定类、可选的构造参数值和属性参数这些其它bean definition一样的特性外，它还具有通过parenetName属性来灵活设置parent bean definition。
+>
+> 通常， GenericBeanDefinition用来注册用户可见的bean definition\(可见的bean definition意味着可以在该类bean definition上定义post-processor来对bean进行操作，甚至为配置parent name做扩展准备\)。`RootBeanDefinition` / `ChildBeanDefinition用来预定义具有`parent/child关系的bean definition。
+>
+> 1.4.3 RootBeanDefinition
+>
+>     一个RootBeanDefinition定义表明它是一个可合并的bean definition：即在spring beanFactory运行期间，可以返回一个特定的bean。RootBeanDefinition可以作为一个重要的通用的bean definition 视图。
+>
+> RootBeanDefinition用来在配置阶段进行注册bean definition。然后，**从spring 2.5后，编写注册bean definition有了更好的的方法：GenericBeanDefinition。GenericBeanDefinition支持动态定义父类依赖，而非硬编码作为root bean definition。**
+
+
+
 #### 3.bean解析
 
 Bean 的解析过程非常复杂，功能被分的很细，因为这里需要被扩展的地方很多，必须保证有足够的灵活性，以应对可能的变化。Bean 的解析主要就是对 Spring 配置文件的解析。这个解析过程主要通过下图中的类完成：
@@ -103,11 +129,11 @@ Bean 的解析过程非常复杂，功能被分的很细，因为这里需要被
 
 **Context 组件**
 
-Context 在 Spring 的 org.springframework.context 包下，前面已经讲解了 Context 组件在 Spring 中的作用，他实际上就是给 Spring 提供一个运行时的环境，用以保存各个对象的状态。下面看一下这个环境是如何构建的。
+Context 在 Spring 的 org.springframework.context 包下，前面已经讲解了 Context 组件在 Spring 中的作用，他实际上就是**给 Spring 提供一个运行时的环境，用以保存各个对象的状态**。下面看一下这个环境是如何构建的。
 
-ApplicationContext 是 Context 的顶级父类，他除了能标识一个应用环境的基本信息外，他还继承了五个接口，这五个接口主要是扩展了 Context 的功能。下面是 Context 的类结构图：
+**ApplicationContext 是 Context 的顶级父类，他除了能标识一个应用环境的基本信息外，他还继承了五个接口，这五个接口主要是扩展了 Context 的功能。**下面是 Context 的类结构图：
 
-**图 6. Context 相关的类结构图**
+#### **图 6. Context 相关的类结构图**
 
 ![&#x56FE; 6. Context &#x76F8;&#x5173;&#x7684;&#x7C7B;&#x7ED3;&#x6784;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image006-114838.png)
 
@@ -120,12 +146,12 @@ ApplicationContext 的子类主要包含两个方面：
 
 再往下分就是按照构建 Context 的文件类型，接着就是访问 Context 的方式。这样一级一级构成了完整的 Context 等级层次。
 
-总体来说 ApplicationContext 必须要完成以下几件事：
+总体来说 **ApplicationContext 必须要完成以下几件事：**
 
-* 标识一个应用环境
-* 利用 BeanFactory 创建 Bean 对象
-* 保存对象关系表
-* 能够捕获各种事件
+* **标识一个应用环境**
+* **利用 BeanFactory 创建 Bean 对象**
+* **保存对象关系表**
+* **能够捕获各种事件**
 
 Context 作为 Spring 的 Ioc 容器，基本上整合了 Spring 的大部分功能，或者说是大部分功能的基础。
 
@@ -135,11 +161,11 @@ Core 组件作为 Spring 的核心组件，他其中包含了很多的关键类�
 
 下图是 Resource 相关的类结构图：
 
-**图 7. Resource 相关的类结构图**
+#### **图 7. Resource 相关的类结构图**
 
 ![&#x56FE; 7. Resource &#x76F8;&#x5173;&#x7684;&#x7C7B;&#x7ED3;&#x6784;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image007-114839.png)
 
-从上图可以看出 Resource 接口封装了各种可能的资源类型，也就是对使用者来说屏蔽了文件类型的不同。对资源的提供者来说，如何把资源包装起来交给其他人用这也是一个问题，我们看到 Resource 接口继承了 InputStreamSource 接口，这个接口中有个 getInputStream 方法，返回的是 InputStream 类。这样所有的资源都被可以通过 InputStream 这个类来获取，所以也屏蔽了资源的提供者。另外还有一个问题就是加载资源的问题，也就是资源的加载者要统一，从上图中可以看出这个任务是由 ResourceLoader 接口完成，他屏蔽了所有的资源加载者的差异，只需要实现这个接口就可以加载所有的资源，他的默认实现是 DefaultResourceLoader。
+从上图可以看出 **Resource 接口封装了各种可能的资源类型**，也就是对使用者来说屏蔽了文件类型的不同。对资源的提供者来说，如何把资源包装起来交给其他人用这也是一个问题，我们看到 Resource 接口继承了 InputStreamSource 接口，这个接口中有个 getInputStream 方法，返回的是 InputStream 类。这样所有的资源都被可以通过 InputStream 这个类来获取，所以也屏蔽了资源的提供者。另外还有一个问题就是加载资源的问题，也就是资源的加载者要统一，从上图中可以看出这个任务是**由 ResourceLoader 接口完成，他屏蔽了所有的资源加载者的差异，只需要实现这个接口就可以加载所有的资源，他的默认实现是 DefaultResourceLoader。**
 
 下面看一下 Context 和 Resource 是如何建立关系的？首先看一下他们的类关系图：
 
@@ -155,11 +181,11 @@ Core 组件作为 Spring 的核心组件，他其中包含了很多的关键类�
 
 **如何创建 BeanFactory 工厂**
 
-正如图 2 描述的那样，Ioc 容器实际上就是 Context 组件结合其他两个组件共同构建了一个 Bean 关系网，如何构建这个关系网？构建的入口就在 AbstractApplicationContext 类的 refresh 方法中。这个方法的代码如下：
+正如图 2 描述的那样，**Ioc 容器实际上就是 Context 组件结合其他两个组件共同构建了一个 Bean 关系网，如何构建这个关系网？构建的入口就在 AbstractApplicationContext 类的 refresh 方法中。**这个方法的代码如下：
 
 **清单 1. AbstractApplicationContext.refresh**
 
-```text
+```java
 public void refresh() throws BeansException, IllegalStateException {
     synchronized (this.startupShutdownMonitor) {
         // Prepare this context for refreshing.
