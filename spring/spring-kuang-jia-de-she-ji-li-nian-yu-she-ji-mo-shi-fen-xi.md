@@ -131,7 +131,9 @@ Bean 的解析过程非常复杂，功能被分的很细，因为这里需要被
 
 #### **图 5. Bean 的解析类**
 
-![&#x56FE; 5. Bean &#x7684;&#x89E3;&#x6790;&#x7C7B;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image005-114838.png)
+
+
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221751378-221751.jpg)
 
 当然还有具体对 tag 的解析这里并没有列出。
 
@@ -143,7 +145,7 @@ Context 在 Spring 的 org.springframework.context 包下，前面已经讲解�
 
 #### **图 6. Context 相关的类结构图**
 
-![&#x56FE; 6. Context &#x76F8;&#x5173;&#x7684;&#x7C7B;&#x7ED3;&#x6784;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image006-114838.png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221754084-221754.jpg)
 
 从上图中可以看出 ApplicationContext 继承了 BeanFactory，这也说明了 Spring 容器中运行的主体对象是 Bean，另外 ApplicationContext 继承了 ResourceLoader 接口，使得 ApplicationContext 可以访问到任何外部资源，这将在 Core 中详细说明。
 
@@ -171,7 +173,7 @@ Core 组件作为 Spring 的核心组件，他其中包含了很多的关键类�
 
 #### **图 7. Resource 相关的类结构图**
 
-![&#x56FE; 7. Resource &#x76F8;&#x5173;&#x7684;&#x7C7B;&#x7ED3;&#x6784;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image007-114839.png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221754854-221754.jpg)
 
 从上图可以看出 **Resource 接口封装了各种可能的资源类型**，也就是对使用者来说屏蔽了文件类型的不同。对资源的提供者来说，如何把资源包装起来交给其他人用这也是一个问题，我们看到 Resource 接口继承了 InputStreamSource 接口，这个接口中有个 getInputStream 方法，返回的是 InputStream 类。这样所有的资源都被可以通过 InputStream 这个类来获取，所以也屏蔽了资源的提供者。另外还有一个问题就是加载资源的问题，也就是资源的加载者要统一，从上图中可以看出这个任务是**由 ResourceLoader 接口完成，他屏蔽了所有的资源加载者的差异，只需要实现这个接口就可以加载所有的资源，他的默认实现是 DefaultResourceLoader。**
 
@@ -179,7 +181,7 @@ Core 组件作为 Spring 的核心组件，他其中包含了很多的关键类�
 
 **图 8. Context 和 Resource 的类关系图**
 
-![&#x56FE; 8. Context &#x548C; Resource &#x7684;&#x7C7B;&#x5173;&#x7CFB;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image008-114839.png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221755365-221755.jpg)
 
 从上图可以看出，Context 是把资源的加载、解析和描述工作委托给了 ResourcePatternResolver 类来完成，他相当于一个接头人，他把资源的加载、解析和资源的定义整合在一起便于其他组件使用。Core 组件中还有很多类似的方式。
 
@@ -276,7 +278,7 @@ protected final void refreshBeanFactory() throws BeansException {
 
 **图 9. DefaultListableBeanFactory 类继承关系图**
 
-![&#x56FE; 9. DefaultListableBeanFactory &#x7C7B;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image009-114839.png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221755872-221756.jpg)
 
 从这个图中发现除了 BeanFactory 相关的类外，还发现了与 Bean 的 register 相关。这在 refreshBeanFactory 方法中有一行 loadBeanDefinitions\(beanFactory\) 将找到答案，这个方法将开始加载、解析 Bean 的定义，也就是把用户定义的数据结构转化为 Ioc 容器中的特定数据结构。
 
@@ -284,13 +286,13 @@ protected final void refreshBeanFactory() throws BeansException {
 
 **图 10. 创建 BeanFactory 时序图**
 
-![&#x56FE; 10. &#x521B;&#x5EFA; BeanFactory &#x65F6;&#x5E8F;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image010-114839.png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221756149-221756.jpg)
 
 Bean 的解析和登记流程时序图如下：
 
 **图 11. 解析和登记 Bean 对象时序图**
 
-![&#x56FE; 11. &#x89E3;&#x6790;&#x548C;&#x767B;&#x8BB0; Bean &#x5BF9;&#x8C61;&#x65F6;&#x5E8F;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image011-114839.png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221757186-221757.jpg)
 
 创建好 BeanFactory 后，接下去添加一些 Spring 本身需要的一些工具类，这个操作在 AbstractApplicationContext 的 prepareBeanFactory 方法完成。
 
@@ -388,19 +390,19 @@ public void preInstantiateSingletons() throws BeansException {
 
 **图 12.Bean 实例创建流程图**
 
-![&#x56FE; 12.Bean &#x5B9E;&#x4F8B;&#x521B;&#x5EFA;&#x6D41;&#x7A0B;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/gif/2021/01/19/image012-114839.gif)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221758221-221758.jpg)
 
 如果是普通的 Bean 就直接创建他的实例，是通过调用 getBean 方法。下面是创建 Bean 实例的时序图：
 
 **图 13.Bean 实例创建时序图**
 
-![&#x56FE; 13.Bean &#x5B9E;&#x4F8B;&#x521B;&#x5EFA;&#x65F6;&#x5E8F;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image013-114839.png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221800452-221800.jpg)
 
 还有一个非常重要的部分就是建立 Bean 对象实例之间的关系，这也是 Spring 框架的核心竞争力，何时、如何建立他们之间的关系请看下面的时序图：
 
 **图 14.Bean 对象关系建立**
 
-![&#x56FE; 14.Bean &#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x5EFA;&#x7ACB;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image014-114840.png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221802342-221802.jpg)
 
 **Ioc 容器的扩展点**
 
@@ -521,7 +523,7 @@ Spring 的 Aop 实现是遵守 Aop 联盟的约定。同时 Spring 又扩展了�
 
 **图 17. Jdk 动态代理的类图**
 
-![&#x56FE; 17. Jdk &#x52A8;&#x6001;&#x4EE3;&#x7406;&#x7684;&#x7C7B;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image017-114840.png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221805553-221805.jpg)
 
 上图清楚的显示了 Spring 引用了 Aop Alliance 定义的接口。姑且不讨论 Spring 如何扩展 Aop Alliance，先看看 Spring 如何实现代理类的，要实现代理类在 Spring 的配置文件中通常是这样定一个 Bean 的，如下：
 
@@ -558,7 +560,7 @@ Spring 的 Aop 实现是遵守 Aop 联盟的约定。同时 Spring 又扩展了�
 
 **图 18.Spring 代理对象的产生**
 
-![&#x56FE; 18.Spring &#x4EE3;&#x7406;&#x5BF9;&#x8C61;&#x7684;&#x4EA7;&#x751F;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image018-114840.png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221806290-221806.jpg)
 
 Spring 创建了代理对象后，当你调用目标对象上的方法时，将都会被代理到 InvocationHandler 类的 invoke 方法中执行，这在前面已经解释。在这里 JdkDynamicAopProxy 类实现了 InvocationHandler 接口。
 
@@ -566,7 +568,7 @@ Spring 创建了代理对象后，当你调用目标对象上的方法时，将�
 
 **图 19.Spring 调用拦截器**
 
-![&#x56FE; 19.Spring &#x8C03;&#x7528;&#x62E6;&#x622A;&#x5668;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image019-114840.png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221807504-221807.jpg)
 
 以上所说的都是 Jdk 动态代理，Spring 还支持一种 CGLIB 类代理，感兴趣自己看吧。
 
@@ -594,7 +596,7 @@ Spring Aop 中 Jdk 动态代理就是利用代理模式技术实现的。在 Spr
 
 **图 21. Spring 中使用代理模式的结构图**
 
-![&#x56FE; 21. Spring &#x4E2D;&#x4F7F;&#x7528;&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#x7684;&#x7ED3;&#x6784;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/gif/2021/01/19/image021-114840.gif)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221808282-221808.jpg)
 
 $Proxy 就是创建的代理对象，而 Subject 是抽象主题，代理对象是通过 InvocationHandler 来持有对目标对象的引用的。
 
@@ -702,7 +704,7 @@ Spring 中策略模式使用有多个地方，如 Bean 定义对象的创建以�
 
 **图 23. Spring 中策略模式结构图**
 
-![&#x56FE; 23. Spring &#x4E2D;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#x7ED3;&#x6784;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image023-114840.png)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221809063-221809.jpg)
 
 在上面结构图中与标准的策略模式结构稍微有点不同，这里抽象策略是 AopProxy 接口，Cglib2AopProxy 和 JdkDynamicAopProxy 分别代表两种策略的实现方式，ProxyFactoryBean 就是代表 Context 角色，它根据条件选择使用 Jdk 代理方式还是 CGLIB 方式，而另外三个类主要是来负责创建具体策略对象，ProxyFactoryBean 是通过依赖的方法来关联具体策略对象的，它是通过调用策略对象的 getProxy\(ClassLoader classLoader\) 方法来完成操作。
 
