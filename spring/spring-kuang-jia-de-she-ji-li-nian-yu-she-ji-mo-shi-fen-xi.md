@@ -3,6 +3,8 @@
 许令波 发布: 2010-06-10
 
 > [https://developer.ibm.com/zh/articles/j-lo-spring-principle/](https://developer.ibm.com/zh/articles/j-lo-spring-principle/)
+>
+> [https://juejin.cn/post/6844903693087670285](https://juejin.cn/post/6844903693087670285)
 
 ## Spring 的骨骼架构
 
@@ -10,7 +12,9 @@ Spring 总共有十几个组件，但是真正核心的组件只有几个，下�
 
 **图 1 .Spring 框架的总体架构图**
 
-![&#x56FE; 1 .Spring &#x6846;&#x67B6;&#x7684;&#x603B;&#x4F53;&#x67B6;&#x6784;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/gif/2021/01/19/image001-114838.gif)
+\*\*\*\*
+
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221748946-221749.jpg)
 
 从上图中可以看出 **Spring 框架中的核心组件只有三个：Core、Context 和 Beans**。它们构建起了整个 Spring 的骨骼架构。没有它们就不可能有 AOP、Web 等上层的特性功能。下面也将主要从这三个组件入手分析 Spring。
 
@@ -32,7 +36,9 @@ Bean 在 Spring 中作用就像 Object 对 OOP 的意义一样，没有对象的
 
 **图 2. 三个组件关系**
 
-![&#x56FE; 2. &#x4E09;&#x4E2A;&#x7EC4;&#x4EF6;&#x5173;&#x7CFB;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/gif/2021/01/19/image002-114838.gif)
+\*\*\*\*
+
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221749233-221749.jpg)
 
 ### 核心组件详解
 
@@ -48,7 +54,9 @@ Spring Bean 的**创建**是典型的**工厂模式**，它的**顶级接口是 
 
 **图 3. Bean 工厂的继承关系**
 
-![&#x56FE; 3. Bean &#x5DE5;&#x5382;&#x7684;&#x7EE7;&#x627F;&#x5173;&#x7CFB;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image003-114838.png)
+\*\*\*\*
+
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221749962-221750.jpg)
 
 BeanFactory 有三个子类：ListableBeanFactory、HierarchicalBeanFactory 和 AutowireCapableBeanFactory。但是从上图中我们可以发现**最终的默认实现类是 DefaultListableBeanFactory**，实现了所有的接口。那为何要定义这么多层次的接口呢？查阅这些接口的源码和说明发现，每个接口都有使用的场合，它主要是**为了区分在 Spring 内部对象的传递和转化过程中，对对象的数据访问所做的限制。例如 ListableBeanFactory 接口表示这些 Bean 是可列表的，而 HierarchicalBeanFactory 表示的这些 Bean 是有继承关系的，也就是每个 Bean 有可能有父 Bean**。AutowireCapableBeanFactory 接口定义 Bean 的自动装配规则。这四个接口共同定义了 Bean 的集合、Bean 之间的关系、以及 Bean 行为。
 
@@ -226,8 +234,6 @@ public void refresh() throws BeansException, IllegalStateException {
 }
 ```
 
-显示更多
-
 这个方法就是构建整个 Ioc 容器过程的完整的代码，了解了里面的每一行代码基本上就了解大部分 Spring 的原理和功能了。
 
 这段代码主要包含这样几个步骤：
@@ -243,7 +249,7 @@ public void refresh() throws BeansException, IllegalStateException {
 
 **清单 2. AbstractRefreshableApplicationContext. refreshBeanFactory**
 
-```text
+```java
 protected final void refreshBeanFactory() throws BeansException {
     if (hasBeanFactory()) {
         destroyBeans();
@@ -266,9 +272,7 @@ protected final void refreshBeanFactory() throws BeansException {
 }
 ```
 
-显示更多
-
-这个方法实现了 AbstractApplicationContext 的抽象方法 refreshBeanFactory，这段代码清楚的说明了 BeanFactory 的创建过程。注意 BeanFactory 对象的类型的变化，前面介绍了他有很多子类，在什么情况下使用不同的子类这非常关键。BeanFactory 的原始对象是 DefaultListableBeanFactory，这个非常关键，因为他设计到后面对这个对象的多种操作，下面看一下这个类的继承层次类图：
+这个方法实现了 AbstractApplicationContext 的抽象方法 refreshBeanFactory，这段代码清楚的说明了 BeanFactory 的创建过程。注意 BeanFactory 对象的类型的变化，前面介绍了他有很多子类，在什么情况下使用不同的子类这非常关键。**BeanFactory 的原始对象是 DefaultListableBeanFactory**，这个非常关键，因为他设计到后面对这个对象的多种操作，下面看一下这个类的继承层次类图：
 
 **图 9. DefaultListableBeanFactory 类继承关系图**
 
