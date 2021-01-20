@@ -302,12 +302,10 @@ AbstractApplicationContext 中接下来的三行代码对 Spring 的功能扩展
 
 **清单 3. BeanFactoryPostProcessor.postProcessBeanFactory**
 
-```text
+```java
 void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory)
     throws BeansException;
 ```
-
-显示更多
 
 它的参数是 beanFactory，说明可以对 beanFactory 做修改，这里注意这个 beanFactory 是 ConfigurableListableBeanFactory 类型的，这也印证了前面介绍的不同 BeanFactory 所使用的场合不同，这里只能是可配置的 BeanFactory，防止一些数据被用户随意修改。
 
@@ -321,7 +319,7 @@ registerBeanPostProcessors 方法也是可以获取用户定义的实现了 Bean
 
 **清单 4. AbstractApplicationContext.finishBeanFactoryInitialization**
 
-```text
+```java
 protected void finishBeanFactoryInitialization(
     ConfigurableListableBeanFactory beanFactory) {
 
@@ -342,7 +340,7 @@ protected void finishBeanFactoryInitialization(
 
 **清单 5. DefaultListableBeanFactory.preInstantiateSingletons**
 
-```text
+```java
 public void preInstantiateSingletons() throws BeansException {
     if (this.logger.isInfoEnabled()) {
         this.logger.info("Pre-instantiating singletons in " + this);
@@ -381,8 +379,6 @@ public void preInstantiateSingletons() throws BeansException {
     }
 }
 ```
-
-显示更多
 
 这里出现了一个非常重要的 Bean —— FactoryBean，可以说 Spring 一大半的扩展的功能都与这个 Bean 有关，这是个特殊的 Bean 是一个工厂 Bean，可以产生 Bean 的 Bean，这里的产生 Bean 是指 Bean 的实例，如果一个类继承 FactoryBean 用户只要实现他的 getObject 方法，就可以自己定义产生实例对象的方法。然而在 Spring 内部这个 Bean 的实例对象是 FactoryBean，通过调用这个对象的 getObject 方法就能获取用户自定义产生的对象，从而为 Spring 提供了很好的扩展性。Spring 获取 FactoryBean 本身的对象是在前面加上 & 来完成的。
 
