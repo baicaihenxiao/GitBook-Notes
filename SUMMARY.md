@@ -6,6 +6,14 @@
 * [➡️　DOCSIFY GITEE VERSION](https://baicaihenxiao.gitee.io/gitbook-notes/#/)
 * [➡️　SUMMARY](https://github.com/baicaihenxiao/GitBook-Notes/blob/master/SUMMARY.md)
 
+## 爱思想 <a id="aisixiang"></a>
+
+* [白春礼：世界科技前沿发展态势](aisixiang/untitled.md)
+* [徐振伟：打造“生物盾牌”：美国生物国防计划的发展及启示](aisixiang/xu-zhen-wei-da-zao-sheng-wu-dun-pai-mei-guo-sheng-wu-guo-fang-ji-hua-de-fa-zhan-ji-qi-shi.md)
+* [吴增定：利益权衡还是道德意志？](aisixiang/wu-zeng-ding-li-yi-quan-heng-hai-shi-dao-de-yi-zhi.md)
+* [胡波：拜登政府的南海政策](aisixiang/hu-bo-bai-deng-zheng-fu-de-nan-hai-zheng-ce.md)
+* [温铁军：迟到但不会缺席的“新冷战”](aisixiang/wen-tie-jun-chi-dao-dan-bu-hui-que-xi-de-xin-leng-zhan.md)
+
 ## java
 
 * [Basic Concept](java/basic-concept/README.md)
@@ -240,9 +248,4 @@
 * [未分类文章](misc/wei-fen-lei-wen-zhang.md)
 * [一份工具清单就可以令 Python 变快](misc/yi-fen-gong-ju-qing-dan-jiu-ke-yi-ling-python-bian-kuai.md)
 * [活性炭除甲醛除味新房竹炭包去味家用装修吸甲醛神器碳清除剂室内](misc/huo-xing-tan-chu-jia-quan-chu-wei-xin-fang-zhu-tan-bao-qu-wei-jia-yong-zhuang-xiu-xi-jia-quan-shen-q.md)
-
-## 爱思想 <a id="aisixiang"></a>
-
-* [白春礼：世界科技前沿发展态势](aisixiang/untitled.md)
-* [徐振伟：打造“生物盾牌”：美国生物国防计划的发展及启示](aisixiang/xu-zhen-wei-da-zao-sheng-wu-dun-pai-mei-guo-sheng-wu-guo-fang-ji-hua-de-fa-zhan-ji-qi-shi.md)
 
