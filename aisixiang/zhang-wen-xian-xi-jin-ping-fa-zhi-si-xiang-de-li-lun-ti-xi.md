@@ -1,6 +1,6 @@
 # 张文显：习近平法治思想的理论体系
 
-#### [张文显：习近平法治思想的理论体系](http://www.aisixiang.com/data/124321.html)
+[张文显：习近平法治思想的理论体系](http://www.aisixiang.com/data/124321.html)
 
 选择字号：[大](http://www.aisixiang.com/data/124321.html#) [中](http://www.aisixiang.com/data/124321.html#) [小](http://www.aisixiang.com/data/124321.html#)   本文共阅读 788 次 更新时间：2021-01-13 23:43:58
 
