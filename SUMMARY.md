@@ -13,6 +13,7 @@
 * [吴增定：利益权衡还是道德意志？](aisixiang/wu-zeng-ding-li-yi-quan-heng-hai-shi-dao-de-yi-zhi.md)
 * [胡波：拜登政府的南海政策](aisixiang/hu-bo-bai-deng-zheng-fu-de-nan-hai-zheng-ce.md)
 * [温铁军：迟到但不会缺席的“新冷战”](aisixiang/wen-tie-jun-chi-dao-dan-bu-hui-que-xi-de-xin-leng-zhan.md)
+* [张文显：习近平法治思想的理论体系](aisixiang/zhang-wen-xian-xi-jin-ping-fa-zhi-si-xiang-de-li-lun-ti-xi.md)
 
 ## java
 
