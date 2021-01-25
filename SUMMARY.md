@@ -8,7 +8,7 @@
 
 ## 爱思想 <a id="aisixiang"></a>
 
-* [白春礼：世界科技前沿发展态势](aisixiang/untitled.md)
+* [白春礼：世界科技前沿发展态势](aisixiang/bai-chun-li-shi-jie-ke-ji-qian-yan-fa-zhan-tai-shi.md)
 * [徐振伟：打造“生物盾牌”：美国生物国防计划的发展及启示](aisixiang/xu-zhen-wei-da-zao-sheng-wu-dun-pai-mei-guo-sheng-wu-guo-fang-ji-hua-de-fa-zhan-ji-qi-shi.md)
 * [吴增定：利益权衡还是道德意志？](aisixiang/wu-zeng-ding-li-yi-quan-heng-hai-shi-dao-de-yi-zhi.md)
 * [胡波：拜登政府的南海政策](aisixiang/hu-bo-bai-deng-zheng-fu-de-nan-hai-zheng-ce.md)
