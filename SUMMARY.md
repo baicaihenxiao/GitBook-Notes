@@ -117,6 +117,7 @@
   * [✔️消息队列满了以后该怎么处理](zu-jian/mq/xiao-xi-dui-lie-man-le-yi-hou-gai-zen-me-chu-li.md)
   * [实战 \| SpringBoot+RabbitMQ ，保证消息100%投递成功并被消费（附源码）](zu-jian/mq/shi-zhan-springboot+rabbitmq-bao-zheng-xiao-xi-100-tou-di-cheng-gong-bing-bei-xiao-fei-fu-yuan-ma.md)
   * [消息队列常见的几种使用场景介绍！](zu-jian/mq/xiao-xi-dui-lie-chang-jian-de-ji-zhong-shi-yong-chang-jing-jie-shao.md)
+  * [MQ 消息中间件梳理](zu-jian/mq/mq-xiao-xi-zhong-jian-jian-shu-li.md)
 * [kafka](zu-jian/kafka/README.md)
   * [面试官：你对Kafka比较熟？ 那说说kafka日志段如何读写的吧？](zu-jian/kafka/mian-shi-guan-ni-dui-kafka-bi-jiao-shou-na-shuo-shuo-kafka-ri-zhi-duan-ru-he-du-xie-de-ba.md)
   * [SpringBoot开发案例之整合Kafka实现消息队列](zu-jian/kafka/springboot-kai-fa-an-li-zhi-zheng-he-kafka-shi-xian-xiao-xi-dui-lie.md)
