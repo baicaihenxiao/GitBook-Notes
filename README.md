@@ -22,6 +22,10 @@
 
 ◻️ to read
 
+$$
+SCORE(A) = \sum_{i \in S_A}(ai+bi) - (b1+b2+...+bn)
+$$
+
 ## [Homepage](https://www.cser.club/)
 
 ## [Github](https://github.com/baicaihenxiao/gitbooknotes)
