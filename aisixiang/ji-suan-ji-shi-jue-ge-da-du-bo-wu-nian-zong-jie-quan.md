@@ -1,6 +1,8 @@
-# 计算机视觉 \| 哥大读博五年总结（全）
+# ✔️⭐计算机视觉 \| 哥大读博五年总结（全）
 
 [https://zhuanlan.zhihu.com/p/338193330](https://zhuanlan.zhihu.com/p/338193330)
+
+[Principles For Success by Ray Dalio \(In 30 Minutes\)](https://www.youtube.com/watch?v=B9XGUpQZY38)
 
 ### **0. 写在前面**
 
