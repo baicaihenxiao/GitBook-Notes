@@ -144,6 +144,7 @@
 * [如何干掉恶心的 SQL 注入？](zu-jian/ru-he-gan-diaoexin-de-sql-zhu-ru.md)
 * [因用了Insert into select语句，同事被开除了！](zu-jian/yin-yong-le-insert-into-select-yu-ju-tong-shi-bei-kai-chu-le.md)
 * [Mybatis 动态SQL（认真看看， 以后写SQL就爽多了）](zu-jian/mybatis-dong-tai-sql-ren-zhen-kan-kan-yi-hou-xie-sql-jiu-shuang-duo-le-1.md)
+* [几个数据持久化框架Hibernate、JPA、Mybatis、JOOQ和JDBC Template的比较](zu-jian/ji-ge-shu-ju-chi-jiu-hua-kuang-jia-hibernatejpamybatisjooq-he-jdbc-template-de-bi-jiao.md)
 
 ## DataBase
 
