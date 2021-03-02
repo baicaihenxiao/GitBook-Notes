@@ -62,6 +62,7 @@
 * [你说，一个Java字符串到底有多少个字符?](java/ni-shuo-yi-ge-java-zi-fu-chuan-dao-di-you-duo-shao-ge-zi-fu.md)
 * [如果面试被问“零拷贝”，你会怎么办？](java/untitled-1.md)
 * [用Java的时候，你是如何实现时间控制的？](java/yong-java-de-shi-hou-ni-shi-ru-he-shi-xian-shi-jian-kong-zhi-de.md)
+* [浅谈之UT和Mock 你得做一个合格的工程师](java/qian-tan-zhi-ut-he-mock-ni-de-zuo-yi-ge-he-ge-de-gong-cheng-shi.md)
 * [✔️⭐ 一个秒杀系统的设计思考](java/yi-ge-miao-sha-xi-tong-de-she-ji-si-kao.md)
 * [阿里的秒杀系统是怎么设计的？](java/e-li-de-miao-sha-xi-tong-shi-zen-me-she-ji-de.md)
 * [分布式系统的CAP理论](java/fen-bu-shi-xi-tong-de-cap-li-lun.md)
