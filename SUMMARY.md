@@ -168,6 +168,7 @@
 ## 排查问题 调优
 
 * [提升系统 10 倍性能的 10 个建议！](pai-cha-wen-ti-tiao-you/ti-sheng-xi-tong-10-bei-xing-neng-de-10-ge-jian-yi.md)
+* [基于SLF4J MDC机制实现日志的链路追踪](pai-cha-wen-ti-tiao-you/ji-yu-slf4j-mdc-ji-zhi-shi-xian-ri-zhi-de-lian-lu-zhui-zong.md)
 * [JAVA 线上故障排查](pai-cha-wen-ti-tiao-you/java-xian-shang-gu-zhang-pai-cha.md)
 * [Spring Boot“内存泄漏”？看看美团大牛是如何排查的](pai-cha-wen-ti-tiao-you/spring-boot-nei-cun-xie-lou-kan-kan-mei-tuan-da-niu-shi-ru-he-pai-cha-de.md)
 * [一次 Java 内存泄漏排查过程，值的一看！](pai-cha-wen-ti-tiao-you/yi-ci-java-nei-cun-xie-lou-pai-cha-guo-cheng-zhi-de-yi-kan.md)
