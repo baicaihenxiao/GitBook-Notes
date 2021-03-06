@@ -14,6 +14,8 @@
 * [胡波：拜登政府的南海政策](aisixiang/hu-bo-bai-deng-zheng-fu-de-nan-hai-zheng-ce.md)
 * [温铁军：迟到但不会缺席的“新冷战”](aisixiang/wen-tie-jun-chi-dao-dan-bu-hui-que-xi-de-xin-leng-zhan.md)
 * [张文显：习近平法治思想的理论体系](aisixiang/zhang-wen-xian-xi-jin-ping-fa-zhi-si-xiang-de-li-lun-ti-xi.md)
+* [✔️ 大国算大帐，要像美国人一样学会等待](aisixiang/da-guo-suan-da-zhang-yao-xiang-mei-guo-ren-yi-yang-xue-hui-deng-dai.md)
+* [✔️⭐ 乔良：美帝三招治天下，局势渐紧](aisixiang/qiao-liang-mei-di-san-zhao-zhi-tian-xia-ju-shi-jian-jin.md)
 * [✔️⭐计算机视觉 \| 哥大读博五年总结（全）](aisixiang/ji-suan-ji-shi-jue-ge-da-du-bo-wu-nian-zong-jie-quan.md)
 
 ## java
