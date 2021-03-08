@@ -191,6 +191,7 @@
 * [让程序员爱不释手的6大代码对比工具！](tools/rang-cheng-xu-yuan-ai-bu-shi-shou-de-6-da-dai-ma-dui-bi-gong-ju.md)
 * [作为程序员，你还没发布过项目到Maven中央仓库](tools/zuo-wei-cheng-xu-yuan-ni-hai-mei-fa-bu-guo-xiang-mu-dao-maven-zhong-yang-cang-ku.md)
 * [grep、sed、awk 高效文件处理 3 剑客！](tools/grepsedawk-gao-xiao-wen-jian-chu-li-3-jian-ke.md)
+* [Online 黑科技工具，大部分我都在用](tools/online-hei-ke-ji-gong-ju-da-bu-fen-wo-du-zai-yong.md)
 * [git](tools/git/README.md)
   * [后端必备 Git 分支开发：规范指南](tools/git/hou-duan-bi-bei-git-fen-zhi-kai-fa-gui-fan-zhi-nan.md)
   * [Merging 和 Rebasing 的大比拼](tools/git/merging-he-rebasing-de-da-bi-pin.md)
