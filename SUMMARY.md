@@ -8,6 +8,7 @@
 
 ## 爱思想 <a id="aisixiang"></a>
 
+* [雷建锋：平衡中美与以印对冲：俄对华战略新动向](aisixiang/lei-jian-feng-ping-heng-zhong-mei-yu-yi-yin-dui-chong-edui-hua-zhan-lve-xin-dong-xiang.md)
 * [白春礼：世界科技前沿发展态势](aisixiang/bai-chun-li-shi-jie-ke-ji-qian-yan-fa-zhan-tai-shi.md)
 * [徐振伟：打造“生物盾牌”：美国生物国防计划的发展及启示](aisixiang/xu-zhen-wei-da-zao-sheng-wu-dun-pai-mei-guo-sheng-wu-guo-fang-ji-hua-de-fa-zhan-ji-qi-shi.md)
 * [吴增定：利益权衡还是道德意志？](aisixiang/wu-zeng-ding-li-yi-quan-heng-hai-shi-dao-de-yi-zhi.md)
