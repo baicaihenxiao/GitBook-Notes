@@ -2,7 +2,7 @@
 
 [https://zhuanlan.zhihu.com/p/112584291](https://zhuanlan.zhihu.com/p/112584291)
 
-有意列出许多美国之外的智库。世界是多元的，中国之外不只有美国一个声音。参考了[University of Pennsylvania 2019 Global Go To Think Tank Index Report](https://link.zhihu.com/?target=https%3A//repository.upenn.edu/think_tanks/17/)
+有意列出许多美国之外的智库。世界是多元的，中国之外不只有美国一个声音。参考了[University of Pennsylvania 2019 Global Go To Think Tank Index Report](https://repository.upenn.edu/think_tanks/17/)
 
 我整理过的相关资料还有：
 
