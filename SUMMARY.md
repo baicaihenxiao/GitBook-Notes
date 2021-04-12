@@ -19,6 +19,7 @@
 * [张文显：习近平法治思想的理论体系](aisixiang/zhang-wen-xian-xi-jin-ping-fa-zhi-si-xiang-de-li-lun-ti-xi.md)
 * [中华人民共和国国民经济和社会发展第十四个五年规划和2035年远景目标纲要](aisixiang/zhong-hua-ren-min-gong-he-guo-guo-min-jing-ji-he-she-hui-fa-zhan-di-shi-si-ge-wu-nian-gui-hua-he-203.md)
 * [✔️⭐ 龚鹏程：得新疆者得天下](aisixiang/gong-peng-cheng-de-xin-jiang-zhe-de-tian-xia.md)
+* [基督，犹太，伊斯兰教](aisixiang/ji-du-you-tai-yi-si-lan-jiao.md)
 * [✔️ 陈嘉映：哲学何为](aisixiang/chen-jia-ying-zhe-xue-he-wei.md)
 * [✔️ 大国算大帐，要像美国人一样学会等待](aisixiang/da-guo-suan-da-zhang-yao-xiang-mei-guo-ren-yi-yang-xue-hui-deng-dai.md)
 * [✔️⭐ 乔良：美帝三招治天下，局势渐紧](aisixiang/qiao-liang-mei-di-san-zhao-zhi-tian-xia-ju-shi-jian-jin.md)
