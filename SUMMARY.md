@@ -195,6 +195,7 @@
 * [程序员好货网站大盘点](tools/cheng-xu-yuan-hao-huo-wang-zhan-da-pan-dian.md)
 * [持续集成利器，GitHub Actions](tools/chi-xu-ji-cheng-li-qi-github-actions.md)
 * [科普 \| Shell中傻傻分不清楚的TOP3](tools/untitled-6.md)
+* [23 个开箱即用的实用 Shell 脚本分享](tools/23-ge-kai-xiang-ji-yong-de-shi-yong-shell-jiao-ben-fen-xiang.md)
 * [原来这就是Java代码生成器的原理啊，太简单了](tools/yuan-lai-zhe-jiu-shi-java-dai-ma-sheng-cheng-qi-de-yuan-lia-tai-jian-dan-le.md)
 * [让程序员爱不释手的6大代码对比工具！](tools/rang-cheng-xu-yuan-ai-bu-shi-shou-de-6-da-dai-ma-dui-bi-gong-ju.md)
 * [作为程序员，你还没发布过项目到Maven中央仓库](tools/zuo-wei-cheng-xu-yuan-ni-hai-mei-fa-bu-guo-xiang-mu-dao-maven-zhong-yang-cang-ku.md)
