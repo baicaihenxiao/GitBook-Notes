@@ -238,6 +238,7 @@
 ## CAREER
 
 * [⭐✔️ &lt;好文&gt;工作方法，职场交流、晋升](career/hao-wen-gong-zuo-fang-fa-zhi-chang-jiao-liu-jin-sheng.md)
+* [工作总结怎么写](career/gong-zuo-zong-jie-zen-me-xie.md)
 * [阿里六年，思辨成长](career/e-li-liu-nian-si-bian-cheng-chang.md)
 * [程序员一般可以从什么平台接私活？](career/untitled-1-1.md)
 * [前同事通过接私活年入 60W，他常用 19 个私活平台汇总！](career/qian-tong-shi-tong-guo-jie-si-huo-nian-ru-60w-ta-chang-yong-19-ge-si-huo-ping-tai-hui-zong.md)
