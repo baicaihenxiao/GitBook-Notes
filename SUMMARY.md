@@ -100,6 +100,7 @@
 * [Spring Security](spring/spring-security/README.md)
   * [SSO 单点登录 芋道 Spring Security OAuth2 单点登录](spring/spring-security/sso-dan-dian-deng-lu-yu-dao-spring-security-oauth2-dan-dian-deng-lu.md)
   * [Spring Security 实战干货：从零手写一个验证码登录](spring/spring-security/spring-security-shi-zhan-gan-huo-cong-ling-shou-xie-yi-ge-yan-zheng-ma-deng-lu.md)
+  * [Spring Security 模块化](spring/spring-security/spring-security-mo-kuai-hua.md)
 * [✔️⭐Spring 框架的设计理念与设计模式分析](spring/spring-kuang-jia-de-she-ji-li-nian-yu-she-ji-mo-shi-fen-xi.md)
 * [Spring中涉及的设计模式总结](spring/spring-zhong-she-ji-de-she-ji-mo-shi-zong-jie.md)
 * [Spring Boot 2.x基础教程：事务管理入门](spring/spring-boot-2.x-ji-chu-jiao-cheng-shi-wu-guan-li-ru-men.md)
