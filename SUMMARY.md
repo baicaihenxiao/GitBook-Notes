@@ -24,6 +24,7 @@
 * [基督，犹太，伊斯兰教](aisixiang/ji-du-you-tai-yi-si-lan-jiao.md)
 * [✔️ 陈嘉映：哲学何为](aisixiang/chen-jia-ying-zhe-xue-he-wei.md)
 * [✔️ 大国算大帐，要像美国人一样学会等待](aisixiang/da-guo-suan-da-zhang-yao-xiang-mei-guo-ren-yi-yang-xue-hui-deng-dai.md)
+* [✔️ 美国国运史](aisixiang/mei-guo-guo-yun-shi.md)
 * [✔️⭐ 乔良：美帝三招治天下，局势渐紧](aisixiang/qiao-liang-mei-di-san-zhao-zhi-tian-xia-ju-shi-jian-jin.md)
 * [✔️⭐计算机视觉 \| 哥大读博五年总结（全）](aisixiang/ji-suan-ji-shi-jue-ge-da-du-bo-wu-nian-zong-jie-quan.md)
 * [✔️ 100岁老人讲述战乱时期的故事](aisixiang/100-sui-lao-ren-jiang-shu-zhan-luan-shi-qi-de-gu-shi.md)
