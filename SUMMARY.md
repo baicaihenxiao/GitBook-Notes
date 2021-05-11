@@ -266,6 +266,7 @@
 
 * [差分数组（差分详解+例题）](algorithm/untitled.md)
 * [✔️⭐如何从大量的 URL 中找出相同的 URL？](algorithm/ru-he-cong-da-liang-de-url-zhong-zhao-chu-xiang-tong-de-url.md)
+* [通俗易懂讲布隆过滤器](algorithm/tong-su-yi-dong-jiang-bu-long-guo-lv-qi.md)
 
 ## Sicence
 
