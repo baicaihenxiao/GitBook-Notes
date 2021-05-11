@@ -9,6 +9,7 @@
 ## 爱思想 <a id="aisixiang"></a>
 
 * [世界各地关于国际关系、发展研究、科技政策的主要智库](aisixiang/shi-jie-ge-di-guan-yu-guo-ji-guan-xi-fa-zhan-yan-jiu-ke-ji-zheng-ce-de-zhu-yao-zhi-ku.md)
+* [王逸舟：外交知识刍议](aisixiang/wang-yi-zhou-wai-jiao-zhi-shi-chu-yi.md)
 * [央地关系视野下的县级治理](aisixiang/yang-di-guan-xi-shi-ye-xia-de-xian-ji-zhi-li.md)
 * [雷建锋：平衡中美与以印对冲：俄对华战略新动向](aisixiang/lei-jian-feng-ping-heng-zhong-mei-yu-yi-yin-dui-chong-edui-hua-zhan-lve-xin-dong-xiang.md)
 * [白春礼：世界科技前沿发展态势](aisixiang/bai-chun-li-shi-jie-ke-ji-qian-yan-fa-zhan-tai-shi.md)
