@@ -12,6 +12,7 @@
 * [王逸舟：外交知识刍议](aisixiang/wang-yi-zhou-wai-jiao-zhi-shi-chu-yi.md)
 * [黄宗智：从土地的资本化到资本的社会化：中国发展经验的新政治经济学](aisixiang/huang-zong-zhi-cong-tu-di-de-zi-ben-hua-dao-zi-ben-de-she-hui-hua-zhong-guo-fa-zhan-jing-yan-de-xin.md)
 * [央地关系视野下的县级治理](aisixiang/yang-di-guan-xi-shi-ye-xia-de-xian-ji-zhi-li.md)
+* [欧洲国家为什么跟风施压中国？](aisixiang/ou-zhou-guo-jia-wei-shen-me-gen-feng-shi-ya-zhong-guo.md)
 * [雷建锋：平衡中美与以印对冲：俄对华战略新动向](aisixiang/lei-jian-feng-ping-heng-zhong-mei-yu-yi-yin-dui-chong-edui-hua-zhan-lve-xin-dong-xiang.md)
 * [白春礼：世界科技前沿发展态势](aisixiang/bai-chun-li-shi-jie-ke-ji-qian-yan-fa-zhan-tai-shi.md)
 * [徐振伟：打造“生物盾牌”：美国生物国防计划的发展及启示](aisixiang/xu-zhen-wei-da-zao-sheng-wu-dun-pai-mei-guo-sheng-wu-guo-fang-ji-hua-de-fa-zhan-ji-qi-shi.md)
