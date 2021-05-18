@@ -2,6 +2,8 @@
 
 把 10min 当成一个 block，一天 144 个 block，出去睡觉的 7,8个小时 44 个 block，每天有意识的时间是 100 个block 1000min，你要如何使用每一个 block？
 
+app [https://144blocks.com/](https://144blocks.com/)
+
 [https://waitbutwhy.com/2016/10/100-blocks-day.html](https://waitbutwhy.com/2016/10/100-blocks-day.html)
 
  October 21, 2016 By Tim Urban  
