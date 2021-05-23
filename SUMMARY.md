@@ -12,6 +12,7 @@
 * [世界各地关于国际关系、发展研究、科技政策的主要智库](aisixiang/shi-jie-ge-di-guan-yu-guo-ji-guan-xi-fa-zhan-yan-jiu-ke-ji-zheng-ce-de-zhu-yao-zhi-ku.md)
 * [王逸舟：外交知识刍议](aisixiang/wang-yi-zhou-wai-jiao-zhi-shi-chu-yi.md)
 * [黄宗智：从土地的资本化到资本的社会化：中国发展经验的新政治经济学](aisixiang/huang-zong-zhi-cong-tu-di-de-zi-ben-hua-dao-zi-ben-de-she-hui-hua-zhong-guo-fa-zhan-jing-yan-de-xin.md)
+* [陈文胜：警惕当前乡镇换届中的官僚主义倾向](aisixiang/chen-wen-sheng-jing-ti-dang-qian-xiang-zhen-huan-jie-zhong-de-guan-liao-zhu-yi-qing-xiang.md)
 * [建议加快农村土地及住房制度改革](aisixiang/jian-yi-jia-kuai-nong-cun-tu-di-ji-zhu-fang-zhi-du-gai-ge.md)
 * [央地关系视野下的县级治理](aisixiang/yang-di-guan-xi-shi-ye-xia-de-xian-ji-zhi-li.md)
 * [欧洲国家为什么跟风施压中国？](aisixiang/ou-zhou-guo-jia-wei-shen-me-gen-feng-shi-ya-zhong-guo.md)
