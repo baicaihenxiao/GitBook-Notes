@@ -131,6 +131,7 @@
 * [如何实现一个可复用的分布式事务消息架构方案？](zu-jian/ru-he-shi-xian-yi-ge-ke-fu-yong-de-fen-bu-shi-shi-wu-xiao-xi-jia-gou-fang-an.md)
 * [面试官问：Kafka 和 RocketMQ 快的飞起，底层存储有什么不同？](zu-jian/mian-shi-guan-wen-kafka-he-rocketmq-kuai-de-fei-qi-di-ceng-cun-chu-you-shen-me-bu-tong.md)
 * [点赞功能，用mysql还是redis？](zu-jian/dian-zan-gong-neng-yong-mysql-hai-shi-redis.md)
+* [大厂面试经典：Redis与MySQL双写一致性如何保证？](zu-jian/da-chang-mian-shi-jing-dian-redis-yu-mysql-shuang-xie-yi-zhi-xing-ru-he-bao-zheng.md)
 * [每个公司都会用的短 URL 服务，怎么设计与实现？](zu-jian/mei-ge-gong-si-du-hui-yong-de-duan-url-fu-wu-zen-me-she-ji-yu-shi-xian.md)
 * [分布式系统互斥性与幂等性问题的分析与解决](zu-jian/fen-bu-shi-xi-tong-hu-chi-xing-yu-mi-deng-xing-wen-ti-de-fen-xi-yu-jie-jue.md)
 * [cron](zu-jian/cron/README.md)
