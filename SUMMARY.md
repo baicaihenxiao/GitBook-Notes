@@ -34,7 +34,7 @@
 * [✔️⭐ 乔良：美帝三招治天下，局势渐紧](aisixiang/qiao-liang-mei-di-san-zhao-zhi-tian-xia-ju-shi-jian-jin.md)
 * [✔️⭐计算机视觉 \| 哥大读博五年总结（全）](aisixiang/ji-suan-ji-shi-jue-ge-da-du-bo-wu-nian-zong-jie-quan.md)
 * [✔️ 100岁老人讲述战乱时期的故事](aisixiang/100-sui-lao-ren-jiang-shu-zhan-luan-shi-qi-de-gu-shi.md)
-* [为什么有公司愿意花1.6亿请郑爽拍戏?](aisixiang/wei-shen-me-you-gong-si-yuan-yi-hua-1.6-yi-qing-zheng-shuang-pai-xi.md)
+* [✔️⭐为什么有公司愿意花1.6亿请郑爽拍戏?](aisixiang/wei-shen-me-you-gong-si-yuan-yi-hua-1.6-yi-qing-zheng-shuang-pai-xi.md)
 
 ## java
 
