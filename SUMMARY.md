@@ -289,3 +289,7 @@
 * [一份工具清单就可以令 Python 变快](misc/yi-fen-gong-ju-qing-dan-jiu-ke-yi-ling-python-bian-kuai.md)
 * [活性炭除甲醛除味新房竹炭包去味家用装修吸甲醛神器碳清除剂室内](misc/huo-xing-tan-chu-jia-quan-chu-wei-xin-fang-zhu-tan-bao-qu-wei-jia-yong-zhuang-xiu-xi-jia-quan-shen-q.md)
 
+## PPT
+
+* [用绿色做的PPT，一个字“潮”！](ppt/yong-lv-se-zuo-de-ppt-yi-ge-zi-chao.md)
+
