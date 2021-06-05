@@ -14,6 +14,7 @@
 * [黄宗智：从土地的资本化到资本的社会化：中国发展经验的新政治经济学](aisixiang/huang-zong-zhi-cong-tu-di-de-zi-ben-hua-dao-zi-ben-de-she-hui-hua-zhong-guo-fa-zhan-jing-yan-de-xin.md)
 * [陈文胜：警惕当前乡镇换届中的官僚主义倾向](aisixiang/chen-wen-sheng-jing-ti-dang-qian-xiang-zhen-huan-jie-zhong-de-guan-liao-zhu-yi-qing-xiang.md)
 * [建议加快农村土地及住房制度改革](aisixiang/jian-yi-jia-kuai-nong-cun-tu-di-ji-zhu-fang-zhi-du-gai-ge.md)
+* [不把亿万农民组织起来，乡村振兴将很难实现](aisixiang/bu-ba-yi-wan-nong-min-zu-zhi-qi-lai-xiang-cun-zhen-xing-jiang-hen-nan-shi-xian.md)
 * [央地关系视野下的县级治理](aisixiang/yang-di-guan-xi-shi-ye-xia-de-xian-ji-zhi-li.md)
 * [欧洲国家为什么跟风施压中国？](aisixiang/ou-zhou-guo-jia-wei-shen-me-gen-feng-shi-ya-zhong-guo.md)
 * [雷建锋：平衡中美与以印对冲：俄对华战略新动向](aisixiang/lei-jian-feng-ping-heng-zhong-mei-yu-yi-yin-dui-chong-edui-hua-zhan-lve-xin-dong-xiang.md)
