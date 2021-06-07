@@ -1,4 +1,4 @@
-# 雷建锋：平衡中美与以印对冲：俄对华战略新动向
+# ✔️ 雷建锋：平衡中美与以印对冲：俄对华战略新动向
 
 [http://www.aisixiang.com/data/125628.html](http://www.aisixiang.com/data/125628.html)
 
