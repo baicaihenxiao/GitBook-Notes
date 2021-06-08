@@ -27,6 +27,7 @@
 * [✔️⭐计算机视觉 \| 哥大读博五年总结（全）](aisixiang/ji-suan-ji-shi-jue-ge-da-du-bo-wu-nian-zong-jie-quan.md)
 * [✔️ 100岁老人讲述战乱时期的故事](aisixiang/100-sui-lao-ren-jiang-shu-zhan-luan-shi-qi-de-gu-shi.md)
 * [✔️⭐为什么有公司愿意花1.6亿请郑爽拍戏?](aisixiang/wei-shen-me-you-gong-si-yuan-yi-hua-1.6-yi-qing-zheng-shuang-pai-xi.md)
+* [在中国合法避税有哪些途径？](aisixiang/zai-zhong-guo-he-fa-bi-shui-you-na-xie-tu-jing.md)
 * [-------国际关系-------](aisixiang/guo-ji-guan-xi.md)
 * [欧洲国家为什么跟风施压中国？](aisixiang/ou-zhou-guo-jia-wei-shen-me-gen-feng-shi-ya-zhong-guo.md)
 * [✔️ 吴白乙：变动中的中欧关系及其基本走势](aisixiang/wu-bai-yi-bian-dong-zhong-de-zhong-ou-guan-xi-ji-qi-ji-ben-zou-shi.md)
