@@ -11,6 +11,7 @@
 * [珍惜时间 - 100 Blocks a Day](aisixiang/zhen-xi-shi-jian-100-blocksaday.md)
 * [世界各地关于国际关系、发展研究、科技政策的主要智库](aisixiang/shi-jie-ge-di-guan-yu-guo-ji-guan-xi-fa-zhan-yan-jiu-ke-ji-zheng-ce-de-zhu-yao-zhi-ku.md)
 * [王逸舟：外交知识刍议](aisixiang/wang-yi-zhou-wai-jiao-zhi-shi-chu-yi.md)
+* [改革开放时期深圳市市长的自述](aisixiang/gai-ge-kai-fang-shi-qi-shen-zhen-shi-shi-chang-de-zi-shu.md)
 * [黄宗智：从土地的资本化到资本的社会化：中国发展经验的新政治经济学](aisixiang/huang-zong-zhi-cong-tu-di-de-zi-ben-hua-dao-zi-ben-de-she-hui-hua-zhong-guo-fa-zhan-jing-yan-de-xin.md)
 * [陈文胜：警惕当前乡镇换届中的官僚主义倾向](aisixiang/chen-wen-sheng-jing-ti-dang-qian-xiang-zhen-huan-jie-zhong-de-guan-liao-zhu-yi-qing-xiang.md)
 * [建议加快农村土地及住房制度改革](aisixiang/jian-yi-jia-kuai-nong-cun-tu-di-ji-zhu-fang-zhi-du-gai-ge.md)
@@ -36,12 +37,9 @@
 * [胡波：拜登政府的南海政策](aisixiang/hu-bo-bai-deng-zheng-fu-de-nan-hai-zheng-ce.md)
 * [✔️ 拜登的气候峰会：环保的背后是什么？](aisixiang/bai-deng-de-qi-hou-feng-hui-huan-bao-de-bei-hou-shi-shen-me.md)
 * [✔️⭐ 乔良：美帝三招治天下，局势渐紧](aisixiang/qiao-liang-mei-di-san-zhao-zhi-tian-xia-ju-shi-jian-jin.md)
-
----
-
-* [✔️ 美国国运史](mei-guo-guo-yun-shi.md)
-* [✔️ 大国算大帐，要像美国人一样学会等待](da-guo-suan-da-zhang-yao-xiang-mei-guo-ren-yi-yang-xue-hui-deng-dai.md)
-* [✔️⭐ 龚鹏程：得新疆者得天下](gong-peng-cheng-de-xin-jiang-zhe-de-tian-xia.md)
+* [✔️ 大国算大帐，要像美国人一样学会等待](aisixiang/da-guo-suan-da-zhang-yao-xiang-mei-guo-ren-yi-yang-xue-hui-deng-dai.md)
+* [✔️⭐ 龚鹏程：得新疆者得天下](aisixiang/gong-peng-cheng-de-xin-jiang-zhe-de-tian-xia.md)
+* [✔️ 美国国运史](aisixiang/mei-guo-guo-yun-shi.md)
 
 ## java
 
