@@ -140,6 +140,7 @@
 * [大厂面试经典：Redis与MySQL双写一致性如何保证？](zu-jian/da-chang-mian-shi-jing-dian-redis-yu-mysql-shuang-xie-yi-zhi-xing-ru-he-bao-zheng.md)
 * [每个公司都会用的短 URL 服务，怎么设计与实现？](zu-jian/mei-ge-gong-si-du-hui-yong-de-duan-url-fu-wu-zen-me-she-ji-yu-shi-xian.md)
 * [分布式系统互斥性与幂等性问题的分析与解决](zu-jian/fen-bu-shi-xi-tong-hu-chi-xing-yu-mi-deng-xing-wen-ti-de-fen-xi-yu-jie-jue.md)
+* [Zookeeper 图形化工具来了](zu-jian/zookeeper-tu-xing-hua-gong-ju-lai-le.md)
 * [cron](zu-jian/cron/README.md)
   * [有个定时任务突然不执行了，别急！原因可能在这](zu-jian/cron/you-ge-ding-shi-ren-wu-tu-ran-bu-zhi-hang-le-bie-ji-yuan-yin-ke-neng-zai-zhe.md)
 * [mq](zu-jian/mq/README.md)
