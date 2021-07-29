@@ -12,6 +12,7 @@
 * [世界各地关于国际关系、发展研究、科技政策的主要智库](aisixiang/shi-jie-ge-di-guan-yu-guo-ji-guan-xi-fa-zhan-yan-jiu-ke-ji-zheng-ce-de-zhu-yao-zhi-ku.md)
 * [王逸舟：外交知识刍议](aisixiang/wang-yi-zhou-wai-jiao-zhi-shi-chu-yi.md)
 * [中国古代官制常识](aisixiang/zhong-guo-gu-dai-guan-zhi-chang-shi.md)
+* [论意识形态的国家权力原理 ——兼论中国国家权力的结构性问题](aisixiang/lun-yi-shi-xing-tai-de-guo-jia-quan-li-yuan-li-jian-lun-zhong-guo-guo-jia-quan-li-de-jie-gou-xing-we.md)
 * [✔️ 改革开放时期深圳市市长的自述](aisixiang/gai-ge-kai-fang-shi-qi-shen-zhen-shi-shi-chang-de-zi-shu.md)
 * [黄宗智：从土地的资本化到资本的社会化：中国发展经验的新政治经济学](aisixiang/huang-zong-zhi-cong-tu-di-de-zi-ben-hua-dao-zi-ben-de-she-hui-hua-zhong-guo-fa-zhan-jing-yan-de-xin.md)
 * [陈文胜：警惕当前乡镇换届中的官僚主义倾向](aisixiang/chen-wen-sheng-jing-ti-dang-qian-xiang-zhen-huan-jie-zhong-de-guan-liao-zhu-yi-qing-xiang.md)
