@@ -33,6 +33,7 @@
 * [在中国合法避税有哪些途径？](aisixiang/zai-zhong-guo-he-fa-bi-shui-you-na-xie-tu-jing.md)
 * [-------国际关系-------](aisixiang/guo-ji-guan-xi.md)
 * [欧洲国家为什么跟风施压中国？](aisixiang/ou-zhou-guo-jia-wei-shen-me-gen-feng-shi-ya-zhong-guo.md)
+* [拜登对华战略中的对台政策∶战略定位与战略竞争](aisixiang/bai-deng-dui-hua-zhan-lve-zhong-de-dui-tai-zheng-ce-zhan-lve-ding-wei-yu-zhan-lve-jing-zheng.md)
 * [✔️ 吴白乙：变动中的中欧关系及其基本走势](aisixiang/wu-bai-yi-bian-dong-zhong-de-zhong-ou-guan-xi-ji-qi-ji-ben-zou-shi.md)
 * [✔️ 雷建锋：平衡中美与以印对冲：俄对华战略新动向](aisixiang/lei-jian-feng-ping-heng-zhong-mei-yu-yi-yin-dui-chong-edui-hua-zhan-lve-xin-dong-xiang.md)
 * [温铁军：迟到但不会缺席的“新冷战”](aisixiang/wen-tie-jun-chi-dao-dan-bu-hui-que-xi-de-xin-leng-zhan.md)
