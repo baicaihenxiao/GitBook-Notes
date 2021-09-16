@@ -304,4 +304,5 @@
 
 * [用绿色做的PPT，一个字“潮”！](ppt/yong-lv-se-zuo-de-ppt-yi-ge-zi-chao.md)
 * [讲课 PPT](ppt/jiang-ke-ppt.md)
+* [PPT 设计基础](ppt/ppt-she-ji-ji-chu.md)
 
