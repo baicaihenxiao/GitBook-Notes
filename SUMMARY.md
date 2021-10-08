@@ -196,6 +196,7 @@
 * [如何去写一手好SQL ？](database/ru-he-qu-xie-yi-shou-hao-sql.md)
 * [这简直就是一个“定时炸弹”！记一次 MySQL 的奇葩故障](database/zhe-jian-zhi-jiu-shi-yi-ge-ding-shi-zha-tan-ji-yi-ci-mysql-de-qi-pa-gu-zhang.md)
 * [【MySQL】MySQL中的索引原理与索引分类](database/mysqlmysql-zhong-de-suo-yin-yuan-li-yu-suo-yin-fen-lei.md)
+* [MVCC 理解](database/mvcc-li-jie.md)
 
 ## 排查问题 调优
 
