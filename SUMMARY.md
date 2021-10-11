@@ -1,12 +1,12 @@
 # Table of contents
 
 * [Welcome to My Notes](README.md)
-* [➡️　GITBOOK VERSION](https://note.cser.club/)
+* [➡️　GITBOOK VERSION](https://note.cser.club)
 * [➡️　DOCSIFY GITHUB VERSION](https://www.cser.club/GitBook-Notes/#/)
 * [➡️　DOCSIFY GITEE VERSION](https://baicaihenxiao.gitee.io/gitbook-notes/#/)
 * [➡️　SUMMARY](https://github.com/baicaihenxiao/GitBook-Notes/blob/master/SUMMARY.md)
 
-## 爱思想 <a id="aisixiang"></a>
+## 爱思想 <a href="aisixiang" id="aisixiang"></a>
 
 * [珍惜时间 - 100 Blocks a Day](aisixiang/zhen-xi-shi-jian-100-blocksaday.md)
 * [✔️⭐火星探测历史科普](aisixiang/huo-xing-tan-ce-li-shi-ke-pu.md)
@@ -28,7 +28,7 @@
 * [✔️⭐ 魏杰详解“双循环”五个核心逻辑](aisixiang/wei-jie-xiang-jie-shuang-xun-huan-wu-ge-he-xin-luo-ji.md)
 * [基督，犹太，伊斯兰教](aisixiang/ji-du-you-tai-yi-si-lan-jiao.md)
 * [✔️ 陈嘉映：哲学何为](aisixiang/chen-jia-ying-zhe-xue-he-wei.md)
-* [✔️⭐计算机视觉 \| 哥大读博五年总结（全）](aisixiang/ji-suan-ji-shi-jue-ge-da-du-bo-wu-nian-zong-jie-quan.md)
+* [✔️⭐计算机视觉 | 哥大读博五年总结（全）](aisixiang/ji-suan-ji-shi-jue-ge-da-du-bo-wu-nian-zong-jie-quan.md)
 * [✔️ 100岁老人讲述战乱时期的故事](aisixiang/100-sui-lao-ren-jiang-shu-zhan-luan-shi-qi-de-gu-shi.md)
 * [✔️⭐为什么有公司愿意花1.6亿请郑爽拍戏?](aisixiang/wei-shen-me-you-gong-si-yuan-yi-hua-1.6-yi-qing-zheng-shuang-pai-xi.md)
 * [在中国合法避税有哪些途径？](aisixiang/zai-zhong-guo-he-fa-bi-shui-you-na-xie-tu-jing.md)
@@ -67,9 +67,9 @@
     * [【死磕Java并发】—–深入分析volatile的实现原理](java/bing-fa/java-bing-fa-yuan-ma-he-ji-yu-dao-yuan-ma/si-ke-java-bing-fa-shen-ru-fen-xi-volatile-de-shi-xian-yuan-li.md)
     * [【死磕Java并发】—–Java内存模型之happens-before](java/bing-fa/java-bing-fa-yuan-ma-he-ji-yu-dao-yuan-ma/si-ke-java-bing-fa-java-nei-cun-mo-xing-zhi-happensbefore.md)
     * [【死磕Java并发】—– Java内存模型之分析volatile](java/bing-fa/java-bing-fa-yuan-ma-he-ji-yu-dao-yuan-ma/si-ke-java-bing-fa-java-nei-cun-mo-xing-zhi-fen-xi-volatile.md)
-  * [Java Concurrency Interview Questions \| Java Code Geeks - 2020](java/bing-fa/untitled-1.md)
+  * [Java Concurrency Interview Questions | Java Code Geeks - 2020](java/bing-fa/untitled-1.md)
   * [写给大忙人看的死锁详解](java/bing-fa/xie-gei-da-mang-ren-kan-de-si-suo-xiang-jie.md)
-  * [Thread.Sleep\(0\)](java/bing-fa/thread.sleep-0.md)
+  * [Thread.Sleep(0)](java/bing-fa/thread.sleep-0.md)
   * [我会手动创建线程，为什么让我使用线程池？ new Object vs new Thread](java/bing-fa/wo-hui-shou-dong-chuang-jian-xian-cheng-wei-shen-me-rang-wo-shi-yong-xian-cheng-chi-new-object-vs-ne.md)
   * [为什么synchronized无法禁止指令重排，却能保证有序性？](java/bing-fa/wei-shen-me-synchronized-wu-fa-jin-zhi-zhi-ling-zhong-pai-que-neng-bao-zheng-you-xu-xing.md)
   * [写的很好！细数 Java 线程池的原理](java/bing-fa/xie-de-hen-hao-xi-shu-java-xian-cheng-chi-de-yuan-li.md)
@@ -112,7 +112,7 @@
   * [从零搭建Spring Boot脚手架（1）：开篇以及技术选型](spring/springboot/cong-ling-da-jian-spring-boot-jiao-shou-jia-1-kai-pian-yi-ji-ji-shu-xuan-xing.md)
   * [Spring Boot 中 @EnableXXX 注解的驱动逻辑探讨](spring/springboot/spring-boot-zhong-enablexxx-zhu-jie-de-qu-dong-luo-ji-tan-tao.md)
   * [✔️⭐SpringBoot优雅的全局异常处理](spring/springboot/springboot-you-ya-de-quan-ju-yi-chang-chu-li.md)
-  * [IDEA + Spring Boot 的三种热加载方案，看完弄懂，不用加班~](spring/springboot/idea-+-spring-boot-de-san-zhong-re-jia-zai-fang-an-kan-wan-nong-dong-bu-yong-jia-ban.md)
+  * [IDEA + Spring Boot 的三种热加载方案，看完弄懂，不用加班\~](spring/springboot/idea-+-spring-boot-de-san-zhong-re-jia-zai-fang-an-kan-wan-nong-dong-bu-yong-jia-ban.md)
   * [基于Spring Boot快速实现发送邮件功能](spring/springboot/ji-yu-spring-boot-kuai-su-shi-xian-fa-song-you-jian-gong-neng.md)
 * [Spring Security](spring/spring-security/README.md)
   * [SSO 单点登录 芋道 Spring Security OAuth2 单点登录](spring/spring-security/sso-dan-dian-deng-lu-yu-dao-spring-security-oauth2-dan-dian-deng-lu.md)
@@ -150,7 +150,7 @@
 * [mq](zu-jian/mq/README.md)
   * [springboot + rabbitmq 用了消息确认机制，感觉掉坑里了](zu-jian/mq/springboot-+-rabbitmq-yong-le-xiao-xi-que-ren-ji-zhi-gan-jue-diao-keng-li-le.md)
   * [✔️消息队列满了以后该怎么处理](zu-jian/mq/xiao-xi-dui-lie-man-le-yi-hou-gai-zen-me-chu-li.md)
-  * [实战 \| SpringBoot+RabbitMQ ，保证消息100%投递成功并被消费（附源码）](zu-jian/mq/shi-zhan-springboot+rabbitmq-bao-zheng-xiao-xi-100-tou-di-cheng-gong-bing-bei-xiao-fei-fu-yuan-ma.md)
+  * [实战 | SpringBoot+RabbitMQ ，保证消息100%投递成功并被消费（附源码）](zu-jian/mq/shi-zhan-springboot+rabbitmq-bao-zheng-xiao-xi-100-tou-di-cheng-gong-bing-bei-xiao-fei-fu-yuan-ma.md)
   * [消息队列常见的几种使用场景介绍！](zu-jian/mq/xiao-xi-dui-lie-chang-jian-de-ji-zhong-shi-yong-chang-jing-jie-shao.md)
   * [MQ 消息中间件梳理](zu-jian/mq/mq-xiao-xi-zhong-jian-jian-shu-li.md)
 * [kafka](zu-jian/kafka/README.md)
@@ -165,9 +165,9 @@
   * [在Redis中设置了过期时间的Key，需要注意哪些问题？](zu-jian/redis/zai-redis-zhong-she-zhi-le-guo-qi-shi-jian-de-key-xu-yao-zhu-yi-na-xie-wen-ti.md)
   * [如何设计一个本地缓存](zu-jian/redis/ru-he-she-ji-yi-ge-ben-di-huan-cun.md)
   * [Spring Boot 中 Redis 的使用](zu-jian/redis/spring-boot-zhong-redis-de-shi-yong.md)
-  * [✔️实战 \| SpringBoot + Redis 分布式锁：模拟抢单](zu-jian/redis/shi-zhan-springboot-+-redis-fen-bu-shi-suo-mo-ni-qiang-dan.md)
+  * [✔️实战 | SpringBoot + Redis 分布式锁：模拟抢单](zu-jian/redis/shi-zhan-springboot-+-redis-fen-bu-shi-suo-mo-ni-qiang-dan.md)
   * [Redis的内存淘汰策略问题](zu-jian/redis/redis-de-nei-cun-tao-tai-ce-lve-wen-ti.md)
-  * [最全 \| Redis可视化工具横向评测](zu-jian/redis/zui-quan-redis-ke-shi-hua-gong-ju-heng-xiang-ping-ce.md)
+  * [最全 | Redis可视化工具横向评测](zu-jian/redis/zui-quan-redis-ke-shi-hua-gong-ju-heng-xiang-ping-ce.md)
   * [因 Redis 分布式锁造成的 P0 级重大事故](zu-jian/redis/yin-redis-fen-bu-shi-suo-zao-cheng-de-p0-ji-zhong-da-shi-gu.md)
   * [熬了一个通宵，终于把7千万个Key删完了](zu-jian/redis/ao-le-yi-ge-tong-xiao-zhong-yu-ba-7-qian-wan-ge-key-shan-wan-le.md)
   * [一次 Redis 分布式锁事故，整个项目组被扣绩效了。。。](zu-jian/redis/yi-ci-redis-fen-bu-shi-suo-shi-gu-zheng-ge-xiang-mu-zu-bei-kou-ji-xiao-le.md)
@@ -218,11 +218,12 @@
 * [因为知道了30+款在线工具，我的工作效率提升500%!](tools/untitled-5.md)
 * [程序员好货网站大盘点](tools/cheng-xu-yuan-hao-huo-wang-zhan-da-pan-dian.md)
 * [持续集成利器，GitHub Actions](tools/chi-xu-ji-cheng-li-qi-github-actions.md)
-* [科普 \| Shell中傻傻分不清楚的TOP3](tools/untitled-6.md)
+* [科普 | Shell中傻傻分不清楚的TOP3](tools/untitled-6.md)
 * [23 个开箱即用的实用 Shell 脚本分享](tools/23-ge-kai-xiang-ji-yong-de-shi-yong-shell-jiao-ben-fen-xiang.md)
 * [原来这就是Java代码生成器的原理啊，太简单了](tools/yuan-lai-zhe-jiu-shi-java-dai-ma-sheng-cheng-qi-de-yuan-lia-tai-jian-dan-le.md)
 * [让程序员爱不释手的6大代码对比工具！](tools/rang-cheng-xu-yuan-ai-bu-shi-shou-de-6-da-dai-ma-dui-bi-gong-ju.md)
 * [作为程序员，你还没发布过项目到Maven中央仓库](tools/zuo-wei-cheng-xu-yuan-ni-hai-mei-fa-bu-guo-xiang-mu-dao-maven-zhong-yang-cang-ku.md)
+* [闲扯Maven项目代码组织形式](tools/xian-che-maven-xiang-mu-dai-ma-zu-zhi-xing-shi.md)
 * [grep、sed、awk 高效文件处理 3 剑客！](tools/grepsedawk-gao-xiao-wen-jian-chu-li-3-jian-ke.md)
 * [Linux 三剑客之 awk 实战详解教程](tools/linux-san-jian-ke-zhi-awk-shi-zhan-xiang-jie-jiao-cheng.md)
 * [Online 黑科技工具，大部分我都在用](tools/online-hei-ke-ji-gong-ju-da-bu-fen-wo-du-zai-yong.md)
@@ -233,7 +234,7 @@
   * [放弃理解Git（一）：Git 内部原理](tools/git/fang-qi-li-jie-git-yi-git-nei-bu-yuan-li.md)
   * [惊艳！小姐姐用动画图解 Git 的 10 大命令，这也太秀了吧！](tools/git/jing-yan-xiao-jie-jie-yong-dong-hua-tu-jie-git-de-10-da-ming-ling-zhe-ye-tai-xiu-le-ba.md)
   * [Git 看这一篇就够了](tools/git/git-kan-zhe-yi-pian-jiu-gou-le.md)
-  * [如何将一个项目同时提交到GitHub和Gitee\(码云\)上](tools/git/ru-he-jiang-yi-ge-xiang-mu-tong-shi-ti-jiao-dao-github-he-gitee-ma-yun-shang.md)
+  * [如何将一个项目同时提交到GitHub和Gitee(码云)上](tools/git/ru-he-jiang-yi-ge-xiang-mu-tong-shi-ti-jiao-dao-github-he-gitee-ma-yun-shang.md)
   * [⭐ 图解Git](tools/git/tu-jie-git.md)
 
 ## NETWORK
@@ -244,7 +245,7 @@
 * [谈谈 Tomcat 请求处理流程](network/tan-tan-tomcat-qing-qiu-chu-li-liu-cheng.md)
 * [Tomcat相关总结](network/tomcat-xiang-guan-zong-jie.md)
 * [✔️ 新手入门：Nginx详解](network/xin-shou-ru-men-nginx-xiang-jie.md)
-* [一口气说出 4 种分布式一致性 Session 实现方式，面试杠杠的~](network/yi-kou-qi-shuo-chu-4-zhong-fen-bu-shi-yi-zhi-xing-session-shi-xian-fang-shi-mian-shi-gang-gang-de.md)
+* [一口气说出 4 种分布式一致性 Session 实现方式，面试杠杠的\~](network/yi-kou-qi-shuo-chu-4-zhong-fen-bu-shi-yi-zhi-xing-session-shi-xian-fang-shi-mian-shi-gang-gang-de.md)
 * [互联网协议新手篇](network/hu-lian-wang-xie-yi-xin-shou-pian.md)
 * [高性能 Nginx HTTPS 调优 - 如何为 HTTPS 提速 30%](network/gao-xing-neng-nginx-https-tiao-you-ru-he-wei-https-ti-su-30.md)
 
@@ -255,7 +256,7 @@
 * [Jenkins安装并部署Java项目完整流程](project/jenkins-an-zhuang-bing-bu-shu-java-xiang-mu-wan-zheng-liu-cheng.md)
 * [一款直击痛点的优秀http框架，让我超高效率完成了和第三方接口的对接](project/yi-kuan-zhi-ji-tong-dian-de-you-xiu-http-kuang-jia-rang-wo-chao-gao-xiao-lv-wan-cheng-le-he-di-san-f.md)
 * [从零开始搭建创业公司后台技术栈](project/cong-ling-kai-shi-da-jian-chuang-ye-gong-si-hou-tai-ji-shu-zhan.md)
-* [✔️⭐\(报价+合同\)程序员接私活完整攻略+赠开源管理系统](project/bao-jia-+-he-tong-cheng-xu-yuan-jie-si-huo-wan-zheng-gong-lve-+-zeng-kai-yuan-guan-li-xi-tong.md)
+* [✔️⭐(报价+合同)程序员接私活完整攻略+赠开源管理系统](project/bao-jia-+-he-tong-cheng-xu-yuan-jie-si-huo-wan-zheng-gong-lve-+-zeng-kai-yuan-guan-li-xi-tong.md)
 * [如何设计 QQ、微信、微博、Github 等等，第三方账号登陆 ？（附表设计）](project/ru-he-she-ji-qq-wei-xin-wei-bo-github-deng-deng-di-san-fang-zhang-hao-deng-lu-fu-biao-she-ji.md)
 * [✔️⭐ MEGAEASE的远程工作文化](project/megaease-de-yuan-cheng-gong-zuo-wen-hua.md)
 * [SpringBoot 项目模板：摆脱步步搭建](project/springboot-xiang-mu-mo-ban-bai-tuo-bu-bu-da-jian.md)
@@ -263,7 +264,7 @@
 
 ## CAREER
 
-* [⭐✔️ &lt;好文&gt;工作方法，职场交流、晋升](career/hao-wen-gong-zuo-fang-fa-zhi-chang-jiao-liu-jin-sheng.md)
+* [⭐✔️ <好文>工作方法，职场交流、晋升](career/hao-wen-gong-zuo-fang-fa-zhi-chang-jiao-liu-jin-sheng.md)
 * [工作总结怎么写](career/gong-zuo-zong-jie-zen-me-xie.md)
 * [阿里六年，思辨成长](career/e-li-liu-nian-si-bian-cheng-chang.md)
 * [程序员一般可以从什么平台接私活？](career/untitled-1-1.md)
@@ -307,4 +308,3 @@
 * [讲课 PPT](ppt/jiang-ke-ppt.md)
 * [PPT 设计基础](ppt/ppt-she-ji-ji-chu.md)
 * [时间轴设计](ppt/shi-jian-zhou-she-ji.md)
-
