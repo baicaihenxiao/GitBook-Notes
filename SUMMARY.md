@@ -230,6 +230,8 @@
 * [Online 黑科技工具，大部分我都在用](tools/online-hei-ke-ji-gong-ju-da-bu-fen-wo-du-zai-yong.md)
 * [git](tools/git/README.md)
   * [后端必备 Git 分支开发：规范指南](tools/git/hou-duan-bi-bei-git-fen-zhi-kai-fa-gui-fan-zhi-nan.md)
+  * [git worktree 1](tools/git/git-worktree-1.md)
+  * [git worktree 2](tools/git/git-worktree-2.md)
   * [Merging 和 Rebasing 的大比拼](tools/git/merging-he-rebasing-de-da-bi-pin.md)
   * [Git科普文，Git基本原理&各种骚操作](tools/git/git-ke-pu-wen-git-ji-ben-yuan-li-ge-zhong-sao-cao-zuo.md)
   * [放弃理解Git（一）：Git 内部原理](tools/git/fang-qi-li-jie-git-yi-git-nei-bu-yuan-li.md)
