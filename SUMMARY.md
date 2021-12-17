@@ -26,6 +26,7 @@
 * [张文显：习近平法治思想的理论体系](aisixiang/zhang-wen-xian-xi-jin-ping-fa-zhi-si-xiang-de-li-lun-ti-xi.md)
 * [中华人民共和国国民经济和社会发展第十四个五年规划和2035年远景目标纲要](aisixiang/zhong-hua-ren-min-gong-he-guo-guo-min-jing-ji-he-she-hui-fa-zhan-di-shi-si-ge-wu-nian-gui-hua-he-203.md)
 * [✔️⭐ 魏杰详解“双循环”五个核心逻辑](aisixiang/wei-jie-xiang-jie-shuang-xun-huan-wu-ge-he-xin-luo-ji.md)
+* [唐元：当前经济形势及2022年对策建议](aisixiang/tang-yuan-dang-qian-jing-ji-xing-shi-ji-2022-nian-dui-ce-jian-yi.md)
 * [基督，犹太，伊斯兰教](aisixiang/ji-du-you-tai-yi-si-lan-jiao.md)
 * [✔️ 陈嘉映：哲学何为](aisixiang/chen-jia-ying-zhe-xue-he-wei.md)
 * [✔️⭐计算机视觉 | 哥大读博五年总结（全）](aisixiang/ji-suan-ji-shi-jue-ge-da-du-bo-wu-nian-zong-jie-quan.md)
