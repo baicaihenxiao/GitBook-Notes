@@ -29,6 +29,7 @@
 * [✔️⭐ 魏杰详解“双循环”五个核心逻辑](aisixiang/wei-jie-xiang-jie-shuang-xun-huan-wu-ge-he-xin-luo-ji.md)
 * [唐元：当前经济形势及2022年对策建议](aisixiang/tang-yuan-dang-qian-jing-ji-xing-shi-ji-2022-nian-dui-ce-jian-yi.md)
 * [基督，犹太，伊斯兰教](aisixiang/ji-du-you-tai-yi-si-lan-jiao.md)
+* [阿联酋外交 - “小斯巴达”能撬动中东格局吗？](aisixiang/a-lian-qiu-wai-jiao-xiao-si-ba-da-neng-qiao-dong-zhong-dong-ge-ju-ma.md)
 * [✔️ 陈嘉映：哲学何为](aisixiang/chen-jia-ying-zhe-xue-he-wei.md)
 * [✔️⭐计算机视觉 | 哥大读博五年总结（全）](aisixiang/ji-suan-ji-shi-jue-ge-da-du-bo-wu-nian-zong-jie-quan.md)
 * [✔️ 100岁老人讲述战乱时期的故事](aisixiang/100-sui-lao-ren-jiang-shu-zhan-luan-shi-qi-de-gu-shi.md)
