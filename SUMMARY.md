@@ -9,6 +9,7 @@
 ## 爱思想 <a href="#aisixiang" id="aisixiang"></a>
 
 * [珍惜时间 - 100 Blocks a Day](aisixiang/zhen-xi-shi-jian-100-blocksaday.md)
+* [我在美团的八年](aisixiang/wo-zai-mei-tuan-de-ba-nian.md)
 * [✔️⭐火星探测历史科普](aisixiang/huo-xing-tan-ce-li-shi-ke-pu.md)
 * [世界各地关于国际关系、发展研究、科技政策的主要智库](aisixiang/shi-jie-ge-di-guan-yu-guo-ji-guan-xi-fa-zhan-yan-jiu-ke-ji-zheng-ce-de-zhu-yao-zhi-ku.md)
 * [王逸舟：外交知识刍议](aisixiang/wang-yi-zhou-wai-jiao-zhi-shi-chu-yi.md)
