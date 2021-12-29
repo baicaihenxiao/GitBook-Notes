@@ -37,6 +37,7 @@
 * [在中国合法避税有哪些途径？](aisixiang/zai-zhong-guo-he-fa-bi-shui-you-na-xie-tu-jing.md)
 * [体制内你总结出的最有用的经验是什么？](aisixiang/ti-zhi-nei-ni-zong-jie-chu-de-zui-you-yong-de-jing-yan-shi-shi-mo.md)
 * [赵燕菁：房产税试点需要注意的几个问题](aisixiang/zhao-yan-jing-fang-chan-shui-shi-dian-xu-yao-zhu-yi-de-ji-ge-wen-ti.md)
+* [贺雪峰：乡镇晋升定律](aisixiang/he-xue-feng-xiang-zhen-jin-sheng-ding-lv.md)
 * [-------国际关系-------](aisixiang/guo-ji-guan-xi.md)
 * [欧洲国家为什么跟风施压中国？](aisixiang/ou-zhou-guo-jia-wei-shen-me-gen-feng-shi-ya-zhong-guo.md)
 * [拜登对华战略中的对台政策∶战略定位与战略竞争](aisixiang/bai-deng-dui-hua-zhan-lve-zhong-de-dui-tai-zheng-ce-zhan-lve-ding-wei-yu-zhan-lve-jing-zheng.md)
