@@ -28,6 +28,7 @@
 * [中华人民共和国国民经济和社会发展第十四个五年规划和2035年远景目标纲要](aisixiang/zhong-hua-ren-min-gong-he-guo-guo-min-jing-ji-he-she-hui-fa-zhan-di-shi-si-ge-wu-nian-gui-hua-he-203.md)
 * [✔️⭐ 魏杰详解“双循环”五个核心逻辑](aisixiang/wei-jie-xiang-jie-shuang-xun-huan-wu-ge-he-xin-luo-ji.md)
 * [唐元：当前经济形势及2022年对策建议](aisixiang/tang-yuan-dang-qian-jing-ji-xing-shi-ji-2022-nian-dui-ce-jian-yi.md)
+* [贾庆国：对国家安全的特点和治理原则之思考](aisixiang/jia-qing-guo-dui-guo-jia-an-quan-de-te-dian-he-zhi-li-yuan-ze-zhi-si-kao.md)
 * [基督，犹太，伊斯兰教](aisixiang/ji-du-you-tai-yi-si-lan-jiao.md)
 * [阿联酋外交 - “小斯巴达”能撬动中东格局吗？](aisixiang/a-lian-qiu-wai-jiao-xiao-si-ba-da-neng-qiao-dong-zhong-dong-ge-ju-ma.md)
 * [✔️ 陈嘉映：哲学何为](aisixiang/chen-jia-ying-zhe-xue-he-wei.md)
