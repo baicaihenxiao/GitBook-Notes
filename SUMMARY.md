@@ -105,6 +105,7 @@
 * [【高并发】高并发秒杀系统架构解密，不是所有的秒杀都是秒杀！](java/gao-bing-fa-gao-bing-fa-miao-sha-xi-tong-jia-gou-jie-mi-bu-shi-suo-you-de-miao-sha-du-shi-miao-sha.md)
 * [Apache 架构师的 30 条设计原则！](java/untitled-2.md)
 * [OpenAPI 标准规范](java/openapi-biao-zhun-gui-fan.md)
+* [聊聊幂等设计](java/liao-liao-mi-deng-she-ji.md)
 * [我，带崩了一个项目！](java/untitled-3.md)
 
 ## Spring
