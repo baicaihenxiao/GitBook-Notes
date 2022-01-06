@@ -234,6 +234,7 @@
 * [grep、sed、awk 高效文件处理 3 剑客！](tools/grepsedawk-gao-xiao-wen-jian-chu-li-3-jian-ke.md)
 * [Linux 三剑客之 awk 实战详解教程](tools/linux-san-jian-ke-zhi-awk-shi-zhan-xiang-jie-jiao-cheng.md)
 * [Online 黑科技工具，大部分我都在用](tools/online-hei-ke-ji-gong-ju-da-bu-fen-wo-du-zai-yong.md)
+* [软件版本命名规则总结](tools/ruan-jian-ban-ben-ming-ming-gui-ze-zong-jie.md)
 * [git](tools/git/README.md)
   * [后端必备 Git 分支开发：规范指南](tools/git/hou-duan-bi-bei-git-fen-zhi-kai-fa-gui-fan-zhi-nan.md)
   * [git worktree 1](tools/git/git-worktree-1.md)
