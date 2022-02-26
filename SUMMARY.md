@@ -52,6 +52,7 @@
 * [✔️ 大国算大帐，要像美国人一样学会等待](aisixiang/da-guo-suan-da-zhang-yao-xiang-mei-guo-ren-yi-yang-xue-hui-deng-dai.md)
 * [✔️⭐ 龚鹏程：得新疆者得天下](aisixiang/gong-peng-cheng-de-xin-jiang-zhe-de-tian-xia.md)
 * [✔️ 美国国运史](aisixiang/mei-guo-guo-yun-shi.md)
+* [“同样被大国做局, 乌克兰崩了, 伊朗为何偏偏能顶住?”](aisixiang/tong-yang-bei-da-guo-zuo-ju-wu-ke-lan-beng-le-yi-lang-wei-he-pian-pian-neng-ding-zhu.md)
 
 ## java
 
