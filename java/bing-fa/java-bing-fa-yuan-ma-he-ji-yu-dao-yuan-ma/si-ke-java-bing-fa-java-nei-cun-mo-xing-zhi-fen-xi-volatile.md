@@ -1,6 +1,6 @@
 # 【死磕Java并发】—– Java内存模型之分析volatile
 
-{% embed url="https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==&mid=2247483857&idx=1&sn=d3069b64d60567b1f8df657d0e1a4fa5&chksm=fa497e60cd3ef776774e186347291fc86dcfc97557b0e949e273be039c9e0a5f43c21c03ff04&scene=21\#wechat\_redirect" %}
+{% embed url="https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247483857&idx=1&sn=d3069b64d60567b1f8df657d0e1a4fa5&chksm=fa497e60cd3ef776774e186347291fc86dcfc97557b0e949e273be039c9e0a5f43c21c03ff04&scene=21#wechat_redirect" %}
 
 
 
@@ -10,9 +10,9 @@
 
 **友情提示：欢迎关注公众号【芋道源码】。😈关注后，拉你进【源码圈】微信群和【大明哥】搞基嗨皮。**
 
-**友情提示：欢迎关注公众号【芋道源码】。😈关注后，拉你进【源码圈】微信群和【\**大明哥\*_】搞基嗨皮。\*_
+**友情提示：欢迎关注公众号【芋道源码】。😈关注后，拉你进【源码圈】微信群和【\\**大明哥\*_】搞基嗨皮。\*_
 
-**友情提示：欢迎关注公众号【芋道源码】。😈关注后，拉你进【源码圈】微信群和【\**大明哥\*_】搞基嗨皮。\*_
+**友情提示：欢迎关注公众号【芋道源码】。😈关注后，拉你进【源码圈】微信群和【\\**大明哥\*_】搞基嗨皮。\*_
 
 前篇博客【死磕Java并发】-----深入分析volatile的实现原理 中已经阐述了volatile的特性了：
 
@@ -26,7 +26,7 @@
 
 在这篇博客【死磕Java并发】-----Java内存模型之happend-before中LZ阐述了happens-before是用来判断是否存数据竞争、线程是否安全的主要依据，它保证了多线程环境下的可见性。下面我们就那个经典的例子来分析volatile变量的读写建立的happens-before关系。
 
-```text
+```
 public class VolatileTest {    int i = 0;    volatile boolean flag = false;    //Thread A    public void write(){        i = 2;              //1        flag = true;        //2    }    //Thread B    public void read(){        if(flag){                                   //3            System.out.println("---i = " + i);      //4        }    }}
 ```
 
@@ -69,7 +69,7 @@ LoadStore屏障用来禁止处理器把上面的volatile读与下面的普通写
 
 下面我们就上面那个VolatileTest例子分析下：
 
-```text
+```
 public class VolatileTest {    int i = 0;    volatile boolean flag = false;    public void write(){        i = 2;        flag = true;    }    public void read(){        if(flag){            System.out.println("---i = " + i);         }    }}
 ```
 
@@ -79,7 +79,7 @@ public class VolatileTest {    int i = 0;    volatile boolean flag = false;    p
 
 volatile的内存屏障插入策略非常保守，其实在实际中，只要不改变volatile写-读得内存语义，编译器可以根据具体情况优化，省略不必要的屏障。如下（摘自方腾飞 《Java并发编程的艺术》）：
 
-```text
+```
 public class VolatileBarrierExample {    int a = 0;    volatile int v1 = 1;    volatile int v2 = 2;    void readAndWrite(){        int i = v1;     //volatile读        int j = v2;     //volatile读        a = i + j;      //普通读        v1 = i + 1;     //volatile写        v2 = j * 2;     //volatile写    }}
 ```
 
@@ -112,4 +112,3 @@ public class VolatileBarrierExample {    int a = 0;    volatile int v1 = 1;    v
 ### 参考资料
 
 1. 方腾飞：《Java并发编程的艺术》
-

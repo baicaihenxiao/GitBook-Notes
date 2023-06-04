@@ -10,7 +10,7 @@
 
 懒汉写法（线程不安全）
 
-```text
+```
 public class Singleton {private static Singleton singleton;private Singleton() {
 }public static Singleton getInstance() {
  if (singleton == null) {
@@ -23,7 +23,7 @@ public class Singleton {private static Singleton singleton;private Singleton() {
 
 懒汉式写法（线程安全）
 
-```text
+```
 public class Singleton {  
    private static Singleton instance;  
    private Singleton (){}  
@@ -38,7 +38,7 @@ public class Singleton {
 
 饿汉式写法
 
-```text
+```
 public class Singleton {  
    private static Singleton instance = new Singleton();  
    private Singleton (){}  
@@ -50,7 +50,7 @@ public class Singleton {
 
 静态内部类
 
-```text
+```
 public class Singleton {  
    private static class SingletonHolder {  
    private static final Singleton INSTANCE = new Singleton();  
@@ -66,7 +66,7 @@ public class Singleton {
 
 这种方式是Effective Java作者Josh Bloch 提倡的方式，它不仅能避免多线程同步问题，而且还能防止反序列化重新创建新的对象，可谓是很坚强的壁垒啊，不过，个人认为由于1.5中才加入enum特性，用这种方式写不免让人感觉生疏。
 
-```text
+```
 public enum Singleton {  
    INSTANCE;  
    public void whateverMethod() {  
@@ -76,7 +76,7 @@ public enum Singleton {
 
 双重校验锁
 
-```text
+```
 public class Singleton {  
    private volatile static Singleton singleton;  
    private Singleton (){}  
@@ -96,7 +96,7 @@ public class Singleton {
 实际应用场景：
 
 1. 在Spring中创建的Bean实例默认都是单例模式存在的。
-2. Windows的Task Manager（任务管理器）就是很典型的单例模式（这个很熟悉吧），想想看，是不是呢，你能打开两个windows task manager吗？不信你自己试试看哦~
+2. Windows的Task Manager（任务管理器）就是很典型的单例模式（这个很熟悉吧），想想看，是不是呢，你能打开两个windows task manager吗？不信你自己试试看哦\~
 3. windows的Recycle Bin（回收站）也是典型的单例应用。在整个系统运行过程中，回收站一直维护着仅有的一个实例。
 4. 网站的计数器，一般也是采用单例模式实现，否则难以同步。
 5. 应用程序的日志应用，一般都何用单例模式实现，这一般是由于共享的日志文件一直处于打开状态，因为只能有一个实例去操作，否则内容不好追加。
@@ -109,7 +109,7 @@ public class Singleton {
 
 这句话被小王和小李听到了，结果乐坏了，蹭蹭蹭，没一会儿，小王就冲到小美家门口了，在这里，小美是被观察者，小王和小李是观察者，被观察者发出一条信息，然后观察者们进行相应的处理，看代码：
 
-```text
+```
 public interface Person {
    //小王和小李通过这个接口可以接收到小美发过来的消息
    void getMessage(String s);
@@ -118,7 +118,7 @@ public interface Person {
 
 这个接口相当于小王和小李的电话号码，小美发送通知的时候就会拨打getMessage这个电话，拨打电话就是调用接口，看不懂没关系，先往下看
 
-```text
+```
 public class LaoWang implements Person {   private String name = "小王";   public LaoWang() {
    }   @Override
    public void getMessage(String s) {
@@ -132,7 +132,7 @@ public class LaoWang implements Person {   private String name = "小王";   pub
 
 代码很简单，我们再看看小美的代码：
 
-```text
+```
 public class XiaoMei {
    List list = new ArrayList();
     public XiaoMei(){
@@ -149,7 +149,7 @@ public class XiaoMei {
 
 我们写一个测试类来看一下结果对不对
 
-```text
+```
 public class Test {
    public static void main(String[] args) {       XiaoMei xiao_mei = new XiaoMei();
        LaoWang lao_wang = new LaoWang();
@@ -165,12 +165,13 @@ public class Test {
 
 场景描述：
 
-以购票为核心业务\(此模式不限于该业务\)，但围绕购票会产生不同的其他逻辑，如：
+以购票为核心业务(此模式不限于该业务)，但围绕购票会产生不同的其他逻辑，如：
 
 * 购票后记录文本日志
 * 购票后记录数据库日志
 * 购票后发送短信
-* 购票送抵扣卷、兑换卷、积分 -其他各类活动等
+* 购票送抵扣卷、兑换卷、积分\
+  \-其他各类活动等
 
 **传统解决方案:**
 
@@ -197,7 +198,7 @@ public class Test {
 
 举个栗子，我想吃三明治，首先我需要一根大大的香肠，我喜欢吃奶油，在香肠上面加一点奶油，再放一点蔬菜，最后再用两片面包夹一下，很丰盛的一顿午饭，营养又健康。那我们应该怎么来写代码呢？首先，我们需要写一个Food类，让其他所有食物都来继承这个类，看代码：
 
-```text
+```
 public class Food {   private String food_name;   public Food() {
    }   public Food(String food_name) {
        this.food_name = food_name;
@@ -209,7 +210,7 @@ public class Food {   private String food_name;   public Food() {
 
 代码很简单，我就不解释了，然后我们写几个子类继承它：
 
-```text
+```
 //面包类
 public class Bread extends Food {   private Food basic_food;   public Bread(Food basic_food) {
        this.basic_food = basic_food;
@@ -232,7 +233,7 @@ public class Vegetable extends Food {   private Food basic_food;   public Vegeta
 
 这几个类都是差不多的，构造方法传入一个Food类型的参数，然后在make方法中加入一些自己的逻辑，如果你还是看不懂为什么这么写，不急，你看看我的Test类是怎么写的，一看你就明白了
 
-```text
+```
 public class Test {
    public static void main(String[] args) {
        Food food = new Bread(new Vegetable(new Cream(new Food("香肠"))));
@@ -241,7 +242,7 @@ public class Test {
 }
 ```
 
-看到没有，一层一层封装，我们从里往外看：最里面我new了一个香肠，在香肠的外面我包裹了一层奶油，在奶油的外面我又加了一层蔬菜，最外面我放的是面包，是不是很形象，哈哈~ 这个设计模式简直跟现实生活中一摸一样，看懂了吗？
+看到没有，一层一层封装，我们从里往外看：最里面我new了一个香肠，在香肠的外面我包裹了一层奶油，在奶油的外面我又加了一层蔬菜，最外面我放的是面包，是不是很形象，哈哈\~ 这个设计模式简直跟现实生活中一摸一样，看懂了吗？
 
 **实际应用场景：**
 
@@ -258,7 +259,7 @@ public class Test {
 
 将两种完全不同的事物联系到一起，就像现实生活中的变压器。假设一个手机充电器需要的电压是20V，但是正常的电压是220V，这时候就需要一个变压器，将220V的电压转换成20V的电压，这样，变压器就将20V的电压和手机联系起来了。
 
-```text
+```
 public class Test {
    public static void main(String[] args) {
        Phone phone = new Phone();
@@ -284,7 +285,7 @@ class VoltageAdapter {
 }
 ```
 
-**适配器模式应用场景**  
+**适配器模式应用场景**\
 
 
 类适配器与对象适配器的使用场景一致，仅仅是实现手段稍有区别，二者主要用于如下场景：
@@ -302,7 +303,7 @@ class VoltageAdapter {
 
 简单工厂模式：一个抽象的接口，多个抽象接口的实现类，一个工厂类，用来实例化抽象的接口
 
-```text
+```
 // 抽象产品类
 abstract class Car {
    public void run();   public void stop();
@@ -343,7 +344,7 @@ class Factory {
 
 工厂方法模式：有四个角色，抽象工厂模式，具体工厂模式，抽象产品模式，具体产品模式。不再是由一个工厂类去实例化具体的产品，而是由抽象工厂的子类去实例化产品
 
-```text
+```
 // 抽象产品角色
 public interface Moveable {
    void run();
@@ -382,7 +383,7 @@ public class Test {
 
 抽象工厂模式：与工厂方法模式不同的是，工厂方法模式中的工厂只生产单一的产品，而抽象工厂模式中的工厂生产多个产品
 
-```text
+```
 //抽象工厂类
 public abstract class AbstractFactory {
    public abstract Vehicle createVehicle();
@@ -434,13 +435,13 @@ public class Test {
 
 到了一定的年龄，我们就要结婚，结婚是一件很麻烦的事情，（包括那些被父母催婚的）。有钱的家庭可能会找司仪来主持婚礼，显得热闹，洋气～好了，现在婚庆公司的生意来了，我们只需要给钱，婚庆公司就会帮我们安排一整套结婚的流程。
 
-整个流程大概是这样的：家里人催婚-&gt;男女双方家庭商定结婚的黄道即日-&gt;找一家靠谱的婚庆公司-&gt;在约定的时间举行结婚仪式-&gt;结婚完毕
+整个流程大概是这样的：家里人催婚->男女双方家庭商定结婚的黄道即日->找一家靠谱的婚庆公司->在约定的时间举行结婚仪式->结婚完毕
 
 婚庆公司打算怎么安排婚礼的节目，在婚礼完毕以后婚庆公司会做什么，我们一概不知。。。别担心，不是黑中介，我们只要把钱给人家，人家会把事情给我们做好。所以，这里的婚庆公司相当于代理角色，现在明白什么是代理角色了吧。
 
 代码实现请看：
 
-```text
+```
 //代理接口
 public interface ProxyInterface {
 //需要代理的是结婚这件事，如果还有其他事情需要代理，比如吃饭睡觉上厕所，也可以写
@@ -456,7 +457,7 @@ void marry();
 
 好了，我们看看婚庆公司的代码:
 
-```text
+```
 public class WeddingCompany implements ProxyInterface {private ProxyInterface proxyInterface;public WeddingCompany(ProxyInterface proxyInterface) {
  this.proxyInterface = proxyInterface;
 }@Override
@@ -474,7 +475,7 @@ public void marry() {
 
 看到没有，婚庆公司需要做的事情很多，我们再看看结婚家庭的代码:
 
-```text
+```
 public class NormalHome implements ProxyInterface{@Override
 public void marry() {
  System.out.println("我们结婚啦～");
@@ -485,7 +486,7 @@ public void marry() {
 
 来看看测试类代码：
 
-```text
+```
 public class Test {
 public static void main(String[] args) {
  ProxyInterface proxyInterface = new WeddingCompany(new NormalHome());
@@ -507,4 +508,3 @@ public static void main(String[] args) {
 下方二维码关注我
 
 _因为坚持分享可落地的技术架构文章_
-

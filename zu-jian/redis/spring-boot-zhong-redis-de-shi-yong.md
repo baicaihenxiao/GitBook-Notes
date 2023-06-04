@@ -12,7 +12,7 @@ Redis 是目前业界使用最广泛的内存数据存储。相比 Memcached，R
 
 1、引入依赖包
 
-```text
+```
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -29,7 +29,7 @@ Lettuce 是一个可伸缩线程安全的 Redis 客户端，多个线程可以�
 
 2、添加配置文件
 
-```text
+```
 # Redis数据库索引（默认为0）
 spring.redis.database=0  
 # Redis服务器地址
@@ -50,7 +50,7 @@ spring.redis.lettuce.pool.min-idle=0
 
 3、添加 cache 的配置类
 
-```text
+```
 @Configuration
 @EnableCaching
 public class RedisConfig extends CachingConfigurerSupport{
@@ -77,7 +77,7 @@ public class RedisConfig extends CachingConfigurerSupport{
 
 3、好了，接下来就可以直接使用了
 
-```text
+```
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TestRedis {
@@ -115,7 +115,7 @@ public class TestRedis {
 
 4、自动根据方法生成缓存
 
-```text
+```
 @RestController
 public class UserController {
 
@@ -145,7 +145,7 @@ Spring Session 提供了一套创建和管理 Servlet HttpSession 的方案。Sp
 
 1、引入依赖
 
-```text
+```
 <dependency>
     <groupId>org.springframework.session</groupId>
     <artifactId>spring-session-data-redis</artifactId>
@@ -154,7 +154,7 @@ Spring Session 提供了一套创建和管理 Servlet HttpSession 的方案。Sp
 
 2、Session 配置：
 
-```text
+```
 @Configuration
 @EnableRedisHttpSession(maxInactiveIntervalInSeconds = 86400*30)
 public class SessionConfig {
@@ -169,7 +169,7 @@ public class SessionConfig {
 
 添加测试方法获取 sessionid
 
-```text
+```
 @RequestMapping("/uid")
 String uid(HttpSession session) {
     UUID uid = (UUID) session.getAttribute("uid");
@@ -183,7 +183,7 @@ String uid(HttpSession session) {
 
 登录 Redis 输入 `keys '*sessions*'`
 
-```text
+```
 t<spring:session:sessions:db031986-8ecc-48d6-b471-b137a3ed6bc4
 t(spring:session:expirations:1472976480000
 ```
@@ -202,8 +202,6 @@ t(spring:session:expirations:1472976480000
 
 ## 参考
 
-[Redis的两个典型应用场景](http://emacoo.cn/blog/spring-redis) 
+[Redis的两个典型应用场景](http://emacoo.cn/blog/spring-redis)&#x20;
 
-[SpringBoot应用之分布式会话](https://segmentfault.com/a/1190000004358410)  
-
-
+[SpringBoot应用之分布式会话](https://segmentfault.com/a/1190000004358410)\

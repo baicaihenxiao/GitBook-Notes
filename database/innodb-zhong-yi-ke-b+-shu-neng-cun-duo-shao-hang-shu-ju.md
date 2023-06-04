@@ -22,25 +22,25 @@ InnoDB一棵B+树可以存放多少行数据？这个问题的简单回答是：
 
 文件系统中一个文件大小只有1个字节，但不得不占磁盘上4KB的空间。
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5DwlibM4t2fTkRcfllMibc4psvpszxUZdu7dEhYa5ia2qiazibEKqb0ic3WhLwg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247487551&idx=1&sn=18f64ba49f3f0f9d8be9d1fdef8857d9&scene=21#wechat_redirect)
+[![](https://mmbiz.qpic.cn/mmbiz\_jpg/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5DwlibM4t2fTkRcfllMibc4psvpszxUZdu7dEhYa5ia2qiazibEKqb0ic3WhLwg/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&scene=21#wechat\_redirect)
 
 innodb的所有数据文件（后缀为ibd的文件），他的大小始终都是16384（16k）的整数倍。
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5DwxSW7QKvD2gQ8OtZUdJ99bXLPT04th2AheNSQ80LIzPiapCGSVc1zibcA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247487551&idx=1&sn=18f64ba49f3f0f9d8be9d1fdef8857d9&scene=21#wechat_redirect)
+[![](https://mmbiz.qpic.cn/mmbiz\_jpg/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5DwxSW7QKvD2gQ8OtZUdJ99bXLPT04th2AheNSQ80LIzPiapCGSVc1zibcA/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&scene=21#wechat\_redirect)
 
 磁盘扇区、文件系统、InnoDB存储引擎都有各自的最小存储单元。
 
-[![](https://mmbiz.qpic.cn/mmbiz_png/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5DwlldTfrHIxCuxJfRgHpsnecoagqJkyMicCPRzChSrAvNV9cWichOsuJqQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247487551&idx=1&sn=18f64ba49f3f0f9d8be9d1fdef8857d9&scene=21#wechat_redirect)
+[![](https://mmbiz.qpic.cn/mmbiz\_png/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5DwlldTfrHIxCuxJfRgHpsnecoagqJkyMicCPRzChSrAvNV9cWichOsuJqQ/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&scene=21#wechat\_redirect)
 
-在[MySQL](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247488132&idx=3&sn=da485b7e53fc1a95acad6baf06892591&scene=21#wechat_redirect)中我们的InnoDB页的大小默认是16k，当然也可以通过参数设置：
+在[MySQL](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247488132\&idx=3\&sn=da485b7e53fc1a95acad6baf06892591\&scene=21#wechat\_redirect)中我们的InnoDB页的大小默认是16k，当然也可以通过参数设置：
 
-[![](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247487551&idx=1&sn=18f64ba49f3f0f9d8be9d1fdef8857d9&scene=21#wechat_redirect)
+[![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M5LMBM-KNwLIye8nLEI%2Fuploads%2FZUkAqfhWq61svkThpdru%2Ffile.gif?alt=media)](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&scene=21#wechat\_redirect)
 
 数据表中的数据都是存储在页中的，所以一个页中能存储多少行数据呢？假设一行数据的大小是1k，那么一个页可以存放16行这样的数据。
 
 如果数据库只按这样的方式存储，那么如何查找数据就成为一个问题，因为我们不知道要查找的数据存在哪个页中，也不可能把所有的页遍历一遍，那样太慢了。所以人们想了一个办法，用B+树的方式组织这些数据。如图所示：
 
-[![](https://mmbiz.qpic.cn/mmbiz_png/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5Dw3oNuYHseXk3YVpw5QGOtMicy6WDG3w9ZDHO4RCcr135EvYicWqh2NrpQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247487551&idx=1&sn=18f64ba49f3f0f9d8be9d1fdef8857d9&scene=21#wechat_redirect)
+[![](https://mmbiz.qpic.cn/mmbiz\_png/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5Dw3oNuYHseXk3YVpw5QGOtMicy6WDG3w9ZDHO4RCcr135EvYicWqh2NrpQ/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&scene=21#wechat\_redirect)
 
 我们先将数据记录按主键进行排序，分别存放在不同的页中（为了便于理解我们这里一个页中只存放3条记录，实际情况可以存放很多），除了存放数据的页以外，还有存放键值+指针的页，如图中page number=3的页，该页存放键值和指向数据页的指针，这样的页由N个键值+指针组成。当然它也是排好序的。这样的数据组织形式，我们称为索引组织表。现在来看下，要查找一条数据，怎么查？
 
@@ -48,7 +48,7 @@ innodb的所有数据文件（后缀为ibd的文件），他的大小始终都�
 
 这里id是主键,我们通过这棵B+树来查找，首先找到根页，你怎么知道user表的根页在哪呢？其实每张表的根页位置在表空间文件中是固定的，即page number=3的页（这点我们下文还会进一步证明），找到根页后通过二分查找法，定位到id=5的数据应该在指针P5指向的页中，那么进一步去page number=5的页中查找，同样通过二分查询法即可找到id=5的记录：
 
-**\| 5 \| zhao2 \| 27 \|**
+**| 5 | zhao2 | 27 |**
 
 现在我们清楚了InnoDB中主键索引B+树是如何组织数据、查询数据的，我们总结一下：
 
@@ -76,17 +76,17 @@ innodb的所有数据文件（后缀为ibd的文件），他的大小始终都�
 
 在实际操作之前，你可以通过InnoDB元数据表确认主键索引根页的page number为3，你也可以从《InnoDB存储引擎》这本书中得到确认。
 
-[![](https://mmbiz.qpic.cn/mmbiz_png/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5Dw9mUzG6W7AnrmgKhSTSOk90uGcR6ibqLkNAJsziaiaLhiaQEBdXUpvYmYBQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247487551&idx=1&sn=18f64ba49f3f0f9d8be9d1fdef8857d9&scene=21#wechat_redirect)
+[![](https://mmbiz.qpic.cn/mmbiz\_png/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5Dw9mUzG6W7AnrmgKhSTSOk90uGcR6ibqLkNAJsziaiaLhiaQEBdXUpvYmYBQ/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&scene=21#wechat\_redirect)
 
 执行结果：
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5DwZUYQQtMs9VrCP9xRmN9N6yvqia7neyDeRggDYLI5wbicP6ibMFqOm0A2g/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247487551&idx=1&sn=18f64ba49f3f0f9d8be9d1fdef8857d9&scene=21#wechat_redirect)
+[![](https://mmbiz.qpic.cn/mmbiz\_jpg/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5DwZUYQQtMs9VrCP9xRmN9N6yvqia7neyDeRggDYLI5wbicP6ibMFqOm0A2g/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&scene=21#wechat\_redirect)
 
-可以看出数据库dbt3下的customer表、lineitem表主键索引根页的page number均为3，而其他的二级索引page number为4。关于二级索引与主键索引的区别请参考[MySQL](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247488132&idx=3&sn=da485b7e53fc1a95acad6baf06892591&scene=21#wechat_redirect)相关书籍，本文不在此介绍。
+可以看出数据库dbt3下的customer表、lineitem表主键索引根页的page number均为3，而其他的二级索引page number为4。关于二级索引与主键索引的区别请参考[MySQL](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247488132\&idx=3\&sn=da485b7e53fc1a95acad6baf06892591\&scene=21#wechat\_redirect)相关书籍，本文不在此介绍。
 
 **下面我们对数据库表空间文件做想相关的解析：**
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5Dw6zicqrzbYw34lF5stXrlTltMFKCBzLBONLRPjbhY9keWfB2gE2SDJsA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247487551&idx=1&sn=18f64ba49f3f0f9d8be9d1fdef8857d9&scene=21#wechat_redirect)
+[![](https://mmbiz.qpic.cn/mmbiz\_jpg/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5Dw6zicqrzbYw34lF5stXrlTltMFKCBzLBONLRPjbhY9keWfB2gE2SDJsA/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&scene=21#wechat\_redirect)
 
 因为主键索引B+树的根页在整个表空间文件中的第3个页开始，所以可以算出它在文件中的偏移量：**16384\*3=49152（16384为页大小）** 。
 
@@ -94,13 +94,13 @@ innodb的所有数据文件（后缀为ibd的文件），他的大小始终都�
 
 **接下来我们用hexdump工具，查看表空间文件指定偏移量上的数据：**
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5Dw5RLUuzk2Uft9LzYG7q7vblUwPFRlib5LqVUYuTzJHmNeqq5MpTvgNEw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247487551&idx=1&sn=18f64ba49f3f0f9d8be9d1fdef8857d9&scene=21#wechat_redirect)
+[![](https://mmbiz.qpic.cn/mmbiz\_jpg/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5Dw5RLUuzk2Uft9LzYG7q7vblUwPFRlib5LqVUYuTzJHmNeqq5MpTvgNEw/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&scene=21#wechat\_redirect)
 
 **linetem表的page level为2，B+树高度为page level+1=3；** **region表的page level为0，B+树高度为page level+1=1；** **customer表的page level为2，B+树高度为page level+1=3；**
 
 **这三张表的数据量如下：**
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5DwLeWqwpGWvxZaRIFJVFt4wJGOFqXKicogf09CmCgpIlFo7M1diaSpdJkQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247487551&idx=1&sn=18f64ba49f3f0f9d8be9d1fdef8857d9&scene=21#wechat_redirect)
+[![](https://mmbiz.qpic.cn/mmbiz\_jpg/JdLkEI9sZffPFibLEVmDs8ibkuNT3ibf5DwLeWqwpGWvxZaRIFJVFt4wJGOFqXKicogf09CmCgpIlFo7M1diaSpdJkQ/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&scene=21#wechat\_redirect)
 
 ## 五、小结
 
@@ -110,7 +110,7 @@ region表只有5行数据，当然他的B+树高度为1。
 
 ## 六、最后回顾一道面试题
 
-有一道[MySQL](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247488132&idx=3&sn=da485b7e53fc1a95acad6baf06892591&scene=21#wechat_redirect)的面试题，为什么[MySQL](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247488132&idx=3&sn=da485b7e53fc1a95acad6baf06892591&scene=21#wechat_redirect)的索引要使用B+树而不是其它树形结构？比如B树？
+有一道[MySQL](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247488132\&idx=3\&sn=da485b7e53fc1a95acad6baf06892591\&scene=21#wechat\_redirect)的面试题，为什么[MySQL](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247488132\&idx=3\&sn=da485b7e53fc1a95acad6baf06892591\&scene=21#wechat\_redirect)的索引要使用B+树而不是其它树形结构？比如B树？
 
 现在这个问题的复杂版本可以参考本文；
 
@@ -120,11 +120,10 @@ region表只有5行数据，当然他的B+树高度为1。
 
 ## 七、总结
 
-本文从一个问题出发，逐步介绍了InnoDB索引组织表的原理、查询方式，并结合已有知识，回答该问题，结合实践来证明。当然为了表述简单易懂，文中忽略了一些细枝末节，比如一个页中不可能所有空间都用于存放数据，它还会存放一些少量的其他字段比如page level，index number等等，另外还有页的填充因子也导致一个页不可能全部用于保存数据。关于二级索引数据存取方式可以参考[MySQL](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247488132&idx=3&sn=da485b7e53fc1a95acad6baf06892591&scene=21#wechat_redirect)相关书籍，他的要点是结合主键索引进行回表查询。
+本文从一个问题出发，逐步介绍了InnoDB索引组织表的原理、查询方式，并结合已有知识，回答该问题，结合实践来证明。当然为了表述简单易懂，文中忽略了一些细枝末节，比如一个页中不可能所有空间都用于存放数据，它还会存放一些少量的其他字段比如page level，index number等等，另外还有页的填充因子也导致一个页不可能全部用于保存数据。关于二级索引数据存取方式可以参考[MySQL](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247488132\&idx=3\&sn=da485b7e53fc1a95acad6baf06892591\&scene=21#wechat\_redirect)相关书籍，他的要点是结合主键索引进行回表查询。
 
 参考资料：
 
-1、《[MySQL](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247488132&idx=3&sn=da485b7e53fc1a95acad6baf06892591&scene=21#wechat_redirect)技术内幕:InnoDB存储引擎》
+1、《[MySQL](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247488132\&idx=3\&sn=da485b7e53fc1a95acad6baf06892591\&scene=21#wechat\_redirect)技术内幕:InnoDB存储引擎》
 
-2、http://www.inno[mysql](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247488132&idx=3&sn=da485b7e53fc1a95acad6baf06892591&scene=21#wechat_redirect).com/查看-innodb表中每个的索引高度/
-
+2、http://www.inno[mysql](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247488132\&idx=3\&sn=da485b7e53fc1a95acad6baf06892591\&scene=21#wechat\_redirect).com/查看-innodb表中每个的索引高度/

@@ -12,7 +12,7 @@ Spring 总共有十几个组件，但是真正核心的组件只有几个，下�
 
 **图 1 .Spring 框架的总体架构图**
 
-\*\*\*\*
+
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221748946-221749.jpg)
 
@@ -36,7 +36,7 @@ Bean 在 Spring 中作用就像 Object 对 OOP 的意义一样，没有对象的
 
 **图 2. 三个组件关系**
 
-\*\*\*\*
+
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221749233-221749.jpg)
 
@@ -54,7 +54,7 @@ Spring Bean 的**创建**是典型的**工厂模式**，它的**顶级接口是 
 
 **图 3. Bean 工厂的继承关系**
 
-\*\*\*\*
+
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221749962-221750.jpg)
 
@@ -62,7 +62,7 @@ BeanFactory 有三个子类：ListableBeanFactory、HierarchicalBeanFactory 和 
 
 > **`org.springframework.beans.factory.BeanFactory`**
 >
-> 注释： This interface is implemented by objects that hold a number of bean definitions, each uniquely identified by a String name. Depending on the bean definition, the factory will return either an independent instance of a contained object \(the Prototype design pattern\), or a single shared instance \(a superior alternative to the Singleton design pattern, in which the instance is a singleton in the scope of the factory\). Which type of instance will be returned depends on the bean factory configuration: the API is the same. Since Spring 2.0, further scopes are available depending on the concrete application context
+> 注释： This interface is implemented by objects that hold a number of bean definitions, each uniquely identified by a String name. Depending on the bean definition, the factory will return either an independent instance of a contained object (the Prototype design pattern), or a single shared instance (a superior alternative to the Singleton design pattern, in which the instance is a singleton in the scope of the factory). Which type of instance will be returned depends on the bean factory configuration: the API is the same. Since Spring 2.0, further scopes are available depending on the concrete application context
 >
 > Bean factory implementations should support the standard bean lifecycle interfaces as far as possible. The full set of initialization methods and their standard order is:
 >
@@ -71,11 +71,11 @@ BeanFactory 有三个子类：ListableBeanFactory、HierarchicalBeanFactory 和 
 > 3. BeanFactoryAware's {@code setBeanFactory}
 > 4. EnvironmentAware's {@code setEnvironment}
 > 5. EmbeddedValueResolverAware's {@code setEmbeddedValueResolver}
-> 6. ResourceLoaderAware's {@code setResourceLoader} \(only applicable when running in an application context\)
-> 7. ApplicationEventPublisherAware's {@code setApplicationEventPublisher} \(only applicable when running in an application context\)
-> 8. MessageSourceAware's {@code setMessageSource} \(only applicable when running in an application context\)
-> 9. ApplicationContextAware's {@code setApplicationContext} \(only applicable when running in an application context\)
-> 10. ServletContextAware's {@code setServletContext} \(only applicable when running in a web application context\)
+> 6. ResourceLoaderAware's {@code setResourceLoader} (only applicable when running in an application context)
+> 7. ApplicationEventPublisherAware's {@code setApplicationEventPublisher} (only applicable when running in an application context)
+> 8. MessageSourceAware's {@code setMessageSource} (only applicable when running in an application context)
+> 9. ApplicationContextAware's {@code setApplicationContext} (only applicable when running in an application context)
+> 10. ServletContextAware's {@code setServletContext} (only applicable when running in a web application context)
 > 11. {@code postProcessBeforeInitialization} methods of BeanPostProcessors
 > 12. InitializingBean's {@code afterPropertiesSet}
 > 13. a custom init-method definition
@@ -95,7 +95,7 @@ Bean 的定义主要有 BeanDefinition 描述，如下图说明了这些类的�
 
 #### **图 4. Bean 定义的类层次关系图**
 
-![&#x56FE; 4. Bean &#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x5C42;&#x6B21;&#x5173;&#x7CFB;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image004-114838.png)
+![图 4. Bean 定义的类层次关系图](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image004-114838.png)
 
 Bean 的定义就是完整的描述了在 Spring 的配置文件中你定义的 节点中所有的信息，包括各种子节点。当 Spring 成功解析你定义的一个 节点后，在 Spring 的内部就被转化成 **BeanDefinition 对象**。以后所有的操作都是对这个对象完成的。
 
@@ -109,17 +109,17 @@ Bean 的定义就是完整的描述了在 Spring 的配置文件中你定义的 
 >
 > 　1.4.1　ChildBeanDefinition是一种bean definition，它可以继承它父类的设置，即ChildBeanDefinition对RootBeanDefinition有一定的依赖关系。
 >
-> 　　ChildBeanDefinition从父类继承构造参数值，属性值并可以重写父类的方法，同时也可以增加新的属性或者方法。\(类同于java类的继承关系\)。若指定初始化方法，销毁方法或者静态工厂方法，　　ChildBeanDefinition将重写相应父类的设置。depends on，autowire mode，dependency check，sigleton，lazy init 一般由子类自行设定。
+> 　　ChildBeanDefinition从父类继承构造参数值，属性值并可以重写父类的方法，同时也可以增加新的属性或者方法。(类同于java类的继承关系)。若指定初始化方法，销毁方法或者静态工厂方法，　　ChildBeanDefinition将重写相应父类的设置。depends on，autowire mode，dependency check，sigleton，lazy init 一般由子类自行设定。
 >
-> 注意：从spring 2.5 开始，提供了一个更好的注册bean definition类GenericBeanDefinition，它支持动态定义父依赖，方法是GenericBeanDefinition.setParentName\(java.lang.String\)，GenericBeanDefinition可以有效的替代ChildBeanDefinition的绝大分部使用场合。
+> 注意：从spring 2.5 开始，提供了一个更好的注册bean definition类GenericBeanDefinition，它支持动态定义父依赖，方法是GenericBeanDefinition.setParentName(java.lang.String)，GenericBeanDefinition可以有效的替代ChildBeanDefinition的绝大分部使用场合。
 >
->   1.4.2 GenericBeanDefinition是一站式的标准bean definition，除了具有指定类、可选的构造参数值和属性参数这些其它bean definition一样的特性外，它还具有通过parenetName属性来灵活设置parent bean definition。
+> &#x20; 1.4.2 GenericBeanDefinition是一站式的标准bean definition，除了具有指定类、可选的构造参数值和属性参数这些其它bean definition一样的特性外，它还具有通过parenetName属性来灵活设置parent bean definition。
 >
-> 通常， GenericBeanDefinition用来注册用户可见的bean definition\(可见的bean definition意味着可以在该类bean definition上定义post-processor来对bean进行操作，甚至为配置parent name做扩展准备\)。`RootBeanDefinition` / `ChildBeanDefinition用来预定义具有`parent/child关系的bean definition。
+> 通常， GenericBeanDefinition用来注册用户可见的bean definition(可见的bean definition意味着可以在该类bean definition上定义post-processor来对bean进行操作，甚至为配置parent name做扩展准备)。`RootBeanDefinition` / `ChildBeanDefinition用来预定义具有`parent/child关系的bean definition。
 >
 > 1.4.3 RootBeanDefinition
 >
->     一个RootBeanDefinition定义表明它是一个可合并的bean definition：即在spring beanFactory运行期间，可以返回一个特定的bean。RootBeanDefinition可以作为一个重要的通用的bean definition 视图。
+> &#x20;   一个RootBeanDefinition定义表明它是一个可合并的bean definition：即在spring beanFactory运行期间，可以返回一个特定的bean。RootBeanDefinition可以作为一个重要的通用的bean definition 视图。
 >
 > RootBeanDefinition用来在配置阶段进行注册bean definition。然后，**从spring 2.5后，编写注册bean definition有了更好的的方法：GenericBeanDefinition。GenericBeanDefinition支持动态定义父类依赖，而非硬编码作为root bean definition。**
 
@@ -280,7 +280,7 @@ protected final void refreshBeanFactory() throws BeansException {
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221755872-221756.jpg)
 
-从这个图中发现除了 BeanFactory 相关的类外，还发现了与 Bean 的 register 相关。这在 refreshBeanFactory 方法中有一行 loadBeanDefinitions\(beanFactory\) 将找到答案，这个方法将开始加载、解析 Bean 的定义，也就是把用户定义的数据结构转化为 Ioc 容器中的特定数据结构。
+从这个图中发现除了 BeanFactory 相关的类外，还发现了与 Bean 的 register 相关。这在 refreshBeanFactory 方法中有一行 loadBeanDefinitions(beanFactory) 将找到答案，这个方法将开始加载、解析 Bean 的定义，也就是把用户定义的数据结构转化为 Ioc 容器中的特定数据结构。
 
 这个过程可以用下面时序图解释：
 
@@ -426,13 +426,13 @@ Ioc 它实际上就是为你构建了一个魔方，Spring 为你搭好了骨骼
 
 **图 15. Proxy 类结构**
 
-![&#x56FE; 15. Proxy &#x7C7B;&#x7ED3;&#x6784;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image015-114840.png)
+![图 15. Proxy 类结构](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image015-114840.png)
 
 从上图发现最后面四个是公有方法。而最后一个方法 newProxyInstance 就是创建代理对象的方法。这个方法的源码如下：
 
 **清单 6. Proxy. newProxyInstance**
 
-```text
+```
 public static Object newProxyInstance(ClassLoader loader,
     Class<?>[] interfaces,
     InvocationHandler h)
@@ -465,7 +465,7 @@ public static Object newProxyInstance(ClassLoader loader,
 
 **图 16. 创建代理对象时序图**
 
-![&#x56FE; 16. &#x521B;&#x5EFA;&#x4EE3;&#x7406;&#x5BF9;&#x8C61;&#x65F6;&#x5E8F;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image016-114840.png)
+![图 16. 创建代理对象时序图](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image016-114840.png)
 
 其实从上图中可以发现正在构造代理类的是在 ProxyGenerator 的 generateProxyClass 的方法中。ProxyGenerator 类在 sun.misc 包下，感兴趣的话可以看看他的源码。
 
@@ -473,7 +473,7 @@ public static Object newProxyInstance(ClassLoader loader,
 
 **清单 7. SimpleProxy 类**
 
-```text
+```
 public interface SimpleProxy {
 
     public void simpleMethod1();
@@ -489,7 +489,7 @@ public interface SimpleProxy {
 
 **清单 8. $Proxy2 类**
 
-```text
+```
 public class $Proxy2 extends java.lang.reflect.Proxy implements SimpleProxy{
     java.lang.reflect.Method m0;
     java.lang.reflect.Method m1;
@@ -525,7 +525,7 @@ Spring 的 Aop 实现是遵守 Aop 联盟的约定。同时 Spring 又扩展了�
 
 **清单 9. 配置代理类 Bean**
 
-```text
+```
 <bean id="testBeanSingleton"
     class="org.springframework.aop.framework.ProxyFactoryBean">
     <property name="proxyInterfaces">
@@ -580,7 +580,7 @@ Spring 中使用的设计模式也很多，比如工厂模式、单例模式、�
 
 **图 20. 代理模式的结构**
 
-![&#x56FE; 20. &#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#x7684;&#x7ED3;&#x6784;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image020-114840.png)
+![图 20. 代理模式的结构](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image020-114840.png)
 
 * Subject：抽象主题，它是代理对象的真实对象要实现的接口，当然这可以由多个接口组成。
 * ProxySubject：代理类除了实现抽象主题定义的接口外，还必须持有所代理对象的引用
@@ -600,7 +600,7 @@ Spring 中一个真实的代理对象结构如下：
 
 **清单 10 代理对象 $Proxy4**
 
-```text
+```
 public class $Proxy4 extends java.lang.reflect.Proxy implements
     org.springframework.aop.framework.PrototypeTargetTests$TestBean
     org.springframework.aop.SpringProxy
@@ -686,7 +686,7 @@ public class $Proxy4 extends java.lang.reflect.Proxy implements
 
 **图 22. 策略模式的结构**
 
-![&#x56FE; 22. &#x7B56;&#x7565;&#x6A21;&#x5F0F;&#x7684;&#x7ED3;&#x6784;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image022-114840.png)
+![图 22. 策略模式的结构](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/19/image022-114840.png)
 
 * Context：使用不同策略的环境，它可以根据自身的条件选择不同的策略实现类来完成所要的操作。它持有一个策略实例的引用。创建具体策略对象的方法也可以由他完成。
 * Strategy：抽象策略，定义每个策略都要实现的策略方法
@@ -702,7 +702,7 @@ Spring 中策略模式使用有多个地方，如 Bean 定义对象的创建以�
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/20/1-20210120221809063-221809.jpg)
 
-在上面结构图中与标准的策略模式结构稍微有点不同，这里抽象策略是 AopProxy 接口，Cglib2AopProxy 和 JdkDynamicAopProxy 分别代表两种策略的实现方式，ProxyFactoryBean 就是代表 Context 角色，它根据条件选择使用 Jdk 代理方式还是 CGLIB 方式，而另外三个类主要是来负责创建具体策略对象，ProxyFactoryBean 是通过依赖的方法来关联具体策略对象的，它是通过调用策略对象的 getProxy\(ClassLoader classLoader\) 方法来完成操作。
+在上面结构图中与标准的策略模式结构稍微有点不同，这里抽象策略是 AopProxy 接口，Cglib2AopProxy 和 JdkDynamicAopProxy 分别代表两种策略的实现方式，ProxyFactoryBean 就是代表 Context 角色，它根据条件选择使用 Jdk 代理方式还是 CGLIB 方式，而另外三个类主要是来负责创建具体策略对象，ProxyFactoryBean 是通过依赖的方法来关联具体策略对象的，它是通过调用策略对象的 getProxy(ClassLoader classLoader) 方法来完成操作。
 
 ## 结束语
 
@@ -711,4 +711,3 @@ Spring 中策略模式使用有多个地方，如 Bean 定义对象的创建以�
 通过分析 Spring 给我一个很大的启示就是这套设计理念其实对我们有很强的借鉴意义，它通过抽象复杂多变的对象，进一步做规范，然后根据它定义的这套规范设计出一个容器，容器中构建它们的复杂关系，其实现在有很多情况都可以用这种类似的处理方法。
 
 虽然我很想把我对 Spring 的理解完全阐述清楚，但是所谓 “书不尽言，言不尽意。”，有什么不对或者不清楚的地方大家还是看看其源码吧。
-

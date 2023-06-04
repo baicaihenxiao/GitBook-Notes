@@ -8,7 +8,7 @@
 
 乔良，空军指挥学院战略教授，国家安全政策研究委员会副秘书长，空军少将。点文末“阅读原文”，可访问乔良授权专栏。
 
-● **乔良** \([进入专栏](http://www.aisixiang.com/thinktank/qiaoliang.html)\)
+● **乔良** ([进入专栏](http://www.aisixiang.com/thinktank/qiaoliang.html))
 
 
 
@@ -202,9 +202,8 @@
 
 这就是说，如果想让我们的国家走向更加先进的话，军队应该走在最前面，应该在一定程度上领先。美国经过了麦克纳马拉改造之后，锐意进取，尤其是在高科技领域，特别是信息技术领域深度开掘，引领潮流，走在了整个国家乃至世界的前面。包括因特网等最新科技成果都是美军率先使用的，航天技术也同样如此。当美军越来越有效地把商业模式运用到军队管理中之后，美国企业反过来把军人当成了宝贝。美军的高级将领退休之后，经常会被不同的企业聘请去当董事长、名誉董事长，为什么呢？一个是要借助他们在军方的人脉，好让军方能够在军购这方面对这些企业有所倾斜。但是另一方面，更是要借助他们有效的管理经验。这对我们应不无启示。
 
-进入 [乔良](http://www.aisixiang.com/thinktank/qiaoliang.html) 的专栏 进入专题： [核心利益](http://www.aisixiang.com/data/search.php?keyWords=%BA%CB%D0%C4%C0%FB%D2%E6&searchfield=keywords) [反腐](http://www.aisixiang.com/data/search.php?keyWords=%B7%B4%B8%AF&searchfield=keywords) [军队改革](http://www.aisixiang.com/data/search.php?keyWords=%BE%FC%B6%D3%B8%C4%B8%EF&searchfield=keywords)
+进入 [乔良](http://www.aisixiang.com/thinktank/qiaoliang.html) 的专栏 进入专题： [核心利益](http://www.aisixiang.com/data/search.php?keyWords=%BA%CB%D0%C4%C0%FB%D2%E6\&searchfield=keywords) [反腐](http://www.aisixiang.com/data/search.php?keyWords=%B7%B4%B8%AF\&searchfield=keywords) [军队改革](http://www.aisixiang.com/data/search.php?keyWords=%BE%FC%B6%D3%B8%C4%B8%EF\&searchfield=keywords)
 
-本文责编：陈冬冬 发信站：爱思想（[http://www.aisixiang.com），栏目：\[天益学术\]\(http://www.aisixiang.com/data/search.php?lanmu=207](http://www.aisixiang.com），栏目：[天益学术]%28http://www.aisixiang.com/data/search.php?lanmu=207)\) &gt; [政治学](http://www.aisixiang.com/academic/zhengzhixue.html) &gt; [中国政治](http://www.aisixiang.com/data/search.php?lanmu=583) 本文链接：[http://www.aisixiang.com/data/97080.html](http://www.aisixiang.com/data/97080.html)
+本文责编：陈冬冬 发信站：爱思想（http://www.aisixiang.com），栏目：\[天益学术]\(http://www.aisixiang.com/data/search.php?lanmu=207) > [政治学](http://www.aisixiang.com/academic/zhengzhixue.html) > [中国政治](http://www.aisixiang.com/data/search.php?lanmu=583) 本文链接：[http://www.aisixiang.com/data/97080.html](http://www.aisixiang.com/data/97080.html)
 
 本文主要根据瞭望东方周刊对乔良将军的采访，以及乔良将军在不同场合从金融、经济角度谈国家战略问题的整理和综合而成，原发于2015年11月。
-

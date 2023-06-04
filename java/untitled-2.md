@@ -2,22 +2,26 @@
 
 [https://mp.weixin.qq.com/s/5cUnBHYIGFFwc20TKes9fg](https://mp.weixin.qq.com/s/5cUnBHYIGFFwc20TKes9fg)
 
-点击上方“芋道源码”，选择“[设为星标](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247486188&idx=3&sn=f160d91ea23e5113e6077c500a2e30c4&chksm=fa49755dcd3efc4bf4f566fbbbf74c191d0b79f2d3222fd211bc52d80b5ef127f52b1158ed71&scene=21#wechat_redirect)”
+点击上方“芋道源码”，选择“[设为星标](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486188\&idx=3\&sn=f160d91ea23e5113e6077c500a2e30c4\&chksm=fa49755dcd3efc4bf4f566fbbbf74c191d0b79f2d3222fd211bc52d80b5ef127f52b1158ed71\&scene=21#wechat\_redirect)”
 
 做积极的人，而不是积极废人！
 
-源码精品专栏 
+源码精品专栏&#x20;
 
-* [原创 \| Java 2020 超神之路，很肝~](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247487551&idx=1&sn=18f64ba49f3f0f9d8be9d1fdef8857d9&chksm=fa496f8ecd3ee698f4954c00efb80fe955ec9198fff3ef4011e331aa37f55a6a17bc8c0335a8&scene=21#wechat_redirect) 
-* [中文详细注释的开源项目](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247486264&idx=1&sn=475ac3f1ef253a33daacf50477203c80&chksm=fa497489cd3efd9f7298f5da6aad0c443ae15f398436aff57cb2b734d6689e62ab43ae7857ac&scene=21#wechat_redirect) 
-* [RPC 框架 Dubbo 源码解析](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247484647&idx=1&sn=9eb7e47d06faca20d530c70eec3b8d5c&chksm=fa497b56cd3ef2408f807e66e0903a5d16fbed149ef7374021302901d6e0260ad717d903e8d4&scene=21#wechat_redirect)
-* [网络应用框架 Netty 源码解析](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247485054&idx=2&sn=9f3b85f7b8454634da6c5c2ded9b4dba&chksm=fa4979cfcd3ef0d9d2dd92d8d1bd8f1553abc6e2095a5d743e0b2c2afe4955ea2bbbd7a4b79d&token=55862109&lang=zh_CN&scene=21#wechat_redirect) 
-* [消息中间件 RocketMQ 源码解析](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247486256&idx=1&sn=81daccd3fcd2953456c917630636fb26&chksm=fa497481cd3efd97d9239f5eab060e49dea9876a6046eadba0effb878d2fb51f3ba5733e4c0b&scene=21#wechat_redirect) 
-* [数据库中间件 Sharding-JDBC 和 MyCAT 源码解析](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247486257&idx=1&sn=4d3c9c675f8833157641a2e0b48e498c&chksm=fa497480cd3efd96fe17975b0b8b141e87fd0a62673e6a30b501460de80b3eb997056f09de08&scene=21#wechat_redirect)
-* [作业调度中间件 Elastic-Job 源码解析](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247486258&idx=1&sn=ae5665ae9c3002b53f87cab44948a096&chksm=fa497483cd3efd950514da5a37160e7fd07f0a96f39265cf7ba3721985e5aadbdcbe7aafc34a&scene=21#wechat_redirect)
-* [分布式事务中间件 TCC-Transaction 源码解析](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247486259&idx=1&sn=b023cf3dbf97e5da59db2f4ee632f5a6&chksm=fa497482cd3efd9402d71469f71863f71a6998b27e12ca2e00446b8178d79dcef0721d8e570a&scene=21#wechat_redirect)
-* [Eureka 和 Hystrix 源码解析](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247486260&idx=1&sn=8f14c0c191d6f8df6eb34202f4ad9708&chksm=fa497485cd3efd93937143a648bc1b530bc7d1f6f8ad4bf2ec112ffe34dee80b474605c22db0&scene=21#wechat_redirect)
-* [Java 并发源码](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247486261&idx=1&sn=bd69f26aadfc826f6313ffbb95e44ee5&chksm=fa497484cd3efd92352d6fb3d05ccbaebca2fafed6f18edbe5be70c99ba088db5c8a7a8080c1&scene=21#wechat_redirect)
+* [原创 | Java 2020 超神之路，很肝\~](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&chksm=fa496f8ecd3ee698f4954c00efb80fe955ec9198fff3ef4011e331aa37f55a6a17bc8c0335a8\&scene=21#wechat\_redirect)\
+
+* [中文详细注释的开源项目](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486264\&idx=1\&sn=475ac3f1ef253a33daacf50477203c80\&chksm=fa497489cd3efd9f7298f5da6aad0c443ae15f398436aff57cb2b734d6689e62ab43ae7857ac\&scene=21#wechat\_redirect)\
+
+* [RPC 框架 Dubbo 源码解析](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247484647\&idx=1\&sn=9eb7e47d06faca20d530c70eec3b8d5c\&chksm=fa497b56cd3ef2408f807e66e0903a5d16fbed149ef7374021302901d6e0260ad717d903e8d4\&scene=21#wechat\_redirect)
+* [网络应用框架 Netty 源码解析](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247485054\&idx=2\&sn=9f3b85f7b8454634da6c5c2ded9b4dba\&chksm=fa4979cfcd3ef0d9d2dd92d8d1bd8f1553abc6e2095a5d743e0b2c2afe4955ea2bbbd7a4b79d\&token=55862109\&lang=zh\_CN\&scene=21#wechat\_redirect)\
+
+* [消息中间件 RocketMQ 源码解析](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486256\&idx=1\&sn=81daccd3fcd2953456c917630636fb26\&chksm=fa497481cd3efd97d9239f5eab060e49dea9876a6046eadba0effb878d2fb51f3ba5733e4c0b\&scene=21#wechat\_redirect)\
+
+* [数据库中间件 Sharding-JDBC 和 MyCAT 源码解析](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486257\&idx=1\&sn=4d3c9c675f8833157641a2e0b48e498c\&chksm=fa497480cd3efd96fe17975b0b8b141e87fd0a62673e6a30b501460de80b3eb997056f09de08\&scene=21#wechat\_redirect)
+* [作业调度中间件 Elastic-Job 源码解析](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486258\&idx=1\&sn=ae5665ae9c3002b53f87cab44948a096\&chksm=fa497483cd3efd950514da5a37160e7fd07f0a96f39265cf7ba3721985e5aadbdcbe7aafc34a\&scene=21#wechat\_redirect)
+* [分布式事务中间件 TCC-Transaction 源码解析](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486259\&idx=1\&sn=b023cf3dbf97e5da59db2f4ee632f5a6\&chksm=fa497482cd3efd9402d71469f71863f71a6998b27e12ca2e00446b8178d79dcef0721d8e570a\&scene=21#wechat\_redirect)
+* [Eureka 和 Hystrix 源码解析](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486260\&idx=1\&sn=8f14c0c191d6f8df6eb34202f4ad9708\&chksm=fa497485cd3efd93937143a648bc1b530bc7d1f6f8ad4bf2ec112ffe34dee80b474605c22db0\&scene=21#wechat\_redirect)
+* [Java 并发源码](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486261\&idx=1\&sn=bd69f26aadfc826f6313ffbb95e44ee5\&chksm=fa497484cd3efd92352d6fb3d05ccbaebca2fafed6f18edbe5be70c99ba088db5c8a7a8080c1\&scene=21#wechat\_redirect)
 
 来源：Srinath
 
@@ -37,9 +41,9 @@ Srinath 通过不懈的努力最终总结出了30条架构原则，他主张架�
 
 ## 基本原则
 
-**原则1**：KISS\(Keep it simple,sutpid\) 和保持每件事情都尽可能的简单。用最简单的解决方案来解决问题。
+**原则1**：KISS(Keep it simple,sutpid) 和保持每件事情都尽可能的简单。用最简单的解决方案来解决问题。
 
-**原则2**：YAGNI\(You aren’t gonna need it\)-不要去搞一些不需要的东西，需要的时候再搞吧。
+**原则2**：YAGNI(You aren’t gonna need it)-不要去搞一些不需要的东西，需要的时候再搞吧。
 
 （小编点评：speculative development的例子可谓俯拾皆是。程序员们对自己说：“我肯定以后会需要这项额外的功能，所以现在就提前把它实现了吧”。其实这是最考验功力的地方，不能闭门YY需要的功能，架构上又要洞察趋势。）
 
@@ -133,16 +137,15 @@ Srinath 通过不懈的努力最终总结出了30条架构原则，他主张架�
 
 作为一个架构师，应该像园丁一般，更多的是修剪花草，除草而不是去定义和构建，你应该策划而不是指挥，你应该去修剪而不是去定义，应该是讨论而不是贴标签。虽然在短期内可能会觉得也没什么，但从长远看，指导团队找到自己的方式会带来好处。如果你稍不留神，就很容易让架构成为一个空洞的词汇。比如设计者会说他的架构是错误的，但不知道为什么是错误的。一个避免这种情况的好办法就是有一个原则列表，这个原则列表是被广泛接受的，这个列表是人们讨论问题的锚点，也是新手架构师学习的路径。
 
-欢迎加入我的知识星球，一起探讨架构，交流源码。加入方式，**长按下方二维码噢**：  
+欢迎加入我的知识星球，一起探讨架构，交流源码。加入方式，**长按下方二维码噢**：\
 
 
-已在知识星球更新源码解析如下：  
+已在知识星球更新源码解析如下：\
 
 
-最近更新《芋道 SpringBoot 2.X 入门》系列，已经 20 余篇，覆盖了 MyBatis、Redis、MongoDB、ES、分库分表、读写分离、SpringMVC、Webflux、权限、WebSocket、Dubbo、RabbitMQ、RocketMQ、Kafka、性能测试等等内容。  
+最近更新《芋道 SpringBoot 2.X 入门》系列，已经 20 余篇，覆盖了 MyBatis、Redis、MongoDB、ES、分库分表、读写分离、SpringMVC、Webflux、权限、WebSocket、Dubbo、RabbitMQ、RocketMQ、Kafka、性能测试等等内容。\
 
 
 提供近 3W 行代码的 SpringBoot 示例，以及超 4W 行代码的电商微服务项目。
 
 获取方式：点“**在看**”，关注公众号并回复 **666** 领取，更多内容陆续奉上。
-

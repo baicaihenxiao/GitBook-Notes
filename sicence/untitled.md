@@ -6,13 +6,13 @@
 
 ### **人活着就是在对抗熵增定律，生命以负熵为生。**——薛定谔
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5b5df9472a74cc84921c4aaf85b6ba19_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5b5df9472a74cc84921c4aaf85b6ba19_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5b5df9472a74cc84921c4aaf85b6ba19\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5b5df9472a74cc84921c4aaf85b6ba19\_720w.jpg)
 
 这篇文章是我一年前写的，结果成了我人生第一篇10w+公众号文章，被136个公众号转载，其中还有几个100万级商业、认知大号。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-e3a419d3555caff13af1ae624b642131_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-e3a419d3555caff13af1ae624b642131_720w.jpg)被136个公众号转载
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-e3a419d3555caff13af1ae624b642131\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-e3a419d3555caff13af1ae624b642131\_720w.jpg)被136个公众号转载
 
-### 0 \| 古今中外的牛人都推崇备至
+### 0 | 古今中外的牛人都推崇备至
 
 **如果物理学只能留一条定律，我会留熵增定律。**
 
@@ -22,15 +22,15 @@
 
 模型菌也很迷惑，但是吴教授能说出这番话绝对不是无的放矢，不管对与不对，都可见熵增定律的分量。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-3ad28a5541e3f65f385dc286e762fab6_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-3ad28a5541e3f65f385dc286e762fab6_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-3ad28a5541e3f65f385dc286e762fab6\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-3ad28a5541e3f65f385dc286e762fab6\_720w.jpg)
 
 无独有偶，吴军也说过类似的话。
 
 如果地球毁灭了，我们怎么能够在一张名片上写下地球文明的全部精髓，让其他文明知道我们曾有过这个文明。
 
-吴军老师给出的答案是三个公式：1+1=2（代表了数学文明）、E=mc²（爱因斯坦的质能方程）、S=-∑ P ln P\(熵的定义\)。
+吴军老师给出的答案是三个公式：1+1=2（代表了数学文明）、E=mc²（爱因斯坦的质能方程）、S=-∑ P ln P(熵的定义)。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-a1947cc79e7111a871a85fed5b727d25_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-a1947cc79e7111a871a85fed5b727d25_720w.jpg)来自得到
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-a1947cc79e7111a871a85fed5b727d25\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-a1947cc79e7111a871a85fed5b727d25\_720w.jpg)来自得到
 
 薛定谔也说过类似的话**「人活着就是在对抗熵增定律，生命以负熵为生。」**（薛定谔在其名著《生命是什么》中的观点）
 
@@ -40,9 +40,9 @@
 
 那么问题来了，什么是熵增定律？为什么它如此重要？它到底对我们有什么巨大影响？
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-8e3aa0a3df1c6f4aa63e47d45020d599_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-8e3aa0a3df1c6f4aa63e47d45020d599_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-8e3aa0a3df1c6f4aa63e47d45020d599\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-8e3aa0a3df1c6f4aa63e47d45020d599\_720w.jpg)
 
-### **01 \| 为什么熵增定律如此重要**
+### **01 | 为什么熵增定律如此重要**
 
 因为它揭示了宇宙的终极演化规律。
 
@@ -58,7 +58,7 @@
 
 这些所有的现象都可以用一个定律来解释——熵增定律。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-d8a635d1771155caf04b517ccf28bdcc_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-d8a635d1771155caf04b517ccf28bdcc_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-d8a635d1771155caf04b517ccf28bdcc\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-d8a635d1771155caf04b517ccf28bdcc\_720w.jpg)
 
 因为事物总是向着熵增的方向发展，**所以一切符合熵增的，都非常容易和舒适**，比如懒散。
 
@@ -70,9 +70,9 @@
 
 **现在我想我找到答案了，生命本身就是自律的过程，即熵减的过程。**
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-00ff8a26c944088436b6b9e19d44a16a_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-00ff8a26c944088436b6b9e19d44a16a_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-00ff8a26c944088436b6b9e19d44a16a\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-00ff8a26c944088436b6b9e19d44a16a\_720w.jpg)
 
-### **02 \| 什么是熵增定律**
+### **02 | 什么是熵增定律**
 
 定义：**在一个孤立系统里，如果没有外力做功，其总混乱度（即熵）会不断增大。**
 
@@ -84,7 +84,7 @@
 
 你可以理解为，**系统中的无效能量。**
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-387c3daede301454ac16ba1c9a1450ad_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-387c3daede301454ac16ba1c9a1450ad_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-387c3daede301454ac16ba1c9a1450ad\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-387c3daede301454ac16ba1c9a1450ad\_720w.jpg)
 
 比如你花了100 J的能量把物体从A地拿到B地，这个过程中有很多能量并没有被100%的转化，而是有部分散失在了宇宙中。
 
@@ -92,7 +92,7 @@
 
 从这里你就可以推出，恒星终将熄灭，生命终将消失，宇宙将变成一片死寂，沦为熵。 这个状态，也被称为热寂。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5fbe565106aa30f48ef2e5a0b4b2b65e_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5fbe565106aa30f48ef2e5a0b4b2b65e_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5fbe565106aa30f48ef2e5a0b4b2b65e\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5fbe565106aa30f48ef2e5a0b4b2b65e\_720w.jpg)
 
 那么什么是熵增定律呢？
 
@@ -102,9 +102,9 @@
 
 任何一个系统，只要满足封闭系统，而且无外力维持，它就会趋于混乱和无序。 生命也如此。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-0c3f04c7204a770fa4fe7d616c86aeaa_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-0c3f04c7204a770fa4fe7d616c86aeaa_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-0c3f04c7204a770fa4fe7d616c86aeaa\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-0c3f04c7204a770fa4fe7d616c86aeaa\_720w.jpg)
 
-### **03 \| 如何对抗熵增，实现超越**
+### **03 | 如何对抗熵增，实现超越**
 
 熵增定律被称为最让人沮丧的定律。
 
@@ -112,7 +112,7 @@
 
 而且，从小的方面来说，它也左右着**国家和企业**的发展规律，让组织变得臃肿，缺乏效率和创新；左右着**个人**的方方面面，让我们安于懒散、难以坚持、难以自律……
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-650c653996260c6c2b6a2b5625752694_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-650c653996260c6c2b6a2b5625752694_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-650c653996260c6c2b6a2b5625752694\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-650c653996260c6c2b6a2b5625752694\_720w.jpg)
 
 那么这还有办法可解吗？
 
@@ -122,7 +122,7 @@
 
 也许我们可以从生命里得到启示，**整个生命的发展就是一部负熵的历史。**
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-afd40e0c98a3e65b1650b9ba0691b3c0_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-afd40e0c98a3e65b1650b9ba0691b3c0_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-afd40e0c98a3e65b1650b9ba0691b3c0\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-afd40e0c98a3e65b1650b9ba0691b3c0\_720w.jpg)
 
 当我们人从无机物到有机生命那一刻起，就注定了这会是一部艰辛与精彩共存的史诗。
 
@@ -144,7 +144,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 即生命的熵减过程，会加剧环境的熵增，于是环境会变得越来越恶劣，生命为了生存，为了获得足够的能量和物质，必须变得更加智能。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-f7049aeafac2fd8bb4d80ec5d2a0ce76_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-f7049aeafac2fd8bb4d80ec5d2a0ce76_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-f7049aeafac2fd8bb4d80ec5d2a0ce76\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-f7049aeafac2fd8bb4d80ec5d2a0ce76\_720w.jpg)
 
 好了，现在我们来总结一下，生命的减熵过程中，其实一直在做三件事。
 
@@ -154,7 +154,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 **第三，努力变得更加智能**。生命为了花更少的能量来获取更多物质和能量，进化出了感知能力，比如当时的霸主奇虾，就有很大一对眼睛。知道的信息越多，就能减少更多熵的耗散。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-53c18960f4660dd548ffa6d712a1e0b4_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-53c18960f4660dd548ffa6d712a1e0b4_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-53c18960f4660dd548ffa6d712a1e0b4\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-53c18960f4660dd548ffa6d712a1e0b4\_720w.jpg)
 
 这三点正好是企业和个人的进化要件。
 
@@ -170,7 +170,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 记住，舒适圈是熵增定律的第一张王牌，任何时候你都不能松懈。一旦你减少了能量的投入，企业的熵增就会立马回来。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5b0e2aae2bd47bda68d42a27b221a8af_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5b0e2aae2bd47bda68d42a27b221a8af_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5b0e2aae2bd47bda68d42a27b221a8af\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5b0e2aae2bd47bda68d42a27b221a8af\_720w.jpg)
 
 **2、开放系统。**
 
@@ -186,7 +186,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 比如你每天的新陈代谢，比如你通过锻炼减去一身的赘肉，比如你看一本好书。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5c93acf9c5bc99673c327a44cd6b3258_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5c93acf9c5bc99673c327a44cd6b3258_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5c93acf9c5bc99673c327a44cd6b3258\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5c93acf9c5bc99673c327a44cd6b3258\_720w.jpg)
 
 基于此，企业也可以得到启示。
 
@@ -200,7 +200,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 与此同时，华为每年淘汰干部10%，员工淘汰5%。每年18万人会淘汰5千人到9千人来激活这个团队。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5a155a2e78131dbef623f17e08eaf83c_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5a155a2e78131dbef623f17e08eaf83c_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5a155a2e78131dbef623f17e08eaf83c\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-5a155a2e78131dbef623f17e08eaf83c\_720w.jpg)
 
 **②远离平衡态**
 
@@ -216,7 +216,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 **最后无能的员工（熵）被淘汰出局，剩下的精英继续流动、重组，变得更加强大。**
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-c371af087b4df641eb7effacb23c5d2a_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-c371af087b4df641eb7effacb23c5d2a_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-c371af087b4df641eb7effacb23c5d2a\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-c371af087b4df641eb7effacb23c5d2a\_720w.jpg)
 
 **③非线性**
 
@@ -228,9 +228,9 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 比如亚马逊，它可能是这个世界上失败最多的企业了，但他们对失败非常包容，因为他们不断在赌“每次小的努力和尝试，都有可能引发意想不到的超额惊喜”。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-e2c15fe18d25b1354695a2376cbfc1cf_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-e2c15fe18d25b1354695a2376cbfc1cf_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-e2c15fe18d25b1354695a2376cbfc1cf\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-e2c15fe18d25b1354695a2376cbfc1cf\_720w.jpg)
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-1b79f1e0589a94c8e8cddb939717eab1_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-1b79f1e0589a94c8e8cddb939717eab1_720w.jpg)思维导图敬上
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-1b79f1e0589a94c8e8cddb939717eab1\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-1b79f1e0589a94c8e8cddb939717eab1\_720w.jpg)思维导图敬上
 
 **二、个人**
 
@@ -252,7 +252,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 **如果我们不主动投入能量做熵减，生活就会脱离我们的掌控。**
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-f2d8d25088746e80d3e2c68d57972fc5_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-f2d8d25088746e80d3e2c68d57972fc5_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-f2d8d25088746e80d3e2c68d57972fc5\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-f2d8d25088746e80d3e2c68d57972fc5\_720w.jpg)
 
 那要怎么办呢？解决办法仍然是：
 
@@ -276,7 +276,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 而且你还放心，因为你已经把事情记下来了，你不用为此担心，做完之后你会有时间来处理的。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-dea29da703427b3256431a4e93936526_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-dea29da703427b3256431a4e93936526_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-dea29da703427b3256431a4e93936526\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-dea29da703427b3256431a4e93936526\_720w.jpg)
 
 再比如学习这件事，当我写这篇文章时，大脑是一片浆糊，怎么办呢？
 
@@ -286,7 +286,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 突然我想到了熵增定律，让知识变得有序的过程正是熵减的过程，**虽然很痛苦，但还是得主动去做这件事。**
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-2f96ded9c2b58f7172b20ca4766a061d_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-2f96ded9c2b58f7172b20ca4766a061d_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-2f96ded9c2b58f7172b20ca4766a061d\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-2f96ded9c2b58f7172b20ca4766a061d\_720w.jpg)
 
 **二、开放系统**
 
@@ -304,7 +304,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 比如**去新的环境（旅行），获取新的认知（读书），结交新的人（社交）**。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-86a98c079c5d3f86d24efe6ec41c20ac_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-86a98c079c5d3f86d24efe6ec41c20ac_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-86a98c079c5d3f86d24efe6ec41c20ac\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-86a98c079c5d3f86d24efe6ec41c20ac\_720w.jpg)
 
 **②远离平衡态**
 
@@ -316,7 +316,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 **你要不断超越自己，给自己新的目标，新的计划。**
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-41d1958d65a15cb643fa8bbbe57efedd_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-41d1958d65a15cb643fa8bbbe57efedd_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-41d1958d65a15cb643fa8bbbe57efedd\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-41d1958d65a15cb643fa8bbbe57efedd\_720w.jpg)
 
 **③非线性**
 
@@ -326,7 +326,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 但是请不要灰心，继续坚持熵减，**等到有一天，你只需要一丁点努力，就会开启你开挂的人生。**
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-6d86a74b9b2f8f5f750d0a73025611da_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-6d86a74b9b2f8f5f750d0a73025611da_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-6d86a74b9b2f8f5f750d0a73025611da\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-6d86a74b9b2f8f5f750d0a73025611da\_720w.jpg)
 
 **三、智能化**
 
@@ -354,7 +354,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 只是我们非常有幸，也许在某个外太空，是类似海豚这样的生物具有智慧。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-f7049aeafac2fd8bb4d80ec5d2a0ce76_hd-20200702160129956.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-f7049aeafac2fd8bb4d80ec5d2a0ce76_720w-20200702160130593.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-f7049aeafac2fd8bb4d80ec5d2a0ce76\_hd-20200702160129956.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-f7049aeafac2fd8bb4d80ec5d2a0ce76\_720w-20200702160130593.jpg)
 
 这个过程，王东岳老爷子将其整合为一个哲学概念——**递弱代偿**。
 
@@ -364,7 +364,7 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 好了，现在我们懂了，**减熵的终极方向是智能化。**
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-0f647070a52abc67da61c6b46906076a_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-0f647070a52abc67da61c6b46906076a_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-0f647070a52abc67da61c6b46906076a\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-0f647070a52abc67da61c6b46906076a\_720w.jpg)
 
 那么如何智能化呢？
 
@@ -376,11 +376,11 @@ DNA比RNA更稳定，也更加智能。但是这样一来，消耗的能量更�
 
 前面提到熵有两种，**热力学熵和信息熵**。其实这两种熵是可以用公式做等号的，因为获取信息需要能量。
 
-_**1bit 信息熵＝kln2（J/K）热力学熵\**_
+_**1bit 信息熵＝kln2（J/K）热力学熵\\**_
 
 **当你信息有局限的时候，要做成一件事，你就需要更多的能量，产生更多的熵。**
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-24a81b2a6c5eb8f0c723995ed287f564_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-24a81b2a6c5eb8f0c723995ed287f564_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-24a81b2a6c5eb8f0c723995ed287f564\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-24a81b2a6c5eb8f0c723995ed287f564\_720w.jpg)
 
 比如做同一套试卷，学霸跟学渣做题所需的时间和能量肯定是不同的，学霸一个小时就做出来了，学渣可能做了三四个小时还做不完。
 
@@ -396,11 +396,11 @@ _**1bit 信息熵＝kln2（J/K）热力学熵\**_
 
 如果你想在此生有所建树的话，那么努力提升自己的眼界和认知，让自己变得更智能吧。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-001ce005e6bfc007830c7adde422b860_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-001ce005e6bfc007830c7adde422b860_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-001ce005e6bfc007830c7adde422b860\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-001ce005e6bfc007830c7adde422b860\_720w.jpg)
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-31f1258c6de45a9cb590652fa3837ad2_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-31f1258c6de45a9cb590652fa3837ad2_720w.jpg)思维导图敬上
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-31f1258c6de45a9cb590652fa3837ad2\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-31f1258c6de45a9cb590652fa3837ad2\_720w.jpg)思维导图敬上
 
-### **04 \| 注意事项**
+### **04 | 注意事项**
 
 **一、熵增无好坏之分**
 
@@ -410,7 +410,7 @@ _**1bit 信息熵＝kln2（J/K）热力学熵\**_
 
 但是！熵增定律对我们来说却很有意义，了解宇宙的运转规律可以让我们变得更好。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-ed50968e5bce72ac94e311ccf5455f10_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-ed50968e5bce72ac94e311ccf5455f10_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-ed50968e5bce72ac94e311ccf5455f10\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-ed50968e5bce72ac94e311ccf5455f10\_720w.jpg)
 
 **二、无序只是概率事件**
 
@@ -422,9 +422,8 @@ _**1bit 信息熵＝kln2（J/K）热力学熵\**_
 
 那么有序的概率就是可以忽略的，我们可以说事物的倾向是从有序到无序。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-cef2706c880c017ddb038fb487209030_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-cef2706c880c017ddb038fb487209030_720w.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-cef2706c880c017ddb038fb487209030\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-cef2706c880c017ddb038fb487209030\_720w.jpg)
 
 另，给大家准备了一份小礼物。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-2775dd8a72eeb022f8a22bff471aaec8_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-2775dd8a72eeb022f8a22bff471aaec8_720w.jpg)绝对是好东西，不然你打我
-
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-2775dd8a72eeb022f8a22bff471aaec8\_hd.jpg)![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/v2-2775dd8a72eeb022f8a22bff471aaec8\_720w.jpg)绝对是好东西，不然你打我

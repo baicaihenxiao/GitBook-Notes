@@ -1,6 +1,6 @@
 # 【死磕Java并发】—–深入分析synchronized的实现原理
 
-{% embed url="https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==&mid=2247483775&idx=1&sn=e3c249e55dc25f323d3922d215e17999&chksm=fa497ececd3ef7d82a9ce86d6ca47353acd45d7d1cb296823267108a06fbdaf71773f576a644" %}
+{% embed url="https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==&mid=2247483775&idx=1&sn=e3c249e55dc25f323d3922d215e17999&chksm=fa497ececd3ef7d82a9ce86d6ca47353acd45d7d1cb296823267108a06fbdaf71773f576a644" %}
 
 
 
@@ -10,9 +10,9 @@
 
 **友情提示：欢迎关注公众号【芋道源码】。😈关注后，拉你进【源码圈】微信群和【大明哥】搞基嗨皮。**
 
-**友情提示：欢迎关注公众号【芋道源码】。😈关注后，拉你进【源码圈】微信群和【\**大明哥\*_】搞基嗨皮。\*_
+**友情提示：欢迎关注公众号【芋道源码】。😈关注后，拉你进【源码圈】微信群和【\\**大明哥\*_】搞基嗨皮。\*_
 
-**友情提示：欢迎关注公众号【芋道源码】。😈关注后，拉你进【源码圈】微信群和【\**大明哥\*_】搞基嗨皮。\*_
+**友情提示：欢迎关注公众号【芋道源码】。😈关注后，拉你进【源码圈】微信群和【\\**大明哥\*_】搞基嗨皮。\*_
 
 记得刚刚开始学习Java的时候，一遇到多线程情况就是synchronized，相对于当时的我们来说synchronized是这么的神奇而又强大，那个时候我们赋予它一个名字“同步”，也成为了我们解决多线程情况的百试不爽的良药。但是，随着我们学习的进行我们知道synchronized是一个重量级锁，相对于Lock，它会显得那么笨重，以至于我们认为它不是那么的高效而慢慢摒弃它。 诚然，随着Javs SE 1.6对synchronized进行的各种优化后，synchronized并不会显得那么重了。下面跟随LZ一起来探索synchronized的实现机制、Java是如何对它进行了优化、锁优化机制、锁的存储结构和升级过程；
 
@@ -28,7 +28,7 @@ Java中每一个对象都可以作为锁，这是synchronized实现同步的基�
 
 当一个线程访问同步代码块时，它首先是需要得到锁才能执行同步代码，当退出或者抛出异常时必须要释放锁，那么它是如何来实现这个机制的呢？我们先看一段简单的代码：
 
-```text
+```
 public class SynchronizedTest {
     public synchronized void test1(){
 
@@ -41,7 +41,7 @@ public class SynchronizedTest {
     }}
 ```
 
-利用javap工具查看生成的class文件信息来分析Synchronize的实现  从上面可以看出，同步代码块是使用monitorenter和monitorexit指令实现的，同步方法（在这看不出来需要看JVM底层实现）依靠的是方法修饰符上的ACC\_SYNCHRONIZED实现。 **同步代码块**：monitorenter指令插入到同步代码块的开始位置，monitorexit指令插入到同步代码块的结束位置，JVM需要保证每一个monitorenter都有一个monitorexit与之相对应。任何对象都有一个monitor与之相关联，当且一个monitor被持有之后，他将处于锁定状态。线程执行到monitorenter指令时，将会尝试获取对象所对应的monitor所有权，即尝试获取对象的锁； **同步方法**：synchronized方法则会被翻译成普通的方法调用和返回指令如:invokevirtual、areturn指令，在VM字节码层面并没有任何特别的指令来实现被synchronized修饰的方法，而是在Class文件的方法表中将该方法的access\_flags字段中的synchronized标志位置1，表示该方法是同步方法并使用调用该方法的对象或该方法所属的Class在JVM的内部对象表示Klass做为锁对象。\(摘自：[http://www.cnblogs.com/javaminer/p/3889023.html](http://www.cnblogs.com/javaminer/p/3889023.html)\)
+利用javap工具查看生成的class文件信息来分析Synchronize的实现  从上面可以看出，同步代码块是使用monitorenter和monitorexit指令实现的，同步方法（在这看不出来需要看JVM底层实现）依靠的是方法修饰符上的ACC\_SYNCHRONIZED实现。 **同步代码块**：monitorenter指令插入到同步代码块的开始位置，monitorexit指令插入到同步代码块的结束位置，JVM需要保证每一个monitorenter都有一个monitorexit与之相对应。任何对象都有一个monitor与之相关联，当且一个monitor被持有之后，他将处于锁定状态。线程执行到monitorenter指令时，将会尝试获取对象所对应的monitor所有权，即尝试获取对象的锁； **同步方法**：synchronized方法则会被翻译成普通的方法调用和返回指令如:invokevirtual、areturn指令，在VM字节码层面并没有任何特别的指令来实现被synchronized修饰的方法，而是在Class文件的方法表中将该方法的access\_flags字段中的synchronized标志位置1，表示该方法是同步方法并使用调用该方法的对象或该方法所属的Class在JVM的内部对象表示Klass做为锁对象。(摘自：[http://www.cnblogs.com/javaminer/p/3889023.html](http://www.cnblogs.com/javaminer/p/3889023.html))
 
 ![Synchronize-1](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/09/640-20200709115345956-115346.jpg)
 
@@ -55,13 +55,13 @@ Java对象头和monitor是实现synchronized的基础！下面就这两个概念
 
 synchronized用的锁是存在Java对象头里的，那么什么是Java对象头呢？Hotspot虚拟机的对象头主要包括两部分数据：Mark Word（标记字段）、Klass Pointer（类型指针）。其中Klass Point是是对象指向它的类元数据的指针，虚拟机通过这个指针来确定这个对象是哪个类的实例，Mark Word用于存储对象自身的运行时数据，它是实现轻量级锁和偏向锁的关键，所以下面将重点阐述
 
-Mark Word。 Mark Word用于存储对象自身的运行时数据，如哈希码（HashCode）、GC分代年龄、锁状态标志、线程持有的锁、偏向线程 ID、偏向时间戳等等。Java对象头一般占有两个机器码（在32位虚拟机中，1个机器码等于4字节，也就是32bit），但是如果对象是数组类型，则需要三个机器码，因为JVM虚拟机可以通过Java对象的元数据信息确定Java对象的大小，但是无法从数组的元数据来确认数组的大小，所以用一块来记录数组长度。下图是Java对象头的存储结构（32位虚拟机）： ![222222\_2](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==) 对象头信息是与对象自身定义的数据无关的额外存储成本，但是考虑到虚拟机的空间效率，Mark Word被设计成一个非固定的数据结构以便在极小的空间内存存储尽量多的数据，它会根据对象的状态复用自己的存储空间，也就是说，Mark Word会随着程序的运行发生变化，变化状态如下（32位虚拟机）： ![11111111111\_2](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+Mark Word。 Mark Word用于存储对象自身的运行时数据，如哈希码（HashCode）、GC分代年龄、锁状态标志、线程持有的锁、偏向线程 ID、偏向时间戳等等。Java对象头一般占有两个机器码（在32位虚拟机中，1个机器码等于4字节，也就是32bit），但是如果对象是数组类型，则需要三个机器码，因为JVM虚拟机可以通过Java对象的元数据信息确定Java对象的大小，但是无法从数组的元数据来确认数组的大小，所以用一块来记录数组长度。下图是Java对象头的存储结构（32位虚拟机）： ![222222\_2](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M5LMBM-KNwLIye8nLEI%2Fuploads%2FdIMq5EryHaBTuXrGMasv%2Ffile.gif?alt=media) 对象头信息是与对象自身定义的数据无关的额外存储成本，但是考虑到虚拟机的空间效率，Mark Word被设计成一个非固定的数据结构以便在极小的空间内存存储尽量多的数据，它会根据对象的状态复用自己的存储空间，也就是说，Mark Word会随着程序的运行发生变化，变化状态如下（32位虚拟机）： ![11111111111\_2](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M5LMBM-KNwLIye8nLEI%2Fuploads%2FbGT7YFkPFnjz6hnslaK8%2Ffile.gif?alt=media)
 
 简单介绍了Java对象头，我们下面再看Monitor。
 
 ### Monitor
 
-什么是Monitor？我们可以把它理解为一个同步工具，也可以描述为一种同步机制，它通常被描述为一个对象。 与一切皆对象一样，所有的Java对象是天生的Monitor，每一个Java对象都有成为Monitor的潜质，因为在Java的设计中 ，每一个Java对象自打娘胎里出来就带了一把看不见的锁，它叫做内部锁或者Monitor锁。 Monitor 是线程私有的数据结构，每一个线程都有一个可用monitor record列表，同时还有一个全局的可用列表。每一个被锁住的对象都会和一个monitor关联（对象头的MarkWord中的LockWord指向monitor的起始地址），同时monitor中有一个Owner字段存放拥有该锁的线程的唯一标识，表示该锁被这个线程占用。其结构如下： ![44444](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==) **Owner**：初始时为NULL表示当前没有任何线程拥有该monitor record，当线程成功拥有该锁后保存线程唯一标识，当锁被释放时又设置为NULL； **EntryQ**:关联一个系统互斥锁（semaphore），阻塞所有试图锁住monitor record失败的线程。 **RcThis**:表示blocked或waiting在该monitor record上的所有线程的个数。 **Nest**:用来实现重入锁的计数。 **HashCode**:保存从对象头拷贝过来的HashCode值（可能还包含GC age）。 **Candidate**:用来避免不必要的阻塞或等待线程唤醒，因为每一次只有一个线程能够成功拥有锁，如果每次前一个释放锁的线程唤醒所有正在阻塞或等待的线程，会引起不必要的上下文切换（从阻塞到就绪然后因为竞争锁失败又被阻塞）从而导致性能严重下降。Candidate只有两种可能的值0表示没有需要唤醒的线程1表示要唤醒一个继任线程来竞争锁。 摘自：Java中synchronized的实现原理与应用） 我们知道synchronized是重量级锁，效率不怎么滴，同时这个观念也一直存在我们脑海里，不过在jdk 1.6中对synchronize的实现进行了各种优化，使得它显得不是那么重了，那么JVM采用了那些优化手段呢？
+什么是Monitor？我们可以把它理解为一个同步工具，也可以描述为一种同步机制，它通常被描述为一个对象。 与一切皆对象一样，所有的Java对象是天生的Monitor，每一个Java对象都有成为Monitor的潜质，因为在Java的设计中 ，每一个Java对象自打娘胎里出来就带了一把看不见的锁，它叫做内部锁或者Monitor锁。 Monitor 是线程私有的数据结构，每一个线程都有一个可用monitor record列表，同时还有一个全局的可用列表。每一个被锁住的对象都会和一个monitor关联（对象头的MarkWord中的LockWord指向monitor的起始地址），同时monitor中有一个Owner字段存放拥有该锁的线程的唯一标识，表示该锁被这个线程占用。其结构如下： ![44444](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M5LMBM-KNwLIye8nLEI%2Fuploads%2FrCnSBRiVeTWGmkrupVpA%2Ffile.gif?alt=media) **Owner**：初始时为NULL表示当前没有任何线程拥有该monitor record，当线程成功拥有该锁后保存线程唯一标识，当锁被释放时又设置为NULL； **EntryQ**:关联一个系统互斥锁（semaphore），阻塞所有试图锁住monitor record失败的线程。 **RcThis**:表示blocked或waiting在该monitor record上的所有线程的个数。 **Nest**:用来实现重入锁的计数。 **HashCode**:保存从对象头拷贝过来的HashCode值（可能还包含GC age）。 **Candidate**:用来避免不必要的阻塞或等待线程唤醒，因为每一次只有一个线程能够成功拥有锁，如果每次前一个释放锁的线程唤醒所有正在阻塞或等待的线程，会引起不必要的上下文切换（从阻塞到就绪然后因为竞争锁失败又被阻塞）从而导致性能严重下降。Candidate只有两种可能的值0表示没有需要唤醒的线程1表示要唤醒一个继任线程来竞争锁。 摘自：Java中synchronized的实现原理与应用） 我们知道synchronized是重量级锁，效率不怎么滴，同时这个观念也一直存在我们脑海里，不过在jdk 1.6中对synchronize的实现进行了各种优化，使得它显得不是那么重了，那么JVM采用了那些优化手段呢？
 
 ## 锁优化
 
@@ -77,9 +77,9 @@ JDK 1.6引入了更加聪明的自旋锁，即自适应自旋锁。所谓自适�
 
 ### 锁消除
 
-为了保证数据的完整性，我们在进行操作时需要对这部分操作进行同步控制，但是在有些情况下，JVM检测到不可能存在共享数据竞争，这是JVM会对这些同步锁进行锁消除。锁消除的依据是逃逸分析的数据支持。 如果不存在竞争，为什么还需要加锁呢？所以锁消除可以节省毫无意义的请求锁的时间。变量是否逃逸，对于虚拟机来说需要使用数据流分析来确定，但是对于我们程序员来说这还不清楚么？我们会在明明知道不存在数据竞争的代码块前加上同步吗？但是有时候程序并不是我们所想的那样？我们虽然没有显示使用锁，但是我们在使用一些JDK的内置API时，如StringBuffer、Vector、HashTable等，这个时候会存在隐形的加锁操作。比如StringBuffer的append\(\)方法，Vector的add\(\)方法：
+为了保证数据的完整性，我们在进行操作时需要对这部分操作进行同步控制，但是在有些情况下，JVM检测到不可能存在共享数据竞争，这是JVM会对这些同步锁进行锁消除。锁消除的依据是逃逸分析的数据支持。 如果不存在竞争，为什么还需要加锁呢？所以锁消除可以节省毫无意义的请求锁的时间。变量是否逃逸，对于虚拟机来说需要使用数据流分析来确定，但是对于我们程序员来说这还不清楚么？我们会在明明知道不存在数据竞争的代码块前加上同步吗？但是有时候程序并不是我们所想的那样？我们虽然没有显示使用锁，但是我们在使用一些JDK的内置API时，如StringBuffer、Vector、HashTable等，这个时候会存在隐形的加锁操作。比如StringBuffer的append()方法，Vector的add()方法：
 
-```text
+```
    public void vectorTest(){
         Vector<String> vector = new Vector<String>();
         for(int i = 0 ; i < 10 ; i++){
@@ -90,7 +90,7 @@ JDK 1.6引入了更加聪明的自旋锁，即自适应自旋锁。所谓自适�
     }
 ```
 
-在运行这段代码时，JVM可以明显检测到变量vector没有逃逸出方法vectorTest\(\)之外，所以JVM可以大胆地将vector内部的加锁操作消除。
+在运行这段代码时，JVM可以明显检测到变量vector没有逃逸出方法vectorTest()之外，所以JVM可以大胆地将vector内部的加锁操作消除。
 
 ### 锁粗化
 
@@ -112,7 +112,7 @@ JDK 1.6引入了更加聪明的自旋锁，即自适应自旋锁。所谓自适�
 
 对于轻量级锁，其性能提升的依据是“对于绝大部分的锁，在整个生命周期内都是不会存在竞争的”，如果打破这个依据则除了互斥的开销外，还有额外的CAS操作，因此在有多线程竞争的情况下，轻量级锁比重量级锁更慢；
 
-下图是轻量级锁的获取和释放过程 
+下图是轻量级锁的获取和释放过程&#x20;
 
 ![22222222222222](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/09/640-20200709115346172-115346.jpeg)
 
@@ -131,7 +131,7 @@ JDK 1.6引入了更加聪明的自旋锁，即自适应自旋锁。所谓自适�
 1. 暂停拥有偏向锁的线程，判断锁对象石是否还处于被锁定状态；
 2. 撤销偏向苏，恢复到无锁状态（01）或者轻量级锁的状态；
 
-下图是偏向锁的获取和释放流程 
+下图是偏向锁的获取和释放流程&#x20;
 
 ![image2](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/09/640-20200709115346386-115346.jpeg)
 
@@ -144,4 +144,3 @@ JDK 1.6引入了更加聪明的自旋锁，即自适应自旋锁。所谓自适�
 1. 周志明：《深入理解Java虚拟机》
 2. 方腾飞：《Java并发编程的艺术》
 3. Java中synchronized的实现原理与应用）
-

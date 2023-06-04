@@ -1,6 +1,6 @@
 # springboot + rabbitmq 用了消息确认机制，感觉掉坑里了
 
-{% embed url="https://mp.weixin.qq.com/s/6LSaqgGqeC40Swxao1ik\_g" %}
+{% embed url="https://mp.weixin.qq.com/s/6LSaqgGqeC40Swxao1ik_g" %}
 
 
 
@@ -8,7 +8,7 @@
 
 最近部门号召大伙多组织一些技术分享会，说是要活跃公司的技术氛围，但早就看穿一切的我知道，这 T M 就是为了刷`KPI`。不过，话说回来这的确是件好事，与其开那些没味的扯皮会，多做技术交流还是很有助于个人成长的。
 
-于是乎我主动报名参加了分享，咳咳咳~ ，真的不是为了那点`KPI`，就是想和大伙一起学习学习！
+于是乎我主动报名参加了分享，咳咳咳\~ ，真的不是为了那点`KPI`，就是想和大伙一起学习学习！
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/640-20200702201215422.png)
 
@@ -16,9 +16,9 @@
 
 可以看到使用了 `RabbitMQ` 以后，我们的业务链路明显变长了，虽然做到了系统间的解耦，但可能造成消息丢失的场景也增加了。例如：
 
-* 消息生产者 - &gt; rabbitmq服务器（消息发送失败）
+* 消息生产者 - > rabbitmq服务器（消息发送失败）
 * rabbitmq服务器自身故障导致消息丢失
-* 消息消费者 - &gt; rabbitmq服务（消费消息失败）
+* 消息消费者 - > rabbitmq服务（消费消息失败）
 
 所以说能不使用中间件就尽量不要用，如果为了用而用只会徒增烦恼。开启消息确认机制以后，尽管很大程度上保证了消息的准确送达，但由于频繁的确认交互，`rabbitmq` 整体效率变低，吞吐量下降严重，不是非常重要的消息真心不建议你用消息确认机制。
 
@@ -30,7 +30,7 @@
 
 **1、引入 rabbitmq 依赖包**
 
-```text
+```
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-amqp</artifactId>
@@ -41,7 +41,7 @@
 
 配置中需要开启 `发送端`和 `消费端` 的消息确认。
 
-```text
+```
 spring.rabbitmq.host=127.0.0.1
 spring.rabbitmq.port=5672
 spring.rabbitmq.username=guest
@@ -62,7 +62,7 @@ spring.rabbitmq.listener.simple.retry.enabled=true
 
 定义交换机 `confirmTestExchange` 和队列 `confirm_test_queue` ，并将队列绑定在交换机上。
 
-```text
+```
 @Configuration
 public class QueueConfig {
 
@@ -105,7 +105,7 @@ public class QueueConfig {
 
 消息只要被 `rabbitmq broker` 接收到就会触发 `confirmCallback` 回调 。
 
-```text
+```
 @Slf4j
 @Component
 public class ConfirmCallbackService implements RabbitTemplate.ConfirmCallback {
@@ -134,7 +134,7 @@ public class ConfirmCallbackService implements RabbitTemplate.ConfirmCallback {
 
 如果消息未能投递到目标 `queue` 里将触发回调 `returnCallback` ，一旦向 `queue` 投递消息未成功，这里一般会记录下当前消息的详细投递数据，方便后续做重发或者补偿等操作。
 
-```text
+```
 @Slf4j
 @Component
 public class ReturnCallbackService implements RabbitTemplate.ReturnCallback {
@@ -150,7 +150,7 @@ public class ReturnCallbackService implements RabbitTemplate.ReturnCallback {
 
 下边是具体的消息发送，在`rabbitTemplate`中设置 `Confirm` 和 `Return` 回调，我们通过`setDeliveryMode()`对消息做持久化处理，为了后续测试创建一个 `CorrelationData`对象，添加一个`id` 为`10000000000`。
 
-```text
+```
 @Autowired
     private RabbitTemplate rabbitTemplate;
 
@@ -192,9 +192,9 @@ public class ReturnCallbackService implements RabbitTemplate.ReturnCallback {
 
 ### 三、消息接收确认
 
-消息接收确认要比消息发送确认简单一点，因为只有一个消息回执（`ack`）的过程。使用`@RabbitHandler`注解标注的方法要增加 `channel`\(信道\)、`message` 两个参数。
+消息接收确认要比消息发送确认简单一点，因为只有一个消息回执（`ack`）的过程。使用`@RabbitHandler`注解标注的方法要增加 `channel`(信道)、`message` 两个参数。
 
-```text
+```
 @Slf4j
 @Component
 @RabbitListener(queues = "confirm_test_queue")
@@ -234,7 +234,7 @@ public class ReceiverMessage1 {
 
 `basicAck`：表示成功确认，使用此回执方法后，消息会被`rabbitmq broker` 删除。
 
-```text
+```
 void basicAck(long deliveryTag, boolean multiple)
 ```
 
@@ -248,7 +248,7 @@ void basicAck(long deliveryTag, boolean multiple)
 
 `basicNack` ：表示失败确认，一般在消费消息业务异常时用到此方法，可以将消息重新投递入队列。
 
-```text
+```
 void basicNack(long deliveryTag, boolean multiple, boolean requeue)
 ```
 
@@ -262,7 +262,7 @@ void basicNack(long deliveryTag, boolean multiple, boolean requeue)
 
 `basicReject`：拒绝消息，与`basicNack`区别在于不能进行批量操作，其他用法很相似。
 
-```text
+```
 void basicReject(long deliveryTag, boolean requeue)
 ```
 
@@ -286,7 +286,7 @@ void basicReject(long deliveryTag, boolean requeue)
 
 在我最开始接触消息确认机制的时候，消费端代码就像下边这样写的，思路很简单：处理完业务逻辑后确认消息， `int a = 1 / 0` 发生异常后将消息重新投入队列。
 
-```text
+```
 @RabbitHandler
     public void processHandler(String msg, Channel channel, Message message) throws IOException {
 
@@ -326,7 +326,7 @@ void basicReject(long deliveryTag, boolean requeue)
 
 而我们当时的解决方案是，先将消息进行应答，此时消息队列会删除该条消息，同时我们再次发送该消息到消息队列，异常消息就放在了消息队列尾部，这样既保证消息不会丢失，又保证了正常业务的进行。
 
-```text
+```
 channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
 // 重新发送消息到队尾
 channel.basicPublish(message.getMessageProperties().getReceivedExchange(),
@@ -339,4 +339,3 @@ channel.basicPublish(message.getMessageProperties().getReceivedExchange(),
 **3、重复消费**
 
 如何保证 MQ 的消费是幂等性，这个需要根据具体业务而定，可以借助`MySQL`、或者`redis` 将消息持久化，通过再消息中的唯一性属性校验。
-

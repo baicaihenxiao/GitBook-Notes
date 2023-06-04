@@ -2,16 +2,19 @@
 
 对于关系型数据库的操作，我们在之前的Spring Boot系列教程中已经介绍了几个最常用的使用案例：
 
-* [使用JdbcTemplate访问MySQL数据库](http://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=2247489506&idx=2&sn=a2260460d8142b1872d7bb2cf34dfd32&chksm=9bd0ba7aaca7336c83a2f59a352c236b2e5942ccb177bdc94dd08bd941b866f036435f635e01&scene=21#wechat_redirect) 
-* [使用Spring Data JPA访问MySQL](http://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=2247489649&idx=2&sn=b4b42ef5a1d9e233a1bd8579cb6bc5d2&chksm=9bd0b5e9aca73cff7672f907cfdc08acfc3b35e03ba507c6f0b9e79a3f593738ba3006b8218f&scene=21#wechat_redirect) 
-* [使用MyBatis访问MySQL](http://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=2247489742&idx=2&sn=b57097e4a4c7642e1c1621b6c3c1e7d4&chksm=9bd0b556aca73c40a3e699df67556faa5a4dc87748bf831d6662bc2638c1841060485f31aafe&scene=21#wechat_redirect) 
+* [使用JdbcTemplate访问MySQL数据库](http://mp.weixin.qq.com/s?\_\_biz=MzAxODcyNjEzNQ==\&mid=2247489506\&idx=2\&sn=a2260460d8142b1872d7bb2cf34dfd32\&chksm=9bd0ba7aaca7336c83a2f59a352c236b2e5942ccb177bdc94dd08bd941b866f036435f635e01\&scene=21#wechat\_redirect)\
 
-因为选择多，因此对于这几种方式哪个更好，一直也是Java开发者们争论的一个热点。同时，一直以来争论的热点一直围绕着**MyBatis**和**Spring Data JPA**的选择（之前我们也聊了关于 [MyBatis和Spring Data JPA的选择问题](http://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=2247520292&idx=7&sn=c8c1bfcc80937f9344513a09a8210e74&chksm=9bd33dbcaca4b4aa52b2c6d9c9824b6348186332e4751fff7f158fdf2ddbfd145ec114848565&scene=21#wechat_redirect)）。
+* [使用Spring Data JPA访问MySQL](http://mp.weixin.qq.com/s?\_\_biz=MzAxODcyNjEzNQ==\&mid=2247489649\&idx=2\&sn=b4b42ef5a1d9e233a1bd8579cb6bc5d2\&chksm=9bd0b5e9aca73cff7672f907cfdc08acfc3b35e03ba507c6f0b9e79a3f593738ba3006b8218f\&scene=21#wechat\_redirect)\
 
-今天小编看到一篇比较特别的思考，作者并没有选择我们最常讨论的选择，而是选择了JDBC Template，这个比较原始、功能并不那么强大的数据访问方式。  
+* [使用MyBatis访问MySQL](http://mp.weixin.qq.com/s?\_\_biz=MzAxODcyNjEzNQ==\&mid=2247489742\&idx=2\&sn=b57097e4a4c7642e1c1621b6c3c1e7d4\&chksm=9bd0b556aca73c40a3e699df67556faa5a4dc87748bf831d6662bc2638c1841060485f31aafe\&scene=21#wechat\_redirect)\
 
 
-**以下内容转载自：**[**https://segmentfault.com/a/1190000018472572**](https://segmentfault.com/a/1190000018472572)\*\*\*\*
+因为选择多，因此对于这几种方式哪个更好，一直也是Java开发者们争论的一个热点。同时，一直以来争论的热点一直围绕着**MyBatis**和**Spring Data JPA**的选择（之前我们也聊了关于 [MyBatis和Spring Data JPA的选择问题](http://mp.weixin.qq.com/s?\_\_biz=MzAxODcyNjEzNQ==\&mid=2247520292\&idx=7\&sn=c8c1bfcc80937f9344513a09a8210e74\&chksm=9bd33dbcaca4b4aa52b2c6d9c9824b6348186332e4751fff7f158fdf2ddbfd145ec114848565\&scene=21#wechat\_redirect)）。
+
+今天小编看到一篇比较特别的思考，作者并没有选择我们最常讨论的选择，而是选择了JDBC Template，这个比较原始、功能并不那么强大的数据访问方式。\
+
+
+**以下内容转载自：**[**https://segmentfault.com/a/1190000018472572**](https://segmentfault.com/a/1190000018472572)
 
 **作者：scherman**
 
@@ -23,7 +26,7 @@ Hibernate和Mybatis是使用最多的两个主流框架，而JOOQ、Ebean等小�
 
 **一、SQL封装和性能**
 
-在使用Hibernate的时候，我们查询的是POJO实体类，而不再是数据库的表，例如hql语句 select count\(\*\) from User，里面的User是一个Java类，而不是数据库表User。这符合ORM最初的理想，ORM认为Java程序员使用OO的思维方式，和关系数据库的思维方式差距巨大，为了填补对象和关系思维方式的鸿沟，必须做一个对象到关系的映射，然后在Java的对象世界中，程序员可以使用纯的对象的思维方式，查询POJO对象，查询条件是对象属性，不再需要有任何表、字段等关系的概念，这样java程序员就更容易做持久层的操作。
+在使用Hibernate的时候，我们查询的是POJO实体类，而不再是数据库的表，例如hql语句 select count(\*) from User，里面的User是一个Java类，而不是数据库表User。这符合ORM最初的理想，ORM认为Java程序员使用OO的思维方式，和关系数据库的思维方式差距巨大，为了填补对象和关系思维方式的鸿沟，必须做一个对象到关系的映射，然后在Java的对象世界中，程序员可以使用纯的对象的思维方式，查询POJO对象，查询条件是对象属性，不再需要有任何表、字段等关系的概念，这样java程序员就更容易做持久层的操作。
 
 JPA可以视为Hibernate的儿子，也继承了这个思路，把SQL彻底封装起来，让Java程序员看不到关系的概念，用纯的面向对象思想，重新创造一个新的查询语言代替sql，比如hql，还有JPQL等。支持JPA的框架，例如Ebean都属于这种类型的框架。
 
@@ -84,4 +87,3 @@ JOOQ这个极端轻量级的框架技术上是最完美的，突然有一天几�
 最终，我决定选择JDBC Template。
 
 **后记**不论我们是在做功能开发还是架构设计的时候，框架的选型、中间的选型一直都是我们逃不开的话题，任何一个框架、中间件，它们都有各自的特点，当这些特点放错了地方，我们会吐槽，说它“坑”。而每个东西之所有长期存在着，是因为它还有其自身特点所能覆盖的应用场景。任何一个框架和中间件，都不是解决问题的银弹，我们不应该人云亦云，而更应用根据自身团队的情况、业务需求的情况、成本预算的情况，选择更适合自身环境的东西，这样才是最好的。
-

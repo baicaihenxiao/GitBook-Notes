@@ -4,14 +4,14 @@
 
 在使用Java编写应用的时候，我们常常需要通过第三方类库来帮助我们完成所需要的功能。有时候这些类库所提供的很多API都通过throws声明了它们所可能抛出的异常。但是在查看这些API的文档时，我们却没有办法找到有关这些异常的详尽解释。在这种情况下，我们不能简单地忽略这些由throws所声明的异常：
 
-```text
+```
 1 public void shouldNotThrowCheckedException() {
 2     // 该API调用可能抛出一个不明原因的Checked Exception
 3     exceptionalAPI();
 4 }
 ```
 
-　　否则Java编译器会由于shouldNotThrowCheckedException\(\)函数没有声明其可能抛出的Checked Exception而报错。但是如果通过throws标明了该函数所可能抛出的Checked Exception，那么其它对shouldNotThrowCheckedException\(\)函数的调用同样需要通过throws标明其可能抛出该Checked Exception。
+　　否则Java编译器会由于shouldNotThrowCheckedException()函数没有声明其可能抛出的Checked Exception而报错。但是如果通过throws标明了该函数所可能抛出的Checked Exception，那么其它对shouldNotThrowCheckedException()函数的调用同样需要通过throws标明其可能抛出该Checked Exception。
 
 　　哦，这可真是一件令人烦燥的事情。那我们应该如何对这些Checked Exception进行处理呢？在本文中，我们将对如何在Java应用中使用及处理Checked Exception进行简单地介绍。
 
@@ -21,7 +21,7 @@
 
 　　在Java中，异常主要分为三种：Exception，RuntimeException以及Error。这三类异常都是Throwable的子类。直接从Exception派生的各个异常类型就是我们刚刚提到的Checked Exception。它的一个比较特殊的地方就是强制调用方对该异常进行处理。就以我们常见的用于读取一个文件内容的FileReader类为例。在该类的构造函数声明中声明了其可能会抛出FileNotFoundException：
 
-```text
+```
 1 public FileReader(String fileName) throws FileNotFoundException {
 2     ……
 3 }
@@ -29,7 +29,7 @@
 
 　　那么在调用该构造函数的函数中，我们需要通过try…catch…来处理该异常：
 
-```text
+```
 1 public void processFile() {
 2     try {
 3         FileReader fileReader = new FileReader(inFile);
@@ -42,7 +42,7 @@
 
 　　如果我们不通过try…catch…来处理该异常，那么我们就不得不在函数声明中通过throws标明该函数会抛出FileNotFoundException：
 
-```text
+```
 1 public void processFile() throws FileNotFoundException {
 2     FileReader fileReader = new FileReader(inFile); // 可能抛出FileNotFoundException
 3     ……
@@ -61,14 +61,14 @@
 
 　　第一种误用的情况就是Checked Exception的广泛传播。在前面已经提到过，调用一个可能抛出Checked Exception的API时，软件开发人员可以有两种选择。其中一种选择就是在对该API进行调用的函数上添加throws声明，并将该Checked Exception向上传递：
 
-```text
+```
 1 public void processFile() throws FileNotFoundException {
 2     FileReader fileReader = new FileReader(inFile); // 可能抛出FileNotFoundException
 3     ……
 4 }
 ```
 
-　　而在调用processFile\(\)函数的代码中，软件开发人员可能觉得这里还不是处理异常FileNotFoundException的合适地点，因此他通过throws将该异常再次向上传递。但是在一个函数上添加throws意味着其它对该函数进行调用的代码同样需要处理该throws声明。在一个代码复用性比较好的系统中，这些throws会非常快速地蔓延开来：
+　　而在调用processFile()函数的代码中，软件开发人员可能觉得这里还不是处理异常FileNotFoundException的合适地点，因此他通过throws将该异常再次向上传递。但是在一个函数上添加throws意味着其它对该函数进行调用的代码同样需要处理该throws声明。在一个代码复用性比较好的系统中，这些throws会非常快速地蔓延开来：
 
 ![](https://images0.cnblogs.com/blog2015/126867/201506/232308112672304.png)
 
@@ -78,11 +78,11 @@
 
 ![](https://images0.cnblogs.com/blog2015/126867/201506/232308531427343.png)
 
-　　在上图中，我们显示了在一个接口声明中添加throws的严重后果。在一开始，我们在应用中实现了接口函数Interface::method\(\)。此时在应用以及第三方应用中拥有六种对它的实现。但是如果A::method\(\)的实现中抛出了一个Checked Exception，那么其就会要求接口中的相应函数也添加该throws声明。一旦在接口中添加了throws声明，那么在应用以及第三方应用中的所有对该接口的实现都需要添加该throws声明，即使在这些实现中并不存在可能抛出该异常的函数调用。
+　　在上图中，我们显示了在一个接口声明中添加throws的严重后果。在一开始，我们在应用中实现了接口函数Interface::method()。此时在应用以及第三方应用中拥有六种对它的实现。但是如果A::method()的实现中抛出了一个Checked Exception，那么其就会要求接口中的相应函数也添加该throws声明。一旦在接口中添加了throws声明，那么在应用以及第三方应用中的所有对该接口的实现都需要添加该throws声明，即使在这些实现中并不存在可能抛出该异常的函数调用。
 
-　　那么我们应该怎么解决这个问题呢？首先，我们应该尽早地对Checked Exception进行处理。这是因为随着Checked Exception沿着函数调用的轨迹向上传递的过程中，这些被抛出的Checked Exception的意义将逐渐模糊。例如在startupApplication\(\)函数中，我们可能需要读取用户的配置文件来根据用户的原有偏好配置应用。由于该段逻辑需要读取用户的配置文件，因此其内部逻辑在运行时将可能抛出FileNotFoundException。如果这个FileNotFoundException没有及时地被处理，那么startupApplication\(\)函数的签名将如下所示：
+　　那么我们应该怎么解决这个问题呢？首先，我们应该尽早地对Checked Exception进行处理。这是因为随着Checked Exception沿着函数调用的轨迹向上传递的过程中，这些被抛出的Checked Exception的意义将逐渐模糊。例如在startupApplication()函数中，我们可能需要读取用户的配置文件来根据用户的原有偏好配置应用。由于该段逻辑需要读取用户的配置文件，因此其内部逻辑在运行时将可能抛出FileNotFoundException。如果这个FileNotFoundException没有及时地被处理，那么startupApplication()函数的签名将如下所示：
 
-```text
+```
 1 public void startupApplication() throws FileNotFoundException {
 2     ……
 3 }
@@ -92,7 +92,7 @@
 
 　　反过来，如果我们在产生Checked  Exception的时候立即对该异常进行处理，那么此时我们将拥有有关该异常的最为丰富的信息：
 
-```text
+```
 1 public void readPreference() {
 2     ……
 3     try {
@@ -106,7 +106,7 @@
 
 　　但是在用户那里看来，他曾经所设置的偏好在这次使用时候已经不再有效了。这是我们的程序在运行时所产生的异常情况，因此我们需要通知用户：因为原来的偏好文件不再存在了，因此我们将使用默认的应用设置。而这一切则是通过一个在我们的应用中定义的RuntimeException类的派生类来完成的：
 
-```text
+```
  1 public void readPreference() {
  2     ……
  3     try {
@@ -121,7 +121,7 @@
 
 　　可以看到，此时在catch块中所抛出的ApplicationSpecificException异常中已经包含了足够多的信息。这样，我们的应用就可以通过捕获ApplicationSpecificException来统一处理它们并将最为详尽的信息显示给用户，从而通知他因为无法找到偏好文件而使用默认设置：
 
-```text
+```
 1 try {
 2     startApplication();
 3 } catch(ApplicationSpecificException exception) {
@@ -133,7 +133,7 @@
 
 　　另一种和Checked Exception相关的问题就是对它的随意处理。在前面的讲解中您或许已经知道了，如果一个Checked Exception不能在对API进行调用的函数中被处理，那么该函数就需要添加throws声明，从而导致多处代码需要针对该Checked Exception进行修改。那么好，为了避免这种情况，我们就尽早地对它进行处理。但是在查看该API文档的时候，我们却发现文档中并没有添加任何有关该Checked Exception的详细解释：
 
-```text
+```
 1 /**
 2  * ……
 3  * throws SomeCheckedException
@@ -144,7 +144,7 @@
 
 　　而且我们也没有办法从该函数的签名中看出到底为什么这个函数会抛出该异常，进而也不知道该异常是否需要对用户可见。在这种情况下，我们只有截获它并在日志中添加一条记录了事：
 
-```text
+```
 1 try {
 2     someFunction();
 3 } catch(SomeCheckedException exception) {
@@ -152,17 +152,17 @@
 5 }
 ```
 
-                很显然，这并不是一种好的做法。而这一切的根本原因则是没有说清楚到底为什么函数会抛出该Checked Exception。因此对于一个API编写者而言，由于throws也是函数声明的一部分，因此为一个函数所能抛出的Checked Exception添加清晰准确的文档实际上是非常重要的。
+&#x20;               很显然，这并不是一种好的做法。而这一切的根本原因则是没有说清楚到底为什么函数会抛出该Checked Exception。因此对于一个API编写者而言，由于throws也是函数声明的一部分，因此为一个函数所能抛出的Checked Exception添加清晰准确的文档实际上是非常重要的。
 
 疲于应付的API用户
 
 　　除了没有清晰的文档之外，另一种让API用户非常抵触的就是过度地对Checked Exception进行使用。
 
-　　或许您已经接触过类似的情况：一个类库中用于取得数据的API，如getData\(int index\)，通过throws抛出一个异常，以表示API用户所传入的参数index是一个非法值。可以想象得到的是，由于getData\(\)可能会被非常频繁地使用，因此软件开发人员需要在每一处调用都使用try … catch …块来截获该异常，从而使代码显得凌乱不堪。
+　　或许您已经接触过类似的情况：一个类库中用于取得数据的API，如getData(int index)，通过throws抛出一个异常，以表示API用户所传入的参数index是一个非法值。可以想象得到的是，由于getData()可能会被非常频繁地使用，因此软件开发人员需要在每一处调用都使用try … catch …块来截获该异常，从而使代码显得凌乱不堪。
 
 　　如果一个类库拥有一个这样的API，那么该类库中的这种对Checked Exception的不恰当使用常常不止一个。那么该类库的这些API会大量地污染用户代码，使得这些用户代码中充斥着不必要也没有任何意义的try…catch…块，进而让代码逻辑显得极为晦涩难懂。
 
-```text
+```
  1 Record record = null;
  2 try {
  3     record = library.getDataAt(2);
@@ -179,7 +179,7 @@
 
 　　反过来，如果这些都不是Checked Exception，而且软件开发人员也能保证传入的索引是合法的，那么代码会简化很多：
 
-```text
+```
 1 Record record = library.getDataAt(2);
 2 record.setIntValue(record.getIntValue() * 2);
 3 library.setDataAt(2, record);
@@ -187,7 +187,7 @@
 
 　　那么我们应该在什么时候使用Checked Exception呢？就像前面所说的，如果一个异常所表示的并不是代码本身的不足所导致的非正常状态，而是一系列应用本身也无法控制的情况，那么我们将需要使用Checked Exception。就以前面所列出的FileReader类的构造函数为例：
 
-```text
+```
 1 public FileReader(String fileName) throws FileNotFoundException
 ```
 
@@ -215,7 +215,7 @@
 
 　　简单地说，Wrapped Exception就是将一个异常包装起来的异常。在try…catch…块捕获到一个异常的时候，该异常内部所记录的消息可能并不合适。就以前面我们已经举过的加载偏好的示例为例。在启动时，应用会尝试读取用户的偏好设置。这些偏好设置记录在了一个文件中，却可能已经被误删除。在这种情况下，对该偏好文件的读取会导致一个FileNotFoundException抛出。但是在该异常中所记录的信息对于用户，甚至应用编写者而言没有任何价值：“Could not find file preference.xml while opening file”。在这种情况下，我们就需要构造一个新的异常，在该异常中标示准确的错误信息，并将FileNotFoundException作为新异常的原因：
 
-```text
+```
  1 public void readPreference() {
  2     ……
  3     try {
@@ -230,7 +230,7 @@
 
 　　上面的示例代码中重新抛出了一个ApplicationSpecificException类型的异常。从它的名字就可以看出，其应该是API使用者在应用实现中所添加的应用特有的异常。为了避免调用栈中的每一个函数都需要添加throws声明，该异常需要从RuntimeException派生。这样应用就可以通过在调用栈的最底层捕捉这些异常并对这些异常进行处理：在系统日志中添加一条异常记录，只对用户显示异常中的消息，以防止异常内部的调用栈信息暴露过多的实现细节等：
 
-```text
+```
 1 try {
 2     ……
 3 } catch(ApplicationSpecificException exception) {
@@ -243,4 +243,3 @@
 转载请注明原文地址并标明转载：[http://www.cnblogs.com/loveis715/p/4596551.html](http://www.cnblogs.com/loveis715/p/4596551.html)
 
 商业转载请事先与我联系：[silverfox715@sina.com](mailto:silverfox715@sina.com)
-

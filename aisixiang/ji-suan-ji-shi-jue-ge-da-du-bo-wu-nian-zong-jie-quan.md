@@ -1,8 +1,8 @@
-# ✔️⭐计算机视觉 \| 哥大读博五年总结（全）
+# ✔️⭐计算机视觉 | 哥大读博五年总结（全）
 
 [https://zhuanlan.zhihu.com/p/338193330](https://zhuanlan.zhihu.com/p/338193330)
 
-[Principles For Success by Ray Dalio \(In 30 Minutes\)](https://www.youtube.com/watch?v=B9XGUpQZY38)
+[Principles For Success by Ray Dalio (In 30 Minutes)](https://www.youtube.com/watch?v=B9XGUpQZY38)
 
 ### **0. 写在前面**
 
@@ -26,7 +26,7 @@
 
 接着，办入住，搞卫生，小憩了一会儿，傍晚出去门口的超市买点吃的；第一次从112街，走到Broadway上，看着熙熙攘攘的外国人面孔，很傻的竟然笑了出来…那会儿自然是极开心的，就是一个毛头小子，充满了对未来生活期待的样子（哎，回不去的青春啊）；当然了，怎么也没想到，接下来的一年，会如此艰难……
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-e80a36c949d30c2fc064e323c5fe380e_720w-152644.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-e80a36c949d30c2fc064e323c5fe380e\_720w-152644.jpg)
 
 **1.2 差距**
 
@@ -52,7 +52,7 @@
 
 qualify考试在1月初。12中旬，忙完了期末考试，去Chinatown吃了顿好的，回家看了部电影，然后跟导师请好假，专心复习qualify。大概有三周的复习时间，除了DSP，其他的topics完全从零开始学。后来觉得，这考试的目的，不是考的知识本身，而考的是学习能力。复习的过程是很惨了，时值圣诞节假期，朋友圈各式各样在佛罗里达坐游轮的，迪士尼看烟花的，回国火锅小烧烤的；而那年的纽约还尤其的冷，家里的暖气开到最大，还是冷的不行，我只能早出晚归的去图书馆；路面冻得白花花的，公车开过扬起白沙，从家里112街到图书馆114街只有5分钟，但却那么漫长；每天几条裤子叠着穿，有天开始一度冷到零下负十几度，我刚出门一会儿就赶紧回来，在牛仔裤外面又套了件运动裤……所幸最后考试通过了，小秘告诉我竟然考了第三，震惊，真是功夫不负有心人讷……
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-d5ccda14f43f5886f1e86daf27b116fb_720w-152645.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-d5ccda14f43f5886f1e86daf27b116fb\_720w-152645.jpg)
 
 **1.5 上课没那么重要**
 
@@ -86,18 +86,18 @@ Last很难，Improve常见但影响力不够深远，对于新手而言，博士
 
 **2.2 单篇Paper选题**
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-9ff61236a6af76f06cf95315d07f4209_720w-152646.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-9ff61236a6af76f06cf95315d07f4209\_720w-152646.jpg)
 
 前面说的PhD选题是大方向上的，具体到每一篇paper，选择的principle和重点则不太一样。来Facebook后从马爷爷那知道了一个著名的**Heilmeier问题系列**，是指导老师们申项目的，我觉得稍微改改，便很适用于我们考虑，某一篇paper的选题，合不合适：
 
 1. **What are you trying to do?** Articulate your objectives using absolutely no jargon.
 2. **How is it done today, and what are the limits of current practice?**
-3. **Who cares?** \[Support other’s research? Shape research landscape? Power applications in industry?\]
+3. **Who cares?** \[Support other’s research? Shape research landscape? Power applications in industry?]
 4. **What's new in your approach** and why do you think it will be successful?
-5. If you're successful, **what difference will it make?** \[e.g. Contributions in theory/modeling? Improve accuracy by 5% on dataset A, B, C…?\]
-6. **What are the risks and the payoffs?** \[Further, how would you mitigate the risks? If your proposed method does not work, what could be alternative design? These can end up as discussions such as ablation studies in your paper.\]
-7. **How much will it cost?** \[e.g. How many GPUs do your experiments require? How long is each training process? How about data storage?\]
-8. **How long will it take?** \[How many hours are you going to work on this per week? When is the submission DDL? Can you make it?\]
+5. If you're successful, **what difference will it make?** \[e.g. Contributions in theory/modeling? Improve accuracy by 5% on dataset A, B, C…?]
+6. **What are the risks and the payoffs?** \[Further, how would you mitigate the risks? If your proposed method does not work, what could be alternative design? These can end up as discussions such as ablation studies in your paper.]
+7. **How much will it cost?** \[e.g. How many GPUs do your experiments require? How long is each training process? How about data storage?]
+8. **How long will it take?** \[How many hours are you going to work on this per week? When is the submission DDL? Can you make it?]
 9. **What are the midterm and final "exams" to check for success?**
 
 ### 3. 谈谈Presentation
@@ -121,7 +121,7 @@ Presentation分为做报告，还有就是写paper
 
 19年CVPR，Doctoral Consortium有幸mentor是斯坦福的一位大牛教授，她也提到了presentation的重要性，说她们lab有个开玩笑的说法，一份slides交给她去改，no pixel left……为了分享如何能让报告听起来有兴趣，她画了下面这张图，**让听众情感（亦是兴趣高低，注意力程度）随着时间的变化，有三个高潮**：首先，介绍你的问题，通常这时候大家都会引发兴趣；但听着听着大家注意力就不集中了，这时候就到了图中第一个低谷，这时候需要指出来这个问题有哪些challenge，大家的兴趣就又被激发了；等大家兴趣来了，精力集中的时候，介绍你的一部分工作work 1；等介绍完第一个工作，大家又疲劳了，这时候指出来，即使有这个work 1，问题还不能被解决，因为有remaining challenge；接着大家又被调动了兴致，可以开始介绍work 2。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-8bff4c80f5cfd3a9e71d7322aabd7904_720w-152647.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-8bff4c80f5cfd3a9e71d7322aabd7904\_720w-152647.jpg)
 
 ### 3.2 谈谈写paper
 
@@ -131,30 +131,36 @@ Presentation分为做报告，还有就是写paper
 * **用Google doc做语法检查**。刚写好的paper有typo和语法错误是很难避免的，但常常会被reviewer揪着不放。大家写paper如今大都在overleaf上，但overleaf的查错还是不够好，建议可以写完paper后，贴到Google doc里面。几年前开始，估计是由于deep learning对Google NLP的改进很大，感觉Google自动改的质量已经非常高了。
 * **Rationale很重要**。不光是要讲清楚你怎么做的，更要justify你问什么这么做；不光要讲你的结果比baseline好，更要解释为什么好；读者看到的不应是一个“使用手册”。有时候我们写paper，花了很多篇幅写了很多实现细节，但是更重要的是，解释“为什么”，这个背后的逻辑和insights。
 * 大部分paper都是提出一个新的方法，**这类方法型paper**似乎都可以套下面这个框架：
-* * Introduction：可以分为以下几个部分：
-    * * Problem definition
+*
+  * Introduction：可以分为以下几个部分：
+    *
+      * Problem definition
         * Previous methods and their limits
         * 简单描述你是提出了什么技术来overcome上面的limits
         * 一个图，非常high-level的解释前人工作的limits和你的工作怎么解决了这些limits，**最好让人30秒内完全看懂**
         * 最后一段如今大都是，In summary, this paper makes three contributions:
-        * * First work to解决什么limits
+        *
+          * First work to解决什么limits
             * 提出了什么novel的技术
             * outperform了state-of-the-art多少
     * Related Work：一般三五个subsection，分别review下相关的topics，同样不光讲previous work做了啥，更要讲自己的方法跟前人工作有啥不同
     * Method
-    * * 这是文章的主体，按照你觉得最容易让别人看懂的方式来讲
+    *
+      * 这是文章的主体，按照你觉得最容易让别人看懂的方式来讲
         * 可以第一个subsection是overview，formulate一下你的problem给出notation，配一个整体framework的图，图里面的字体不能太大或者太小看不清，要有些细节，让人光看图就能明白你的方法是怎么回事，但不要过于复杂，让人在不超过2分钟的时间看完这张图
         * 然后几个subsection具体介绍你的方法或者模型；如果testing跟training不太一样，最后一个subsection介绍inference时候的不同，通常是一些post-processing操作
     * Experiment
-    * * Datasets
+    *
+      * Datasets
         * Implementation details such as pre-processing process, training recipe
         * Evaluation metrics
         * Comparisons with state-of-the-art
         * Detailed analysis
-        * * Alternative design choice exploration
+        *
+          * Alternative design choice exploration
             * Ablation studies
             * Visualization examples
-    * Conclusion \(and Future Work\)
+    * Conclusion (and Future Work)
     * Abstract：是全文的精简版，建议在paper写完第一稿差不多成型了，有定下来的成熟的storyline了，再去写abstract；大概就是用一两句话分别概括paper里面每个section，然后串起来
 
 另外paper提交时候，可以交supplementary materials，虽然reviewer并不被要求强制看这个，但其实给我们机会，去include更多文章技术细节、实验结果的好地方；在后面rebuttal阶段，通常篇幅有限制，但如果你已经在**supp里面未雨绸缪**，可以省很多空间，refer reviewer去看你supp里面的内容就好了。
@@ -169,7 +175,7 @@ Presentation分为做报告，还有就是写paper
 
 若用一个词形容16年参加CVPR的体验，那就是兴奋了。首先Vegas就足够让人兴奋了，一座沙漠中建起来的梦幻城市，各式各样的酒店，威尼斯人，凯撒皇宫，艾弗尔铁塔，每换一个酒店就像到了一个新的国家。三年后毕业旅行，我带爸妈来，故地重游依旧是很惊艳。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-975cf128d144c4cf9c1253a7cca1a65c_720w-152647.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-975cf128d144c4cf9c1253a7cca1a65c\_720w-152647.jpg)
 
 然后这也是第一次见到许多业界大佬们的真身。当时在湾区实习，候机的时候就发现周围都是同行。第一天晚上跟着师兄逛赌城大道，一个很高的老外来跟我们打招呼握手，我后来才意识到是现在在Tesla的Andrej，之前本科的时候还邮件问过他DBN的问题，没想到竟然是他…后面陆陆续续看到各种在Paper上面名字很熟悉的真人，很兴奋了…
 
@@ -195,7 +201,7 @@ Presentation分为做报告，还有就是写paper
 
 洛杉矶也是我很喜欢的一个城市，因为我一直有个影视梦，所以很喜欢好莱坞，这大概就是我为什么坚定做video方向的初衷了。长滩其实离LA市区挺远的，算是一个度假小城市了，甚至有自己的机场。长滩市最著名的景点就是literally的长滩了，有很多游艇一列一列地停着，蛮壮观的。
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-f3e464593c9a8a65a053387d966312c3_720w-152647.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-f3e464593c9a8a65a053387d966312c3\_720w-152647.jpg)
 
 19年这会儿我已经毕业了，刚加入Facebook，不用逛公司了解找工作的情况，倒是又可以认认真真开会了。另外，对于毕业生，会有个Doctoral Consortium，强烈建议申请，他们会组织毕业生和业界大佬一对一吃饭，是个很难得的学习机会，毕竟除了自己导师，很少有其他老师能花一个小时跟你单独聊各种research和career上的问题了吧。
 
@@ -223,7 +229,7 @@ Presentation分为做报告，还有就是写paper
 
 原以为之前我已经了解湾区了，但16年其实是在Sunnyvale，Santa Clara这块，靠东边，偏热；18年FB在Menlo Park，公司公寓在红木城，这块靠西边，温度跟西雅图夏天差不多，很舒服，跟16年常活动的区域还是有点远的。说fancy是因为，17年在微软，我觉得有免费的咖啡和椰子汁就很不错了；来了FB，好么，喝的吃的种样繁多，微软就显得小巫见大巫了；FB楼里各种有个性标识的墙，intern program组织的活动也多，认识了很多玩得来的小伙伴。在这也学了很多“黑话”，什么movefast啦，什么what does success look like啦……
 
-![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-5ef7fe933d98462b6268d29e61e07744_720w-152647.jpg)
+![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/01/31/v2-5ef7fe933d98462b6268d29e61e07744\_720w-152647.jpg)
 
 但同时也是最累的一个暑假了，一来因为open space办公室，大家都坐在一块儿，业界大佬就在身边，自然也会想向他们学习，做的优秀；二来FB有mid-term和final review，一般你的mentor们会给你写feedback，打分，然后有个叫calibration的环节，上面的老板们会把所有intern放在一起比较，调整分数，要看你跟你的peers比怎么样。所以好几次，忙到晚上3-4点，早上8点就得起来赶班车……
 
@@ -285,7 +291,7 @@ Presentation分为做报告，还有就是写paper
 
 ### 7.2 如何找教职？
 
-目前来说，毕业直接找到教职的难度还是比较大的，很多人会先做个PostDoc，可以一方面积累新的paper，一方面积累新的connection。同时博后期间，可以有更多时间，准备更充分地找教职。找教职的话，qu qing学长写了个总结，非常全面，强推，最近在update，估计要过一段时间放出来，大家stay tuned哈：[https://qingqu06.github.io/pdf/Job\_Search.pdf](https://link.zhihu.com/?target=https%3A//qingqu06.github.io/pdf/Job_Search.pdf)
+目前来说，毕业直接找到教职的难度还是比较大的，很多人会先做个PostDoc，可以一方面积累新的paper，一方面积累新的connection。同时博后期间，可以有更多时间，准备更充分地找教职。找教职的话，qu qing学长写了个总结，非常全面，强推，最近在update，估计要过一段时间放出来，大家stay tuned哈：[https://qingqu06.github.io/pdf/Job\_Search.pdf](https://link.zhihu.com/?target=https%3A//qingqu06.github.io/pdf/Job\_Search.pdf)
 
 ### 7.3 如何赚大钱？
 
@@ -323,7 +329,7 @@ Presentation分为做报告，还有就是写paper
 
 ### 常怀感激之心
 
-一路上得到很多前辈帮助，非常感激。在来到Facebook后，学会心怀感激，感觉是个很明显的公司文化：每个月组里的all hands有shoutout session，让大家在全组面前，表达对工作中帮助了自己的人的感谢；公司有\#thanks hub, 可以给帮你的人写感谢note，而且这个note，对方的manager会看到；而且，很多时候，感觉是很小的事情，大家也会互相道谢；每次开完会，大家也会互相道谢。简单的一句thank you真的可以让人幸福感增加不少，毕竟很多时候别人并没有义务非要帮助我们，这让大家更愿意互帮互助，感觉是个特别好的文化。
+一路上得到很多前辈帮助，非常感激。在来到Facebook后，学会心怀感激，感觉是个很明显的公司文化：每个月组里的all hands有shoutout session，让大家在全组面前，表达对工作中帮助了自己的人的感谢；公司有#thanks hub, 可以给帮你的人写感谢note，而且这个note，对方的manager会看到；而且，很多时候，感觉是很小的事情，大家也会互相道谢；每次开完会，大家也会互相道谢。简单的一句thank you真的可以让人幸福感增加不少，毕竟很多时候别人并没有义务非要帮助我们，这让大家更愿意互帮互助，感觉是个特别好的文化。
 
 ### Principles For Success by Ray Dalio
 
@@ -333,7 +339,6 @@ Presentation分为做报告，还有就是写paper
 
 Mike 于 旧金山
 
-**\[ 后记: 惭愧在各位老师、大佬面前班门弄斧了；若是对于有的同学有点帮助，我就很高兴了；但不可避免的，因为时间有限，文章写的粗糙，还请多多担待；因为篇幅限制，有的问题难以讲得完善全面，还请结合自身情况，辩证地借鉴相关经验；或跟您意见不合，全当看小说，寻个乐子罢了；顺祝大家新春愉快，平安喜乐，万事胜意；希望疫情早日过去，世界和平… \]**
+**\[ 后记: 惭愧在各位老师、大佬面前班门弄斧了；若是对于有的同学有点帮助，我就很高兴了；但不可避免的，因为时间有限，文章写的粗糙，还请多多担待；因为篇幅限制，有的问题难以讲得完善全面，还请结合自身情况，辩证地借鉴相关经验；或跟您意见不合，全当看小说，寻个乐子罢了；顺祝大家新春愉快，平安喜乐，万事胜意；希望疫情早日过去，世界和平… ]**
 
 编辑于 01-23
-

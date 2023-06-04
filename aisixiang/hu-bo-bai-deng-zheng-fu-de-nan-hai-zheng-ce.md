@@ -2,7 +2,7 @@
 
 > [http://www.aisixiang.com/data/124358.html](http://www.aisixiang.com/data/124358.html)
 
-选择字号：[大](http://www.aisixiang.com/data/124358.html#) [中](http://www.aisixiang.com/data/124358.html#) [小](http://www.aisixiang.com/data/124358.html#)   本文共阅读 95 次 更新时间：2021-01-15 22:25:43
+选择字号：[大](http://www.aisixiang.com/data/124358.html) [中](http://www.aisixiang.com/data/124358.html) [小](http://www.aisixiang.com/data/124358.html)   本文共阅读 95 次 更新时间：2021-01-15 22:25:43
 
 进入专题： [南海问题](http://www.aisixiang.com/zhuanti/61.html)   [地缘政治](http://www.aisixiang.com/zhuanti/366.html)  ● **胡波**  [![](http://www.aisixiang.com/images/detail-20200426.jpg)](http://www.aisixiang.com/data/121035.html)
 
@@ -24,5 +24,4 @@
 
 　　 第三方因素和意外事件的影响也不容忽视。目前，中国与其他声索国之间，中国与美国之间都可能会发生一些海上的意外摩擦事件，这些意外事件发生后，大概率会被媒体无限放大，从而推动美国新政府出台更激进的政策。
 
-    进入专题： [南海问题](http://www.aisixiang.com/zhuanti/61.html)   [地缘政治](http://www.aisixiang.com/zhuanti/366.html)  
-
+&#x20;   进入专题： [南海问题](http://www.aisixiang.com/zhuanti/61.html)   [地缘政治](http://www.aisixiang.com/zhuanti/366.html) &#x20;

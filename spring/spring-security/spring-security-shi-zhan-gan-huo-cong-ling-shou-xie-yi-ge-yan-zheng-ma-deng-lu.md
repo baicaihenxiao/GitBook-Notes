@@ -1,6 +1,6 @@
 # Spring Security 实战干货：从零手写一个验证码登录
 
-[合集](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUzMzQ2MDIyMA==&action=getalbum&album_id=1319904585363980289&subscene=159&subscene=&scenenote=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FB2JgdLMHtaCRPQsgSf2dXA#wechat_redirect)
+[合集](https://mp.weixin.qq.com/mp/appmsgalbum?\_\_biz=MzUzMzQ2MDIyMA==\&action=getalbum\&album\_id=1319904585363980289\&subscene=159\&subscene=\&scenenote=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FB2JgdLMHtaCRPQsgSf2dXA#wechat\_redirect)
 
 
 
@@ -8,7 +8,7 @@
 
 ## 1. 前言
 
-前面关于**Spring Security**胖哥又写了两篇文章，分别图文并茂地介绍了[UsernamePasswordAuthenticationFilter](https://mp.weixin.qq.com/s?__biz=MzUzMzQ2MDIyMA==&mid=2247485877&idx=1&sn=247ae5e3a9d88515762b7113f2d73c0d&scene=21#wechat_redirect)和 [AuthenticationManager](https://mp.weixin.qq.com/s?__biz=MzUzMzQ2MDIyMA==&mid=2247485949&idx=1&sn=6ad372be495e730e6ad58ac091ca925a&scene=21#wechat_redirect)。很多同学表示无法理解这两个东西有什么用，能解决哪些实际问题？所以今天就对这两篇理论进行实战运用，我们从零写一个短信验证码登录并适配到**Spring Security**体系中。如果你在阅读中有什么疑问可以回头看看这两篇文章，能解决很多疑惑。
+前面关于**Spring Security**胖哥又写了两篇文章，分别图文并茂地介绍了[UsernamePasswordAuthenticationFilter](https://mp.weixin.qq.com/s?\_\_biz=MzUzMzQ2MDIyMA==\&mid=2247485877\&idx=1\&sn=247ae5e3a9d88515762b7113f2d73c0d\&scene=21#wechat\_redirect)和 [AuthenticationManager](https://mp.weixin.qq.com/s?\_\_biz=MzUzMzQ2MDIyMA==\&mid=2247485949\&idx=1\&sn=6ad372be495e730e6ad58ac091ca925a\&scene=21#wechat\_redirect)。很多同学表示无法理解这两个东西有什么用，能解决哪些实际问题？所以今天就对这两篇理论进行实战运用，我们从零写一个短信验证码登录并适配到**Spring Security**体系中。如果你在阅读中有什么疑问可以回头看看这两篇文章，能解决很多疑惑。
 
 > 当然你可以修改成邮箱或者其它通讯设备的验证码登录。
 
@@ -18,7 +18,7 @@
 
 验证码的缓存生命周期：
 
-```text
+```
 public interface CaptchaCacheStorage {
 
     /**
@@ -48,7 +48,7 @@ public interface CaptchaCacheStorage {
 
 我们一般会借助于缓存中间件，比如**Redis**、**Ehcache**、**Memcached**等等来做这个事情。为了方便收看该教程的同学们所使用的不同的中间件。这里我结合Spring Cache特意抽象了验证码的缓存处理。
 
-```text
+```
 private static final String SMS_CAPTCHA_CACHE = "captcha";
 @Bean
 CaptchaCacheStorage captchaCacheStorage() {
@@ -79,7 +79,7 @@ CaptchaCacheStorage captchaCacheStorage() {
 
 接着我们就来编写和业务无关的验证码服务了，验证码服务的核心功能有两个：**发送验证码**和**验证码校验**。其它的诸如统计、黑名单、历史记录可根据实际业务定制。这里只实现核心功能。
 
-```text
+```
 /**
  * 验证码服务.
  * 两个功能： 发送和校验.
@@ -122,7 +122,7 @@ public CaptchaService captchaService(CaptchaCacheStorage captchaCacheStorage) {
 
 接下来就可以根据`CaptchaService`编写短信发送接口`/captcha/{phone}`了。
 
-```text
+```
 @RestController
 @RequestMapping("/captcha")
 public class CaptchaController {
@@ -164,7 +164,7 @@ public class CaptchaController {
 
 `Authentication`在我看来就是一个载体，在未得到认证之前它用来携带登录的关键参数，比如用户名和密码、验证码；在认证成功后它携带用户的信息和角色集。所以模仿`UsernamePasswordAuthenticationToken` 来实现一个`CaptchaAuthenticationToken`，去掉不必要的功能，抄就完事儿了:
 
-```text
+```
 package cn.felord.spring.security.captcha;
 
 import org.springframework.security.authentication.AbstractAuthenticationToken;
@@ -242,7 +242,7 @@ public class CaptchaAuthenticationToken extends AbstractAuthenticationToken {
 
 我们还需要定制一个`AuthenticationManager`来对上面定义的凭据`CaptchaAuthenticationToken`进行认证处理。下面这张图有必要再拿出来看一下：
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)ProviderManager
+![img](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M5LMBM-KNwLIye8nLEI%2Fuploads%2F7mnqkqAca0emVTrwLPXz%2Ffile.gif?alt=media)ProviderManager
 
 定义`AuthenticationManager`只需要定义其实现`ProviderManager`。而`ProviderManager`又需要依赖`AuthenticationProvider`。
 
@@ -256,7 +256,7 @@ public class CaptchaAuthenticationToken extends AbstractAuthenticationToken {
 
 根据这个流程实现如下：
 
-```text
+```
 package cn.felord.spring.security.captcha;
 
 import lombok.extern.slf4j.Slf4j;
@@ -367,7 +367,7 @@ public class CaptchaAuthenticationProvider implements AuthenticationProvider, In
 
 然后就可以组装`ProviderManager`了：
 
-```text
+```
 ProviderManager providerManager = new ProviderManager(Collections.singletonList(captchaAuthenticationProvider));
 ```
 
@@ -375,9 +375,9 @@ ProviderManager providerManager = new ProviderManager(Collections.singletonList(
 
 ### 3.3 验证码认证过滤器
 
-定制好验证码凭据和验证码认证管理器后我们就可以定义验证码认证过滤器了。修改一下[UsernamePasswordAuthenticationFilter](https://mp.weixin.qq.com/s?__biz=MzUzMzQ2MDIyMA==&mid=2247485877&idx=1&sn=247ae5e3a9d88515762b7113f2d73c0d&scene=21#wechat_redirect)就能满足需求：
+定制好验证码凭据和验证码认证管理器后我们就可以定义验证码认证过滤器了。修改一下[UsernamePasswordAuthenticationFilter](https://mp.weixin.qq.com/s?\_\_biz=MzUzMzQ2MDIyMA==\&mid=2247485877\&idx=1\&sn=247ae5e3a9d88515762b7113f2d73c0d\&scene=21#wechat\_redirect)就能满足需求：
 
-```text
+```
 package cn.felord.spring.security.captcha;
 
 import org.springframework.lang.Nullable;
@@ -451,7 +451,7 @@ public class CaptchaAuthenticationFilter extends AbstractAuthenticationProcessin
 
 这里我们指定了拦截验证码登陆的请求为：
 
-```text
+```
 POST /clogin?phone=手机号&captcha=验证码 HTTP/1.1
 Host: localhost:8082
 ```
@@ -462,7 +462,7 @@ Host: localhost:8082
 
 我把所有的验证码认证的相关配置集中了起来，并加上了注释。
 
-```text
+```
 package cn.felord.spring.security.captcha;
 
 import cn.hutool.core.util.RandomUtil;
@@ -638,5 +638,4 @@ public class CaptchaAuthenticationConfiguration {
 
 ## 4. 总结
 
-通过对[UsernamePasswordAuthenticationFilter](https://mp.weixin.qq.com/s?__biz=MzUzMzQ2MDIyMA==&mid=2247485877&idx=1&sn=247ae5e3a9d88515762b7113f2d73c0d&scene=21#wechat_redirect)和 [AuthenticationManager](https://mp.weixin.qq.com/s?__biz=MzUzMzQ2MDIyMA==&mid=2247485949&idx=1&sn=6ad372be495e730e6ad58ac091ca925a&scene=21#wechat_redirect)的系统学习，我们了解了**Spring Security**认证的整个流程，本文是对这两篇的一个实际运用。相信看到这一篇后你就不会对前几篇的图解懵逼了，这也是理论到实践的一次尝试。DEMO 可以通过公众号：**码农小胖哥** 回复**captcha** 获取，如果有用还请关注、点赞、转发给胖哥一个创作的动力。
-
+通过对[UsernamePasswordAuthenticationFilter](https://mp.weixin.qq.com/s?\_\_biz=MzUzMzQ2MDIyMA==\&mid=2247485877\&idx=1\&sn=247ae5e3a9d88515762b7113f2d73c0d\&scene=21#wechat\_redirect)和 [AuthenticationManager](https://mp.weixin.qq.com/s?\_\_biz=MzUzMzQ2MDIyMA==\&mid=2247485949\&idx=1\&sn=6ad372be495e730e6ad58ac091ca925a\&scene=21#wechat\_redirect)的系统学习，我们了解了**Spring Security**认证的整个流程，本文是对这两篇的一个实际运用。相信看到这一篇后你就不会对前几篇的图解懵逼了，这也是理论到实践的一次尝试。DEMO 可以通过公众号：**码农小胖哥** 回复**captcha** 获取，如果有用还请关注、点赞、转发给胖哥一个创作的动力。

@@ -4,11 +4,11 @@
 
 > [http://www.aisixiang.com/data/118803.html](http://www.aisixiang.com/data/118803.html)
 
-选择字号：[大](http://www.aisixiang.com/data/118803.html#) [中](http://www.aisixiang.com/data/118803.html#) [小](http://www.aisixiang.com/data/118803.html#) 本文共阅读 6396 次 更新时间：2019-10-31 21:39:34
+选择字号：[大](http://www.aisixiang.com/data/118803.html) [中](http://www.aisixiang.com/data/118803.html) [小](http://www.aisixiang.com/data/118803.html) 本文共阅读 6396 次 更新时间：2019-10-31 21:39:34
 
-进入专题： [美国](http://www.aisixiang.com/data/search.php?keyWords=%C3%C0%B9%FA&searchfield=keywords) [中美关系](http://www.aisixiang.com/zhuanti/83.html)
+进入专题： [美国](http://www.aisixiang.com/data/search.php?keyWords=%C3%C0%B9%FA\&searchfield=keywords) [中美关系](http://www.aisixiang.com/zhuanti/83.html)
 
-● **乔良** \([进入专栏](http://www.aisixiang.com/thinktank/qiaoliang.html)\)
+● **乔良** ([进入专栏](http://www.aisixiang.com/thinktank/qiaoliang.html))
 
 **本文得出结论**：**美国一方面通过石油和美元挂钩维护美元的全球结算和流通，并打压欧元和还未出现的亚元；另一方面使美元周期性的价值变动来维护美元的价值和收割其他地区的资产。这样美国只需要印钞票就可以收割世界的韭菜。**
 
@@ -572,7 +572,6 @@
 
 大家同时站在新机遇的起跑线上，谁会成为新的主导者呢？
 
-进入 [乔良](http://www.aisixiang.com/thinktank/qiaoliang.html) 的专栏 进入专题： [美国](http://www.aisixiang.com/data/search.php?keyWords=%C3%C0%B9%FA&searchfield=keywords) [中美关系](http://www.aisixiang.com/zhuanti/83.html)
+进入 [乔良](http://www.aisixiang.com/thinktank/qiaoliang.html) 的专栏 进入专题： [美国](http://www.aisixiang.com/data/search.php?keyWords=%C3%C0%B9%FA\&searchfield=keywords) [中美关系](http://www.aisixiang.com/zhuanti/83.html)
 
-本文责编：limei 发信站：爱思想（[http://www.aisixiang.com），栏目：\[天益学术\]\(http://www.aisixiang.com/data/search.php?lanmu=207](http://www.aisixiang.com），栏目：[天益学术]%28http://www.aisixiang.com/data/search.php?lanmu=207)\) &gt; [国际关系](http://www.aisixiang.com/academic/guojiguanxi.html) &gt; [国际关系时评](http://www.aisixiang.com/data/search.php?lanmu=8) 本文链接：[http://www.aisixiang.com/data/118803.html](http://www.aisixiang.com/data/118803.html) 文章来源：陆家嘴金融圈
-
+本文责编：limei 发信站：爱思想（http://www.aisixiang.com），栏目：\[天益学术]\(http://www.aisixiang.com/data/search.php?lanmu=207) > [国际关系](http://www.aisixiang.com/academic/guojiguanxi.html) > [国际关系时评](http://www.aisixiang.com/data/search.php?lanmu=8) 本文链接：[http://www.aisixiang.com/data/118803.html](http://www.aisixiang.com/data/118803.html) 文章来源：陆家嘴金融圈

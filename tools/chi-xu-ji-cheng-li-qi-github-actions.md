@@ -1,6 +1,6 @@
 # 持续集成利器，GitHub Actions
 
-{% embed url="https://mp.weixin.qq.com/s/yvMdaAO\_386A8LAGE5YiPQ" %}
+{% embed url="https://mp.weixin.qq.com/s/yvMdaAO_386A8LAGE5YiPQ" %}
 
 
 
@@ -12,7 +12,7 @@ GitHub Actions 是 GitHub 推出的持续集成服务，于 2018 年 10 月推�
 
 回忆一下代码从开发到上线的过程，通常要经过
 
-> 代码开发 -&gt; 代码提交 -&gt; 服务器编译、测试、打包 -&gt; 服务器部署（大规模部署用 docker）
+> 代码开发 -> 代码提交 -> 服务器编译、测试、打包 -> 服务器部署（大规模部署用 docker）
 
 整个过程中，除了代码开发和代码提交这两个步骤是依赖于开发人员的。
 
@@ -57,7 +57,7 @@ GitHub Actions 配置文件放在仓库的 `.github/workflows` 目录下面，�
 * name：name 表示当前 action 的名称，根据自己的需求进行命名
 * on：on 表示触发条件，比如当代码 push 到 master 分支的时候触发，则
 
-```text
+```
 on:
   push:
     branches:
@@ -66,7 +66,7 @@ on:
 
 * jobs：jobs 表示实际需要执行的工作，比如下方代码，表示使用 ubuntu 执行构建工作，执行步骤上使用了 appleboy/ssh-action 这个仓库的能力
 
-```text
+```
 jobs:
   build:
     name: Build
@@ -82,7 +82,7 @@ jobs:
 
 首先这里面涉及到ssh登录的问题，所以查找到了一个仓库`https://github.com/appleboy/ssh-action`，能够自动模拟ssh登录，按照文档建立`.github/workflows/main.yml`文件
 
-```text
+```
 name: remote ssh command
 on:
   push:
@@ -109,13 +109,13 @@ jobs:
 
 配置文件中前面的内容很容易理解，从 with 开始的部分，涉及到登录个人服务器信息，需要使用账号和密码，那么如果将账号密码明文放在GitHub中，一定会非常不安全，GitHub也不会允许这样的事情出现，于是就有secrets配置
 
-选择 settings-&gt;secrets，然后添加文件中的 secrets，这里的值不会被泄露出去
+选择 settings->secrets，然后添加文件中的 secrets，这里的值不会被泄露出去
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/09/640-20200709105937270-105937.png)
 
 其中 HOST值为 IP地址，USERNAME 为用户名，PASSWORD为登录密码
 
-```text
+```
 比如 ssh root@10.20.0.1
 HOST = 10.20.0.1
 USERNAME = root
@@ -124,7 +124,7 @@ PASSWORD = ******（服务器登录密码）
 
 根据配置文件，在登录完成后会连续执行script中的指令
 
-```text
+```
 script: |
   cd ~/test
   git pull origin master
@@ -138,4 +138,3 @@ script: |
 GitHub Actions将应用版本管理和持续集成非常好的结合了起来，形成了开发部署利器。
 
 除了上述的例子之外，还有很多功能值得探索，建议大家多多尝试，给自己的代码插上持续集成的翅膀！
-

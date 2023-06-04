@@ -1,6 +1,6 @@
 # Java开发常用技术栈盘点
 
-{% embed url="https://mp.weixin.qq.com/s?\_\_biz=MzUzMzQ2MDIyMA==&mid=2247485292&idx=2&sn=4564732355fdb36ba0d2ec5348d7bdc4&chksm=faa2e2ffcdd56be97777a5a3fb3d89e133aac564619b3c3bbd318e8ee80dff8e770637435f8e&scene=158\#rd" %}
+{% embed url="https://mp.weixin.qq.com/s?__biz=MzUzMzQ2MDIyMA==&mid=2247485292&idx=2&sn=4564732355fdb36ba0d2ec5348d7bdc4&chksm=faa2e2ffcdd56be97777a5a3fb3d89e133aac564619b3c3bbd318e8ee80dff8e770637435f8e&scene=158#rd" %}
 
 
 
@@ -49,4 +49,3 @@
 消息队列主要是**Kafka**、**RocketMQ**、**RabbitMQ**,老牌**ActiveMQ**开始没落，**Yahoo**捐献给**Apache**的**Pulsar**不知道为什么没有像**zookeeper**一样买账的。**Nginx**依然是高性能**Web**服务器、代理服务器的首选。
 
 这就是我对**Java**当前常用技术栈的一些看法和观点。如果你有不同的意见和补充请留言讨论，也欢迎转发让更多人看到。
-

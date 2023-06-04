@@ -6,9 +6,9 @@
 **sss**
 {% endhint %}
 
-### \*\*\*\*[**https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/pdf/20200701000601城市地摊财富秘籍.pdf**](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/pdf/20200701000601城市地摊财富秘籍.pdf)\*\*\*\*
+### [**https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/pdf/20200701000601城市地摊财富秘籍.pdf**](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/pdf/20200701000601%E5%9F%8E%E5%B8%82%E5%9C%B0%E6%91%8A%E8%B4%A2%E5%AF%8C%E7%A7%98%E7%B1%8D.pdf)
 
-### \*\*\*\*
+###
 
 ### **Font**
 
@@ -20,7 +20,7 @@ _**italic+bold**_
 
 ~~呜呜呜哈哈哈哼哼哼积极 strikethrough~~
 
-```text
+```
 *aaaa italic*
 
 **bbbb bold**
@@ -32,29 +32,28 @@ _**italic+bold**_
 
 ### **New line & indent**
 
-1. add double spaces at end line add 2 spaces at the end of the previous line. auto indention here.
-2. one blank line with indention
+1. add double spaces at end line\
+   add 2 spaces at the end of the previous line.\
+   auto indention here.
+2.  one blank line with indention
 
-   4 spaces at the beginning of this line and the previous blank line to indent
+    4 spaces at the beginning of this line and the previous blank line to indent
 
-   bb
+    bb
+3.  one blank line without indention
 
-3. one blank line without indention
-
-   less than 4 spaces not leading to indent
-
+    less than 4 spaces not leading to indent
 4. sublist leads to auto indent
 5. asd
 6. multi level indent
-   * asd  
+   *   asd &#x20;
 
-     add 2 spaces at the end of previous line.
+       add 2 spaces at the end of previous line.
+   *   asd
 
-   * asd
+       here more than 2 spaces to indent
 
-     here more than 2 spaces to indent
-
-```text
+```
 1. add double spaces at end line  
 add 2 spaces at the end of the previous line.  
 auto indention here.
@@ -97,11 +96,11 @@ auto indention here.
 > **quote h4 https://www.markdownguide.org/basic-syntax/**
 >
 > * Revenue was off the chart.
-> * Profits were higher than ever.
+> *   Profits were higher than ever.
 >
->   _Everything_ is going according to **plan**.
+>     _Everything_ is going according to **plan**.
 
-```text
+```
 > Dorothy followed her through many of the beautiful rooms in her castle.
 >
 > The Witch bade
@@ -120,21 +119,19 @@ auto indention here.
 
 * image with fixed width
 
-![](/photos/papers/blockchain/Aggregating%20crowd%20wisdom%20via%20blockchain/system%20architecture.png){:width="300px"}
+{:width="300px"}
 
 * image with alt msg
 
-![you seeeeeeeeeeeeeeeeeeeeeeeeeee](/photos/papers/blockchain/Aggregating%20crowd%20wisdom%20via%20blockchain/system%20architecture.png){:width="20%" }
+{:width="20%" }
 
 * image with link
 
-[![link to markdownguide.org](/photos/papers/blockchain/Aggregating%20crowd%20wisdom%20via%20blockchain/system%20architecture.png){:width="300px"}](https://www.markdownguide.org/basic-syntax/)
+[{:width="300px"}](https://www.markdownguide.org/basic-syntax/)
 
-* image aligns to right in html code\(seems not work on github jekyll\)
+* image aligns to right in html code(seems not work on github jekyll)
 
-![](/photos/papers/blockchain/Aggregating%20crowd%20wisdom%20via%20blockchain/system%20architecture.png)
-
-```text
+```
 * image with fixed width
 
 ![](/photos/papers/blockchain/Aggregating crowd wisdom via blockchain/system architecture.png){:width="300px"}
@@ -157,7 +154,7 @@ auto indention here.
 * Second item, dawg
 * Third item, what what?!
 
-```text
+```
 * First item, yo
 * Second item, dawg
 * Third item, what what?!
@@ -169,7 +166,7 @@ auto indention here.
 2. Second item, dawg
 3. Third item, what what?!
 
-```text
+```
 1. First item, yo
 2. Second item, dawg
 3. Third item, what what?!
@@ -177,17 +174,17 @@ auto indention here.
 
 ### **Tables**
 
-| Title 1 | Title 2 | Title 3 | Title 4 |
-| :--- | :--- | :--- | :--- |
-| lorem | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit |
+| Title 1 | Title 2     | Title 3           | Title 4               |
+| ------- | ----------- | ----------------- | --------------------- |
+| lorem   | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit |
 
-TA \| CC \| ES \| ET Fully trusted \| Fully trusted\| Honest-but-curious \| sss
+TA | CC | ES | ET Fully trusted | Fully trusted| Honest-but-curious | sss
 
-| TA | CC | ES | ET |
-| :--- | :--- | :--- | :--- |
+| TA            | CC            | ES                 | ET  |
+| ------------- | ------------- | ------------------ | --- |
 | Fully trusted | Fully trusted | Honest-but-curious | sss |
 
-```text
+```
 Title 1               | Title 2               | Title 3               | Title 4
 --------------------- | --------------------- | --------------------- | ---------------------
 lorem                 | lorem ipsum           | lorem ipsum dolor     | lorem ipsum dolor sit
@@ -206,7 +203,7 @@ Fully trusted | Fully trusted| Honest-but-curious | sss
 * [ ] Update the website
 * [ ] Contact the media
 
-```text
+```
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media
@@ -214,7 +211,7 @@ Fully trusted | Fully trusted| Honest-but-curious | sss
 
 ### **Code snippet**
 
-code block using \'\'\'html blabla \'\'\' syntax
+code block using \\'\\'\\'html blabla \\'\\'\\' syntax
 
 ```markup
 <html>
@@ -228,21 +225,21 @@ code block using \'\'\'html blabla \'\'\' syntax
 
 code block without list using spaces
 
-```text
+```
 a blank line + 4 spaces
 asdasd
 ```
 
-* code block with list using spaces
+*   code block with list using spaces
 
-  ```text
-  jekyll: a blank line + 6 spaces
-    markdown: a blank line + 8 spaces
-  ```
+    ```
+    jekyll: a blank line + 6 spaces
+      markdown: a blank line + 8 spaces
+    ```
 
 inline code `inline`
 
-```text
+```
 code block without list using spaces
 
     a blank line + 4 spaces
@@ -256,5 +253,4 @@ code block without list using spaces
 inline code `inline`
 ```
 
-### \*\*\*\*
-
+###

@@ -1,4 +1,4 @@
-# 最全 \| Redis可视化工具横向评测
+# 最全 | Redis可视化工具横向评测
 
 [https://mp.weixin.qq.com/s/pV8mCq2bIyThH9e4Drlu-g](https://mp.weixin.qq.com/s/pV8mCq2bIyThH9e4Drlu-g)
 
@@ -67,11 +67,11 @@ key的显示可以支持按冒号分割的键名空间，除了基本的五大�
 
 命令行模式也同以前有了很大的进步，支持了命令自动提示。
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M5LMBM-KNwLIye8nLEI%2Fuploads%2FlIo3wnM2WTZVJdwdfvit%2Ffile.gif?alt=media)
 
 从功能看上去中规中矩，使用起来便捷。最大的缺点就是不免费。个人使用的话，大概一年要200多RMB的价格。
 
-### 
+###
 
 ### 4.medis
 
@@ -89,7 +89,7 @@ key的显示可以支持按冒号分割的键名空间，除了基本的五大�
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/02/640-20200802180030021-180030.jpg)
 
-### 
+###
 
 ### 5.AnotherRedisDesktopManager
 
@@ -107,7 +107,7 @@ key的显示可以支持按冒号分割的键名空间，除了基本的五大�
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/02/640-20200802180030213-180030.jpg)
 
-### 
+###
 
 ### 6.FastoRedis
 
@@ -133,7 +133,7 @@ value的显示支持树状，表格状等等显示方式。令我惊讶的是，
 
 总的来说，除了界面UI交互略生硬，还有是一款收费软件之外，还是一款很不错的redis可视化工具。
 
-### 
+###
 
 ### 7.RedisPlus
 
@@ -149,7 +149,7 @@ value的显示支持树状，表格状等等显示方式。令我惊讶的是，
 
 没什么亮点，也就基本功能。加分项可能也就是有一个监控。其他的都很普通 。甚至于这款软件连命令行模式都没有。用的是javafx开发，按道理说，应该是跨平台的软件 ，但是提供的下载地址，并没有mac的直接安装包。况且就算是跨平台的吧。
 
-### 
+###
 
 ### 8.Red
 
@@ -163,7 +163,7 @@ value的显示支持树状，表格状等等显示方式。令我惊讶的是，
 
 只支持Mac端，颜值还是不错的。功能中规中矩。基本功能都有，支持key命名空间的展示。
 
-### 
+###
 
 ### 9.Redis Insight
 
@@ -207,7 +207,7 @@ value的显示支持树状，表格状等等显示方式。令我惊讶的是，
 
 RedisInsight这个可视化工具对redis的覆盖之全面令人咋舌。虽然他的查询key的功能算不上优秀，但是他的全面性和分析监控方面，确实是其他redis可视化工具难以企及的，况且颜值还那么高，强烈推荐。
 
-### 
+###
 
 ### 10.Iedis2
 
@@ -231,7 +231,7 @@ Iedis是一款基于IntelliJ IDEA的插件，在IDEA的plugin市场里就可以�
 
 总的来说，Iedis除了需要付费，其他的一切都看上去很美好。价格是。。。$139/年。还是美元，看到这个价格，是不是长叹一口气呢。
 
-### 
+###
 
 ### 11.总结
 
@@ -240,4 +240,3 @@ Iedis是一款基于IntelliJ IDEA的插件，在IDEA的plugin市场里就可以�
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/02/640-20200802180032281-180032.jpg)
 
 相信看到这里，你心里一定有答案了。好的工具能让你事半功倍，从而节约大量的时间和成本，希望大家在日常开发中，能挑选好的工具，以最快的效率解决最复杂的事情。
-

@@ -1,4 +1,4 @@
-# Java Concurrency Interview Questions \| Java Code Geeks - 2020
+# Java Concurrency Interview Questions | Java Code Geeks - 2020
 
 [https://www.javacodegeeks.com/2014/11/multithreading-concurrency-interview-questions-answers.html](https://www.javacodegeeks.com/2014/11/multithreading-concurrency-interview-questions-answers.html)
 
@@ -12,7 +12,7 @@ _However, the ability to write robust concurrent programs is a great tool in a d
 
 In this article we will discuss different types of questions that can be used in a programming interview in order to assess a candidate’s understanding of concurrency and multithreading.
 
-The questions are not only Java specific, but revolve around general programming principles. Enjoy!  
+The questions are not only Java specific, but revolve around general programming principles. Enjoy!\
 
 
 ## 1. Processes and Threads
@@ -27,11 +27,11 @@ Learn more here:
 
 #### 2. What is the difference between processes and threads?
 
-A process is an execution environment provided by the operating system that has its own set of private resources \(e.g. memory, open files, etc.\). Threads, in contrast to processes, live within a process and share their resources \(memory, open files, etc.\) with the other threads of the process. The ability to share resources between different threads makes thread more suitable for tasks where performance is a significant requirement.
+A process is an execution environment provided by the operating system that has its own set of private resources (e.g. memory, open files, etc.). Threads, in contrast to processes, live within a process and share their resources (memory, open files, etc.) with the other threads of the process. The ability to share resources between different threads makes thread more suitable for tasks where performance is a significant requirement.
 
 #### 3. In Java, what is a process and a thread?
 
-In Java, processes correspond to a running Java Virtual Machine \(JVM\) whereas threads live within the JVM and can be created and stopped by the Java application dynamically at runtime.
+In Java, processes correspond to a running Java Virtual Machine (JVM) whereas threads live within the JVM and can be created and stopped by the Java application dynamically at runtime.
 
 #### 4. What is a scheduler?
 
@@ -45,39 +45,8 @@ Each Java program is executed within the main thread; hence each Java applicatio
 
 The current thread can be accessed by calling the static method `currentThread()` of the JDK class `java.lang.Thread`:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <p>4</p>
-        <p>5</p>
-        <p>6</p>
-        <p>7</p>
-        <p>8</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>public</code>  <code>class</code>  <code>MainThread {</code>
-        </p>
-        <p><code>    public</code>  <code>static</code>  <code>void</code>  <code>main(String[] args) {</code>
-        </p>
-        <p><code>        long</code>  <code>id = Thread.currentThread().getId();</code>
-        </p>
-        <p><code>        String name = Thread.currentThread().getName();</code>
-        </p>
-        <p><code>        ...</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> | <p><code>public</code> <code>class</code> <code>MainThread {</code></p><p>    <code>public</code> <code>static</code> <code>void</code> <code>main(String[] args) {</code></p><p>        <code>long</code> <code>id = Thread.currentThread().getId();</code></p><p>        <code>String name = Thread.currentThread().getName();</code></p><p>        <code>...</code></p><p>    <code>}</code></p><p><code>}</code></p> |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 #### 7. What properties does each Java thread have?
 
@@ -170,105 +139,16 @@ A prominent example for such optimizations is a `List` implementation that holds
 
 #### 21. How is a thread created in Java?
 
-Basically, there are two ways to create a thread in Java.  
- The first one is to write a class that extends the JDK class `java.lang.Thread` and call its method `start()`:
+Basically, there are two ways to create a thread in Java.\
+&#x20;The first one is to write a class that extends the JDK class `java.lang.Thread` and call its method `start()`:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>01</p>
-        <p>02</p>
-        <p>03</p>
-        <p>04</p>
-        <p>05</p>
-        <p>06</p>
-        <p>07</p>
-        <p>08</p>
-        <p>09</p>
-        <p>10</p>
-        <p>11</p>
-        <p>12</p>
-        <p>13</p>
-        <p>14</p>
-        <p>15</p>
-        <p>16</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>public</code>  <code>class</code>  <code>MyThread</code>  <code>extends</code>  <code>Thread {</code>
-        </p>
-        <p><code>    public</code>  <code>MyThread(String name) {</code>
-        </p>
-        <p><code>        super(name);</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    @Override</code>
-        </p>
-        <p><code>    public</code>  <code>void</code>  <code>run() {</code>
-        </p>
-        <p><code>        System.out.println(&quot;Executing thread &quot;+Thread.currentThread().getName());</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    public</code>  <code>static</code>  <code>void</code>  <code>main(String[] args)</code>  <code>throws</code>  <code>InterruptedException {</code>
-        </p>
-        <p><code>        MyThread myThread =</code>  <code>new</code>  <code>MyThread(&quot;myThread&quot;);</code>
-        </p>
-        <p><code>        myThread.start();</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>01</p><p>02</p><p>03</p><p>04</p><p>05</p><p>06</p><p>07</p><p>08</p><p>09</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p> | <p><code>public</code> <code>class</code> <code>MyThread</code> <code>extends</code> <code>Thread {</code></p><p>    <code>public</code> <code>MyThread(String name) {</code></p><p>        <code>super(name);</code></p><p>    <code>}</code></p><p>    <code>@Override</code></p><p>    <code>public</code> <code>void</code> <code>run() {</code></p><p>        <code>System.out.println("Executing thread "+Thread.currentThread().getName());</code></p><p>    <code>}</code></p><p>    <code>public</code> <code>static</code> <code>void</code> <code>main(String[] args)</code> <code>throws</code> <code>InterruptedException {</code></p><p>        <code>MyThread myThread =</code> <code>new</code> <code>MyThread("myThread");</code></p><p>        <code>myThread.start();</code></p><p>    <code>}</code></p><p><code>}</code></p> |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 The second way is to implement the interface `java.lang.Runnable` and pass this implementation as a parameter to the constructor of `java.lang.Thread`:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>01</p>
-        <p>02</p>
-        <p>03</p>
-        <p>04</p>
-        <p>05</p>
-        <p>06</p>
-        <p>07</p>
-        <p>08</p>
-        <p>09</p>
-        <p>10</p>
-        <p>11</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>public</code>  <code>class</code>  <code>MyRunnable</code>  <code>implements</code>  <code>Runnable {</code>
-        </p>
-        <p><code>    public</code>  <code>void</code>  <code>run() {</code>
-        </p>
-        <p><code>        System.out.println(&quot;Executing thread &quot;+Thread.currentThread().getName());</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    public</code>  <code>static</code>  <code>void</code>  <code>main(String[] args)</code>  <code>throws</code>  <code>InterruptedException {</code>
-        </p>
-        <p><code>        Thread myThread =</code>  <code>new</code>  <code>Thread(new</code>  <code>MyRunnable(),</code>  <code>&quot;myRunnable&quot;);</code>
-        </p>
-        <p><code>        myThread.start();</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>01</p><p>02</p><p>03</p><p>04</p><p>05</p><p>06</p><p>07</p><p>08</p><p>09</p><p>10</p><p>11</p> | <p><code>public</code> <code>class</code> <code>MyRunnable</code> <code>implements</code> <code>Runnable {</code></p><p>    <code>public</code> <code>void</code> <code>run() {</code></p><p>        <code>System.out.println("Executing thread "+Thread.currentThread().getName());</code></p><p>    <code>}</code></p><p>    <code>public</code> <code>static</code> <code>void</code> <code>main(String[] args)</code> <code>throws</code> <code>InterruptedException {</code></p><p>        <code>Thread myThread =</code> <code>new</code> <code>Thread(new</code> <code>MyRunnable(),</code> <code>"myRunnable");</code></p><p>        <code>myThread.start();</code></p><p>    <code>}</code></p><p><code>}</code></p> |
+| --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 #### 22. Why should a thread not be stopped by calling its method `stop()`?
 
@@ -280,151 +160,17 @@ No, after having started a thread by invoking its `start()` method, a second inv
 
 #### 24. What is the output of the following code?
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>01</p>
-        <p>02</p>
-        <p>03</p>
-        <p>04</p>
-        <p>05</p>
-        <p>06</p>
-        <p>07</p>
-        <p>08</p>
-        <p>09</p>
-        <p>10</p>
-        <p>11</p>
-        <p>12</p>
-        <p>13</p>
-        <p>14</p>
-        <p>15</p>
-        <p>16</p>
-        <p>17</p>
-        <p>18</p>
-        <p>19</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>public</code>  <code>class</code>  <code>MultiThreading {</code>
-        </p>
-        <p><code>    private</code>  <code>static</code>  <code>class</code>  <code>MyThread</code>  <code>extends</code>  <code>Thread {</code>
-        </p>
-        <p><code>        public</code>  <code>MyThread(String name) {</code>
-        </p>
-        <p><code>            super(name);</code>
-        </p>
-        <p><code>        }</code>
-        </p>
-        <p><code>        @Override</code>
-        </p>
-        <p><code>        public</code>  <code>void</code>  <code>run() {</code>
-        </p>
-        <p><code>            System.out.println(Thread.currentThread().getName());</code>
-        </p>
-        <p><code>        }</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    public</code>  <code>static</code>  <code>void</code>  <code>main(String[] args) {</code>
-        </p>
-        <p><code>        MyThread myThread =</code>  <code>new</code>  <code>MyThread(&quot;myThread&quot;);</code>
-        </p>
-        <p><code>        myThread.run();</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>01</p><p>02</p><p>03</p><p>04</p><p>05</p><p>06</p><p>07</p><p>08</p><p>09</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p> | <p><code>public</code> <code>class</code> <code>MultiThreading {</code></p><p>    <code>private</code> <code>static</code> <code>class</code> <code>MyThread</code> <code>extends</code> <code>Thread {</code></p><p>        <code>public</code> <code>MyThread(String name) {</code></p><p>            <code>super(name);</code></p><p>        <code>}</code></p><p>        <code>@Override</code></p><p>        <code>public</code> <code>void</code> <code>run() {</code></p><p>            <code>System.out.println(Thread.currentThread().getName());</code></p><p>        <code>}</code></p><p>    <code>}</code></p><p>    <code>public</code> <code>static</code> <code>void</code> <code>main(String[] args) {</code></p><p>        <code>MyThread myThread =</code> <code>new</code> <code>MyThread("myThread");</code></p><p>        <code>myThread.run();</code></p><p>    <code>}</code></p><p><code>}</code></p> |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 The code above produces the output “main” and not “myThread”. As can be seen in line two of the `main()` method, we invoke by mistake the method `run()` instead of `start()`. Hence, no new thread is started, but the method `run()` gets executed within the main thread.
 
 #### 25. What is a daemon thread?
 
-A daemon thread is a thread whose execution state is not evaluated when the JVM decides if it should stop or not. The JVM stops when all user threads \(in contrast to the daemon threads\) are terminated. Hence daemon threads can be used to implement for example monitoring functionality as the thread is stopped by the JVM as soon as all user threads have stopped:
+A daemon thread is a thread whose execution state is not evaluated when the JVM decides if it should stop or not. The JVM stops when all user threads (in contrast to the daemon threads) are terminated. Hence daemon threads can be used to implement for example monitoring functionality as the thread is stopped by the JVM as soon as all user threads have stopped:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>01</p>
-        <p>02</p>
-        <p>03</p>
-        <p>04</p>
-        <p>05</p>
-        <p>06</p>
-        <p>07</p>
-        <p>08</p>
-        <p>09</p>
-        <p>10</p>
-        <p>11</p>
-        <p>12</p>
-        <p>13</p>
-        <p>14</p>
-        <p>15</p>
-        <p>16</p>
-        <p>17</p>
-        <p>18</p>
-        <p>19</p>
-        <p>20</p>
-        <p>21</p>
-        <p>22</p>
-        <p>23</p>
-        <p>24</p>
-        <p>25</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>public</code>  <code>class</code>  <code>Example {</code>
-        </p>
-        <p><code>    private</code>  <code>static</code>  <code>class</code>  <code>MyDaemonThread</code>  <code>extends</code>  <code>Thread {</code>
-        </p>
-        <p><code>        public</code>  <code>MyDaemonThread() {</code>
-        </p>
-        <p><code>            setDaemon(true);</code>
-        </p>
-        <p><code>        }</code>
-        </p>
-        <p><code>        @Override</code>
-        </p>
-        <p><code>        public</code>  <code>void</code>  <code>run() {</code>
-        </p>
-        <p><code>            while</code>  <code>(true) {</code>
-        </p>
-        <p><code>                try</code>  <code>{</code>
-        </p>
-        <p><code>                    Thread.sleep(1);</code>
-        </p>
-        <p><code>                }</code>  <code>catch</code>  <code>(InterruptedException e) {</code>
-        </p>
-        <p><code>                    e.printStackTrace();</code>
-        </p>
-        <p><code>                }</code>
-        </p>
-        <p><code>            }</code>
-        </p>
-        <p><code>        }</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    public</code>  <code>static</code>  <code>void</code>  <code>main(String[] args)</code>  <code>throws</code>  <code>InterruptedException {</code>
-        </p>
-        <p><code>        Thread thread =</code>  <code>new</code>  <code>MyDaemonThread();</code>
-        </p>
-        <p><code>        thread.start();</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>01</p><p>02</p><p>03</p><p>04</p><p>05</p><p>06</p><p>07</p><p>08</p><p>09</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p> | <p><code>public</code> <code>class</code> <code>Example {</code></p><p>    <code>private</code> <code>static</code> <code>class</code> <code>MyDaemonThread</code> <code>extends</code> <code>Thread {</code></p><p>        <code>public</code> <code>MyDaemonThread() {</code></p><p>            <code>setDaemon(true);</code></p><p>        <code>}</code></p><p>        <code>@Override</code></p><p>        <code>public</code> <code>void</code> <code>run() {</code></p><p>            <code>while</code> <code>(true) {</code></p><p>                <code>try</code> <code>{</code></p><p>                    <code>Thread.sleep(1);</code></p><p>                <code>}</code> <code>catch</code> <code>(InterruptedException e) {</code></p><p>                    <code>e.printStackTrace();</code></p><p>                <code>}</code></p><p>            <code>}</code></p><p>        <code>}</code></p><p>    <code>}</code></p><p>    <code>public</code> <code>static</code> <code>void</code> <code>main(String[] args)</code> <code>throws</code> <code>InterruptedException {</code></p><p>        <code>Thread thread =</code> <code>new</code> <code>MyDaemonThread();</code></p><p>        <code>thread.start();</code></p><p>    <code>}</code></p><p><code>}</code></p> |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 The example application above terminates even though the daemon thread is still running in its endless while loop.
 
@@ -434,7 +180,7 @@ A Java thread dump is a way of finding out what every thread in the JVM is doing
 
 This is especially useful if your Java application sometimes seems to hang when running under load, as an analysis of the dump will show where the threads are stuck.
 
-You can generate a thread dump under Unix/Linux by running kill -QUIT &lt;pid&gt;, and under Windows by hitting Ctl + Break.
+You can generate a thread dump under Unix/Linux by running kill -QUIT \<pid>, and under Windows by hitting Ctl + Break.
 
 #### 27. Is it possible to convert a normal user thread into a daemon thread after it has been started?
 
@@ -444,67 +190,28 @@ A user thread cannot be converted into a daemon thread once it has been started.
 
 Busy waiting means implementations that wait for an event by performing some active computations that let the thread/process occupy the processor although it could be removed from it by the scheduler. An example for busy waiting would be to spend the waiting time within a loop that determines the current time again and again until a certain point in time is reached:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>01</p>
-        <p>02</p>
-        <p>03</p>
-        <p>04</p>
-        <p>05</p>
-        <p>06</p>
-        <p>07</p>
-        <p>08</p>
-        <p>09</p>
-        <p>10</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>Thread thread =</code>  <code>new</code>  <code>Thread(new</code>  <code>Runnable() {</code>
-        </p>
-        <p><code>    @Override</code>
-        </p>
-        <p><code>    public</code>  <code>void</code>  <code>run() {</code>
-        </p>
-        <p><code>        long</code>  <code>millisToStop = System.currentTimeMillis() +</code>  <code>5000;</code>
-        </p>
-        <p><code>        long</code>  <code>currentTimeMillis = System.currentTimeMillis();</code>
-        </p>
-        <p><code>        while</code>  <code>(millisToStop &gt; currentTimeMillis) {</code>
-        </p>
-        <p><code>            currentTimeMillis = System.currentTimeMillis();</code>
-        </p>
-        <p><code>        }</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>});</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>01</p><p>02</p><p>03</p><p>04</p><p>05</p><p>06</p><p>07</p><p>08</p><p>09</p><p>10</p> | <p><code>Thread thread =</code> <code>new</code> <code>Thread(new</code> <code>Runnable() {</code></p><p>    <code>@Override</code></p><p>    <code>public</code> <code>void</code> <code>run() {</code></p><p>        <code>long</code> <code>millisToStop = System.currentTimeMillis() +</code> <code>5000;</code></p><p>        <code>long</code> <code>currentTimeMillis = System.currentTimeMillis();</code></p><p>        <code>while</code> <code>(millisToStop > currentTimeMillis) {</code></p><p>            <code>currentTimeMillis = System.currentTimeMillis();</code></p><p>        <code>}</code></p><p>    <code>}</code></p><p><code>});</code></p> |
+| ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-#### 29. What are differences between wait\(\) and sleep\(\) method in Java?
+#### 29. What are differences between wait() and sleep() method in Java?
 
-#### wait\(\):
+#### wait():
 
-* wait\(\) method releases the lock.
-* wait\(\) is the method of Object class.
-* wait\(\) is the non-static method – public final void wait\(\) throws InterruptedException { //…}
-* wait\(\) should be notified by notify\(\) or notifyAll\(\) methods.
-* wait\(\) method needs to be called from a loop in order to deal with false alarm.
-* wait\(\) method must be called from synchronized context \(i.e. synchronized method or block\), otherwise it will throw IllegalMonitorStateException
+* wait() method releases the lock.
+* wait() is the method of Object class.
+* wait() is the non-static method – public final void wait() throws InterruptedException { //…}
+* wait() should be notified by notify() or notifyAll() methods.
+* wait() method needs to be called from a loop in order to deal with false alarm.
+* wait() method must be called from synchronized context (i.e. synchronized method or block), otherwise it will throw IllegalMonitorStateException
 
-**sleep\(\):**
+**sleep():**
 
-* sleep\(\) method doesn’t release the lock.
-* sleep\(\) is the method of java.lang.Thread class.
-* sleep\(\) is the static method – public static void sleep\(long millis, int nanos\) throws InterruptedException { //… }
-* after the specified amount of time, sleep\(\) is completed.
-* sleep\(\) better not to call from loop\(i.e. see code below\).
-* sleep\(\) may be called from anywhere. there is no specific requirement.
+* sleep() method doesn’t release the lock.
+* sleep() is the method of java.lang.Thread class.
+* sleep() is the static method – public static void sleep(long millis, int nanos) throws InterruptedException { //… }
+* after the specified amount of time, sleep() is completed.
+* sleep() better not to call from loop(i.e. see code below).
+* sleep() may be called from anywhere. there is no specific requirement.
 
 #### 30. What happens when an uncaught exception leaves the `run()` method?
 
@@ -522,33 +229,8 @@ The interface `Runnable` defines the method `run()` without any return value whe
 
 A shutdown hook is a thread that gets executed when the JVM shuts down. It can be registered by invoking `addShutdownHook(Runnable)` on the Runtime instance:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <p>4</p>
-        <p>5</p>
-        <p>6</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>Runtime.getRuntime().addShutdownHook(new</code>  <code>Thread() {</code>
-        </p>
-        <p><code>    @Override</code>
-        </p>
-        <p><code>    public</code>  <code>void</code>  <code>run() {</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>});</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p> | <p><code>Runtime.getRuntime().addShutdownHook(new</code> <code>Thread() {</code></p><p>    <code>@Override</code></p><p>    <code>public</code> <code>void</code> <code>run() {</code></p><p>    <code>}</code></p><p><code>});</code></p> |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 ### 2.2 Pausing Execution with Sleep
 
@@ -578,80 +260,8 @@ Learn more here:
 
 To stop a thread one can use a volatile reference pointing to the current thread that can be set to null by other threads to indicate the current thread should stop its execution:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>01</p>
-        <p>02</p>
-        <p>03</p>
-        <p>04</p>
-        <p>05</p>
-        <p>06</p>
-        <p>07</p>
-        <p>08</p>
-        <p>09</p>
-        <p>10</p>
-        <p>11</p>
-        <p>12</p>
-        <p>13</p>
-        <p>14</p>
-        <p>15</p>
-        <p>16</p>
-        <p>17</p>
-        <p>18</p>
-        <p>19</p>
-        <p>20</p>
-        <p>21</p>
-        <p>22</p>
-        <p>23</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>private</code>  <code>static</code>  <code>class</code>  <code>MyStopThread</code>  <code>extends</code>  <code>Thread {</code>
-        </p>
-        <p><code>    private</code>  <code>volatile</code>  <code>Thread stopIndicator;</code>
-        </p>
-        <p><code>    public</code>  <code>void</code>  <code>start() {</code>
-        </p>
-        <p><code>        stopIndicator =</code>  <code>new</code>  <code>Thread(this);</code>
-        </p>
-        <p><code>        stopIndicator.start();</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    public</code>  <code>void</code>  <code>stopThread() {</code>
-        </p>
-        <p><code>        stopIndicator =</code>  <code>null;</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    @Override</code>
-        </p>
-        <p><code>    public</code>  <code>void</code>  <code>run() {</code>
-        </p>
-        <p><code>        Thread thisThread = Thread.currentThread();</code>
-        </p>
-        <p><code>        while(thisThread == stopIndicator) {</code>
-        </p>
-        <p><code>            try</code>  <code>{</code>
-        </p>
-        <p><code>                Thread.sleep(1000);</code>
-        </p>
-        <p><code>            }</code>  <code>catch</code>  <code>(InterruptedException e) {</code>
-        </p>
-        <p><code>            }</code>
-        </p>
-        <p><code>        }</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>01</p><p>02</p><p>03</p><p>04</p><p>05</p><p>06</p><p>07</p><p>08</p><p>09</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>20</p><p>21</p><p>22</p><p>23</p> | <p><code>private</code> <code>static</code> <code>class</code> <code>MyStopThread</code> <code>extends</code> <code>Thread {</code></p><p>    <code>private</code> <code>volatile</code> <code>Thread stopIndicator;</code></p><p>    <code>public</code> <code>void</code> <code>start() {</code></p><p>        <code>stopIndicator =</code> <code>new</code> <code>Thread(this);</code></p><p>        <code>stopIndicator.start();</code></p><p>    <code>}</code></p><p>    <code>public</code> <code>void</code> <code>stopThread() {</code></p><p>        <code>stopIndicator =</code> <code>null;</code></p><p>    <code>}</code></p><p>    <code>@Override</code></p><p>    <code>public</code> <code>void</code> <code>run() {</code></p><p>        <code>Thread thisThread = Thread.currentThread();</code></p><p>        <code>while(thisThread == stopIndicator) {</code></p><p>            <code>try</code> <code>{</code></p><p>                <code>Thread.sleep(1000);</code></p><p>            <code>}</code> <code>catch</code> <code>(InterruptedException e) {</code></p><p>            <code>}</code></p><p>        <code>}</code></p><p>    <code>}</code></p><p><code>}</code></p> |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### 2.3 Interrupts
 
@@ -659,72 +269,8 @@ To stop a thread one can use a volatile reference pointing to the current thread
 
 The method `interrupt()` of `java.lang.Thread` interrupts a sleeping thread. The interrupted thread that has been put to sleep by calling `Thread.sleep()` is woken up by an `InterruptedException`:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>01</p>
-        <p>02</p>
-        <p>03</p>
-        <p>04</p>
-        <p>05</p>
-        <p>06</p>
-        <p>07</p>
-        <p>08</p>
-        <p>09</p>
-        <p>10</p>
-        <p>11</p>
-        <p>12</p>
-        <p>13</p>
-        <p>14</p>
-        <p>15</p>
-        <p>16</p>
-        <p>17</p>
-        <p>18</p>
-        <p>19</p>
-        <p>20</p>
-        <p>21</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>public</code>  <code>class</code>  <code>InterruptExample</code>  <code>implements</code>  <code>Runnable {</code>
-        </p>
-        <p><code>    public</code>  <code>void</code>  <code>run() {</code>
-        </p>
-        <p><code>        try</code>  <code>{</code>
-        </p>
-        <p><code>            Thread.sleep(Long.MAX_VALUE);</code>
-        </p>
-        <p><code>        }</code>  <code>catch</code>  <code>(InterruptedException e) {</code>
-        </p>
-        <p><code>            System.out.println(&quot;[&quot;+Thread.currentThread().getName()+&quot;] Interrupted by exception!&quot;);</code>
-        </p>
-        <p><code>        }</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    public</code>  <code>static</code>  <code>void</code>  <code>main(String[] args)</code>  <code>throws</code>  <code>InterruptedException {</code>
-        </p>
-        <p><code>        Thread myThread =</code>  <code>new</code>  <code>Thread(new</code>  <code>InterruptExample(),</code>  <code>&quot;myThread&quot;);</code>
-        </p>
-        <p><code>        myThread.start();</code>
-        </p>
-        <p><code>        System.out.println(&quot;[&quot;+Thread.currentThread().getName()+&quot;] Sleeping in main thread for 5s...&quot;);</code>
-        </p>
-        <p><code>        Thread.sleep(5000);</code>
-        </p>
-        <p><code>        System.out.println(&quot;[&quot;+Thread.currentThread().getName()+&quot;] Interrupting myThread&quot;);</code>
-        </p>
-        <p><code>        myThread.interrupt();</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>01</p><p>02</p><p>03</p><p>04</p><p>05</p><p>06</p><p>07</p><p>08</p><p>09</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>20</p><p>21</p> | <p><code>public</code> <code>class</code> <code>InterruptExample</code> <code>implements</code> <code>Runnable {</code></p><p>    <code>public</code> <code>void</code> <code>run() {</code></p><p>        <code>try</code> <code>{</code></p><p>            <code>Thread.sleep(Long.MAX_VALUE);</code></p><p>        <code>}</code> <code>catch</code> <code>(InterruptedException e) {</code></p><p>            <code>System.out.println("["+Thread.currentThread().getName()+"] Interrupted by exception!");</code></p><p>        <code>}</code></p><p>    <code>}</code></p><p>    <code>public</code> <code>static</code> <code>void</code> <code>main(String[] args)</code> <code>throws</code> <code>InterruptedException {</code></p><p>        <code>Thread myThread =</code> <code>new</code> <code>Thread(new</code> <code>InterruptExample(),</code> <code>"myThread");</code></p><p>        <code>myThread.start();</code></p><p>        <code>System.out.println("["+Thread.currentThread().getName()+"] Sleeping in main thread for 5s...");</code></p><p>        <code>Thread.sleep(5000);</code></p><p>        <code>System.out.println("["+Thread.currentThread().getName()+"] Interrupting myThread");</code></p><p>        <code>myThread.interrupt();</code></p><p>    <code>}</code></p><p><code>}</code></p> |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 #### 39. How can a thread query if it has been interrupted?
 
@@ -740,117 +286,13 @@ Methods like `sleep()` and `join()` throw an `InterruptedException` to tell the 
 
 Waiting for a thread’s termination is done by invoking the method `join()` on the thread’s instance variable:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <p>4</p>
-        <p>5</p>
-        <p>6</p>
-        <p>7</p>
-        <p>8</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>Thread thread =</code>  <code>new</code>  <code>Thread(new</code>  <code>Runnable() {</code>
-        </p>
-        <p><code>    @Override</code>
-        </p>
-        <p><code>    public</code>  <code>void</code>  <code>run() {</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>});</code>
-        </p>
-        <p><code>thread.start();</code>
-        </p>
-        <p><code>thread.join();</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> | <p><code>Thread thread =</code> <code>new</code> <code>Thread(new</code> <code>Runnable() {</code></p><p>    <code>@Override</code></p><p>    <code>public</code> <code>void</code> <code>run() {</code></p><p>    <code>}</code></p><p><code>});</code></p><p><code>thread.start();</code></p><p><code>thread.join();</code></p> |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 #### 42. What is the output of the following program?
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>01</p>
-        <p>02</p>
-        <p>03</p>
-        <p>04</p>
-        <p>05</p>
-        <p>06</p>
-        <p>07</p>
-        <p>08</p>
-        <p>09</p>
-        <p>10</p>
-        <p>11</p>
-        <p>12</p>
-        <p>13</p>
-        <p>14</p>
-        <p>15</p>
-        <p>16</p>
-        <p>17</p>
-        <p>18</p>
-        <p>19</p>
-        <p>20</p>
-        <p>21</p>
-        <p>22</p>
-        <p>23</p>
-        <p>24</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>public</code>  <code>class</code>  <code>MyThreads {</code>
-        </p>
-        <p><code>    private</code>  <code>static</code>  <code>class</code>  <code>MyDaemonThread</code>  <code>extends</code>  <code>Thread {</code>
-        </p>
-        <p><code>        public</code>  <code>MyDaemonThread() {</code>
-        </p>
-        <p><code>            setDaemon(true);</code>
-        </p>
-        <p><code>        }</code>
-        </p>
-        <p><code>        @Override</code>
-        </p>
-        <p><code>        public</code>  <code>void</code>  <code>run() {</code>
-        </p>
-        <p><code>            try</code>  <code>{</code>
-        </p>
-        <p><code>                Thread.sleep(1000);</code>
-        </p>
-        <p><code>            }</code>  <code>catch</code>  <code>(InterruptedException e) {</code>
-        </p>
-        <p><code>            }</code>
-        </p>
-        <p><code>        }</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    public</code>  <code>static</code>  <code>void</code>  <code>main(String[] args)</code>  <code>throws</code>  <code>InterruptedException {</code>
-        </p>
-        <p><code>        Thread thread =</code>  <code>new</code>  <code>MyDaemonThread();</code>
-        </p>
-        <p><code>        thread.start();</code>
-        </p>
-        <p><code>        thread.join();</code>
-        </p>
-        <p><code>        System.out.println(thread.isAlive());</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>01</p><p>02</p><p>03</p><p>04</p><p>05</p><p>06</p><p>07</p><p>08</p><p>09</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>20</p><p>21</p><p>22</p><p>23</p><p>24</p> | <p><code>public</code> <code>class</code> <code>MyThreads {</code></p><p>    <code>private</code> <code>static</code> <code>class</code> <code>MyDaemonThread</code> <code>extends</code> <code>Thread {</code></p><p>        <code>public</code> <code>MyDaemonThread() {</code></p><p>            <code>setDaemon(true);</code></p><p>        <code>}</code></p><p>        <code>@Override</code></p><p>        <code>public</code> <code>void</code> <code>run() {</code></p><p>            <code>try</code> <code>{</code></p><p>                <code>Thread.sleep(1000);</code></p><p>            <code>}</code> <code>catch</code> <code>(InterruptedException e) {</code></p><p>            <code>}</code></p><p>        <code>}</code></p><p>    <code>}</code></p><p>    <code>public</code> <code>static</code> <code>void</code> <code>main(String[] args)</code> <code>throws</code> <code>InterruptedException {</code></p><p>        <code>Thread thread =</code> <code>new</code> <code>MyDaemonThread();</code></p><p>        <code>thread.start();</code></p><p>        <code>thread.join();</code></p><p>        <code>System.out.println(thread.isAlive());</code></p><p>    <code>}</code></p><p><code>}</code></p> |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 The output of the above code is “false”. Although the instance of MyDaemonThread is a daemon thread, the invocation of `join()` causes the main thread to wait until the execution of the daemon thread has finished. Hence calling `isAlive()` on the thread instance reveals that the daemon thread is no longer running.
 
@@ -862,8 +304,8 @@ The output of the above code is “false”. Although the instance of MyDaemonTh
 * synchronized block has better performance as only the critical section is locked but synchronized method has poor performance than block.
 * synchronized block provide granular control over lock but synchronized method lock either on current object represented by this or class level lock.
 * synchronized block can throw NullPointerException but synchronized method doesn’t throw.
-* synchronized block: synchronized\(this\){}
-* synchronized method: public synchronized void fun\(\){}
+* synchronized block: synchronized(this){}
+* synchronized method: public synchronized void fun(){}
 
 #### 44. What is a volatile keyword in Java and how is it different from the synchronized method in Java?
 
@@ -873,26 +315,8 @@ Using volatile force a thread to read and write variables directly from RAM memo
 
 When you have to implement exclusive access to a resource, like some static value or some file reference, the code that works with the exclusive resource can be embraced with a synchronized block:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>synchronized</code>  <code>(SynchronizedCounter.class) {</code>
-        </p>
-        <p><code>    counter++;</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>1</p><p>2</p><p>3</p> | <p><code>synchronized</code> <code>(SynchronizedCounter.class) {</code></p><p>    <code>counter++;</code></p><p><code>}</code></p> |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
 
 #### 46. What is a semaphore?
 
@@ -928,36 +352,12 @@ Learn more here:
 
 A synchronized method acquires the intrinsic lock for that method’s object and releases it when the method returns. Even if the method throws an exception, the intrinsic lock is released. Hence a synchronized method is equal to the following code:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <p>4</p>
-        <p>5</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>public</code>  <code>void</code>  <code>method() {</code>
-        </p>
-        <p><code>    synchronized(this) {</code>
-        </p>
-        <p><code>        ...</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p> | <p><code>public</code> <code>void</code> <code>method() {</code></p><p>    <code>synchronized(this) {</code></p><p>        <code>...</code></p><p>    <code>}</code></p><p><code>}</code></p> |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 #### 50. If two threads call a synchronized method on different object instances simultaneously, could one of these threads block?
 
-Both methods lock the same monitor. Therefore, you can’t simultaneously execute them on the same object from different threads \(one of the two methods will block until the other is finished\).
+Both methods lock the same monitor. Therefore, you can’t simultaneously execute them on the same object from different threads (one of the two methods will block until the other is finished).
 
 #### 51. Can a constructor be synchronized?
 
@@ -998,7 +398,7 @@ Learn more here:
 
 [Reentrant Lock example of a task runner](https://examples.javacodegeeks.com/core-java/util/concurrent/reentrant-lock-example-of-a-task-runner/)
 
-[Reentrant ReadWriteLock example of value calculator](https://examples.javacodegeeks.com/core-java/util/concurrent/reentrant-readwritelock-example-of-value-calculator/)  
+[Reentrant ReadWriteLock example of value calculator](https://examples.javacodegeeks.com/core-java/util/concurrent/reentrant-readwritelock-example-of-value-calculator/)\
 
 
 ### 3.2 Atomic Access
@@ -1015,7 +415,7 @@ No, the incrementation of an integer variable consist of more than one operation
 
 The Java language provides some basic operations that are atomic and that therefore can be used to make sure that concurrent threads always see the same value:
 
-* Read and write operations to reference variables and primitive variables \(except long and double\)
+* Read and write operations to reference variables and primitive variables (except long and double)
 * Read and write operations for all variables declared as volatile
 
 ## 4. Liveness
@@ -1024,7 +424,7 @@ The Java language provides some basic operations that are atomic and that theref
 
 #### 60. What do we understand by a deadlock?
 
-A deadlock is a situation in which two \(or more\) threads are each waiting on the other thread to free a resource that it has locked, while the thread itself has locked a resource the other thread is waiting on:
+A deadlock is a situation in which two (or more) threads are each waiting on the other thread to free a resource that it has locked, while the thread itself has locked a resource the other thread is waiting on:
 
 * Thread 1: locks resource A, waits for resource B
 * Thread 2: locks resource B, waits for resource A
@@ -1036,11 +436,11 @@ In general the following requirements for a deadlock can be identified:
 * Mutual exclusion: There is a resource which can be accessed only by one thread at any point in time.
 * Resource holding: While having locked one resource, the thread tries to acquire another lock on some other exclusive resource.
 * No preemption: There is no mechanism, which frees the resource if one thread holds the lock for a specific period of time.
-* Circular wait: During runtime a constellation occurs in which two \(or more\) threads are each waiting on the other thread to free a resource that it has locked.
+* Circular wait: During runtime a constellation occurs in which two (or more) threads are each waiting on the other thread to free a resource that it has locked.
 
 #### 62. Is it possible to prevent deadlocks at all?
 
-In order to prevent deadlocks one \(or more\) of the requirements for a deadlock has to be eliminated:
+In order to prevent deadlocks one (or more) of the requirements for a deadlock has to be eliminated:
 
 * Mutual exclusion: In some situation it is possible to prevent mutual exclusion by using optimistic locking.
 * Resource holding: A thread may release all its exclusive locks, when it does not succeed in obtaining all exclusive locks.
@@ -1083,77 +483,8 @@ It is not specified which threads will be woken up by calling `notify()` if more
 
 **Is the following code that retrieves an integer value from some queue implementation correct?**
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>01</p>
-        <p>02</p>
-        <p>03</p>
-        <p>04</p>
-        <p>05</p>
-        <p>06</p>
-        <p>07</p>
-        <p>08</p>
-        <p>09</p>
-        <p>10</p>
-        <p>11</p>
-        <p>12</p>
-        <p>13</p>
-        <p>14</p>
-        <p>15</p>
-        <p>16</p>
-        <p>17</p>
-        <p>18</p>
-        <p>19</p>
-        <p>20</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>public</code>  <code>Integer getNextInt() {</code>
-        </p>
-        <p><code>    Integer retVal =</code>  <code>null;</code>
-        </p>
-        <p><code>    synchronized</code>  <code>(queue) {</code>
-        </p>
-        <p><code>        try</code>  <code>{</code>
-        </p>
-        <p><code>            while</code>  <code>(queue.isEmpty()) {</code>
-        </p>
-        <p><code>                queue.wait();</code>
-        </p>
-        <p><code>            }</code>
-        </p>
-        <p><code>        }</code>  <code>catch</code>  <code>(InterruptedException e) {</code>
-        </p>
-        <p><code>            e.printStackTrace();</code>
-        </p>
-        <p><code>        }</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    synchronized</code>  <code>(queue) {</code>
-        </p>
-        <p><code>        retVal = queue.poll();</code>
-        </p>
-        <p><code>        if</code>  <code>(retVal ==</code>  <code>null) {</code>
-        </p>
-        <p><code>            System.err.println(&quot;retVal is null&quot;);</code>
-        </p>
-        <p><code>            throw</code>  <code>new</code>  <code>IllegalStateException();</code>
-        </p>
-        <p><code>        }</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    return</code>  <code>retVal;</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>01</p><p>02</p><p>03</p><p>04</p><p>05</p><p>06</p><p>07</p><p>08</p><p>09</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>20</p> | <p><code>public</code> <code>Integer getNextInt() {</code></p><p>    <code>Integer retVal =</code> <code>null;</code></p><p>    <code>synchronized</code> <code>(queue) {</code></p><p>        <code>try</code> <code>{</code></p><p>            <code>while</code> <code>(queue.isEmpty()) {</code></p><p>                <code>queue.wait();</code></p><p>            <code>}</code></p><p>        <code>}</code> <code>catch</code> <code>(InterruptedException e) {</code></p><p>            <code>e.printStackTrace();</code></p><p>        <code>}</code></p><p>    <code>}</code></p><p>    <code>synchronized</code> <code>(queue) {</code></p><p>        <code>retVal = queue.poll();</code></p><p>        <code>if</code> <code>(retVal ==</code> <code>null) {</code></p><p>            <code>System.err.println("retVal is null");</code></p><p>            <code>throw</code> <code>new</code> <code>IllegalStateException();</code></p><p>        <code>}</code></p><p>    <code>}</code></p><p>    <code>return</code> <code>retVal;</code></p><p><code>}</code></p> |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 Although the code above uses the queue as object monitor, it does not behave correctly in a multi-threaded environment. The reason for this is that it has two separate synchronized blocks. When two threads are woken up in line 6 by another thread that calls `notifyAll()`, both threads enter one after the other the second synchronized block. It this second block the queue has now only one new value, hence the second thread will poll on an empty queue and get null as return value.
 
@@ -1181,7 +512,7 @@ To create an immutable object you need to:
 * The class itself should be declared final in order to prevent subclasses to violate the principle of immutability.
 * If fields are not of a primitive type but a reference to another object:
   * There should not be a getter method that exposes the reference directly to the caller.
-  * Don’t change the referenced objects \(or at least changing these references is not visisble to clients of the object\).
+  * Don’t change the referenced objects (or at least changing these references is not visisble to clients of the object).
 
 ## 7.Lock Objects
 
@@ -1198,74 +529,20 @@ Lock contention occurs, when two or more threads are competing in the acquisitio
 In some cases lock contention can be reduced by applying one of the following techniques:
 
 * The scope of the lock is reduced.
-* The number of times a certain lock is acquired is reduced \(lock splitting\).
+* The number of times a certain lock is acquired is reduced (lock splitting).
 * Using hardware supported optimistic locking operations instead of synchronization.
 * Avoid synchronization where possible.
 * Avoid object pooling.
 
 #### 77. Which technique to reduce lock contention can be applied to the following code?
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <p>4</p>
-        <p>5</p>
-        <p>6</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>synchronized</code>  <code>(map) {</code>
-        </p>
-        <p><code>    UUID randomUUID = UUID.randomUUID();</code>
-        </p>
-        <p><code>    Integer value = Integer.valueOf(42);</code>
-        </p>
-        <p><code>    String key = randomUUID.toString();</code>
-        </p>
-        <p><code>    map.put(key, value);</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p> | <p><code>synchronized</code> <code>(map) {</code></p><p>    <code>UUID randomUUID = UUID.randomUUID();</code></p><p>    <code>Integer value = Integer.valueOf(42);</code></p><p>    <code>String key = randomUUID.toString();</code></p><p>    <code>map.put(key, value);</code></p><p><code>}</code></p> |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 The code above performs the computation of the random UUID and the conversion of the literal 42 into an Integer object within the synchronized block, although these two lines of code are local to the current thread and do not affect other threads. Hence they can be moved out of the synchronized block:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <p>4</p>
-        <p>5</p>
-        <p>6</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>UUID randomUUID = UUID.randomUUID();</code>
-        </p>
-        <p><code>Integer value = Integer.valueOf(42);</code>
-        </p>
-        <p><code>String key = randomUUID.toString();</code>
-        </p>
-        <p><code>synchronized</code>  <code>(map) {</code>
-        </p>
-        <p><code>    map.put(key, value);</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p> | <p><code>UUID randomUUID = UUID.randomUUID();</code></p><p><code>Integer value = Integer.valueOf(42);</code></p><p><code>String key = randomUUID.toString();</code></p><p><code>synchronized</code> <code>(map) {</code></p><p>    <code>map.put(key, value);</code></p><p><code>}</code></p> |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 #### 78. Explain by an example the technique lock splitting.
 
@@ -1283,7 +560,7 @@ Main differences between a Lock and a synchronized block are following:
 
 * Guarantee of sequence ? Synchronized block does not provide any guarantee of sequence in which waiting thread will be given access. Lock interface handles it.
 * No timeout ? Synchronized block has no option of timeout if lock is not granted. Lock interface provides such option.
-* Single method ? Synchronized block must be fully contained within a single method whereas a lock interface’s methods lock\(\) and unlock\(\) can be called in different methods.
+* Single method ? Synchronized block must be fully contained within a single method whereas a lock interface’s methods lock() and unlock() can be called in different methods.
 
 ## 8.Executors
 
@@ -1325,62 +602,17 @@ Learn more here:
 
 [java.util.concurrent.RejectedExecutionHandler Example](https://examples.javacodegeeks.com/core-java/util/concurrent/rejectedexecutionhandler/java-util-concurrent-rejectedexecutionhandler-example/)
 
-[java.util.concurrent.ScheduledThreadPoolExecutor Example](https://examples.javacodegeeks.com/core-java/util/concurrent/scheduledthreadpoolexecutor/java-util-concurrent-scheduledthreadpoolexecutor-example/)  
+[java.util.concurrent.ScheduledThreadPoolExecutor Example](https://examples.javacodegeeks.com/core-java/util/concurrent/scheduledthreadpoolexecutor/java-util-concurrent-scheduledthreadpoolexecutor-example/)\
 
 
 ### 8.2 Thread Pools
 
 #### 85. Do you know an easy way to construct a thread pool with 5 threads that executes some tasks that return a value?
 
-The SDK provides a factory and utility class `Executors` whose static method `newFixedThreadPool(int nThreads)` allows the creation of a thread pool with a fixed number of threads \(the implementation of `MyCallable` is omitted\):
+The SDK provides a factory and utility class `Executors` whose static method `newFixedThreadPool(int nThreads)` allows the creation of a thread pool with a fixed number of threads (the implementation of `MyCallable` is omitted):
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>01</p>
-        <p>02</p>
-        <p>03</p>
-        <p>04</p>
-        <p>05</p>
-        <p>06</p>
-        <p>07</p>
-        <p>08</p>
-        <p>09</p>
-        <p>10</p>
-        <p>11</p>
-        <p>12</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>public</code>  <code>static</code>  <code>void</code>  <code>main(String[] args)</code>  <code>throws</code>  <code>InterruptedException, ExecutionException {</code>
-        </p>
-        <p><code>    ExecutorService executorService = Executors.newFixedThreadPool(5);</code>
-        </p>
-        <p><code>    Future&lt;Integer&gt;[] futures =</code>  <code>new</code>  <code>Future[5];</code>
-        </p>
-        <p><code>    for</code>  <code>(int</code>  <code>i =</code>  <code>0; i &lt; futures.length; i++) {</code>
-        </p>
-        <p><code>        futures[i] = executorService.submit(new</code>  <code>MyCallable());</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    for</code>  <code>(int</code>  <code>i =</code>  <code>0; i &lt; futures.length; i++) {</code>
-        </p>
-        <p><code>        Integer retVal = futures[i].get();</code>
-        </p>
-        <p><code>        System.out.println(retVal);</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    executorService.shutdown();</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>01</p><p>02</p><p>03</p><p>04</p><p>05</p><p>06</p><p>07</p><p>08</p><p>09</p><p>10</p><p>11</p><p>12</p> | <p><code>public</code> <code>static</code> <code>void</code> <code>main(String[] args)</code> <code>throws</code> <code>InterruptedException, ExecutionException {</code></p><p>    <code>ExecutorService executorService = Executors.newFixedThreadPool(5);</code></p><p>    <code>Future&#x3C;Integer>[] futures =</code> <code>new</code> <code>Future[5];</code></p><p>    <code>for</code> <code>(int</code> <code>i =</code> <code>0; i &#x3C; futures.length; i++) {</code></p><p>        <code>futures[i] = executorService.submit(new</code> <code>MyCallable());</code></p><p>    <code>}</code></p><p>    <code>for</code> <code>(int</code> <code>i =</code> <code>0; i &#x3C; futures.length; i++) {</code></p><p>        <code>Integer retVal = futures[i].get();</code></p><p>        <code>System.out.println(retVal);</code></p><p>    <code>}</code></p><p>    <code>executorService.shutdown();</code></p><p><code>}</code></p> |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 #### 86. Is it possible to perform stream operations in Java 8 with a thread pool?
 
@@ -1402,7 +634,7 @@ The base class of the Fork/Join Framework `java.util.concurrent.ForkJoinPool` is
 
 #### 90. Is it possible to find the smallest number within an array of numbers using the Fork/Join-Framework?
 
-The problem of finding the smallest number within an array of numbers can be solved by using a divide-and-conquer algorithm. The smallest problem that can be solved very easily is an array of two numbers as we can determine the smaller of the two numbers directly by one comparison. Using a divide-and-conquer approach the initial array is divided into two parts of equal length and both parts are provided to two instances of `RecursiveTask` that extend the class `ForkJoinTask`. By forking the two tasks they get executed and either solve the problem directly, if their slice of the array has the length two, or they again recursively divide the array into two parts and fork two new RecursiveTasks. Finally each task instance returns its result \(either by having it computed directly or by waiting for the two subtasks\). The root tasks then returns the smallest number in the array.
+The problem of finding the smallest number within an array of numbers can be solved by using a divide-and-conquer algorithm. The smallest problem that can be solved very easily is an array of two numbers as we can determine the smaller of the two numbers directly by one comparison. Using a divide-and-conquer approach the initial array is divided into two parts of equal length and both parts are provided to two instances of `RecursiveTask` that extend the class `ForkJoinTask`. By forking the two tasks they get executed and either solve the problem directly, if their slice of the array has the length two, or they again recursively divide the array into two parts and fork two new RecursiveTasks. Finally each task instance returns its result (either by having it computed directly or by waiting for the two subtasks). The root tasks then returns the smallest number in the array.
 
 #### 91. What is the difference between the two classes `RecursiveTask` and `RecursiveAction`?
 
@@ -1420,7 +652,7 @@ Learn more here:
 
 #### 92. What are Concurrent Collection Classes?
 
-Java Collection classes are fail-fast which means that if the Collection will be changed while some thread is traversing over it using iterator, the iterator.next\(\) will throw ConcurrentModificationException.
+Java Collection classes are fail-fast which means that if the Collection will be changed while some thread is traversing over it using iterator, the iterator.next() will throw ConcurrentModificationException.
 
 #### 93. What is Java Memory Model?
 
@@ -1482,46 +714,8 @@ CAS stands for compare-and-swap and means that the processor provides a separate
 
 The SDK classes in the package `java.util.concurrent.atomic` like `AtomicInteger` or `AtomicBoolean` use internally the CAS operation to implement concurrent incrementation.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>01</p>
-        <p>02</p>
-        <p>03</p>
-        <p>04</p>
-        <p>05</p>
-        <p>06</p>
-        <p>07</p>
-        <p>08</p>
-        <p>09</p>
-        <p>10</p>
-        <p>11</p>
-      </th>
-      <th style="text-align:left">
-        <p><code>public</code>  <code>class</code>  <code>CounterAtomic {</code>
-        </p>
-        <p><code>    private</code>  <code>AtomicLong counter =</code>  <code>new</code>  <code>AtomicLong();</code>
-        </p>
-        <p><code>    public</code>  <code>void</code>  <code>increment() {</code>
-        </p>
-        <p><code>        counter.incrementAndGet();</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>    public</code>  <code>long</code>  <code>get() {</code>
-        </p>
-        <p><code>        return</code>  <code>counter.get();</code>
-        </p>
-        <p><code>    }</code>
-        </p>
-        <p><code>}</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+| <p>01</p><p>02</p><p>03</p><p>04</p><p>05</p><p>06</p><p>07</p><p>08</p><p>09</p><p>10</p><p>11</p> | <p><code>public</code> <code>class</code> <code>CounterAtomic {</code></p><p>    <code>private</code> <code>AtomicLong counter =</code> <code>new</code> <code>AtomicLong();</code></p><p>    <code>public</code> <code>void</code> <code>increment() {</code></p><p>        <code>counter.incrementAndGet();</code></p><p>    <code>}</code></p><p>    <code>public</code> <code>long</code> <code>get() {</code></p><p>        <code>return</code> <code>counter.get();</code></p><p>    <code>}</code></p><p><code>}</code></p> |
+| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 Learn more here:
 
@@ -1558,4 +752,3 @@ _If you enjoyed this, then_ [_**subscribe to our newsletter**_](http://eepurl.co
 _You are welcome to contribute with your comments and we will include them in the article!_nclude them in the article!
 
 **Last Updated Jan. 26, 2019**
-

@@ -2,8 +2,8 @@
 
 唐元：[http://www.aisixiang.com/thinktank/TangYuan.html](http://www.aisixiang.com/thinktank/TangYuan.html)
 
-  
-[https://mp.weixin.qq.com/s?\_\_biz=MzI0OTAzMzA0MA==&mid=2247493549&idx=1&sn=300df6744deb7a50477c5bd971687f69](https://mp.weixin.qq.com/s?__biz=MzI0OTAzMzA0MA==&mid=2247493549&idx=1&sn=300df6744deb7a50477c5bd971687f69)
+\
+[https://mp.weixin.qq.com/s?\_\_biz=MzI0OTAzMzA0MA==\&mid=2247493549\&idx=1\&sn=300df6744deb7a50477c5bd971687f69](https://mp.weixin.qq.com/s?\_\_biz=MzI0OTAzMzA0MA==\&mid=2247493549\&idx=1\&sn=300df6744deb7a50477c5bd971687f69)
 
 
 
@@ -75,7 +75,6 @@
 
 3、实行土地用途严格管制制度。建议严格界定土地属性，基本农田必须用于种植水稻、玉米、小麦、大豆等农作物，严禁农地尤其是基本农田撂荒，对撂荒者实行高额罚款甚至收回土地使用权，保证国家主粮生产持续增长。
 
- 中国政策科学研究会  唐元
+&#x20;中国政策科学研究会  唐元
 
 　　 2021年2月25日
-

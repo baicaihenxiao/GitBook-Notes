@@ -16,11 +16,11 @@
 
 #### 陈嘉映：哲学何为
 
-选择字号：[大](http://www.aisixiang.com/data/125571.html#) [中](http://www.aisixiang.com/data/125571.html#) [小](http://www.aisixiang.com/data/125571.html#) 本文共阅读 962 次 更新时间：2021-03-13 22:13:22
+选择字号：[大](http://www.aisixiang.com/data/125571.html) [中](http://www.aisixiang.com/data/125571.html) [小](http://www.aisixiang.com/data/125571.html) 本文共阅读 962 次 更新时间：2021-03-13 22:13:22
 
-进入专题： [陈嘉映](http://www.aisixiang.com/data/search.php?keyWords=%B3%C2%BC%CE%D3%B3&searchfield=keywords)
+进入专题： [陈嘉映](http://www.aisixiang.com/data/search.php?keyWords=%B3%C2%BC%CE%D3%B3\&searchfield=keywords)
 
-● **陈嘉映** \([进入专栏](http://www.aisixiang.com/thinktank/chenjiaying.html)\)
+● **陈嘉映** ([进入专栏](http://www.aisixiang.com/thinktank/chenjiaying.html))
 
 一
 
@@ -66,7 +66,6 @@
 
 选自陈嘉映新书《价值的理由》
 
-进入 [陈嘉映](http://www.aisixiang.com/thinktank/chenjiaying.html) 的专栏 进入专题： [陈嘉映](http://www.aisixiang.com/data/search.php?keyWords=%B3%C2%BC%CE%D3%B3&searchfield=keywords)
+进入 [陈嘉映](http://www.aisixiang.com/thinktank/chenjiaying.html) 的专栏 进入专题： [陈嘉映](http://www.aisixiang.com/data/search.php?keyWords=%B3%C2%BC%CE%D3%B3\&searchfield=keywords)
 
-本文责编：admin 发信站：爱思想（[http://www.aisixiang.com），栏目：\[天益学术\]\(http://www.aisixiang.com/data/search.php?lanmu=207](http://www.aisixiang.com），栏目：[天益学术]%28http://www.aisixiang.com/data/search.php?lanmu=207)\) &gt; [哲学](http://www.aisixiang.com/academic/zhexue.html) &gt; [哲学治学心路](http://www.aisixiang.com/data/search.php?lanmu=635) 本文链接：[http://www.aisixiang.com/data/125571.html](http://www.aisixiang.com/data/125571.html)
-
+本文责编：admin 发信站：爱思想（http://www.aisixiang.com），栏目：\[天益学术]\(http://www.aisixiang.com/data/search.php?lanmu=207) > [哲学](http://www.aisixiang.com/academic/zhexue.html) > [哲学治学心路](http://www.aisixiang.com/data/search.php?lanmu=635) 本文链接：[http://www.aisixiang.com/data/125571.html](http://www.aisixiang.com/data/125571.html)

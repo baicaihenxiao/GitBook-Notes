@@ -1,4 +1,4 @@
-# 一口气说出 4 种分布式一致性 Session 实现方式，面试杠杠的~
+# 一口气说出 4 种分布式一致性 Session 实现方式，面试杠杠的\~
 
 [https://mp.weixin.qq.com/s/eNU0WPWRHHOx5bmnZDjEhg](https://mp.weixin.qq.com/s/eNU0WPWRHHOx5bmnZDjEhg)
 
@@ -22,7 +22,7 @@
 
 这个时候组长刚准备下班，看到我们这里有问题，于是过来了看了一下。简单了解的一下基本情况，很快就找到了问题的原因，然后在 Nginx 端修改了下配置，重启解决了问题。
 
-### 
+###
 
 ### **分布式一致性 Session**
 
@@ -46,7 +46,7 @@
 
 下面阿粉将会以阿粉跟组长对话的形式，讲解分布式一致性 **Session** 解决办法。
 
-### 
+###
 
 ### **Session 复制**
 
@@ -58,7 +58,7 @@
 
 架构图如下：
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)一致性 Session-Session 复制
+![img](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M5LMBM-KNwLIye8nLEI%2Fuploads%2FfFPu9zSZQqT5O6JVUgzB%2Ffile.gif?alt=media)一致性 Session-Session 复制
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/29/640-20200729110540128-110540.jpg)
 
@@ -80,13 +80,13 @@
 
 **所以不推荐使用这种方案。**
 
-### 
+###
 
 ### **Session 前端存储**
 
 **阿粉：**
 
-恩，这个方案确实有点不靠谱~
+恩，这个方案确实有点不靠谱\~
 
 哎，有了！我们的 Session 里面其实就是存了用户的信息，那我现在不存 Tomcat **Session** 里，我把信息拿出来，存到浏览器的 **Cookie** 中。
 
@@ -116,7 +116,7 @@
 
 我比较推荐下面两种方案。
 
-### 
+###
 
 ### **Session  粘滞（Sticky Sessions）**
 
@@ -168,7 +168,7 @@ Session 粘滞-IP Hash
 
 不过后面我们还是改成下面这种方式。
 
-### 
+###
 
 ### **后端集中存储**
 
@@ -194,7 +194,7 @@ Session 粘滞-IP Hash
 
 **阿粉：**
 
-对对，这种方式好~
+对对，这种方式好\~
 
 **组长：**
 
@@ -230,7 +230,7 @@ Session 粘滞-IP Hash
 
 好吧，吃人嘴短，下周我研究下。
 
-### 
+###
 
 ### **总结**
 
@@ -246,4 +246,3 @@ Session 粘滞-IP Hash
 当然第四种方案需要一定的开发工作量，前期还没改造的过程可以选择 第三种方案中间过渡。
 
 好了，后面阿粉就要使用 Session 后端存储方案改造这个工程了，后面阿粉再跟大家分享一下 **spring-session**。
-

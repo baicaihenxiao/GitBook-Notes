@@ -1,13 +1,13 @@
 # 面试： String 五连杀 ！你还满血吗 ？
 
-{% embed url="https://mp.weixin.qq.com/s/95GfiYD0E\_wRovOojVGP4Q" %}
+{% embed url="https://mp.weixin.qq.com/s/95GfiYD0E_wRovOojVGP4Q" %}
 
 
 
 
 
-作者 \| Anthony\_tester  
-来源 \|  [https://blog.csdn.net/u011541946/article/details/79865160](https://blog.csdn.net/u011541946/article/details/79865160)
+作者 | Anthony\_tester\
+来源 |  [https://blog.csdn.net/u011541946/article/details/79865160](https://blog.csdn.net/u011541946/article/details/79865160)
 
 
 
@@ -15,7 +15,7 @@
 
 **1.判定定义为String类型的st1和st2是否相等，为什么**
 
-```text
+```
 package string;
 
 public class Demo2_String {
@@ -50,7 +50,7 @@ public class Demo2_String {
 
 下面我们来画一个内存图来表示上面的代码，看起来更加有说服力。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/R3InYSAIZkHUicxSy2DcUUSNedBOEKXNEtpsGzKjjjmrZnW7c6GwtmDjl2MuXOSghicqDgZZIJiagL69ibibuKboORQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://mmbiz.qpic.cn/mmbiz\_png/R3InYSAIZkHUicxSy2DcUUSNedBOEKXNEtpsGzKjjjmrZnW7c6GwtmDjl2MuXOSghicqDgZZIJiagL69ibibuKboORQ/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
 
 
 
@@ -72,27 +72,27 @@ public class Demo2_String {
 
 **2. 下面这句话在内存中创建了几个对象**
 
-```text
+```
 String st1 = new String(“abc”);
 ```
 
-答案是：在内存中创建两个对象，一个在\[堆内存\]\#\)，一个在常量池，堆内存对象是常量池对象的一个拷贝副本。
+答案是：在内存中创建两个对象，一个在\[堆内存]#)，一个在常量池，堆内存对象是常量池对象的一个拷贝副本。
 
 **分析：**
 
-我们下面直接来一个内存图。![](https://mmbiz.qpic.cn/mmbiz_png/R3InYSAIZkHUicxSy2DcUUSNedBOEKXNEcsUs3UDHQ1ajP86U6jlX6cBjy6MMx46utglBoR0gSnZfD3I48Kfaqg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+我们下面直接来一个内存图。![](https://mmbiz.qpic.cn/mmbiz\_png/R3InYSAIZkHUicxSy2DcUUSNedBOEKXNEcsUs3UDHQ1ajP86U6jlX6cBjy6MMx46utglBoR0gSnZfD3I48Kfaqg/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
 
 当我们看到了new这个关键字，就要想到，new出来的对象都是存储在堆内存。然后我们来解释堆中对象为什么是常量池的对象的拷贝副本。
 
 “abc”属于字符串，字符串属于常量，所以应该在常量池中创建，所以第一个创建的对象就是在常量池里的“abc”。
 
-第二个对象在堆内存为啥是一个拷贝的副本呢，这个就需要在JDK API 1.6找到String\(String original\)这个构造方法的注释：初始化一个新创建的 `String` 对象，使其表示一个与参数相同的字符序列；换句话说，新创建的字符串是该参数字符串的副本。
+第二个对象在堆内存为啥是一个拷贝的副本呢，这个就需要在JDK API 1.6找到String(String original)这个构造方法的注释：初始化一个新创建的 `String` 对象，使其表示一个与参数相同的字符序列；换句话说，新创建的字符串是该参数字符串的副本。
 
 所以，答案就出来了，两个对象。
 
 **3、判定以下定义为String类型的st1和st2是否相等**
 
-```text
+```
 package string;
 public class Demo2_String {
    public static void main(String[] args) {
@@ -108,15 +108,15 @@ public class Demo2_String {
 
 由于有前面两道提内存分析的经验和理论，所以，我能快速得出上面的答案。
 
-==比较的st1和st2对象的内存地址，由于st1指向的是堆内存的地址，st2看到“abc”已经在常量池存在，就不会再新建，所以st2指向了常量池的内存地址，所以==判断结果输出false，两者不相等。
+\==比较的st1和st2对象的内存地址，由于st1指向的是堆内存的地址，st2看到“abc”已经在常量池存在，就不会再新建，所以st2指向了常量池的内存地址，所以==判断结果输出false，两者不相等。
 
 第二个equals比较，比较是两个字符串序列是否相等，由于就一个“abc”，所以完全相等。
 
-内存图如下![](https://mmbiz.qpic.cn/mmbiz_png/R3InYSAIZkHUicxSy2DcUUSNedBOEKXNEj4FNb7jlt3Ig4VN3z2WED1hR50199wiakhCzSbDlicBHg6lqEjO7GnicQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+内存图如下![](https://mmbiz.qpic.cn/mmbiz\_png/R3InYSAIZkHUicxSy2DcUUSNedBOEKXNEj4FNb7jlt3Ig4VN3z2WED1hR50199wiakhCzSbDlicBHg6lqEjO7GnicQ/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
 
 **4. 判定以下定义为String类型的st1和st2是否相等**
 
-```text
+```
 package string;
 
 public class Demo2_String {
@@ -138,7 +138,7 @@ public class Demo2_String {
 
 _**\*5、判断以下st2和st3是否相等\***_
 
-```text
+```
 package string;
 
 public class Demo2_String {
@@ -161,13 +161,13 @@ public class Demo2_String {
 
 那么第一个判断为什么是false，我们很疑惑。同样，下面我们用API的注释说明和内存图来解释这个为什么不相等。
 
-首先，打开JDK API 1.6中String的介绍，找到下面图片这句话。![](https://mmbiz.qpic.cn/mmbiz_png/R3InYSAIZkHUicxSy2DcUUSNedBOEKXNEPicqMggUf3qGadYzD1hmZH5fxalWJotcSmxhXxSx2IyAp41ribqEARTA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+首先，打开JDK API 1.6中String的介绍，找到下面图片这句话。![](https://mmbiz.qpic.cn/mmbiz\_png/R3InYSAIZkHUicxSy2DcUUSNedBOEKXNEPicqMggUf3qGadYzD1hmZH5fxalWJotcSmxhXxSx2IyAp41ribqEARTA/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
 
 关键点就在红圈这句话，我们知道任何数据和字符串进行加号（+）运算，最终得到是一个拼接的新的字符串。
 
-上面注释说明了这个拼接的原理是由StringBuilder或者StringBuffer类和里面的append方法实现拼接，然后调用 toString\(\) 把拼接的对象转换成字符串对象，最后把得到字符串对象的地址赋值给变量。
+上面注释说明了这个拼接的原理是由StringBuilder或者StringBuffer类和里面的append方法实现拼接，然后调用 toString() 把拼接的对象转换成字符串对象，最后把得到字符串对象的地址赋值给变量。
 
-结合这个理解，我们下面画一个内存图来分析。![](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+结合这个理解，我们下面画一个内存图来分析。![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M5LMBM-KNwLIye8nLEI%2Fuploads%2FdWrWvsC7A60UEeNAKB5L%2Ffile.gif?alt=media)
 
 **大致内存过程**
 
@@ -188,4 +188,3 @@ public class Demo2_String {
 这篇的面试题，完全就是要求掌握JDK API中一些注解和原理，以及内存图分析，才能得到正确的结果，我承认是画内存图让我理解了答案为什么是这样。
 
 画完内存图之后，得到答案，你确实会发现很有趣，最后才会有原来如此的感叹。
-

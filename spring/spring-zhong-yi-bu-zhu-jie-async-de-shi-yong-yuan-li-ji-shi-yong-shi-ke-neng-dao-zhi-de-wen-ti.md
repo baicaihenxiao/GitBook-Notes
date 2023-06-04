@@ -20,17 +20,17 @@
 
 这个注解的作用在于可以让被标注的方法异步执行，但是有两个前提条件
 
-1. 配置类上添加@EnableAsync注解
+1\. 配置类上添加@EnableAsync注解
 
-2. 需要异步执行的方法的所在类由Spring管理
+2\. 需要异步执行的方法的所在类由Spring管理
 
-3. 需要异步执行的方法上添加了@Async注解
+3\. 需要异步执行的方法上添加了@Async注解
 
 我们通过一个Demo体会下这个注解的作用吧
 
 **第一步，配置类上开启异步：**
 
-```text
+```
 @EnableAsync
 @Configuration
 @ComponentScan("com.dmz.spring.async")
@@ -41,7 +41,7 @@ public class Config {
 
 **第二步，**
 
-```text
+```
 @Component  // 这个类本身要被Spring管理
 public class DmzAsyncService {
 
@@ -59,7 +59,7 @@ public class DmzAsyncService {
 
 **第三步，测试异步执行**
 
-```text
+```
 public class Main {
  public static void main(String[] args) {
   AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(Config.class);
@@ -134,7 +134,7 @@ public class AsyncConfigurationSelector extends AdviceModeImportSelector<EnableA
 
 我们先看下它的父类`AbstractAsyncConfiguration`，其源码如下：
 
-```text
+```
 @Configuration
 public abstract class AbstractAsyncConfiguration implements ImportAware {
 
@@ -180,7 +180,7 @@ public abstract class AbstractAsyncConfiguration implements ImportAware {
 
 再来看看`ProxyAsyncConfiguration`这个类的源码
 
-```text
+```
 @Configuration
 @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
 public class ProxyAsyncConfiguration extends AbstractAsyncConfiguration {
@@ -215,7 +215,7 @@ public class ProxyAsyncConfiguration extends AbstractAsyncConfiguration {
 
 我们抓住重点，`AsyncAnnotationBeanPostProcessor`是一个后置处理器器，按照我们对Spring的了解，大概率是在这个后置处理器的`postProcessAfterInitialization`方法中完成了代理，直接定位到这个方法，这个方法位于父类`AbstractAdvisingBeanPostProcessor`中，具体代码如下：
 
-```text
+```
 public Object postProcessAfterInitialization(Object bean, String beanName) {
     // 没有通知，或者是AOP的基础设施类，那么不进行代理
     if (this.advisor == null || bean instanceof AopInfrastructureBean) {
@@ -259,7 +259,7 @@ public Object postProcessAfterInitialization(Object bean, String beanName) {
 
 其实也不难猜到肯定就是类上添加了`@Async`注解或者类中含有被`@Async`注解修饰的方法。基于此，我们看看这个`isEligible`这个方法的实现逻辑，这个方位位于`AbstractBeanFactoryAwareAdvisingPostProcessor`中，也是`AsyncAnnotationBeanPostProcessor`的父类，对应代码如下：
 
-```text
+```
 // AbstractBeanFactoryAwareAdvisingPostProcessor的isEligible方法
 // 调用了父类
 protected boolean isEligible(Object bean, String beanName) {
@@ -288,7 +288,7 @@ protected boolean isEligible(Class<?> targetClass) {
 
 实际上最后就是根据advisor来确定是否要进行代理，advisor实际就是一个绑定了切点的通知，那么`AsyncAnnotationBeanPostProcessor`这个advisor是什么时候被初始化的呢？我们直接定位到`AsyncAnnotationBeanPostProcessor`的`setBeanFactory`方法，其源码如下：
 
-```text
+```
 public void setBeanFactory(BeanFactory beanFactory) {
     super.setBeanFactory(beanFactory);
 
@@ -305,7 +305,7 @@ public void setBeanFactory(BeanFactory beanFactory) {
 
 我们来看看`AsyncAnnotationAdvisor`中的切点匹配规程是怎么样的，直接定位到这个类的`buildPointcut`方法中，其源码如下：
 
-```text
+```
 protected Pointcut buildPointcut(Set<Class<? extends Annotation>> asyncAnnotationTypes) {
     ComposablePointcut result = null;
     for (Class<? extends Annotation> asyncAnnotationType : asyncAnnotationTypes) {
@@ -332,7 +332,7 @@ protected Pointcut buildPointcut(Set<Class<? extends Annotation>> asyncAnnotatio
 
 前面也提到了advisor是一个绑定了切点的通知，前面分析了它的切点，那么现在我们就来看看它的通知逻辑，直接定位到`AsyncAnnotationAdvisor`中的`buildAdvice`方法，源码如下：
 
-```text
+```
 protected Advice buildAdvice(
     @Nullable Supplier<Executor> executor, @Nullable Supplier<AsyncUncaughtExceptionHandler> exceptionHandler) {
 
@@ -344,7 +344,7 @@ protected Advice buildAdvice(
 
 简单吧，加了一个拦截器而已，对于interceptor类型的对象，我们关注它的核心方法`invoke`就行了，代码如下：
 
-```text
+```
 public Object invoke(final MethodInvocation invocation) throws Throwable {
     Class<?> targetClass = (invocation.getThis() != null ? AopUtils.getTargetClass(invocation.getThis()) : null);
     Method specificMethod = ClassUtils.getMostSpecificMethod(invocation.getMethod(), targetClass);
@@ -378,9 +378,9 @@ public Object invoke(final MethodInvocation invocation) throws Throwable {
 }
 ```
 
-## 
+##
 
-## 
+##
 
 ## **导致的问题及解决方案**
 
@@ -405,7 +405,7 @@ public Object invoke(final MethodInvocation invocation) throws Throwable {
 
 在三级缓存缓存了一个工厂对象，这个工厂对象会调用`getEarlyBeanReference`方法来获取一个早期的代理对象的引用，其源码如下：
 
-```text
+```
 protected Object getEarlyBeanReference(String beanName, RootBeanDefinition mbd, Object bean) {
    Object exposedObject = bean;
    if (!mbd.isSynthetic() && hasInstantiationAwareBeanPostProcessors()) {
@@ -432,7 +432,7 @@ protected Object getEarlyBeanReference(String beanName, RootBeanDefinition mbd, 
 
 就以上面读者给出的Demo为例，只需要在为B注入A时添加一个`@Lazy`注解即可
 
-```text
+```
 @Component
 public class B implements BService {
 
@@ -451,7 +451,7 @@ public class B implements BService {
 
 我觉得这是这个注解最坑的地方，没有之一！我们来看看它默认使用的线程池是哪个，在前文的源码分析中，我们可以看到决定要使用线程池的方法是`org.springframework.aop.interceptor.AsyncExecutionAspectSupport#determineAsyncExecutor`。其源码如下：
 
-```text
+```
 protected AsyncTaskExecutor determineAsyncExecutor(Method method) {
     AsyncTaskExecutor executor = this.executors.get(method);
     if (executor == null) {
@@ -478,7 +478,7 @@ protected AsyncTaskExecutor determineAsyncExecutor(Method method) {
 
 最终会调用到`org.springframework.aop.interceptor.AsyncExecutionInterceptor#getDefaultExecutor`这个方法中
 
-```text
+```
 protected Executor getDefaultExecutor(@Nullable BeanFactory beanFactory) {
    Executor defaultExecutor = super.getDefaultExecutor(beanFactory);
    return (defaultExecutor != null ? defaultExecutor : new SimpleAsyncTaskExecutor());
@@ -505,7 +505,7 @@ protected Executor getDefaultExecutor(@Nullable BeanFactory beanFactory) {
 
 如下：
 
-```text
+```
 public class DmzAsyncConfigurer implements AsyncConfigurer {
    @Override
    public Executor getAsyncExecutor() {
@@ -518,7 +518,7 @@ public class DmzAsyncConfigurer implements AsyncConfigurer {
 
 如下：
 
-```text
+```
 public class A implements AService {
 
  private B b;
@@ -546,11 +546,10 @@ public class Config {
 }
 ```
 
-## 
+##
 
-## 
+##
 
 ## **总结**
 
 本文主要介绍了Spring中异步注解的使用、原理及可能碰到的问题，针对每个问题文中也给出了方案。希望通过这篇文章能帮助你彻底掌握`@Async`注解的使用，知其然并知其所以然！
-

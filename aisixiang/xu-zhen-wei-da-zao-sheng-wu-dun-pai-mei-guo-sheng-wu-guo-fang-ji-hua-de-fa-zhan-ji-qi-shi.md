@@ -4,9 +4,9 @@
 
 #### 徐振伟：打造“生物盾牌”：美国生物国防计划的发展及启示
 
-选择字号：[大](http://www.aisixiang.com/data/124338.html#) [中](http://www.aisixiang.com/data/124338.html#) [小](http://www.aisixiang.com/data/124338.html#)   本文共阅读 119 次 更新时间：2021-01-14 23:24:16
+选择字号：[大](http://www.aisixiang.com/data/124338.html) [中](http://www.aisixiang.com/data/124338.html) [小](http://www.aisixiang.com/data/124338.html)   本文共阅读 119 次 更新时间：2021-01-14 23:24:16
 
-进入专题： [美国生物国防计划](http://www.aisixiang.com/data/search.php?keyWords=%C3%C0%B9%FA%C9%FA%CE%EF%B9%FA%B7%C0%BC%C6%BB%AE&searchfield=keywords)  ● **徐振伟**  
+进入专题： [美国生物国防计划](http://www.aisixiang.com/data/search.php?keyWords=%C3%C0%B9%FA%C9%FA%CE%EF%B9%FA%B7%C0%BC%C6%BB%AE\&searchfield=keywords)  ● **徐振伟** &#x20;
 
 　　 内容摘要：美国部署生物国防的主要目的是防范生物武器袭击或生物技术滥用给美国造成潜在伤害。在2001年“9·11”恐怖袭击和“炭疽邮件”事件发生后，美国历任总统小布什、奥巴马、特朗普通过颁布法律文件和财政拨款大力实施生物国防计划。当前，美国建立了生物威胁识别中心、公共卫生紧急情况应急中心和灾害应急管理系统，初步形成了较为系统和完善的生物国防体系，这有利于应对生物武器袭击和突发性灾害事件。然而，在新冠肺炎疫情暴发后，美国的生物国防计划为选举政治所裹挟，这导致其应对疫情的能力大大下降。鉴于美国的经验和教训，我国应及时制定生物国防计划，以提升全民的生物国防意识以及生物国防的战略地位。
 
@@ -110,10 +110,9 @@
 
 　　 纵观美国生物国防的发展历程，可以看出，美国生物国防发展集中体现了“发展型国家”的特点。“发展型国家”的理论认为，国家在经济发展中扮演着重要角色，特别是能够直接介入市场，由政府通过制定发展规划等形式引导不同社会部门，共同促进经济发展。美国虽然在经济上宣称奉行自由市场经济，但是在生物国防建设方面却体现了典型的“发展型国家”的特点，即没有将生物国防建设完全交给市场，而是十分强调政府的有效管理和干预，通过集权方式实现高效运作和对突发事件的有效应对。我国社会主义制度具有集中力量办大事的优势，在生物国防建设方面更需要发挥这种制度优势，以防范生物安全风险、维护国家生物安全为目标和核心，践行“综合安全观”，建立健全统一、高效、有序的生物安全制度体系，打造保卫人民生命安全和国家安全的“生物盾牌”。
 
-    进入专题： [美国生物国防计划](http://www.aisixiang.com/data/search.php?keyWords=%C3%C0%B9%FA%C9%FA%CE%EF%B9%FA%B7%C0%BC%C6%BB%AE&searchfield=keywords)  ![](http://www.aisixiang.com/images/wechat_qr.jpg)
+&#x20;   进入专题： [美国生物国防计划](http://www.aisixiang.com/data/search.php?keyWords=%C3%C0%B9%FA%C9%FA%CE%EF%B9%FA%B7%C0%BC%C6%BB%AE\&searchfield=keywords)  ![](http://www.aisixiang.com/images/wechat\_qr.jpg)
 
-本文责编：陈冬冬  
-发信站：爱思想（http://www.aisixiang.com），栏目：[天益学术](http://www.aisixiang.com/data/search.php?lanmu=207) &gt; [社会学](http://www.aisixiang.com/academic/shehuixue.html) &gt; [社会思想与理论](http://www.aisixiang.com/data/search.php?lanmu=697)  
-本文链接：http://www.aisixiang.com/data/124338.html  
+本文责编：陈冬冬\
+发信站：爱思想（http://www.aisixiang.com），栏目：[天益学术](http://www.aisixiang.com/data/search.php?lanmu=207) > [社会学](http://www.aisixiang.com/academic/shehuixue.html) > [社会思想与理论](http://www.aisixiang.com/data/search.php?lanmu=697)\
+本文链接：http://www.aisixiang.com/data/124338.html\
 文章来源：《国外社会科学前沿》2020年第9期
-

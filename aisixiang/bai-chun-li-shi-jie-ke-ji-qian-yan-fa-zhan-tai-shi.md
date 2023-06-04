@@ -1,12 +1,12 @@
 # 白春礼：世界科技前沿发展态势
 
-> [http://www.aisixiang.com/data/124440.html](http://www.aisixiang.com/data/124440.html)
+> [http://www.aisixiang.com/data/124440.html](http://www.aisixiang.com/data/124440.html)&#x20;
 
 #### 白春礼：世界科技前沿发展态势
 
-选择字号：[大](http://www.aisixiang.com/data/124440.html#) [中](http://www.aisixiang.com/data/124440.html#) [小](http://www.aisixiang.com/data/124440.html#)   本文共阅读 796 次 更新时间：2021-01-19 22:27:10
+选择字号：[大](http://www.aisixiang.com/data/124440.html) [中](http://www.aisixiang.com/data/124440.html) [小](http://www.aisixiang.com/data/124440.html)   本文共阅读 796 次 更新时间：2021-01-19 22:27:10
 
-进入专题： [科技前沿](http://www.aisixiang.com/data/search.php?keyWords=%BF%C6%BC%BC%C7%B0%D1%D8&searchfield=keywords)  ● **白春礼**  
+进入专题： [科技前沿](http://www.aisixiang.com/data/search.php?keyWords=%BF%C6%BC%BC%C7%B0%D1%D8\&searchfield=keywords)  ● **白春礼** &#x20;
 
 　　 2020年12月26日下午，十三届全国人大常委会第二十四次会议在人民大会堂闭幕。闭幕会后，栗战书委员长主持举行了十三届全国人大常委会第二十一讲专题讲座。中国科学院院士、中国科学院原院长、全国人大民族委员会主任委员白春礼作了题为《世界科技前沿发展态势》的讲座。
 
@@ -174,9 +174,8 @@
 
 　　 我们坚信，在以习近平同志为核心的党中央的英明领导下，我国科技界将继续深化改革、攻坚克难、勇攀高峰，实现科技自立自强，以高质量科技创新支撑引领高质量发展；一定能实现到2035年跻身创新型国家前列、到2050年建成世界科技强国的宏伟目标，为全面建设社会主义现代化国家提供强有力的科技支撑。
 
-    进入专题： [科技前沿](http://www.aisixiang.com/data/search.php?keyWords=%BF%C6%BC%BC%C7%B0%D1%D8&searchfield=keywords)  ![](http://www.aisixiang.com/images/wechat_qr.jpg)
+&#x20;   进入专题： [科技前沿](http://www.aisixiang.com/data/search.php?keyWords=%BF%C6%BC%BC%C7%B0%D1%D8\&searchfield=keywords)  ![](http://www.aisixiang.com/images/wechat\_qr.jpg)
 
-本文责编：admin  
-发信站：爱思想（http://www.aisixiang.com），栏目：[天益笔会](http://www.aisixiang.com/penclub/) &gt; [科学精神](http://www.aisixiang.com/data/search.php?lanmu=751) &gt; [科学演讲](http://www.aisixiang.com/data/search.php?lanmu=752)  
+本文责编：admin\
+发信站：爱思想（http://www.aisixiang.com），栏目：[天益笔会](http://www.aisixiang.com/penclub/) > [科学精神](http://www.aisixiang.com/data/search.php?lanmu=751) > [科学演讲](http://www.aisixiang.com/data/search.php?lanmu=752)\
 本文链接：http://www.aisixiang.com/data/124440.html
-

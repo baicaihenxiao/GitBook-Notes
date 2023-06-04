@@ -1,6 +1,6 @@
 # SSO 单点登录 芋道 Spring Security OAuth2 单点登录
 
-{% embed url="https://mp.weixin.qq.com/s/Fz9uAfxSH\_4W98gMBQGczQ" %}
+{% embed url="https://mp.weixin.qq.com/s/Fz9uAfxSH_4W98gMBQGczQ" %}
 
 {% embed url="http://www.iocoder.cn/Spring-Security/OAuth2-learning-sso/" %}
 
@@ -30,21 +30,20 @@
 
 我们只需要在**统一登录系统**（[https://login.taobao.com](https://login.taobao.com/)）进行登录即可，而后就可以“愉快”的自由剁手，并且无需分别在淘宝、天猫、飞猪等等系统重新登录。
 
-![&#x767B;&#x5F55;&#x7CFB;&#x7EDF;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/01.png)
+![登录系统](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/01.png)
 
-> 友情提示：更多单点登录的介绍，可见[《维基百科 —— 单点登录》](https://zh.wikipedia.org/wiki/單一登入)。
+> 友情提示：更多单点登录的介绍，可见[《维基百科 —— 单点登录》](https://zh.wikipedia.org/wiki/%E5%96%AE%E4%B8%80%E7%99%BB%E5%85%A5)。
 
 下面，我们正式搭建 Spring Security OAuth 实现 SSO 的**示例项目**，如下图所示：
 
-![&#x9879;&#x76EE;&#x7ED3;&#x6784;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/02.png)
+![项目结构](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/02.png)
 
-* 创建 [`lab-68-demo21-authorization-server-on-sso`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/) 项目，作为**统一登录系统**。
+*   创建 [`lab-68-demo21-authorization-server-on-sso`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/) 项目，作为**统一登录系统**。
 
-  > 旁白君：机智的胖友，是不是发现这个项目和**授权**服务器非常相似！！！
+    > 旁白君：机智的胖友，是不是发现这个项目和**授权**服务器非常相似！！！
+*   创建 [`lab-68-demo21-resource-server-on-sso`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-resource-server-on-sso/) 项目，模拟需要登录的 **XXX 系统**。
 
-* 创建 [`lab-68-demo21-resource-server-on-sso`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-resource-server-on-sso/) 项目，模拟需要登录的 **XXX 系统**。
-
-  > 旁白君：机智的胖友，是不是发现这个项目和**资源**服务器非常相似！！！
+    > 旁白君：机智的胖友，是不是发现这个项目和**资源**服务器非常相似！！！
 
 ## 2. 搭建统一登录系统
 
@@ -60,13 +59,13 @@
 
 在 [`resources/db`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/) 目录下，有四个 SQL 脚本，分别用于初始化 User 和 OAuth 相关的表。
 
-![SQL &#x811A;&#x672C;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/11.png)
+![SQL 脚本](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/11.png)
 
 #### 2.1.1 初始化 OAuth 表
 
-① 执行 [`oauth_schema.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/oauth_schema.sql) 脚本，创建数据库**表结构**。
+① 执行 [`oauth_schema.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/oauth\_schema.sql) 脚本，创建数据库**表结构**。
 
-```text
+```
 drop table if exists oauth_client_details;
 create table oauth_client_details (
   client_id VARCHAR(255) PRIMARY KEY,
@@ -122,22 +121,22 @@ create table if not exists oauth_approvals (
 
 结果如下图所示：
 
-![&#x8868;&#x7ED3;&#x6784;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/12.png)
+![表结构](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/12.png)
 
-| 表 | 作用 |
-| :--- | :--- |
-| `oauth_access_token` | OAuth 2.0 **访问**令牌 |
-| `oauth_refresh_token` | OAuth 2.0 **刷新**令牌 |
-| `oauth_code` | OAuth 2.0 **授权码** |
-| `oauth_client_details` | OAuth 2.0 **客户端** |
-| `oauth_client_token` |  |
-| `oauth_approvals` |  |
+| 表                      | 作用                 |
+| ---------------------- | ------------------ |
+| `oauth_access_token`   | OAuth 2.0 **访问**令牌 |
+| `oauth_refresh_token`  | OAuth 2.0 **刷新**令牌 |
+| `oauth_code`           | OAuth 2.0 **授权码**  |
+| `oauth_client_details` | OAuth 2.0 **客户端**  |
+| `oauth_client_token`   |                    |
+| `oauth_approvals`      |                    |
 
 > 旁白君：这里的表结构设计，我们可以借鉴参考，实现自己的 OAuth 2.0 的功能。
 
-② 执行 [`oauth_data.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/oauth_data.sql) 脚本，插入一个客户端记录。
+② 执行 [`oauth_data.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/oauth\_data.sql) 脚本，插入一个客户端记录。
 
-```text
+```
 INSERT INTO oauth_client_details
     (client_id, client_secret, scope, authorized_grant_types,
     web_server_redirect_uri, authorities, access_token_validity,
@@ -147,7 +146,7 @@ VALUES
     'password,authorization_code,refresh_token', 'http://127.0.0.1:9090/login', null, 3600, 864000, null, true);
 ```
 
-> **注意**！这条记录的 `web_server_redirect_uri` 字段，我们设置为 [http://127.0.0.1:9090/login，这是稍后我们搭建的](http://127.0.0.1:9090/login，这是稍后我们搭建的) XXX 系统的回调地址。
+> **注意**！这条记录的 `web_server_redirect_uri` 字段，我们设置为 [http://127.0.0.1:9090/login，这是稍后我们搭建的](http://127.0.0.1:9090/login%EF%BC%8C%E8%BF%99%E6%98%AF%E7%A8%8D%E5%90%8E%E6%88%91%E4%BB%AC%E6%90%AD%E5%BB%BA%E7%9A%84) XXX 系统的回调地址。
 >
 > * 统一登录系统采用 OAuth 2.0 的**授权码**模式进行授权。
 > * 授权成功后，浏览器会跳转 [http://127.0.0.1:9090/login](http://127.0.0.1:9090/login) 回调地址，然后 XXX 系统会通过**授权码**向统一登录系统获取**访问令牌**。
@@ -156,13 +155,13 @@ VALUES
 
 结果如下图所示：
 
-![\`oauth\_client\_details\` &#x8868;&#x8BB0;&#x5F55;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/12-20200702220548407.png)
+![\`oauth\_client\_details\` 表记录](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/12-20200702220548407.png)
 
 #### 2.1.2 初始化 User 表
 
-① 执行 [`user_schema.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/user_data.sql) 脚本，创建数据库**表结构**。
+① 执行 [`user_schema.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/user\_data.sql) 脚本，创建数据库**表结构**。
 
-```text
+```
 DROP TABLE IF EXISTS `authorities`;
 CREATE TABLE `authorities` (
   `username` varchar(50) NOT NULL,
@@ -181,16 +180,16 @@ CREATE TABLE `users` (
 
 结果如下图所示：
 
-![&#x8868;&#x7ED3;&#x6784;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/13.png)
+![表结构](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/13.png)
 
-| 表 | 作用 |
-| :--- | :--- |
-| `users` | **用户**表 |
+| 表             | 作用                |
+| ------------- | ----------------- |
+| `users`       | **用户**表           |
 | `authorities` | **授权**表，例如用户拥有的角色 |
 
-② 执行 [`user_data.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/user_data.sql) 脚本，插入一个用户记录和一个授权记录。
+② 执行 [`user_data.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/user\_data.sql) 脚本，插入一个用户记录和一个授权记录。
 
-```text
+```
 INSERT INTO `authorities` VALUES ('yunai', 'ROLE_USER');
 
 INSERT INTO `users` VALUES ('yunai', '112233', '1');
@@ -198,13 +197,13 @@ INSERT INTO `users` VALUES ('yunai', '112233', '1');
 
 结果如下图所示：
 
-![\`users\` &#x548C; \`authorities\` &#x8868;&#x8BB0;&#x5F55;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/14.png)
+![\`users\` 和 \`authorities\` 表记录](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/14.png)
 
 ### 2.2 引入依赖
 
 创建 [`pom.xml`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/pom.xml) 文件，引入 Spring Security OAuth 依赖。
 
-```text
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -272,7 +271,7 @@ INSERT INTO `users` VALUES ('yunai', '112233', '1');
 
 创建 [`application.yaml`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/application.yaml) 配置文件，添加**数据库连接池**的配置：
 
-```text
+```
 spring:
   # datasource 数据源配置内容，对应 DataSourceProperties 配置属性类
   datasource:
@@ -286,7 +285,7 @@ spring:
 
 创建 [SecurityConfig](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/java/cn/iocoder/springboot/lab68/authorizationserverdemo/config/SecurityConfig.java) 配置类，通过 **Spring Security** 提供**用户认证**的功能。代码如下：
 
-```text
+```
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -323,7 +322,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 创建 [OAuth2AuthorizationServerConfig](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/java/cn/iocoder/springboot/lab68/authorizationserverdemo/config/OAuth2AuthorizationServerConfig.java) 配置类，通过 **Spring Security OAuth** 提供**授权服务器**的功能。代码如下：
 
-```text
+```
 @Configuration
 @EnableAuthorizationServer
 public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
@@ -375,7 +374,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
 
 创建 [AuthorizationServerApplication](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/java/cn/iocoder/springboot/lab68/authorizationserverdemo/AuthorizationServerApplication.java) 类，统一登录系统的启动类。代码如下：
 
-```text
+```
 @SpringBootApplication
 public class AuthorizationServerApplication {
 
@@ -392,7 +391,7 @@ public class AuthorizationServerApplication {
 
 `POST` 请求 [http://localhost:8080/oauth/token](http://localhost:8080/oauth/token) 地址，使用密码模式进行**授权**。如下图所示：
 
-![&#x5BC6;&#x7801;&#x6A21;&#x5F0F;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/15.png)
+![密码模式](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/15.png)
 
 成功获取到访问令牌，成功！
 
@@ -410,7 +409,7 @@ public class AuthorizationServerApplication {
 
 创建 [`pom.xml`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/pom.xml) 文件，引入 Spring Security OAuth 依赖。
 
-```text
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -466,7 +465,7 @@ public class AuthorizationServerApplication {
 
 创建 [`application.yaml`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-resource-server-on-sso/src/main/resources/application.yml) 配置文件，添加 **SSO** 相关配置：
 
-```text
+```
 server:
   port: 9090
   servlet:
@@ -499,7 +498,7 @@ security:
 
 而这里配置的 `security.oauth2.client.user-authorization-uri` 地址，就是之前**授权**服务器的 `oauth/authorize` 接口，可以进行**授权码**模式的授权。
 
-> 友情提示：如果胖友忘记**授权**服务器的 `oauth/authorize` 接口，建议回看下[《芋道 Spring Security OAuth2 入门》](http://www.iocoder.cn/Spring-Security/OAuth2-learning/?self)的[「3. 授权码模式」](http://www.iocoder.cn/Spring-Security/OAuth2-learning-sso/#)小节。
+> 友情提示：如果胖友忘记**授权**服务器的 `oauth/authorize` 接口，建议回看下[《芋道 Spring Security OAuth2 入门》](http://www.iocoder.cn/Spring-Security/OAuth2-learning/?self)的[「3. 授权码模式」](http://www.iocoder.cn/Spring-Security/OAuth2-learning-sso/)小节。
 
 ④ `security.oauth2.client.access-token-uri` 配置项，获取**访问令牌**的地址。
 
@@ -519,7 +518,7 @@ security:
 
 创建 [OAuthSsoConfig](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-resource-server-on-sso/src/main/java/cn/iocoder/springboot/lab68/resourceserverdemo/config/OAuthSsoConfig.java) 类，配置接入 SSO 功能。代码如下：
 
-```text
+```
 @Configuration
 @EnableOAuth2Sso // 开启 Sso 功能
 public class OAuthSsoConfig {
@@ -535,7 +534,7 @@ public class OAuthSsoConfig {
 
 创建 [UserController](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-resource-server-on-sso/src/main/java/cn/iocoder/springboot/lab68/resourceserverdemo/controller/UserController.java) 类，提供获取当前用户的 `/user/info` 接口。代码如下：
 
-```text
+```
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -552,7 +551,7 @@ public class UserController {
 
 创建 [ResourceServerApplication](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-resource-server-on-sso/src/main/java/cn/iocoder/springboot/lab68/resourceserverdemo/ResourceServerApplication.java) 类，XXX 系统的启动类。代码如下：
 
-```text
+```
 @SpringBootApplication
 public class ResourceServerApplication {
 
@@ -571,11 +570,11 @@ public class ResourceServerApplication {
 
 又因为在**统一登录系统**暂未登录，所以被重定向到**统一登录系统**的 [http://127.0.0.1:8080/login](http://127.0.0.1:8080/login) **登录**地址。如下图所示：
 
-![&#x767B;&#x5F55;&#x754C;&#x9762;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/21.png)
+![登录界面](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/21.png)
 
 ② 输入用户的账号密码「yunai/1024」，进行**统一登录系统**的登录。登录完成后，进入**统一登录系统**的 [http://127.0.0.1:8080/oauth/authorize](http://127.0.0.1:8080/oauth/authorize) **授权**地址。如下图所示：
 
-![&#x6388;&#x6743;&#x754C;&#x9762;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/22.png)
+![授权界面](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/22.png)
 
 ③ 点击「Authorize」按钮，完成用户的授权。授权完成后，浏览器重定向到 **XXX 系统**的 [http://127.0.0.1:9090/login](http://127.0.0.1:9090/login) **回调**地址。
 
@@ -583,7 +582,7 @@ public class ResourceServerApplication {
 
 获取授权码完成后，**自动**跳转到登录前的 [http://127.0.0.1:9090/user/info](http://127.0.0.1:9090/user/info) 地址，打印出当前登录的用户信息。如下图所示：
 
-![&#x7528;&#x6237;&#x4FE1;&#x606F;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/23.png)
+![用户信息](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/23.png)
 
 如此，我们从**统一登录系统**也拿到了**用户信息**。下面，我们来进一步将 Spring Security 的**权限控制**功能来演示下。
 
@@ -591,7 +590,7 @@ public class ResourceServerApplication {
 
 创建 [SecurityConfig](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-resource-server-on-sso/src/main/java/cn/iocoder/springboot/lab68/resourceserverdemo/config/SecurityConfig.java) 配置类，添加 Spring Security 的功能。代码如下：
 
-```text
+```
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true) // 开启对 Spring Security 注解的方法，进行权限验证。
 @Order(101) // OAuth2SsoDefaultConfiguration 使用了 Order(100)，所以这里设置为 Order(101)，防止相同顺序导致报错
@@ -605,7 +604,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 创建 [DemoController](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-resource-server-on-sso/src/main/java/cn/iocoder/springboot/lab68/resourceserverdemo/controller/DemoController.java) 类，提供测试权限的功能的接口。代码如下：
 
-```text
+```
 @RestController
 @RequestMapping("/demo")
 public class DemoController {
@@ -633,22 +632,20 @@ public class DemoController {
 
 ① 使用浏览器，访问 [http://127.0.0.1:9090/demo/user-list](http://127.0.0.1:9090/demo/user-list) 地址，**成功**。如下图所示：
 
-![&#x6210;&#x529F;&#x8BBF;&#x95EE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/24.png)
+![成功访问](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/24.png)
 
 ② 使用浏览器，访问 [http://127.0.0.1:9090/demo/admin-list](http://127.0.0.1:9090/demo/admin-list) 地址，**失败**。如下图所示：
 
-![&#x5931;&#x8D25;&#x8BBF;&#x95EE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/25.png)
+![失败访问](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/02/25.png)
 
 ## 666. 彩蛋
 
 至此，我们成功使用 Spring Security OAuth 实现了一个 SSO 单点登录的示例。下图，是 SSO 的整体流程图，胖友可以继续深入理解下：
 
-![SSO &#x6D41;&#x7A0B;&#x56FE;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/f616b6e1946340ab63318cfcf269bef6.jpg)
+![SSO 流程图](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/02/f616b6e1946340ab63318cfcf269bef6.jpg)
 
 后续，想要深入的胖友，可以看看 Spring Security OAuth 提供的如下两个过滤器：
 
 * [OAuth2ClientContextFilter](https://github.com/spring-projects/spring-security-oauth/blob/master/spring-security-oauth2/src/main/java/org/springframework/security/oauth2/client/filter/OAuth2ClientContextFilter.java)
-* \[OAuth2ClientAuthenticationProcessingFilter\]\(
-
-
+* \[OAuth2ClientAuthenticationProcessingFilter]\(
 

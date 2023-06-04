@@ -1,26 +1,26 @@
 # 用Java的时候，你是如何实现时间控制的？
 
-{% embed url="https://mp.weixin.qq.com/s/\_rMMBpYe9jbaypbhYotGWg" %}
+{% embed url="https://mp.weixin.qq.com/s/_rMMBpYe9jbaypbhYotGWg" %}
 
 
 
-作者 \| Yrion
+作者 | Yrion
 
-来源 \| rrd.me/gCQHp
+来源 | rrd.me/gCQHp
 
-前言：需求是这样的，在与第三方对接过程中，对方提供了token进行时效性验证，过一段时间token就会失效.后台有定时任务在获取，但是偶尔会出现token失效，这是因为在获取的时候，定时任务正在跑，可能正在获取最新的token中，这个时候如何过一段时间\(比如800毫秒之后\)再请求呢？小王仰望天空45度，思考起来了。。。
+前言：需求是这样的，在与第三方对接过程中，对方提供了token进行时效性验证，过一段时间token就会失效.后台有定时任务在获取，但是偶尔会出现token失效，这是因为在获取的时候，定时任务正在跑，可能正在获取最新的token中，这个时候如何过一段时间(比如800毫秒之后)再请求呢？小王仰望天空45度，思考起来了。。。
 
 **一：时间控制的几种方案**
 
 1.1: 从线程方面解决
 
-最简单粗暴的一种实现方案：Thread.sleep\(800\)，但是很快就被小王给pass掉了。为什么呢？虽然这种方式可以，但是存在一个隐患，如果在多线程环境下，线程很容易被interrupt,这样代码就会抛出异常，这样线程就会挂起，导致整个线程异常结束。实在是不够优雅，违背了我们设计的初衷。
+最简单粗暴的一种实现方案：Thread.sleep(800)，但是很快就被小王给pass掉了。为什么呢？虽然这种方式可以，但是存在一个隐患，如果在多线程环境下，线程很容易被interrupt,这样代码就会抛出异常，这样线程就会挂起，导致整个线程异常结束。实在是不够优雅，违背了我们设计的初衷。
 
 1.2:使用Timer
 
 查阅了jdk，我发现有个实现定时的类，使用它是可以的，在jdk中提供了定时器类，这个类的主要作用就是控制一定的时间来简单的定时执行某个任务。有点简单的elasticJob的设计味道。接下来看一下，用timmer如何实现延时。。有点惊喜，我们来写一个最简单的例子来看一下如何实现定时任务：
 
-```text
+```
 public class TimmerTest {
    /**
      * 测试方法
@@ -43,7 +43,7 @@ public class TimmerTest {
 }
 ```
 
-```text
+```
 <dependency>
   <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -60,7 +60,7 @@ public class TimmerTest {
 </dependency>
 ```
 
-```text
+```
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -91,7 +91,7 @@ public class RedisConfig {
 }
 ```
 
-```text
+```
 @Component
 public class RedisManager {
     
@@ -187,7 +187,7 @@ public class RedisManager {
     }
 ```
 
-```text
+```
 import com.youjia.orders.redis.RedisManager;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -234,7 +234,7 @@ public class RedisTest extends OrderProviderApplicationTests {
 }
 ```
 
-```text
+```
 开始控制时间
 一共耗费时间：10042
 ```
@@ -274,4 +274,3 @@ outPut:
 1.3:redis延时
 
 这是一个很简单的定时器实现，可以看出它只需要将方法对应的类继承自MyTask就可以实现定时执行，这种方法是可以实现延时的效果，但是它有一个致命的缺点：对代码的侵入性太大，为了实现定时我们不得已将对应的方法封装成一个类，然后放在定时器里执行。这样的、是可以的，但未免也有点太得不偿失了。为此我要更改整个类的结构，对于修改一个东西，我们要尽量按照最简单的方式最好的效果来实现，所以这种方案也应该pass掉。
-

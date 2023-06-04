@@ -1,12 +1,12 @@
 # 设计模式总结
 
-[https://mp.weixin.qq.com/s/pjQ6xqDvHHlfANUW\_o2dTQ](https://mp.weixin.qq.com/s/pjQ6xqDvHHlfANUW_o2dTQ)
+[https://mp.weixin.qq.com/s/pjQ6xqDvHHlfANUW\_o2dTQ](https://mp.weixin.qq.com/s/pjQ6xqDvHHlfANUW\_o2dTQ)
 
 作者：HongJie
 
 链接：javadoop.com/post/design-pattern
 
-设计模式是对大家实际工作中写的各种代码进行高层次抽象的总结，其中最出名的当属 _Gang of Four_ \(_GoF_\) 的分类了，他们将设计模式分类为 23 种经典的模式，根据用途我们又可以分为三大类，分别为创建型模式、结构型模式和行为型模式。
+设计模式是对大家实际工作中写的各种代码进行高层次抽象的总结，其中最出名的当属 _Gang of Four_ (_GoF_) 的分类了，他们将设计模式分类为 23 种经典的模式，根据用途我们又可以分为三大类，分别为创建型模式、结构型模式和行为型模式。
 
 有一些重要的设计原则在开篇和大家分享下，这些原则将贯通全文：
 
@@ -24,7 +24,7 @@
 
 和名字一样简单，非常简单，直接上代码吧：
 
-```text
+```
 public class FoodFactory {
 
     public static Food makeFood(String name) {
@@ -53,7 +53,7 @@ _其中，LanZhouNoodle 和 HuangMenChicken 都继承自 Food。_
 
 简单工厂模式很简单，如果它能满足我们的需要，我觉得就不要折腾了。之所以需要引入工厂模式，是因为我们往往需要使用两个或两个以上的工厂。
 
-```text
+```
 public interface FoodFactory {
     Food makeFood(String name);
 }
@@ -89,7 +89,7 @@ public class AmericanFoodFactory implements FoodFactory {
 
 客户端调用：
 
-```text
+```
 public class APP {
     public static void main(String[] args) {
         // 先选择一个具体的工厂
@@ -100,7 +100,7 @@ public class APP {
 }
 ```
 
-虽然都是调用 makeFood\("A"\) 制作 A 类食物，但是，不同的工厂生产出来的完全不一样。
+虽然都是调用 makeFood("A") 制作 A 类食物，但是，不同的工厂生产出来的完全不一样。
 
 第一步，我们需要选取合适的工厂，然后第二步基本上和简单工厂一样。
 
@@ -122,7 +122,7 @@ public class APP {
 
 这个时候的客户端调用是这样的：
 
-```text
+```
 // 得到 Intel 的 CPU
 CPUFactory cpuFactory = new IntelCPUFactory();
 CPU cpu = intelCPUFactory.makeCPU();
@@ -141,15 +141,15 @@ Computer computer = new Computer(cpu, mainBoard);
 
 下面就是我们要说的**产品族**的概念，它代表了组成某个产品的一系列附件的集合：
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M5LMBM-KNwLIye8nLEI%2Fuploads%2FaaUngJq7dCfFZ5y6Mnof%2Ffile.gif?alt=media)
 
 当涉及到这种产品族的问题的时候，就需要抽象工厂模式来支持了。我们不再定义 CPU 工厂、主板工厂、硬盘工厂、显示屏工厂等等，我们直接定义电脑工厂，每个电脑工厂负责生产所有的设备，这样能保证肯定不存在兼容问题。
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M5LMBM-KNwLIye8nLEI%2Fuploads%2FNIVrQZMfqhwLU4RSFWvO%2Ffile.gif?alt=media)
 
 这个时候，对于客户端来说，不再需要单独挑选 CPU厂商、主板厂商、硬盘厂商等，直接选择一家品牌工厂，品牌工厂会负责生产所有的东西，而且能保证肯定是兼容可用的。
 
-```text
+```
 public static void main(String[] args) {
     // 第一步就要选定一个“大厂”
     ComputerFactory cf = new AmdFactory();
@@ -173,7 +173,7 @@ public static void main(String[] args) {
 
 饿汉模式最简单：
 
-```text
+```
 public class Singleton {
     // 首先，将 new Singleton() 堵死
     private Singleton() {};
@@ -193,7 +193,7 @@ public class Singleton {
 
 饱汉模式最容易出错：
 
-```text
+```
 public class Singleton {
     // 首先，也是先堵死 new Singleton() 这条路
     private Singleton() {}
@@ -219,11 +219,11 @@ public class Singleton {
 >
 > volatile 在这里是需要的，希望能引起读者的关注。
 >
-> 很多人不知道怎么写，直接就在 getInstance\(\) 方法签名上加上 synchronized，这就不多说了，性能太差。
+> 很多人不知道怎么写，直接就在 getInstance() 方法签名上加上 synchronized，这就不多说了，性能太差。
 
 嵌套类最经典，以后大家就用它吧：
 
-```text
+```
 public class Singleton3 {
 
     private Singleton3() {}
@@ -247,16 +247,16 @@ public class Singleton3 {
 
 经常碰见的 XxxBuilder 的类，通常都是建造者模式的产物。建造者模式其实有很多的变种，但是对于客户端来说，我们的使用通常都是一个模式的：
 
-```text
+```
 Food food = new FoodBuilder().a().b().c().build();
 Food food = Food.builder().a().b().c().build();
 ```
 
-套路就是先 new 一个 Builder，然后可以链式地调用一堆方法，最后再调用一次 build\(\) 方法，我们需要的对象就有了。
+套路就是先 new 一个 Builder，然后可以链式地调用一堆方法，最后再调用一次 build() 方法，我们需要的对象就有了。
 
 来一个中规中矩的建造者模式：
 
-```text
+```
 class User {
     // 下面是“一堆”的属性
     private String name;
@@ -327,11 +327,11 @@ class User {
 }
 ```
 
-核心是：先把所有的属性都设置给 Builder，然后 build\(\) 方法的时候，将这些属性**复制**给实际产生的对象。
+核心是：先把所有的属性都设置给 Builder，然后 build() 方法的时候，将这些属性**复制**给实际产生的对象。
 
 看看客户端的调用：
 
-```text
+```
 public class APP {
     public static void main(String[] args) {
         User d = User.builder()
@@ -343,11 +343,11 @@ public class APP {
 }
 ```
 
-说实话，建造者模式的**链式**写法很吸引人，但是，多写了很多“无用”的 builder 的代码，感觉这个模式没什么用。不过，当属性很多，而且有些必填，有些选填的时候，这个模式会使代码清晰很多。我们可以在 **Builder 的构造方法**中强制让调用者提供必填字段，还有，在 build\(\) 方法中校验各个参数比在 User 的构造方法中校验，代码要优雅一些。
+说实话，建造者模式的**链式**写法很吸引人，但是，多写了很多“无用”的 builder 的代码，感觉这个模式没什么用。不过，当属性很多，而且有些必填，有些选填的时候，这个模式会使代码清晰很多。我们可以在 **Builder 的构造方法**中强制让调用者提供必填字段，还有，在 build() 方法中校验各个参数比在 User 的构造方法中校验，代码要优雅一些。
 
 > 题外话，强烈建议读者使用 lombok，用了 lombok 以后，上面的一大堆代码会变成如下这样:
 
-```text
+```
 @Builder
 class User {
     private String  name;
@@ -361,7 +361,7 @@ class User {
 
 当然，如果你只是想要链式写法，不想要建造者模式，有个很简单的办法，User 的 getter 方法不变，所有的 setter 方法都让其 **return this** 就可以了，然后就可以像下面这样调用：
 
-```text
+```
 User user = new User().setName("").setPassword("").setAge(20);
 ```
 
@@ -373,9 +373,9 @@ User user = new User().setName("").setPassword("").setAge(20);
 
 原型模式很简单：有一个原型**实例**，基于这个原型实例产生新的实例，也就是“克隆”了。
 
-Object 类中有一个 clone\(\) 方法，它用于生成一个新的对象，当然，如果我们要调用这个方法，java 要求我们的类必须先**实现 Cloneable 接口**，此接口没有定义任何方法，但是不这么做的话，在 clone\(\) 的时候，会抛出 CloneNotSupportedException 异常。
+Object 类中有一个 clone() 方法，它用于生成一个新的对象，当然，如果我们要调用这个方法，java 要求我们的类必须先**实现 Cloneable 接口**，此接口没有定义任何方法，但是不这么做的话，在 clone() 的时候，会抛出 CloneNotSupportedException 异常。
 
-```text
+```
 protected native Object clone() throws CloneNotSupportedException;
 ```
 
@@ -387,7 +387,7 @@ protected native Object clone() throws CloneNotSupportedException;
 
 创建型模式总体上比较简单，它们的作用就是为了产生实例对象，算是各种工作的第一步了，因为我们写的是**面向对象**的代码，所以我们第一步当然是需要创建一个对象了。
 
-简单工厂模式最简单；工厂模式在简单工厂模式的基础上增加了选择工厂的维度，需要第一步选择合适的工厂；抽象工厂模式有产品族的概念，如果各个产品是存在兼容性问题的，就要用抽象工厂模式。单例模式就不说了，为了保证全局使用的是同一对象，一方面是安全性考虑，一方面是为了节省资源；建造者模式专门对付属性很多的那种类，为了让代码更优美；原型模式用得最少，了解和 Object 类中的 clone\(\) 方法相关的知识即可。
+简单工厂模式最简单；工厂模式在简单工厂模式的基础上增加了选择工厂的维度，需要第一步选择合适的工厂；抽象工厂模式有产品族的概念，如果各个产品是存在兼容性问题的，就要用抽象工厂模式。单例模式就不说了，为了保证全局使用的是同一对象，一方面是安全性考虑，一方面是为了节省资源；建造者模式专门对付属性很多的那种类，为了让代码更优美；原型模式用得最少，了解和 Object 类中的 clone() 方法相关的知识即可。
 
 ## 结构型模式
 
@@ -401,7 +401,7 @@ protected native Object clone() throws CloneNotSupportedException;
 
 > 理解**代理**这个词，这个模式其实就简单了。
 
-```text
+```
 public interface FoodService {
     Food makeChicken();
     Food makeNoodle();
@@ -452,7 +452,7 @@ public class FoodServiceProxy implements FoodService {
 
 客户端调用，注意，我们要用代理来实例化接口：
 
-```text
+```
 // 这里用代理类来实例化
 FoodService foodService = new FoodServiceProxy();
 foodService.makeChicken();
@@ -474,11 +474,11 @@ foodService.makeChicken();
 
 #### 默认适配器模式
 
-首先，我们先看看最简单的适配器模式**默认适配器模式\(Default Adapter\)**是怎么样的。
+首先，我们先看看最简单的适配器模式**默认适配器模式(Default Adapter)**是怎么样的。
 
 我们用 Appache commons-io 包中的 FileAlterationListener 做例子，此接口定义了很多的方法，用于对文件或文件夹进行监控，一旦发生了对应的操作，就会触发相应的方法。
 
-```text
+```
 public interface FileAlterationListener {
     void onStart(final FileAlterationObserver observer);
     void onDirectoryCreate(final File directory);
@@ -495,7 +495,7 @@ public interface FileAlterationListener {
 
 所以，我们需要下面的一个**适配器**，它用于实现上面的接口，但是**所有的方法都是空方法**，这样，我们就可以转而定义自己的类来继承下面这个类即可。
 
-```text
+```
 public class FileAlterationListenerAdaptor implements FileAlterationListener {
 
     public void onStart(final FileAlterationObserver observer) {
@@ -526,7 +526,7 @@ public class FileAlterationListenerAdaptor implements FileAlterationListener {
 
 比如我们可以定义以下类，我们仅仅需要实现我们想实现的方法就可以了：
 
-```text
+```
 public class FileMonitor extends FileAlterationListenerAdaptor {
     public void onFileCreate(final File file) {
         // 文件创建
@@ -546,7 +546,7 @@ public class FileMonitor extends FileAlterationListenerAdaptor {
 
 来看一个《Head First 设计模式》中的一个例子，我稍微修改了一下，看看怎么将鸡适配成鸭，这样鸡也能当鸭来用。因为，现在鸭这个接口，我们没有合适的实现类可以用，所以需要适配器。
 
-```text
+```
 public interface Duck {
     public void quack(); // 鸭的呱呱叫
     public void fly(); // 飞
@@ -567,9 +567,9 @@ public class WildCock implements Cock {
 }
 ```
 
-鸭接口有 fly\(\) 和 quare\(\) 两个方法，鸡 Cock 如果要冒充鸭，fly\(\) 方法是现成的，但是鸡不会鸭的呱呱叫，没有 quack\(\) 方法。这个时候就需要适配了：
+鸭接口有 fly() 和 quare() 两个方法，鸡 Cock 如果要冒充鸭，fly() 方法是现成的，但是鸡不会鸭的呱呱叫，没有 quack() 方法。这个时候就需要适配了：
 
-```text
+```
 // 毫无疑问，首先，这个适配器肯定需要 implements Duck，这样才能当做鸭来用
 public class CockAdapter implements Duck {
 
@@ -595,7 +595,7 @@ public class CockAdapter implements Duck {
 
 客户端调用很简单了：
 
-```text
+```
 public static void main(String[] args) {
     // 有一只野鸡
       Cock wildCock = new WildCock();
@@ -623,19 +623,18 @@ public static void main(String[] args) {
 
 #### 适配器模式总结
 
-1. 类适配和对象适配的异同
+1.  类适配和对象适配的异同
 
-   > 一个采用继承，一个采用组合；
-   >
-   > 类适配属于静态实现，对象适配属于组合的动态实现，对象适配需要多实例化一个对象。
-   >
-   > 总体来说，对象适配用得比较多。
+    > 一个采用继承，一个采用组合；
+    >
+    > 类适配属于静态实现，对象适配属于组合的动态实现，对象适配需要多实例化一个对象。
+    >
+    > 总体来说，对象适配用得比较多。
+2.  适配器模式和代理模式的异同
 
-2. 适配器模式和代理模式的异同
+    比较这两种模式，其实是比较对象适配器模式和代理模式，在代码结构上，它们很相似，都需要一个具体的实现类的实例。但是它们的目的不一样，代理模式做的是增强原方法的活；适配器做的是适配的活，为的是提供“把鸡包装成鸭，然后当做鸭来使用”，而鸡和鸭它们之间原本没有继承关系。
 
-   比较这两种模式，其实是比较对象适配器模式和代理模式，在代码结构上，它们很相似，都需要一个具体的实现类的实例。但是它们的目的不一样，代理模式做的是增强原方法的活；适配器做的是适配的活，为的是提供“把鸡包装成鸭，然后当做鸭来使用”，而鸡和鸭它们之间原本没有继承关系。
-
-   ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/20/640-20200720141038679-141038.jpg)
+    ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/20/640-20200720141038679-141038.jpg)
 
 ### 桥梁模式
 
@@ -643,7 +642,7 @@ public static void main(String[] args) {
 
 我们首先需要一个桥梁，它是一个接口，定义提供的接口方法。
 
-```text
+```
 public interface DrawAPI {
    public void draw(int radius, int x, int y);
 }
@@ -651,7 +650,7 @@ public interface DrawAPI {
 
 然后是一系列实现类：
 
-```text
+```
 public class RedPen implements DrawAPI {
     @Override
     public void draw(int radius, int x, int y) {
@@ -674,7 +673,7 @@ public class BluePen implements DrawAPI {
 
 定义一个抽象类，此类的实现类都需要使用 DrawAPI：
 
-```text
+```
 public abstract class Shape {
     protected DrawAPI drawAPI;
     protected Shape(DrawAPI drawAPI) {
@@ -686,7 +685,7 @@ public abstract class Shape {
 
 定义抽象类的子类：
 
-```text
+```
 // 圆形
 public class Circle extends Shape {
     private int radius;
@@ -715,7 +714,7 @@ public class Rectangle extends Shape {
 
 最后，我们来看客户端演示：
 
-```text
+```
 public static void main(String[] args) {
     Shape greenCircle = new Circle(10, new GreenPen());
     Shape redRectangle = new Rectangle(4, 8, new RedPen());
@@ -726,7 +725,7 @@ public static void main(String[] args) {
 
 可能大家看上面一步步还不是特别清晰，我把所有的东西整合到一张图上：
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M5LMBM-KNwLIye8nLEI%2Fuploads%2FClcoXmG9GqZ8UV5ZIEZY%2Ffile.gif?alt=media)
 
 这回大家应该就知道抽象在哪里，怎么解耦了吧。桥梁模式的优点也是显而易见的，就是非常容易进行扩展。
 
@@ -758,7 +757,7 @@ public static void main(String[] args) {
 
 首先，定义饮料抽象基类：
 
-```text
+```
 public abstract class Beverage {
       // 返回描述
       public abstract String getDescription();
@@ -769,7 +768,7 @@ public abstract class Beverage {
 
 然后是三个基础饮料实现类，红茶、绿茶和咖啡：
 
-```text
+```
 public class BlackTea extends Beverage {
       public String getDescription() {
         return "红茶";
@@ -791,7 +790,7 @@ public class GreenTea extends Beverage {
 
 定义调料，也就是装饰者的基类，此类必须继承自 Beverage：
 
-```text
+```
 // 调料
 public abstract class Condiment extends Beverage {
 
@@ -800,7 +799,7 @@ public abstract class Condiment extends Beverage {
 
 然后我们来定义柠檬、芒果等具体的调料，它们属于装饰者，毫无疑问，这些调料肯定都需要继承调料 Condiment 类：
 
-```text
+```
 public class Lemon extends Condiment {
     private Beverage bevarage;
     // 这里很关键，需要传入具体的饮料，如需要传入没有被装饰的红茶或绿茶，
@@ -835,7 +834,7 @@ public class Mango extends Condiment {
 
 看客户端调用：
 
-```text
+```
 public static void main(String[] args) {
     // 首先，我们需要一个基础饮料，红茶、绿茶或咖啡
     Beverage beverage = new GreenTea();
@@ -850,7 +849,7 @@ public static void main(String[] args) {
 
 如果我们需要 **芒果-珍珠-双份柠檬-红茶**：
 
-```text
+```
 Beverage beverage = new Mongo(new Pearl(new Lemon(new Lemon(new BlackTea()))));
 ```
 
@@ -872,7 +871,7 @@ FilterInputStream 承接了装饰模式的关键节点，它的实现类是一�
 
 当然，在 java IO 中，如果我们使用装饰器的话，就不太适合面向接口编程了，如：
 
-```text
+```
 InputStream inputStream = new LineNumberInputStream(new BufferedInputStream(new FileInputStream("")));
 ```
 
@@ -880,7 +879,7 @@ InputStream inputStream = new LineNumberInputStream(new BufferedInputStream(new 
 
 我们应该像下面这样使用：
 
-```text
+```
 DataInputStream is = new DataInputStream(
                               new BufferedInputStream(
                                   new FileInputStream("")));
@@ -894,7 +893,7 @@ DataInputStream is = new DataInputStream(
 
 首先，我们定义一个接口：
 
-```text
+```
 public interface Shape {
    void draw();
 }
@@ -902,7 +901,7 @@ public interface Shape {
 
 定义几个实现类：
 
-```text
+```
 public class Circle implements Shape {
     @Override
     public void draw() {
@@ -920,7 +919,7 @@ public class Rectangle implements Shape {
 
 客户端调用：
 
-```text
+```
 public static void main(String[] args) {
     // 画一个圆形
       Shape circle = new Circle();
@@ -932,13 +931,13 @@ public static void main(String[] args) {
 }
 ```
 
-以上是我们常写的代码，我们需要画圆就要先实例化圆，画长方形就需要先实例化一个长方形，然后再调用相应的 draw\(\) 方法。
+以上是我们常写的代码，我们需要画圆就要先实例化圆，画长方形就需要先实例化一个长方形，然后再调用相应的 draw() 方法。
 
 下面，我们看看怎么用门面模式来让客户端调用更加友好一些。
 
 我们先定义一个门面：
 
-```text
+```
 public class ShapeMaker {
    private Shape circle;
    private Shape rectangle;
@@ -968,7 +967,7 @@ public class ShapeMaker {
 
 看看现在客户端怎么调用：
 
-```text
+```
 public static void main(String[] args) {
   ShapeMaker shapeMaker = new ShapeMaker();
 
@@ -987,7 +986,7 @@ public static void main(String[] args) {
 
 直接看一个例子吧，每个员工都有姓名、部门、薪水这些属性，同时还有下属员工集合（虽然可能集合为空），而下属员工和自己的结构是一样的，也有姓名、部门这些属性，同时也有他们的下属员工集合。
 
-```text
+```
 public class Employee {
    private String name;
    private String dept;
@@ -1019,7 +1018,7 @@ public class Employee {
 }
 ```
 
-通常，这种类需要定义 add\(node\)、remove\(node\)、getChildren\(\) 这些方法。
+通常，这种类需要定义 add(node)、remove(node)、getChildren() 这些方法。
 
 这说的其实就是组合模式，这种简单的模式我就不做过多介绍了，相信各位读者也不喜欢看我写废话。
 
@@ -1049,7 +1048,7 @@ public class Employee {
 
 首先，先定义一个策略接口：
 
-```text
+```
 public interface Strategy {
    public void draw(int radius, int x, int y);
 }
@@ -1057,7 +1056,7 @@ public interface Strategy {
 
 然后我们定义具体的几个策略：
 
-```text
+```
 public class RedPen implements Strategy {
    @Override
    public void draw(int radius, int x, int y) {
@@ -1080,7 +1079,7 @@ public class BluePen implements Strategy {
 
 使用策略的类：
 
-```text
+```
 public class Context {
    private Strategy strategy;
 
@@ -1096,7 +1095,7 @@ public class Context {
 
 客户端演示：
 
-```text
+```
 public static void main(String[] args) {
     Context context = new Context(new BluePen()); // 使用绿色笔来画
       context.executeDraw(10, 0, 0);
@@ -1119,7 +1118,7 @@ public static void main(String[] args) {
 
 首先，需要定义主题，每个主题需要持有观察者列表的引用，用于在数据变更的时候通知各个观察者：
 
-```text
+```
 public class Subject {
     private List<Observer> observers = new ArrayList<Observer>();
     private int state;
@@ -1146,7 +1145,7 @@ public class Subject {
 
 定义观察者接口：
 
-```text
+```
 public abstract class Observer {
     protected Subject subject;
     public abstract void update();
@@ -1157,7 +1156,7 @@ public abstract class Observer {
 
 我们来定义具体的几个观察者类：
 
-```text
+```
 public class BinaryObserver extends Observer {
     // 在构造方法中进行订阅主题
     public BinaryObserver(Subject subject) {
@@ -1188,7 +1187,7 @@ public class HexaObserver extends Observer {
 
 客户端使用也非常简单：
 
-```text
+```
 public static void main(String[] args) {
     // 先定义一个主题
     Subject subject1 = new Subject();
@@ -1203,7 +1202,7 @@ public static void main(String[] args) {
 
 output:
 
-```text
+```
 订阅的数据发生变化，新的数据处理为二进制值为：1011
 订阅的数据发生变化，新的数据处理为十六进制值为：B
 ```
@@ -1224,7 +1223,7 @@ output:
 
 首先，我们要定义流程上节点的基类：
 
-```text
+```
 public abstract class RuleHandler {
     // 后继节点
     protected RuleHandler successor;
@@ -1245,7 +1244,7 @@ public abstract class RuleHandler {
 
 校验用户是否是新用户：
 
-```text
+```
 public class NewUserRuleHandler extends RuleHandler {
     public void apply(Context context) {
         if (context.isNewUser()) {
@@ -1262,7 +1261,7 @@ public class NewUserRuleHandler extends RuleHandler {
 
 校验用户所在地区是否可以参与：
 
-```text
+```
 public class LocationRuleHandler extends RuleHandler {
     public void apply(Context context) {
         boolean allowed = activityService.isSupportedLocation(context.getLocation);
@@ -1279,7 +1278,7 @@ public class LocationRuleHandler extends RuleHandler {
 
 校验奖品是否已领完：
 
-```text
+```
 public class LimitRuleHandler extends RuleHandler {
     public void apply(Context context) {
         int remainedTimes = activityService.queryRemainedTimes(context); // 查询剩余奖品
@@ -1296,7 +1295,7 @@ public class LimitRuleHandler extends RuleHandler {
 
 客户端：
 
-```text
+```
 public static void main(String[] args) {
     RuleHandler newUserHandler = new NewUserRuleHandler();
     RuleHandler locationHandler = new LocationRuleHandler();
@@ -1319,7 +1318,7 @@ public static void main(String[] args) {
 
 通常会有一个抽象类：
 
-```text
+```
 public abstract class AbstractTemplate {
     // 这就是模板方法
     public void templateMethod() {
@@ -1340,11 +1339,11 @@ public abstract class AbstractTemplate {
 }
 ```
 
-模板方法中调用了 3 个方法，其中 apply\(\) 是抽象方法，子类必须实现它，其实模板方法中有几个抽象方法完全是自由的，我们也可以将三个方法都设置为抽象方法，让子类来实现。也就是说，模板方法只负责定义第一步应该要做什么，第二步应该做什么，第三步应该做什么，至于怎么做，由子类来实现。
+模板方法中调用了 3 个方法，其中 apply() 是抽象方法，子类必须实现它，其实模板方法中有几个抽象方法完全是自由的，我们也可以将三个方法都设置为抽象方法，让子类来实现。也就是说，模板方法只负责定义第一步应该要做什么，第二步应该做什么，第三步应该做什么，至于怎么做，由子类来实现。
 
 我们写一个实现类：
 
-```text
+```
 public class ConcreteTemplate extends AbstractTemplate {
     public void apply() {
         System.out.println("子类实现抽象方法 apply");
@@ -1358,7 +1357,7 @@ public class ConcreteTemplate extends AbstractTemplate {
 
 客户端调用演示：
 
-```text
+```
 public static void main(String[] args) {
     AbstractTemplate t = new ConcreteTemplate();
     // 调用模板方法
@@ -1378,7 +1377,7 @@ update: 2017-10-19
 
 定义状态接口：
 
-```text
+```
 public interface State {
     public void doAction(Context context);
 }
@@ -1386,7 +1385,7 @@ public interface State {
 
 定义减库存的状态：
 
-```text
+```
 public class DeductState implements State {
 
     public void doAction(Context context) {
@@ -1404,7 +1403,7 @@ public class DeductState implements State {
 
 定义补库存状态：
 
-```text
+```
 public class RevertState implements State {
 
     public void doAction(Context context) {
@@ -1420,9 +1419,9 @@ public class RevertState implements State {
 }
 ```
 
-前面用到了 context.setState\(this\)，我们来看看怎么定义 Context 类：
+前面用到了 context.setState(this)，我们来看看怎么定义 Context 类：
 
-```text
+```
 public class Context {
     private State state;
       private String name;
@@ -1441,7 +1440,7 @@ public class Context {
 
 我们来看下客户端调用，大家就一清二楚了：
 
-```text
+```
 public static void main(String[] args) {
     // 我们需要操作的是 iPhone X
     Context context = new Context("iPhone X");
@@ -1472,4 +1471,3 @@ public static void main(String[] args) {
 学习设计模式的目的是为了让我们的代码更加的优雅、易维护、易扩展。这次整理这篇文章，让我重新审视了一下各个设计模式，对我自己而言收获还是挺大的。我想，文章的最大收益者一般都是作者本人，为了写一篇文章，需要巩固自己的知识，需要寻找各种资料，而且，自己写过的才最容易记住，也算是我给读者的建议吧。
 
 **·END·**
-

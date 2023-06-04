@@ -51,7 +51,7 @@
 
 上面都只是定性的分析，香农把[随机变量](https://link.zhihu.com/?target=https%3A//zh.wikipedia.org/wiki/%25E9%259A%258F%25E6%259C%25BA%25E5%258F%2598%25E9%2587%258F)X的熵值 Η定义如下，其值域为{x1, ..., xn}
 
-![\mathrm{H} \(X\)=-\sum \_{{i}}{{\mathrm  {P}}\(x\_{i}\)\log \_{b}{\mathrm  {P}}\(x\_{i}\)}](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28X%29%3D-%5Csum+_%7B%7Bi%7D%7D%7B%7B%5Cmathrm++%7BP%7D%7D%28x_%7Bi%7D%29%5Clog+_%7Bb%7D%7B%5Cmathrm++%7BP%7D%7D%28x_%7Bi%7D%29%7D)
+![\mathrm{H} (X)=-\sum \_\{{i\}}\{{\mathrm  {P\}}(x\_{i})\log \_{b}{\mathrm  {P\}}(x\_{i})}](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28X%29%3D-%5Csum+\_%7B%7Bi%7D%7D%7B%7B%5Cmathrm++%7BP%7D%7D%28x\_%7Bi%7D%29%5Clog+\_%7Bb%7D%7B%5Cmathrm++%7BP%7D%7D%28x\_%7Bi%7D%29%7D)
 
 b是对数所使用的底。当b = 2，熵的单位是**bit**。
 
@@ -61,7 +61,7 @@ P为X的[概率质量函数](https://link.zhihu.com/?target=https%3A//zh.wikiped
 
 让我们用抛硬币来举例，“抛一次硬币是正面”这个随机变量X的**信息熵**为
 
-![\mathrm{H} \(X\)=-\(\frac{1}{2}log \_{2}\frac{1}{2} + \frac{1}{2}log \_{2}\frac{1}{2}\) = -log\_{2}\frac{1}{2}=1](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28X%29%3D-%28%5Cfrac%7B1%7D%7B2%7Dlog+_%7B2%7D%5Cfrac%7B1%7D%7B2%7D+%2B+%5Cfrac%7B1%7D%7B2%7Dlog+_%7B2%7D%5Cfrac%7B1%7D%7B2%7D%29+%3D+-log_%7B2%7D%5Cfrac%7B1%7D%7B2%7D%3D1)
+![\mathrm{H} (X)=-(\frac{1}{2}log \_{2}\frac{1}{2} + \frac{1}{2}log \_{2}\frac{1}{2}) = -log\_{2}\frac{1}{2}=1](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28X%29%3D-%28%5Cfrac%7B1%7D%7B2%7Dlog+\_%7B2%7D%5Cfrac%7B1%7D%7B2%7D+%2B+%5Cfrac%7B1%7D%7B2%7Dlog+\_%7B2%7D%5Cfrac%7B1%7D%7B2%7D%29+%3D+-log\_%7B2%7D%5Cfrac%7B1%7D%7B2%7D%3D1)
 
 也就是抛一次硬币是正面这个事件的信息熵只需要1 bit，也就是只需要用1位的二进制数就可以表示这个信息大小。
 
@@ -75,19 +75,19 @@ P为X的[概率质量函数](https://link.zhihu.com/?target=https%3A//zh.wikiped
 
 首先，”**1000桶水其中有一桶有毒**“这个随机变量X的**信息熵**为
 
-![\mathrm{H} \(X\)=-log \_{2}\frac{1}{1000} =9.966](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28X%29%3D-log+_%7B2%7D%5Cfrac%7B1%7D%7B1000%7D+%3D9.966)
+![\mathrm{H} (X)=-log \_{2}\frac{1}{1000} =9.966](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28X%29%3D-log+\_%7B2%7D%5Cfrac%7B1%7D%7B1000%7D+%3D9.966)
 
 1只猪喝水以后的要么活着，要么死去，一共有两种状态，所以”1只猪喝完水以后的状态“这个随机变量Y的信息熵为
 
-![\mathrm{H} \(Z\)=-\(\frac{1}{2}log \_{2}\frac{1}{2} + \frac{1}{2}log \_{2}\frac{1}{2}\) = -log\_{2}\frac{1}{2}=1](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28Z%29%3D-%28%5Cfrac%7B1%7D%7B2%7Dlog+_%7B2%7D%5Cfrac%7B1%7D%7B2%7D+%2B+%5Cfrac%7B1%7D%7B2%7Dlog+_%7B2%7D%5Cfrac%7B1%7D%7B2%7D%29+%3D+-log_%7B2%7D%5Cfrac%7B1%7D%7B2%7D%3D1)
+![\mathrm{H} (Z)=-(\frac{1}{2}log \_{2}\frac{1}{2} + \frac{1}{2}log \_{2}\frac{1}{2}) = -log\_{2}\frac{1}{2}=1](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28Z%29%3D-%28%5Cfrac%7B1%7D%7B2%7Dlog+\_%7B2%7D%5Cfrac%7B1%7D%7B2%7D+%2B+%5Cfrac%7B1%7D%7B2%7Dlog+\_%7B2%7D%5Cfrac%7B1%7D%7B2%7D%29+%3D+-log\_%7B2%7D%5Cfrac%7B1%7D%7B2%7D%3D1)
 
 n只猪喝完水会有 ![2^n](https://www.zhihu.com/equation?tex=2%5En) 种状态，即"n只猪喝完水以后的状态"这个随机变量Y的信息熵为
 
-![\mathrm{H} \(Y\)=-\sum \_{{i=1}}^{2^n}{\frac{1}{2^n}}{\log \_{2}{\frac{1}{2^n}}}=-\log \_{2}{\frac{1}{2^n}}=n](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28Y%29%3D-%5Csum+_%7B%7Bi%3D1%7D%7D%5E%7B2%5En%7D%7B%5Cfrac%7B1%7D%7B2%5En%7D%7D%7B%5Clog+_%7B2%7D%7B%5Cfrac%7B1%7D%7B2%5En%7D%7D%7D%3D-%5Clog+_%7B2%7D%7B%5Cfrac%7B1%7D%7B2%5En%7D%7D%3Dn)
+![\mathrm{H} (Y)=-\sum \_\{{i=1\}}^{2^n}{\frac{1}{2^n\}}{\log \_{2}{\frac{1}{2^n\}}}=-\log \_{2}{\frac{1}{2^n\}}=n](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28Y%29%3D-%5Csum+\_%7B%7Bi%3D1%7D%7D%5E%7B2%5En%7D%7B%5Cfrac%7B1%7D%7B2%5En%7D%7D%7B%5Clog+\_%7B2%7D%7B%5Cfrac%7B1%7D%7B2%5En%7D%7D%7D%3D-%5Clog+\_%7B2%7D%7B%5Cfrac%7B1%7D%7B2%5En%7D%7D%3Dn)
 
 所以，按照题目要求，如果至少需要n头猪能够找到这桶毒水，那么随机变量Y的信息熵必须要大于随机变量X的信息熵，也就是
 
-H\(Y\) &gt;= H\(X\) ，也就是 n &gt;= 9.966，即 **n = 10**
+H(Y) >= H(X) ，也就是 n >= 9.966，即 **n = 10**
 
 当我们用信息熵算出来了n的最小值以后，我们就可以坚信，理论上n=10一定是最优解，任何想方设法想找到小于10的值都是徒劳的。
 
@@ -99,7 +99,7 @@ H\(Y\) &gt;= H\(X\) ，也就是 n &gt;= 9.966，即 **n = 10**
 
 **至于到底采用什么方案，这涉及到术的层面，即使我们暂时想不到，我们也会有努力的方向，并且知道努力的边界在哪里，不会做类似寻找永动机的事情。**
 
-下面我们来看下图具体的方案![](data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='606'%20height='663'></svg>)
+下面我们来看下图具体的方案![](data:image/svg+xml;utf8,\<svg%20xmlns='http://www.w3.org/2000/svg'%20width='606'%20height='663'>\</svg>)
 
 我们将1000桶水按照2进制编码，如上图第一行，需要10位二进制数。于是有
 
@@ -133,11 +133,11 @@ H\(Y\) &gt;= H\(X\) ，也就是 n &gt;= 9.966，即 **n = 10**
 
 ”**1000桶水其中有一桶有毒**“这个随机变量X的**信息熵**为
 
-![\mathrm{H} \(X\)=-log \_{2}\frac{1}{1000} =9.966](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28X%29%3D-log+_%7B2%7D%5Cfrac%7B1%7D%7B1000%7D+%3D9.966)
+![\mathrm{H} (X)=-log \_{2}\frac{1}{1000} =9.966](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28X%29%3D-log+\_%7B2%7D%5Cfrac%7B1%7D%7B1000%7D+%3D9.966)
 
 而对于猪的状态就不太一样了，我们可以想象一下，一只猪在一个小时内会有几种状态？
 
-1.  在第0分钟的时候喝了一桶水以后，第15分钟死去。
+1. &#x20;在第0分钟的时候喝了一桶水以后，第15分钟死去。
 2. 第15分钟依然活着，喝了一桶水以后，第30分钟死去。
 3. 第30分钟依然活着，喝了一桶水以后，第45分钟死去。
 4. 第45分钟依然活着，喝了一桶水以后，第60分钟死去。
@@ -145,21 +145,21 @@ H\(Y\) &gt;= H\(X\) ，也就是 n &gt;= 9.966，即 **n = 10**
 
 可见，1只猪1个小时以后会有5种状态，所以”1只猪1个小时后的状态“这个随机变量Z的信息熵为
 
-![\mathrm{H} \(Z\)=-\( 5 \times \frac{1}{5}log \_{2}\frac{1}{5} \) = log\_{2}5=2.3219](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28Z%29%3D-%28+5+%5Ctimes+%5Cfrac%7B1%7D%7B5%7Dlog+_%7B2%7D%5Cfrac%7B1%7D%7B5%7D+%29+%3D+log_%7B2%7D5%3D2.3219)
+![\mathrm{H} (Z)=-( 5 \times \frac{1}{5}log \_{2}\frac{1}{5} ) = log\_{2}5=2.3219](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28Z%29%3D-%28+5+%5Ctimes+%5Cfrac%7B1%7D%7B5%7Dlog+\_%7B2%7D%5Cfrac%7B1%7D%7B5%7D+%29+%3D+log\_%7B2%7D5%3D2.3219)
 
 n只猪1个小时后会有 ![5^n](https://www.zhihu.com/equation?tex=5%5En) 种状态，即"n只猪1个小时以后的状态"这个随机变量Y的信息熵为
 
-![\mathrm{H} \(Y\)=-\sum \_{{i=1}}^{5^n}{\frac{1}{5^n}}{\log \_{2}{\frac{1}{5^n}}}=-\log \_{2}{\frac{1}{5^n}}=n \log\_{2}{5}=2.3219n](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28Y%29%3D-%5Csum+_%7B%7Bi%3D1%7D%7D%5E%7B5%5En%7D%7B%5Cfrac%7B1%7D%7B5%5En%7D%7D%7B%5Clog+_%7B2%7D%7B%5Cfrac%7B1%7D%7B5%5En%7D%7D%7D%3D-%5Clog+_%7B2%7D%7B%5Cfrac%7B1%7D%7B5%5En%7D%7D%3Dn+%5Clog_%7B2%7D%7B5%7D%3D2.3219n)
+![\mathrm{H} (Y)=-\sum \_\{{i=1\}}^{5^n}{\frac{1}{5^n\}}{\log \_{2}{\frac{1}{5^n\}}}=-\log \_{2}{\frac{1}{5^n\}}=n \log\_{2}{5}=2.3219n](https://www.zhihu.com/equation?tex=%5Cmathrm%7BH%7D+%28Y%29%3D-%5Csum+\_%7B%7Bi%3D1%7D%7D%5E%7B5%5En%7D%7B%5Cfrac%7B1%7D%7B5%5En%7D%7D%7B%5Clog+\_%7B2%7D%7B%5Cfrac%7B1%7D%7B5%5En%7D%7D%7D%3D-%5Clog+\_%7B2%7D%7B%5Cfrac%7B1%7D%7B5%5En%7D%7D%3Dn+%5Clog\_%7B2%7D%7B5%7D%3D2.3219n)
 
 所以，按照题目要求，如果至少需要n头猪能够找到这桶毒水，那么随机变量Y的信息熵必须要大于随机变量X的信息熵，也就是
 
-H\(Y\) &gt;= H\(X\) ，也就是 n &gt;= 9.966 / 2.3219 = 4.292，即 **n = 5**
+H(Y) >= H(X) ，也就是 n >= 9.966 / 2.3219 = 4.292，即 **n = 5**
 
 事实上，**对于 n = 5来说，不仅可以检测1000桶水，甚至检测3000桶水都是没有问题的。有兴趣的童鞋可以试着计算一下**。
 
 到此，香农给了我们一个理论极限，但是具体的方案还是需要我们自己进行构造。**得出n=5是依靠我们的理论功底，而得出具体的方案就是我们的工程水平了。**
 
-根据前面简化版本的二进制编码方式的思路，我们是不是可以利用猪的5种状态构造一个5进制编码方式呢？如下图所示。![](data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='667'%20height='707'></svg>)![](data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='667'%20height='708'></svg>)
+根据前面简化版本的二进制编码方式的思路，我们是不是可以利用猪的5种状态构造一个5进制编码方式呢？如下图所示。![](data:image/svg+xml;utf8,\<svg%20xmlns='http://www.w3.org/2000/svg'%20width='667'%20height='707'>\</svg>)![](data:image/svg+xml;utf8,\<svg%20xmlns='http://www.w3.org/2000/svg'%20width='667'%20height='708'>\</svg>)
 
 首先，将1000桶水按照5进制编码的方式排列，如上图所示，需要5位5进制数。
 
@@ -197,9 +197,9 @@ H\(Y\) &gt;= H\(X\) ，也就是 n &gt;= 9.966 / 2.3219 = 4.292，即 **n = 5**
 
 看到评论中有很多对答案有疑问的，所以补充一下答疑，不一一回复了，谢谢。
 
-1. **有的评论说，一只猪就够，每隔两秒钟喝一次。**
+1\. **有的评论说，一只猪就够，每隔两秒钟喝一次。**
 
- 请参见题目详情限制条件1
+&#x20;请参见题目详情限制条件1
 
 > “1.一滴毒水足以导致一头猪的死亡。死亡时间为15分钟内不确定的某个时间点。”
 
@@ -224,4 +224,3 @@ H\(Y\) &gt;= H\(X\) ，也就是 n &gt;= 9.966 / 2.3219 = 4.292，即 **n = 5**
 所以我们用等概率的方式求出最大信息熵时最小的n，当n再小，最差情况下已经无法测出1000桶水了。
 
 **如果你觉得对你有帮助，请帮忙点赞，谢谢。**
-

@@ -2,7 +2,7 @@
 
 
 
-{% embed url="https://mp.weixin.qq.com/s/cHA6m\_e7yfd64aPaSqY0mg" %}
+{% embed url="https://mp.weixin.qq.com/s/cHA6m_e7yfd64aPaSqY0mg" %}
 
 
 
@@ -10,11 +10,11 @@
 
 ## CPU
 
-一般来讲我们首先会排查 CPU 方面的问题。CPU 异常往往还是比较好定位的。原因包括业务逻辑问题\(死循环\)、频繁 gc 以及上下文切换过多。而最常见的往往是业务逻辑\(或者框架逻辑\)导致的，可以使用 jstack 来分析对应的堆栈情况。
+一般来讲我们首先会排查 CPU 方面的问题。CPU 异常往往还是比较好定位的。原因包括业务逻辑问题(死循环)、频繁 gc 以及上下文切换过多。而最常见的往往是业务逻辑(或者框架逻辑)导致的，可以使用 jstack 来分析对应的堆栈情况。
 
 使用 jstack 分析 CPU 问题
 
-我们先用 ps 命令找到对应进程的 pid\(如果你有好几个目标进程，可以先用 top 看一下哪个占用比较高\)。
+我们先用 ps 命令找到对应进程的 pid(如果你有好几个目标进程，可以先用 top 看一下哪个占用比较高)。
 
 接着用top -H -p pid来找到 CPU 使用率比较高的一些线程
 
@@ -24,19 +24,19 @@
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092342656-092342.jpg)
 
-接着直接在 jstack 中找到相应的堆栈信息jstack pid \|grep 'nid' -C5 –color
+接着直接在 jstack 中找到相应的堆栈信息jstack pid |grep 'nid' -C5 –color
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092342820-092342.jpg)
 
 可以看到我们已经找到了 nid 为 0x42 的堆栈信息，接着只要仔细分析一番即可。
 
-当然更常见的是我们对整个 jstack 文件进行分析，通常我们会比较关注 WAITING 和 TIMED\_WAITING 的部分，BLOCKED 就不用说了。我们可以使用命令cat jstack.log \| grep "java.lang.Thread.State" \| sort -nr \| uniq -c来对 jstack 的状态有一个整体的把握，如果 WAITING 之类的特别多，那么多半是有问题啦。
+当然更常见的是我们对整个 jstack 文件进行分析，通常我们会比较关注 WAITING 和 TIMED\_WAITING 的部分，BLOCKED 就不用说了。我们可以使用命令cat jstack.log | grep "java.lang.Thread.State" | sort -nr | uniq -c来对 jstack 的状态有一个整体的把握，如果 WAITING 之类的特别多，那么多半是有问题啦。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092342879-092342.jpg)
 
 频繁 gc
 
-当然我们还是会使用 jstack 来分析问题，但有时候我们可以先确定下 gc 是不是太频繁，使用jstat -gc pid 1000命令来对 gc 分代变化情况进行观察，1000 表示采样间隔\(ms\)，S0C/S1C、S0U/S1U、EC/EU、OC/OU、MC/MU 分别代表两个 Survivor 区、Eden 区、老年代、元数据区的容量和使用量。YGC/YGT、FGC/FGCT、GCT 则代表 YoungGc、FullGc 的耗时和次数以及总耗时。如果看到 gc 比较频繁，再针对 gc 方面做进一步分析，具体可以参考一下 gc 章节的描述。
+当然我们还是会使用 jstack 来分析问题，但有时候我们可以先确定下 gc 是不是太频繁，使用jstat -gc pid 1000命令来对 gc 分代变化情况进行观察，1000 表示采样间隔(ms)，S0C/S1C、S0U/S1U、EC/EU、OC/OU、MC/MU 分别代表两个 Survivor 区、Eden 区、老年代、元数据区的容量和使用量。YGC/YGT、FGC/FGCT、GCT 则代表 YoungGc、FullGc 的耗时和次数以及总耗时。如果看到 gc 比较频繁，再针对 gc 方面做进一步分析，具体可以参考一下 gc 章节的描述。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092500369-092500.jpg)
 
@@ -46,7 +46,7 @@
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092500430-092500.jpg)
 
-cs\(context switch\)一列则代表了上下文切换的次数。
+cs(context switch)一列则代表了上下文切换的次数。
 
 如果我们希望对特定的 pid 进行监控那么可以使用 pidstat -w pid命令，cswch 和 nvcswch 表示自愿及非自愿切换。
 
@@ -106,7 +106,7 @@ JMV 中的内存不足，OOM 大致可以分为以下几种：
 
 **Caused by: java.lang.OutOfMemoryError: Meta space**
 
-这个意思是元数据区的内存占用已经达到XX:MaxMetaspaceSize设置的最大值，排查思路和上面的一致，参数方面可以通过XX:MaxPermSize来进行调整\(这里就不说 1.8 以前的永久代了\)。
+这个意思是元数据区的内存占用已经达到XX:MaxMetaspaceSize设置的最大值，排查思路和上面的一致，参数方面可以通过XX:MaxPermSize来进行调整(这里就不说 1.8 以前的永久代了)。
 
 Stack Overflow
 
@@ -122,7 +122,7 @@ Stack Overflow
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343579-092343.jpg)
 
-通过 mat\(Eclipse Memory Analysis Tools\)导入 dump 文件进行分析，内存泄漏问题一般我们直接选 Leak Suspects 即可，mat 给出了内存泄漏的建议。另外也可以选择 Top Consumers 来查看最大对象报告。和线程相关的问题可以选择 thread overview 进行分析。除此之外就是选择 Histogram 类概览来自己慢慢分析，大家可以搜搜 mat 的相关教程。
+通过 mat(Eclipse Memory Analysis Tools)导入 dump 文件进行分析，内存泄漏问题一般我们直接选 Leak Suspects 即可，mat 给出了内存泄漏的建议。另外也可以选择 Top Consumers 来查看最大对象报告。和线程相关的问题可以选择 thread overview 进行分析。除此之外就是选择 Histogram 类概览来自己慢慢分析，大家可以搜搜 mat 的相关教程。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343638-092343.jpg)
 
@@ -134,7 +134,7 @@ gc 问题和线程
 
 gc 问题除了影响 CPU 也会影响内存，排查思路也是一致的。一般先使用 jstat 来查看分代变化情况，比如 youngGC 或者 fullGC 次数是不是太多呀；EU、OU 等指标增长是不是异常呀等。
 
-线程的话太多而且不被及时 gc 也会引发 oom，大部分就是之前说的unable to create new native thread。除了 jstack 细细分析 dump 文件外，我们一般先会看下总体线程，通过pstreee -p pid \|wc -l。
+线程的话太多而且不被及时 gc 也会引发 oom，大部分就是之前说的unable to create new native thread。除了 jstack 细细分析 dump 文件外，我们一般先会看下总体线程，通过pstreee -p pid |wc -l。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343695-092343.jpg)
 
@@ -146,7 +146,7 @@ gc 问题除了影响 CPU 也会影响内存，排查思路也是一致的。一
 
 如果碰到堆外内存溢出，那可真是太不幸了。首先堆外内存溢出表现就是物理常驻内存增长快，报错的话视使用方式都不确定，如果由于使用 Netty 导致的，那错误日志里可能会出现OutOfDirectMemoryError错误，如果直接是 DirectByteBuffer，那会报OutOfMemoryError: Direct buffer memory。
 
-堆外内存溢出往往是和 NIO 的使用相关，一般我们先通过 pmap 来查看下进程占用的内存情况pmap -x pid \| sort -rn -k3 \| head -30，这段意思是查看对应 pid 倒序前 30 大的内存段。这边可以再一段时间后再跑一次命令看看内存增长情况，或者和正常机器比较可疑的内存段在哪里。
+堆外内存溢出往往是和 NIO 的使用相关，一般我们先通过 pmap 来查看下进程占用的内存情况pmap -x pid | sort -rn -k3 | head -30，这段意思是查看对应 pid 倒序前 30 大的内存段。这边可以再一段时间后再跑一次命令看看内存增长情况，或者和正常机器比较可疑的内存段在哪里。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343821-092343.jpg)
 
@@ -154,7 +154,7 @@ gc 问题除了影响 CPU 也会影响内存，排查思路也是一致的。一
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343878-092344.jpg)
 
-获取 dump 文件后可用 heaxdump 进行查看hexdump -C filename \| less，不过大多数看到的都是二进制乱码。
+获取 dump 文件后可用 heaxdump 进行查看hexdump -C filename | less，不过大多数看到的都是二进制乱码。
 
 NMT 是 Java7U40 引入的 HotSpot 新特性，配合 jcmd 命令我们就可以看到具体内存组成了。需要在启动参数中加入 -XX:NativeMemoryTracking=summary 或者 -XX:NativeMemoryTracking=detail，会有略微性能损耗。
 
@@ -162,13 +162,13 @@ NMT 是 Java7U40 引入的 HotSpot 新特性，配合 jcmd 命令我们就可以
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092343963-092344.jpg)
 
-然后等放一段时间后再去看看内存增长的情况，通过jcmd pid VM.native\_memory detail.diff\(summary.diff\)做一下 summary 或者 detail 级别的 diff。
+然后等放一段时间后再去看看内存增长的情况，通过jcmd pid VM.native\_memory detail.diff(summary.diff)做一下 summary 或者 detail 级别的 diff。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344020-092344.jpg)
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344082-092344.jpg)
 
-可以看到 jcmd 分析出来的内存十分详细，包括堆内、线程以及 gc\(所以上述其他内存异常其实都可以用 nmt 来分析\)，这边堆外内存我们重点关注 Internal 的内存增长，如果增长十分明显的话那就是有问题了。
+可以看到 jcmd 分析出来的内存十分详细，包括堆内、线程以及 gc(所以上述其他内存异常其实都可以用 nmt 来分析)，这边堆外内存我们重点关注 Internal 的内存增长，如果增长十分明显的话那就是有问题了。
 
 detail 级别的话还会有具体内存段的增长情况，如下图。
 
@@ -180,7 +180,7 @@ detail 级别的话还会有具体内存段的增长情况，如下图。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344209-092344.jpg)
 
-不过其实上面那些操作也很难定位到具体的问题点，关键还是要看错误日志栈，找到可疑的对象，搞清楚它的回收机制，然后去分析对应的对象。比如 DirectByteBuffer 分配内存的话，是需要 full GC 或者手动 system.gc 来进行回收的\(所以最好不要使用-XX:+DisableExplicitGC\)。那么其实我们可以跟踪一下 DirectByteBuffer 对象的内存情况，通过jmap -histo:live pid手动触发 fullGC 来看看堆外内存有没有被回收。如果被回收了，那么大概率是堆外内存本身分配的太小了，通过-XX:MaxDirectMemorySize进行调整。如果没有什么变化，那就要使用 jmap 去分析那些不能被 gc 的对象，以及和 DirectByteBuffer 之间的引用关系了。
+不过其实上面那些操作也很难定位到具体的问题点，关键还是要看错误日志栈，找到可疑的对象，搞清楚它的回收机制，然后去分析对应的对象。比如 DirectByteBuffer 分配内存的话，是需要 full GC 或者手动 system.gc 来进行回收的(所以最好不要使用-XX:+DisableExplicitGC)。那么其实我们可以跟踪一下 DirectByteBuffer 对象的内存情况，通过jmap -histo:live pid手动触发 fullGC 来看看堆外内存有没有被回收。如果被回收了，那么大概率是堆外内存本身分配的太小了，通过-XX:MaxDirectMemorySize进行调整。如果没有什么变化，那就要使用 jmap 去分析那些不能被 gc 的对象，以及和 DirectByteBuffer 之间的引用关系了。
 
 ## **GC 问题**
 
@@ -211,7 +211,7 @@ fullGC 的原因可能包括以下这些，以及参数调整方面的一些思�
 * 并发阶段失败：在并发标记阶段，MixGC 之前老年代就被填满了，那么这时候 G1 就会放弃标记周期。这种情况，可能就需要增加堆大小，或者调整并发标记线程数-XX:ConcGCThreads。
 * 晋升失败：在 GC 的时候没有足够的内存供存活/晋升对象使用，所以触发了 Full GC。这时候可以通过-XX:G1ReservePercent来增加预留内存百分比，减少-XX:InitiatingHeapOccupancyPercent来提前启动标记，-XX:ConcGCThreads来增加标记线程数也是可以的。
 * 大对象分配失败：大对象找不到合适的 region 空间进行分配，就会进行 fullGC，这种情况下可以增大内存或者增大-XX:G1HeapRegionSize。
-* 程序主动执行 System.gc\(\)：不要随便写就对了。
+* 程序主动执行 System.gc()：不要随便写就对了。
 
 另外，我们可以在启动参数中配置-XX:HeapDumpPath=/xxx/dump.hprof来 dump fullGC 相关的文件，并通过 jinfo 来进行 gc 前后的 dump
 
@@ -251,13 +251,13 @@ tcp 队列溢出是个相对底层的错误，它可能会造成超时、rst 等
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344338-092344.jpg)
 
-如上图所示，这里有两个队列：syns queue\(半连接队列）、accept queue（全连接队列）。三次握手，在 server 收到 client 的 syn 后，把消息放到 syns queue，回复 syn+ack 给 client，server 收到 client 的 ack，如果这时 accept queue 没满，那就从 syns queue 拿出暂存的信息放入 accept queue 中，否则按 tcp\_abort\_on\_overflow 指示的执行。
+如上图所示，这里有两个队列：syns queue(半连接队列）、accept queue（全连接队列）。三次握手，在 server 收到 client 的 syn 后，把消息放到 syns queue，回复 syn+ack 给 client，server 收到 client 的 ack，如果这时 accept queue 没满，那就从 syns queue 拿出暂存的信息放入 accept queue 中，否则按 tcp\_abort\_on\_overflow 指示的执行。
 
 tcp\_abort\_on\_overflow 0 表示如果三次握手第三步的时候 accept queue 满了那么 server 扔掉 client 发过来的 ack。tcp\_abort\_on\_overflow 1 则表示第三步的时候如果全连接队列满了，server 发送一个 rst 包给 client，表示废掉这个握手过程和这个连接，意味着日志里可能会有很多connection reset / connection reset by peer。
 
 那么在实际开发中，我们怎么能快速定位到 tcp 队列溢出呢？
 
-**netstat 命令，执行 netstat -s \| egrep "listen\|LISTEN"**
+**netstat 命令，执行 netstat -s | egrep "listen|LISTEN"**
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344395-092344.jpg)
 
@@ -271,7 +271,7 @@ tcp\_abort\_on\_overflow 0 表示如果三次握手第三步的时候 accept que
 
 接着我们看看怎么设置全连接、半连接队列大小吧：
 
-全连接队列的大小取决于 min\(backlog, somaxconn\)。backlog 是在 socket 创建的时候传入的，somaxconn 是一个 os 级别的系统参数。而半连接队列的大小取决于 max\(64, /proc/sys/net/ipv4/tcp\_max\_syn\_backlog\)。
+全连接队列的大小取决于 min(backlog, somaxconn)。backlog 是在 socket 创建的时候传入的，somaxconn 是一个 os 级别的系统参数。而半连接队列的大小取决于 max(64, /proc/sys/net/ipv4/tcp\_max\_syn\_backlog)。
 
 在日常开发中，我们往往使用 servlet 容器作为服务端，所以我们有时候也需要关注容器的连接队列大小。在 Tomcat 中 backlog 叫做acceptCount，在 Jetty 里面则是acceptQueueSize。
 
@@ -291,7 +291,7 @@ RST 包表示连接重置，用于关闭一些无用的连接，通常表示异�
 
 **客户端或服务端有一边发生了异常，该方向对端发送 RST 以告知关闭连接**
 
-我们上面讲的 tcp 队列溢出发送 RST 包其实也是属于这一种。这种往往是由于某些原因，一方无法再能正常处理请求连接了\(比如程序崩了，队列满了\)，从而告知另一方关闭连接。
+我们上面讲的 tcp 队列溢出发送 RST 包其实也是属于这一种。这种往往是由于某些原因，一方无法再能正常处理请求连接了(比如程序崩了，队列满了)，从而告知另一方关闭连接。
 
 **接收到的 TCP 报文不在已知的 TCP 连接内**
 
@@ -315,9 +315,9 @@ TIME\_WAIT 和 CLOSE\_WAIT
 
 TIME\_WAIT 和 CLOSE\_WAIT 是啥意思相信大家都知道。
 
-在线上时，我们可以直接用命令netstat -n \| awk '/^tcp/ {++S\[$NF\]} END {for\(a in S\) print a, S\[a\]}'来查看 time-wait 和 close\_wait 的数量
+在线上时，我们可以直接用命令netstat -n | awk '/^tcp/ {++S\[$NF]} END {for(a in S) print a, S\[a]}'来查看 time-wait 和 close\_wait 的数量
 
-用 ss 命令会更快ss -ant \| awk '{++S\[$1\]} END {for\(a in S\) print a, S\[a\]}'
+用 ss 命令会更快ss -ant | awk '{++S\[$1]} END {for(a in S) print a, S\[a]}'
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/11/640-20200711092344633-092344.jpg)
 
@@ -352,6 +352,4 @@ close\_wait 往往都是因为应用程序写的有问题，没有在 ACK 后再
 想要定位这类问题，最好是通过 jstack 来分析线程堆栈来排查问题，具体可参考上述章节。这里仅举一个例子。
 
 开发同学说应用上线后 CLOSE\_WAIT 就一直增多，直到挂掉为止，jstack 后找到比较可疑的堆栈是大部分线程都卡在了countdownlatch.await方法，找开发同学了解后得知使用了多线程但是确没有 catch 异常，修改后发现异常仅仅是最简单的升级 sdk 后常出现的class not found。
-
-
 

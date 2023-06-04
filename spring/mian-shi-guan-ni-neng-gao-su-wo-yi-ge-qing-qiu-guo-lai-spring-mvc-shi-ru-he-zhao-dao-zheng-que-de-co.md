@@ -1,6 +1,6 @@
 # 面试官：你能告诉我一个请求过来，Spring MVC 是如何找到正确的 Controller 的？
 
-[https://mp.weixin.qq.com/s?\_\_biz=MzUxOTc4NjEyMw==&mid=2247491254&idx=2&sn=f3731a9a3aab7a70009f54283f75c6cf&chksm=f9f50552ce828c445d582bf2179210408a9ac326ca14f720701b3d281ec800149d78d90512a9&scene=0&xtrack=1\#rd](https://mp.weixin.qq.com/s?__biz=MzUxOTc4NjEyMw==&mid=2247491254&idx=2&sn=f3731a9a3aab7a70009f54283f75c6cf&chksm=f9f50552ce828c445d582bf2179210408a9ac326ca14f720701b3d281ec800149d78d90512a9&scene=0&xtrack=1#rd)
+[https://mp.weixin.qq.com/s?\_\_biz=MzUxOTc4NjEyMw==\&mid=2247491254\&idx=2\&sn=f3731a9a3aab7a70009f54283f75c6cf\&chksm=f9f50552ce828c445d582bf2179210408a9ac326ca14f720701b3d281ec800149d78d90512a9\&scene=0\&xtrack=1#rd](https://mp.weixin.qq.com/s?\_\_biz=MzUxOTc4NjEyMw==\&mid=2247491254\&idx=2\&sn=f3731a9a3aab7a70009f54283f75c6cf\&chksm=f9f50552ce828c445d582bf2179210408a9ac326ca14f720701b3d281ec800149d78d90512a9\&scene=0\&xtrack=1#rd)
 
 来源：cnblogs.com/fangjian0423/p/springMVC-request-mapping.html
 
@@ -14,7 +14,7 @@
 
 SpringMVC是目前主流的Web MVC框架之一。
 
-我们使用浏览器通过地址 [http://ip:port/contextPath/path进行访问，SpringMVC是如何得知用户到底是访问哪个Controller中的方法，这期间到底发生了什么。](http://ip:port/contextPath/path进行访问，SpringMVC是如何得知用户到底是访问哪个Controller中的方法，这期间到底发生了什么。)
+我们使用浏览器通过地址 [http://ip:port/contextPath/path进行访问，SpringMVC是如何得知用户到底是访问哪个Controller中的方法，这期间到底发生了什么。](http://ip/:port/contextPath/path%E8%BF%9B%E8%A1%8C%E8%AE%BF%E9%97%AE%EF%BC%8CSpringMVC%E6%98%AF%E5%A6%82%E4%BD%95%E5%BE%97%E7%9F%A5%E7%94%A8%E6%88%B7%E5%88%B0%E5%BA%95%E6%98%AF%E8%AE%BF%E9%97%AE%E5%93%AA%E4%B8%AAController%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%8C%E8%BF%99%E6%9C%9F%E9%97%B4%E5%88%B0%E5%BA%95%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%E3%80%82)
 
 本文将分析SpringMVC是如何处理请求与Controller之间的映射关系的，让读者知道这个过程中到底发生了什么事情。
 
@@ -34,7 +34,7 @@ Spring3.1版本之后引入的。是一个封装了方法参数、方法注解�
 
 InvocableHandlerMethod的子类ServletInvocableHandlerMethod有个重要的属性HandlerMethodReturnValueHandlerComposite，很明显是对响应进行处理的。
 
-ServletInvocableHandlerMethod这个类在HandlerAdapter对每个请求处理过程中，都会实例化一个出来\(上面提到的属性由HandlerAdapter进行设置\)，分别对请求和返回进行处理。 \(RequestMappingHandlerAdapter源码，实例化ServletInvocableHandlerMethod的时候分别set了上面提到的重要属性\)
+ServletInvocableHandlerMethod这个类在HandlerAdapter对每个请求处理过程中，都会实例化一个出来(上面提到的属性由HandlerAdapter进行设置)，分别对请求和返回进行处理。 (RequestMappingHandlerAdapter源码，实例化ServletInvocableHandlerMethod的时候分别set了上面提到的重要属性)
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/03/640-20200803165350213-165350.jpg)img
 
@@ -46,7 +46,7 @@ HandlerMethod在实例化的时候，构造函数中会初始化这个数组，�
 
 以类DeptController为例：
 
-```text
+```
 @Controller
 @RequestMapping(value = "/dept")
 public class DeptController {
@@ -64,11 +64,11 @@ public class DeptController {
 }
 ```
 
-\(刚初始化时的数据\)
+(刚初始化时的数据)
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/03/640-20200803165350523-165350.jpg)img
 
-\(HandlerAdapter处理后的数据\)
+(HandlerAdapter处理后的数据)
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/03/640-20200803165350789-165350.jpg)img
 
@@ -134,9 +134,9 @@ RequestMethodsRequestCondition：
 
 最终，RequestMappingHandlerMapping中两个比较重要的属性
 
-private final Map handlerMethods = new LinkedHashMap\(\);
+private final Map handlerMethods = new LinkedHashMap();
 
-private final MultiValueMap urlMap = new LinkedMultiValueMap\(\);
+private final MultiValueMap urlMap = new LinkedMultiValueMap();
 
 T为RequestMappingInfo。
 
@@ -146,11 +146,11 @@ T为RequestMappingInfo。
 
 这个过程我们看是如何实现的。
 
-首先看HandlerMethod的获得\(直接看关键代码了\)：
+首先看HandlerMethod的获得(直接看关键代码了)：
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/03/640-20200803165354584-165354.jpg)img
 
-这里的比较器是使用RequestMappingInfo的compareTo方法\(RequestCondition接口定义的\)。
+这里的比较器是使用RequestMappingInfo的compareTo方法(RequestCondition接口定义的)。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/03/640-20200803165354913-165355.jpg)img
 
@@ -162,7 +162,7 @@ T为RequestMappingInfo。
 
 写了这么多，来点例子让我们验证一下吧。
 
-```text
+```
 @Controller
 @RequestMapping(value = "/wildcard")
 public class TestWildcardController {
@@ -206,9 +206,9 @@ public class TestWildcardController {
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/03/640-20200803165355536-165355.jpg)img
 
-当我们访问：[http://localhost:8888/SpringMVCDemo/wildcard/test1的时候。](http://localhost:8888/SpringMVCDemo/wildcard/test1的时候。)
+当我们访问：[http://localhost:8888/SpringMVCDemo/wildcard/test1的时候。](http://localhost:8888/SpringMVCDemo/wildcard/test1%E7%9A%84%E6%97%B6%E5%80%99%E3%80%82)
 
-会先根据 "/wildcard/test1" 找urlMap对应的RequestMappingInfo集合，找不到的话取handlerMethods集合中所有的key集合\(也就是RequestMappingInfo集合\)。
+会先根据 "/wildcard/test1" 找urlMap对应的RequestMappingInfo集合，找不到的话取handlerMethods集合中所有的key集合(也就是RequestMappingInfo集合)。
 
 然后进行匹配，匹配根据RequestCondition的getMatchingCondition方法。
 
@@ -238,7 +238,7 @@ public class TestWildcardController {
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/03/640-20200803165357241-165357.jpg)img
 
-```text
+```
 @Controller
 @RequestMapping(value = "/priority")
 public class TestPriorityController {
@@ -274,7 +274,7 @@ public class TestPriorityController {
 
 ## 资源文件映射
 
-以上分析均是基于Controller方法的映射\(RequestMappingHandlerMapping\)。
+以上分析均是基于Controller方法的映射(RequestMappingHandlerMapping)。
 
 SpringMVC中还有静态文件的映射，SimpleUrlHandlerMapping。
 
@@ -282,7 +282,7 @@ DispatcherServlet找对应的HandlerExecutionChain的时候会遍历属性handle
 
 由于我们在\*-dispatcher.xml中加入了以下配置：
 
-```text
+```
 <mvc:resources location="/static/" mapping="/static/**"/>
 ```
 
@@ -302,7 +302,7 @@ Spring解析配置文件会使用ResourcesBeanDefinitionParser进行解析的时
 
 地址匹配到/static/\*\*。
 
-最终SimpleUrlHandlerMapping找到对应的Handler -&gt; ResourceHttpRequestHandler。
+最终SimpleUrlHandlerMapping找到对应的Handler -> ResourceHttpRequestHandler。
 
 ResourceHttpRequestHandler进行handleRequest的时候，直接输出资源文件的文本内容。
 
@@ -311,4 +311,3 @@ ResourceHttpRequestHandler进行handleRequest的时候，直接输出资源文�
 大致上整理了一下SpringMVC对请求的处理，包括其中比较关键的类和接口，希望对读者有帮助。
 
 让自己对SpringMVC有了更深入的认识，也为之后分析数据绑定，拦截器、HandlerAdapter等打下基础。
-

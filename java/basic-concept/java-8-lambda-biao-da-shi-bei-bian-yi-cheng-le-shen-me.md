@@ -1,14 +1,14 @@
 # Java 8 Lambda 表达式被编译成了什么？
 
-[https://mp.weixin.qq.com/s?\_\_biz=MzU0MzQ5MDA0Mw==&mid=2247493088&idx=2&sn=b1d7ef64f886924392d30d15d8bd7134&chksm=fb080f74cc7f8662b8ebd580ca8eb34fd6a88fcc2bc5c43015fa368f950d38d1aa19d0890ba7&mpshare=1&scene=1&srcid=082604rM0WvdAP5Tb4iVSpIt&sharer\_sharetime=1598413591075&sharer\_shareid=393f249533d421d13c2402bd43e74356\#rd](https://mp.weixin.qq.com/s?__biz=MzU0MzQ5MDA0Mw==&mid=2247493088&idx=2&sn=b1d7ef64f886924392d30d15d8bd7134&chksm=fb080f74cc7f8662b8ebd580ca8eb34fd6a88fcc2bc5c43015fa368f950d38d1aa19d0890ba7&mpshare=1&scene=1&srcid=082604rM0WvdAP5Tb4iVSpIt&sharer_sharetime=1598413591075&sharer_shareid=393f249533d421d13c2402bd43e74356#rd)
+[https://mp.weixin.qq.com/s?\_\_biz=MzU0MzQ5MDA0Mw==\&mid=2247493088\&idx=2\&sn=b1d7ef64f886924392d30d15d8bd7134\&chksm=fb080f74cc7f8662b8ebd580ca8eb34fd6a88fcc2bc5c43015fa368f950d38d1aa19d0890ba7\&mpshare=1\&scene=1\&srcid=082604rM0WvdAP5Tb4iVSpIt\&sharer\_sharetime=1598413591075\&sharer\_shareid=393f249533d421d13c2402bd43e74356#rd](https://mp.weixin.qq.com/s?\_\_biz=MzU0MzQ5MDA0Mw==\&mid=2247493088\&idx=2\&sn=b1d7ef64f886924392d30d15d8bd7134\&chksm=fb080f74cc7f8662b8ebd580ca8eb34fd6a88fcc2bc5c43015fa368f950d38d1aa19d0890ba7\&mpshare=1\&scene=1\&srcid=082604rM0WvdAP5Tb4iVSpIt\&sharer\_sharetime=1598413591075\&sharer\_shareid=393f249533d421d13c2402bd43e74356#rd)
 
-在了解了Java 8 Lambda的一些基本概念和应用后， 我们会有这样的一个问题: _**Lambda表达式被编译成了什么？\**_
+在了解了Java 8 Lambda的一些基本概念和应用后， 我们会有这样的一个问题: _**Lambda表达式被编译成了什么？\\**_
 
 这是一个有趣的问题，涉及到JDK的具体的实现。本文将介绍OpenJDK对Lambda表达式的转换细节， 读者可以了解Java 8 Lambda表达式背景知识。
 
 ## Lambda表达式的转换策略
 
-Brian Goetz是Oracle的Java语言架构师， JSR 335\(Lambda Expression\)规范的lead, 写了几篇Lambda设计方面的文章， 其中之一就是Translation of Lambda Expressions。这篇文章介绍了Java 8 Lambda设计时的考虑以及实现方法。
+Brian Goetz是Oracle的Java语言架构师， JSR 335(Lambda Expression)规范的lead, 写了几篇Lambda设计方面的文章， 其中之一就是Translation of Lambda Expressions。这篇文章介绍了Java 8 Lambda设计时的考虑以及实现方法。
 
 他提到， Lambda表达式可以通过内部类， method handle, dynamic proxy等方式实现， 但是这些方法各有优劣。真正要实现Lambda表达式， 必须兼顾两个目标：一是不引入特定策略，以期为将来的优化提供最大的灵活性， 二是保持类文件格式的稳定。通过Java 7中引入的**invokedynamic** （JSR 292）, 可以很好的兼顾这两个目标。
 
@@ -16,9 +16,9 @@ Brian Goetz是Oracle的Java语言架构师， JSR 335\(Lambda Expression\)规范
 
 **invokedynamic** 将Lambda表达式的转换策略推迟到运行时， 这也意味着我们现在编译的代码在将来的转换策略改变的情况下也能正常运行。
 
-编译器在编译的时候， 会将Lambda表达式的表达式体 \(lambda body\)脱糖\(desugar\) 成一个方法，此方法的参数列表和返回类型和lambda表达式一致， 如果有捕获参数， 脱糖的方法的参数可能会更多一些， 并会产生一个**invokedynamic**调用， 调用一个call site。
+编译器在编译的时候， 会将Lambda表达式的表达式体 (lambda body)脱糖(desugar) 成一个方法，此方法的参数列表和返回类型和lambda表达式一致， 如果有捕获参数， 脱糖的方法的参数可能会更多一些， 并会产生一个**invokedynamic**调用， 调用一个call site。
 
-这个call site被调用时会返回lambda表达式的目标类型\(functional interface\)的一个实现类。这个call site称为这个lambda表达式的_lambda factory_。 _lambda factory_的bootstrap方法是一个标准方法， 叫做_lambda metafactory_。
+这个call site被调用时会返回lambda表达式的目标类型(functional interface)的一个实现类。这个call site称为这个lambda表达式的_lambda factory_。 _lambda factory_的bootstrap方法是一个标准方法， 叫做_lambda metafactory_。
 
 编译器在转换lambda表达式时， 可以推断出表达式的参数类型，返回类型以及异常， 称之为`natural signature`， 我们将目标类型的方法签名称之为`lambda descriptor`, lambda factory的返回对象实现了函数式接口， 并且关联的表达式的代码逻辑， 称之为`lambda object`。
 
@@ -27,15 +27,17 @@ Brian Goetz是Oracle的Java语言架构师， JSR 335\(Lambda Expression\)规范
 以上的解释有点晦涩， 简单来说
 
 * 编译时
-* * Lambda 表达式会生成一个方法， 方法实现了表达式的代码逻辑
+*
+  * Lambda 表达式会生成一个方法， 方法实现了表达式的代码逻辑
     * 生成invokedynamic指令， 调用bootstrap方法， 由java.lang.invoke.LambdaMetafactory.metafactory方法实现
 * 运行时
-* * invokedynamic指令调用metafactory方法。它会返回一个CallSite, 此CallSite返回目标类型的一个匿名实现类， 此类关联编译时产生的方法
+*
+  * invokedynamic指令调用metafactory方法。它会返回一个CallSite, 此CallSite返回目标类型的一个匿名实现类， 此类关联编译时产生的方法
     * lambda表达式调用时会调用匿名实现类关联的方法。
 
 最简单的一个lambda表达式的例子：
 
-```text
+```
 public class Lambda1 {
  public static void main(String[] args) {
   Consumer<String> c = s -> System.out.println(s);
@@ -46,7 +48,7 @@ public class Lambda1 {
 
 使用javap查看生成的字节码 `javap -c -p -v com/colobu/lambda/chapter5/Lambda1.class`:
 
-```text
+```
 [root@colobu bin]# javap -c -p -v com/colobu/lambda/chapter5/Lambda1.class 
 Classfile /mnt/eclipse/Lambda/bin/com/colobu/lambda/chapter5/Lambda1.class
   Last modified Nov 6, 2014; size 1401 bytes
@@ -188,7 +190,7 @@ Constant pool:
 
 原lambda表达式处产生了一条`invokedynamic #19, 0`。它会调用`bootstrap`方法。
 
-```text
+```
 0: #57 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
       Method arguments:
         #58 (Ljava/lang/Object;)V
@@ -198,7 +200,7 @@ Constant pool:
 
 如果Lambda表达式写成`Consumer<String> c = (Consumer<String> & Serializable)s -> System.out.println(s);`, 则BootstrapMethods的字节码为
 
-```text
+```
 BootstrapMethods:
     0: #108 invokestatic java/lang/invoke/LambdaMetafactory.altMetafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
       Method arguments:
@@ -212,7 +214,7 @@ BootstrapMethods:
 
 如果Lambda表达式写成\`\`,则BootstrapMethods的字节码为
 
-```text
+```
 BootstrapMethods:
   0: #57 invokestatic java/lang/invoke/LambdaMetafactory.altMetafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
     Method arguments:
@@ -234,7 +236,7 @@ BootstrapMethods:
 
 现在我们可以重点关注以下 `LambdaMetafactory.metafactory`的实现。
 
-```text
+```
 public static CallSite metafactory(MethodHandles.Lookup caller,
                                        String invokedName,
                                        MethodType invokedType,
@@ -252,7 +254,7 @@ public static CallSite metafactory(MethodHandles.Lookup caller,
     }
 ```
 
-实际是由`InnerClassLambdaMetafactory`的`buildCallSite`来生成。生成之前会调用`validateMetafactoryArgs`方法校验目标类型\(SAM\)方法的参数/和产生的方法的参数/返回值类型是否一致。
+实际是由`InnerClassLambdaMetafactory`的`buildCallSite`来生成。生成之前会调用`validateMetafactoryArgs`方法校验目标类型(SAM)方法的参数/和产生的方法的参数/返回值类型是否一致。
 
 `metaFactory`方法的参数：
 
@@ -265,7 +267,7 @@ public static CallSite metafactory(MethodHandles.Lookup caller,
 
 上面的代码基本上是`InnerClassLambdaMetafactory.buildCallSite`的包装，下面看看这个方法的实现：
 
-```text
+```
 CallSite buildCallSite() throws LambdaConversionException {
        final Class<?> innerClass = spinInnerClass();
        if (invokedType.parameterCount() == 0) {
@@ -286,7 +288,7 @@ CallSite buildCallSite() throws LambdaConversionException {
 
 下面的代码中，在一个循环中重复生成调用lambda表达式，只会生成同一个lambda对象， 因为只有同一个`invokedynamic`指令。
 
-```text
+```
 for (int i = 0; i<100; i++){
  Consumer<String> c = s -> System.out.println(s);
  System.out.println(c.hashCode());
@@ -295,7 +297,7 @@ for (int i = 0; i<100; i++){
 
 但是下面的代码会生成两个lambda对象, 因为它会生成两个`invokedynamic`指令。
 
-```text
+```
 Consumer<String> c = s -> System.out.println(s);
 System.out.println(c.hashCode());
 Consumer<String> c2 = s -> System.out.println(s);
@@ -306,7 +308,7 @@ System.out.println(c2.hashCode());
 
 既然LambdaMetafactory会使用`asm`框架生成一个匿名类， 那么这个类的类名有什么规律的。
 
-```text
+```
 Consumer<String> c = s -> System.out.println(s);
 System.out.println(c.getClass().getName());
 System.out.println(c.getClass().getSimpleName());
@@ -315,15 +317,15 @@ System.out.println(c.getClass().getCanonicalName());
 
 输出结果如下：
 
-```text
+```
 com.colobu.lambda.chapter5.Lambda3$$Lambda$1/640070680
 Lambda3$$Lambda$1/640070680
 com.colobu.lambda.chapter5.Lambda3$$Lambda$1/640070680
 ```
 
-类名格式如 &lt;包名&gt;.&lt;类名&gt;$$Lambda$/. number是由一个计数器生成counter.incrementAndGet\(\)。后缀`/<NN>`中的数字是一个hash值, 那就是类对象的hash值`c.getClass().hashCode()`。在`Klass::external_name()`中生成。
+类名格式如 <包名>.<类名>\$$Lambda$/. number是由一个计数器生成counter.incrementAndGet()。后缀`/<NN>`中的数字是一个hash值, 那就是类对象的hash值`c.getClass().hashCode()`。在`Klass::external_name()`中生成。
 
-```text
+```
 sprintf(hash_buf, "/" UINTX_FORMAT, (uintx)hash);
 ```
 
@@ -331,7 +333,7 @@ sprintf(hash_buf, "/" UINTX_FORMAT, (uintx)hash);
 
 上面提到， Lambda表达式体会由编译器生成一个方法，名字格式如`Lambda$XXX`。既然是类中的实实在在的方法，我们就可以直接调用。当然， 你在代码中直接写`lambda$0()`编译通不过， 因为Lambda表达式体还没有被抽取成方法。但是在运行中我们可以通过反射的方式调用。下面的例子使用发射和MethodHandle两种方式调用这个方法。
 
-```text
+```
 public static void main(String[] args) throws Throwable {
  Consumer<String> c = s -> System.out.println(s);
  Method m = Lambda4.class.getDeclaredMethod("lambda$0", String.class);
@@ -345,7 +347,7 @@ public static void main(String[] args) throws Throwable {
 
 我们知道，在匿名类中调用外部的参数时，参数必须声明为`final`。Lambda体内也可以引用上下文中的变量，变量可以不声明成`final`的，但是必须等价于`final`。下面的例子中变量capturedV等价与`final`， 并没有在上下文中重新赋值。
 
-```text
+```
 public class Lambda5 {
  String greeting = "hello";
 
@@ -364,7 +366,7 @@ public class Lambda5 {
 
 ## 方法引用
 
-```text
+```
 public static void main(String[] args) throws Throwable {
 
  Consumer<String> c  = System.out::println;
@@ -374,7 +376,7 @@ public static void main(String[] args) throws Throwable {
 
 这段代码不会产生一个类似"Lambda$0"新方法。因为LambdaMetafactory会直接使用这个引用的方法。
 
-```text
+```
 BootstrapMethods:
   0: #51 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
     Method arguments:
@@ -384,4 +386,3 @@ BootstrapMethods:
 ```
 
 `#59`指示实现方法为System.out::println
-

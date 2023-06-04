@@ -7,7 +7,7 @@
 
 现陆续将Demo代码和技术文章整理在一起 Github实践精选 ，方便大家阅读查看，本文同样收录在此，觉得不错，还请Star
 
-上一篇文章  [面试问我，创建多少个线程合适？我该怎么说](http://mp.weixin.qq.com/s?__biz=Mzg3NjIxMjA1Ng==&mid=2247484219&idx=1&sn=612ca4e6d5839651d9712da889599d98&chksm=cf34f90cf843701a20c2295dbcbb8f72bcaebaac8307891e657c16eb76e4d77768dceb000f63&scene=21#wechat_redirect)  从定性到定量的分析了如何创建正确个数的线程来最大化利用系统资源（其实就是几道小学数学题）。通常来讲，有了个这个知识点傍身，按需手动创建相应个数的线程就好  
+上一篇文章  [面试问我，创建多少个线程合适？我该怎么说](http://mp.weixin.qq.com/s?\_\_biz=Mzg3NjIxMjA1Ng==\&mid=2247484219\&idx=1\&sn=612ca4e6d5839651d9712da889599d98\&chksm=cf34f90cf843701a20c2295dbcbb8f72bcaebaac8307891e657c16eb76e4d77768dceb000f63\&scene=21#wechat\_redirect)  从定性到定量的分析了如何创建正确个数的线程来最大化利用系统资源（其实就是几道小学数学题）。通常来讲，有了个这个知识点傍身，按需手动创建相应个数的线程就好\
 
 
 但是现实中，你也许听过或者被要求：
@@ -45,17 +45,17 @@
 >
 > **答：**... 嗯...啊
 
-按照常规理解 new Thread\(\) 创建一个线程和 new Object\(\) 没有什么差别。Java中万物接对象，因为 Thread 的老祖宗也是 Object
+按照常规理解 new Thread() 创建一个线程和 new Object() 没有什么差别。Java中万物接对象，因为 Thread 的老祖宗也是 Object
 
-如果你真是这么理解的，说明你对线程的生命周期还不是很理解，请回看之前的 [Java线程生命周期这样理解挺简单的](http://mp.weixin.qq.com/s?__biz=Mzg3NjIxMjA1Ng==&mid=2247484174&idx=1&sn=622c18a79fa77a9cbe9c66fe6f540288&chksm=cf34f939f843702f0e108da75d2bad71a02c32de653a766c49bd578d2ea6226c0b0b2af52429&scene=21#wechat_redirect)
+如果你真是这么理解的，说明你对线程的生命周期还不是很理解，请回看之前的 [Java线程生命周期这样理解挺简单的](http://mp.weixin.qq.com/s?\_\_biz=Mzg3NjIxMjA1Ng==\&mid=2247484174\&idx=1\&sn=622c18a79fa77a9cbe9c66fe6f540288\&chksm=cf34f939f843702f0e108da75d2bad71a02c32de653a766c49bd578d2ea6226c0b0b2af52429\&scene=21#wechat\_redirect)
 
-在这篇文章中我们明确说明，new Thread\(\) 在操作系统层面并没有创建新的线程，这是编程语言特有的。真正转换为操作系统层面创建一个线程，还要调用操作系统内核的API，然后操作系统要为该线程分配一系列的资源
+在这篇文章中我们明确说明，new Thread() 在操作系统层面并没有创建新的线程，这是编程语言特有的。真正转换为操作系统层面创建一个线程，还要调用操作系统内核的API，然后操作系统要为该线程分配一系列的资源
 
 废话不多说，我们将二者做个对比：
 
-#### new Object\(\) 过程
+#### new Object() 过程
 
-```text
+```
 Object obj = new Object();
 ```
 
@@ -81,7 +81,7 @@ Object obj = new Object();
 
 这段描述稍稍有点抽象，用数据来说明创建一个线程（即便不干什么）需要多大空间呢？答案是大约  `1M`  左右
 
-```text
+```
 java -XX:+UnlockDiagnosticVMOptions -XX:NativeMemoryTracking=summary -XX:+PrintNMTStatistics -version
 ```
 
@@ -97,7 +97,7 @@ Java 也提供了它自己实现的线程池模型—— `ThreadPoolExecutor`。
 
 为了了解这个管理思想，我们当前只需要关注 `ThreadPoolExecutor` 构造方法就可以了
 
-```text
+```
 public ThreadPoolExecutor(int corePoolSize,
                               int maximumPoolSize,
                               long keepAliveTime,
@@ -126,15 +126,15 @@ public ThreadPoolExecutor(int corePoolSize,
 
 这么复杂的构造方法在JDK中还真是不多见，为了个更形象化的让大家理解这几个核心参数，我们以多数人都经历过的春运（北京——上海）来说明**（表格有变动，请阅读原文）**
 
-| 序号 | 参数名称 | 参数解释 | 春运形象说明 |
-| :--- | :--- | :--- | :--- |
-| 1 | corePoolSize | 表示常驻核心线程数，如果大于0，即使本地任务执行完也不会被销毁 | 日常固定的列车数辆（不管是不是春运，都要有固定这些车次运行） |
-| 2 | maximumPoolSize | 表示线程池能够容纳可同时执行的最大线程数 | 春运客流量大，临时加车，加车后，总列车次数不能超过这个最大值，否则就会出现调度不开等问题 |
-| 3 | keepAliveTime | 表示线程池中线程空闲的时间，当空闲时间达到该值时，线程会被销毁，只剩下 `corePoolSize` 个线程位置 | 春运压力过后，临时的加车（如果空闲时间超过`keepAliveTime`）就会被撤掉，只保留日常固定的列车车次数量用于日常运营 |
-| 4 | unit | `keepAliveTime` 的时间单位，最终都会转换成【纳秒】，因为CPU的执行速度杠杠滴 | `keepAliveTime` 的单位，春运以【天】为计算单位 |
-| 5 | workQueue | 当请求的线程数大于 `maximumPoolSize` 时，线程进入该阻塞队列 | 春运压力异常大，即便加车后（达到`maximumPoolSize`）也不能满足要求，所有乘坐请求都会进入该阻塞队列中排队 |
-| 6 | threadFactory | 顾名思义，线程工厂，用来生产一组相同任务的线程，同时也可以通过它增加前缀名，虚拟机栈分析时更清晰 | 比如（北京——上海）就属于该段列车所有前缀，表明列车运输职责 |
-| 7 | handler | 执行拒绝策略，当 `workQueue` 达到上限，就要通过这个来处理，比如拒绝，丢弃等，这是一种限流的保护措施 | 当`workQueue`排队也达到队列最大上线，就要提示无票等拒绝策略了,因为我们不能加车了，当前所有车次已经满负载 |
+| 序号 | 参数名称            | 参数解释                                                     | 春运形象说明                                                          |
+| -- | --------------- | -------------------------------------------------------- | --------------------------------------------------------------- |
+| 1  | corePoolSize    | 表示常驻核心线程数，如果大于0，即使本地任务执行完也不会被销毁                          | 日常固定的列车数辆（不管是不是春运，都要有固定这些车次运行）                                  |
+| 2  | maximumPoolSize | 表示线程池能够容纳可同时执行的最大线程数                                     | 春运客流量大，临时加车，加车后，总列车次数不能超过这个最大值，否则就会出现调度不开等问题                    |
+| 3  | keepAliveTime   | 表示线程池中线程空闲的时间，当空闲时间达到该值时，线程会被销毁，只剩下 `corePoolSize` 个线程位置 | 春运压力过后，临时的加车（如果空闲时间超过`keepAliveTime`）就会被撤掉，只保留日常固定的列车车次数量用于日常运营 |
+| 4  | unit            | `keepAliveTime` 的时间单位，最终都会转换成【纳秒】，因为CPU的执行速度杠杠滴          | `keepAliveTime` 的单位，春运以【天】为计算单位                                 |
+| 5  | workQueue       | 当请求的线程数大于 `maximumPoolSize` 时，线程进入该阻塞队列                  | 春运压力异常大，即便加车后（达到`maximumPoolSize`）也不能满足要求，所有乘坐请求都会进入该阻塞队列中排队    |
+| 6  | threadFactory   | 顾名思义，线程工厂，用来生产一组相同任务的线程，同时也可以通过它增加前缀名，虚拟机栈分析时更清晰         | 比如（北京——上海）就属于该段列车所有前缀，表明列车运输职责                                  |
+| 7  | handler         | 执行拒绝策略，当 `workQueue` 达到上限，就要通过这个来处理，比如拒绝，丢弃等，这是一种限流的保护措施 | 当`workQueue`排队也达到队列最大上线，就要提示无票等拒绝策略了,因为我们不能加车了，当前所有车次已经满负载      |
 
 试想，如果有请求就新建一趟列车，请求结束就“销毁”这趟列车，频繁往复这样操作，这样的代价肯定是不能接受的。
 
@@ -174,7 +174,7 @@ Executors 大大的简化了我们创建各种类型线程池的方式，为什�
 
 传入的workQueue 是一个边界为 `Integer.MAX_VALUE` 队列，我们也可以变相的称之为无界队列了，因为边界太大了，这么大的等待队列也是非常消耗内存的
 
-```text
+```
 /**
  * Creates a {@code LinkedBlockingQueue} with a capacity of
  * {@link Integer#MAX_VALUE}.
@@ -203,4 +203,3 @@ public LinkedBlockingQueue() {
 1. 我们说了这么多线程池的好，那使用线程池有哪些缺点或限制呢？
 2. 为什么不建议所有业务共用一个线程池？有什么缺点？
 3. 给线程池设置指定前缀，有哪些方式？
-

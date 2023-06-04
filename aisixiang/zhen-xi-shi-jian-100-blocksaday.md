@@ -6,7 +6,7 @@ app [https://144blocks.com/](https://144blocks.com/)
 
 [https://waitbutwhy.com/2016/10/100-blocks-day.html](https://waitbutwhy.com/2016/10/100-blocks-day.html)
 
- October 21, 2016 By Tim Urban  
+&#x20;October 21, 2016 By Tim Urban\
 
 
 Most people sleep about seven or eight hours a night. That leaves 16 or 17 hours awake each day. Or about 1,000 minutes.
@@ -42,4 +42,3 @@ Tip: the above grid is printable if you click on it.
 If you’re into Wait But Why, sign up for the **Wait But Why email list** and we’ll send you the new posts right when they come out. It’s a very unannoying list, don’t worry.
 
 If you’d like to support Wait But Why, [**here’s our Patreon page**](https://www.patreon.com/waitbutwhy).
-

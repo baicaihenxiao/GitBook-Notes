@@ -1,14 +1,14 @@
 # Git科普文，Git基本原理&各种骚操作
 
-_\*\*\*\*_[_**https://mp.weixin.qq.com/s/csEgAjJwH75\_IvAnFBIuvw**_](https://mp.weixin.qq.com/s/csEgAjJwH75_IvAnFBIuvw)_\*\*\*\*_
+[_**https://mp.weixin.qq.com/s/csEgAjJwH75\_IvAnFBIuvw**_](https://mp.weixin.qq.com/s/csEgAjJwH75\_IvAnFBIuvw)
 
 **Git简单介绍\*\***
 
 `Git`是一个分布式版本控制软件，最初由`Linus Torvalds`创作，于2005年以`GPL`发布。最初目的是为更好地管理`Linux`内核开发而设计。
 
-## 
+##
 
-## _**\**_**Git工作流程以及各个区域\*\***
+## _**\\**_**Git工作流程以及各个区域\*\***
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/08/14/640-20200814101809665-101809.png)
 
@@ -18,17 +18,17 @@ _\*\*\*\*_[_**https://mp.weixin.qq.com/s/csEgAjJwH75\_IvAnFBIuvw**_](https://mp.
 * /refs/remotes：远程仓库的引用（不可修改）
 * Remote：远程仓库
 
-## 
+##
 
-## _**\**_**Git文件状态变化\*\***
+## _**\\**_**Git文件状态变化\*\***
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/08/14/640-20200814101811011-101811.png)
 
-## _**\**_**Git各种命令\*\***
+## _**\\**_**Git各种命令\*\***
 
 ### Git简单命令
 
-```text
+```
 # 在当前目录新建一个git仓库
 git init
 
@@ -68,7 +68,7 @@ git blame file-name
 
 #### git clone
 
-```text
+```
 # 将远程git仓库克隆到本地
 git clone url
 
@@ -78,7 +78,7 @@ git clone -b branch url
 
 #### git stash
 
-```text
+```
 # 将修改过，未add到Staging区的文件，暂时存储起来
 git stash
 
@@ -103,7 +103,7 @@ git stash clear
 
 #### git config
 
-```text
+```
 # 配置git图形界面编码为utf-8
 git config --global gui.encoding=utf-8 
 
@@ -117,7 +117,7 @@ git config user.name name
 
 #### git remote
 
-```text
+```
 # 显示所有远程仓库
 git remote -v  
 
@@ -133,7 +133,7 @@ git remote show origin
 
 #### git add
 
-```text
+```
 # 添加所有的修改到Staging区
 git add .
 git add --all  
@@ -153,7 +153,7 @@ git add src/main*
 
 #### git commit
 
-```text
+```
 # 提交Staging区的代码到本地仓库区
 git commit -m "message"  
 
@@ -169,7 +169,7 @@ git commit --amend --author="name <email>" --no-edit
 
 #### git branch
 
-```text
+```
 # 列出本地所有分支
 git branch   
 
@@ -197,7 +197,7 @@ git branch -m old-branch new-branch
 
 #### git checkout
 
-```text
+```
 # 创建本地分支并关联远程分支
 git checkout -b local-branch origin/remote-branch
 
@@ -213,7 +213,7 @@ git checkout commit-file
 
 #### git tag
 
-```text
+```
 # 创建带有说明的标签
 git tag -a v1.4 -m 'my version 1.4'
 
@@ -232,7 +232,7 @@ git tag -d tag-name
 
 #### git push
 
-```text
+```
 # 删除远程分支
 git push origin :master   
 
@@ -263,7 +263,7 @@ git push origin dev:master
 
 #### git reset
 
-```text
+```
 # 将未commit的文件移出Staging区
 git reset HEAD
 
@@ -285,7 +285,7 @@ git reset --hard commit-id
 
 #### git diff
 
-```text
+```
 # 查看文件在工作区和暂存区区别
 git diff file-name
 
@@ -301,7 +301,7 @@ git diff commit-id commit-id
 
 #### git show
 
-```text
+```
 # 查看指定标签的提交信息
 git show tag-name
 
@@ -311,7 +311,7 @@ git show commit-id
 
 #### git log
 
-```text
+```
 # 指定文件夹 log
 git log --pretty=format:"%h %cn %s %cd" --author="iisheng\|胜哥"  --date=short src
 # 查看指定用户指定format 提交
@@ -332,7 +332,7 @@ git log --author="iisheng" --pretty=tformat: --numstat | awk '{ add += $1 ; subs
 
 #### git rebase
 
-```text
+```
 # 将指定分支合并到当前分支
 git rebase branch-name
 
@@ -345,7 +345,7 @@ git rebase -i --root
 
 #### git restore
 
-```text
+```
 # 恢复第一次add 的文件，同 git rm --cached
 git restore --staged file
 
@@ -355,7 +355,7 @@ git restore file
 
 #### git revert
 
-```text
+```
 # 撤销前一次commit
 git revert HEAD
 
@@ -366,9 +366,9 @@ git revert HEAD^
 git revert commit-id
 ```
 
-## 
+##
 
-## _**\**_**Git骚操作\*\***
+## _**\\**_**Git骚操作\*\***
 
 #### Git命令不能自动补全？（Mac版）
 
@@ -376,13 +376,13 @@ git revert commit-id
 
 安装`bash-completion`
 
-```text
+```
 brew install bash-completion
 ```
 
 添加 bash-completion 到`~/.bash_profile`:
 
-```text
+```
  if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
  fi
@@ -394,13 +394,13 @@ brew install bash-completion
 
 暂存未提交的代码
 
-```text
+```
 git stash
 ```
 
 还原暂存的代码
 
-```text
+```
 git stash apply
 ```
 
@@ -408,7 +408,7 @@ git stash apply
 
 使用`cherry-pick`命令
 
-```text
+```
 git cherry-pick 指定commit-id
 ```
 
@@ -416,13 +416,13 @@ git cherry-pick 指定commit-id
 
 还原未`commit`的本地更改的代码
 
-```text
+```
 git reset --hard
 ```
 
 还原包含`commit`的代码，到跟远程分支相同
 
-```text
+```
 git reset --hard origin/master
 ```
 
@@ -430,19 +430,19 @@ git reset --hard origin/master
 
 还原到上次`commit`
 
-```text
+```
 git reset --hard HEAD^
 ```
 
 还原到当前之前的几次`commit`
 
-```text
+```
 git reset --hard HEAD~2
 ```
 
 强制推送到远程分支，确保没有其他人在`push`，不然可能会丢失代码
 
-```text
+```
 git push origin develop --force
 ```
 
@@ -458,7 +458,7 @@ git push origin develop --force
 
 脚本如下：
 
-```text
+```
 #!/bin/sh
 
 git filter-branch --env-filter '
@@ -482,7 +482,7 @@ fi
 
 强制推送替换
 
-```text
+```
 git push --force --tags origin 'refs/heads/*'
 ```
 
@@ -490,7 +490,7 @@ git push --force --tags origin 'refs/heads/*'
 
 也是使用`git filter-branch`命令。
 
-```text
+```
 git filter-branch --force --index-filter \
   "git rm --cached --ignore-unmatch FILE-PATH-AND-NAME" \
   --prune-empty --tag-name-filter cat -- --all
@@ -498,13 +498,13 @@ git filter-branch --force --index-filter \
 
 强制推送覆盖远程分支。
 
-```text
+```
 git push origin --force --all
 ```
 
 强制推送覆盖远程`tag`。
 
-```text
+```
 git push origin --force --tags
 ```
 
@@ -534,7 +534,7 @@ git push origin --force --tags
 
 编辑 `~/.ssh/config`文件 没有就创建
 
-```text
+```
 # github
 Host github.com
 Port 22
@@ -562,7 +562,7 @@ User iisheng
 
 比如，开发分支是`feature`，主干分支是`master`。我们在进行代码合并的时候，可以执行下面的命令。
 
-```text
+```
 # 切换当前分支到feature
 git checkout feature
 
@@ -596,7 +596,7 @@ git rebase master
 
 #### 不小心执行了`git stash clear`怎么办？
 
-```text
+```
 git fsck --lost-found
 ```
 
@@ -606,7 +606,7 @@ git fsck --lost-found
 
 ❝啥？你没执行过`git add`代码就丢了？别怕，一般编译器有`Local History`赶紧去试试吧。
 
-## 
+##
 
 ## **详解git merge**
 
@@ -652,7 +652,7 @@ git fsck --lost-found
 
 如果在两个分支分别对同一个文件做了改动，`Git`就没法直接合并他们。当遇到冲突的时候，`Git`会自动停下来，等待我们解决冲突。就像这样
 
-```text
+```
 $ git merge dev 
 Auto-merging 111.txt
 CONFLICT (content): Merge conflict in 111.txt
@@ -661,7 +661,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 我们可以在合并冲突后的任意时刻使用`git status`命令来查看那些因包含合并冲突而处于未合并`unmerged`状态的文件。
 
-```text
+```
 $ git status 
 On branch master
 You have unmerged paths.
@@ -677,7 +677,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 待解决冲突的文件`Git`会以未合并的状态标识出来，出现冲突的文件会出现一些特殊的区段，看起来像下面的样子。
 
-```text
+```
 <<<<<<< HEAD
 111aaa
 =======
@@ -689,7 +689,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 我们可以把上面的测试内容改成下面的样子来解决冲突
 
-```text
+```
 111aaa
 ```
 
@@ -697,7 +697,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 解决冲突的过程中，每一步都可以执行`git status`查看当前状态，`Git`也会给出相应提示，进行下一步操作。当我们所有的文件都暂存之后时，执行`git status`时，`Git`会给我们看起来像下面的这种提示
 
-```text
+```
 $ git status 
 On branch master
 All conflicts fixed but you are still merging.
@@ -706,7 +706,7 @@ All conflicts fixed but you are still merging.
 
 然后，我们根据提示执行`git commit`。
 
-```text
+```
 Merge branch 'dev'
 
 # Conflicts:
@@ -728,9 +728,9 @@ Merge branch 'dev'
 
 然后，我们保存这次提交就完成了这次冲突合并。
 
-## 
+##
 
-## _**\**_**详解git rebase\*\***
+## _**\\**_**详解git rebase\*\***
 
 ### rebase做了什么
 
@@ -754,9 +754,9 @@ Merge branch 'dev'
 
 它的原理是首先找到这两个分支（即当前分支 `dev`、变基操作的目标基底分支`master`）的最近共同祖先 `C2`，然后对比当前分支相对于该祖先的历次提交，提取相应的修改并存为临时文件， 然后将当前分支指向目标基底`C3`, 最后以此将之前另存为临时文件的修改依序应用，也就是在`C3`后面添加`C4'`、`C5'`。
 
-## 
+##
 
-## _**\**_**Git对象与快照\*\***
+## _**\\**_**Git对象与快照\*\***
 
 提到`Git`，总有人会说**快照**，**快照**是个什么鬼？
 
@@ -770,7 +770,7 @@ Merge branch 'dev'
 
 然后，查看`.git/objects`目录下都有什么。
 
-```text
+```
 $ find .git/objects
 .git/objects
 .git/objects/pack
@@ -779,7 +779,7 @@ $ find .git/objects
 
 接着，我们写一个文件`echo '1111' > 111.txt`，并执行`git add`之后，再查看。
 
-```text
+```
 $ find .git/objects
 .git/objects
 .git/objects/5f
@@ -792,7 +792,7 @@ $ find .git/objects
 
 我们可以使用下面的命令，显示在`Git`对象中存储的内容。
 
-```text
+```
 $ git cat-file -p 5f2f16bfff90e6620509c0cf442e7a3586dad8fb
 1111
 ```
@@ -809,14 +809,14 @@ $ git cat-file -p 5f2f16bfff90e6620509c0cf442e7a3586dad8fb
 
 当我们执行过`git add`之后，暂存区就有内容了，我们可以通过`Git`底层命令，生成树对象。
 
-```text
+```
 $ git write-tree
 b716c7b049ccd9048b0566a57cfd516c17c1e39f
 ```
 
 查看该树对象的内容。
 
-```text
+```
 $ git cat-file -p b716c7b049ccd9048b0566a57cfd516c17c1e39f
 100644 blob 5f2f16bfff90e6620509c0cf442e7a3586dad8fb 111.txt
 ```
@@ -829,14 +829,14 @@ $ git cat-file -p b716c7b049ccd9048b0566a57cfd516c17c1e39f
 
 然后查看一下`log`找到该次提交的`commit`哈希值。
 
-```text
+```
 $ git log --oneline 
 5281f7e (HEAD -> master) first commit
 ```
 
 接着，我们查看一下该提交对象的内容。
 
-```text
+```
 $ git cat-file -p 5281f7e
 tree b716c7b049ccd9048b0566a57cfd516c17c1e39f
 author iisheng <***@gmail.com> 1596073568 +0800
@@ -853,7 +853,7 @@ first commit
 
 ❝实际上`Git`中的各种对象都是类似的，只不过因为各种对象自身功能不同，存储结构不同而已。
 
-## 
+##
 
 ## **Git引用-我从远程拉的代码不是最新的？**
 
@@ -881,5 +881,4 @@ first commit
 
 参考文献：
 
-\[1\]: [https://git-scm.com/](https://git-scm.com/)
-
+\[1]: [https://git-scm.com/](https://git-scm.com/)

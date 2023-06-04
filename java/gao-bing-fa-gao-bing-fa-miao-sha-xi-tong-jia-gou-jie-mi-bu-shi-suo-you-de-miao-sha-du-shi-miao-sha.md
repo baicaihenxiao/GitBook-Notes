@@ -1,6 +1,6 @@
 # 【高并发】高并发秒杀系统架构解密，不是所有的秒杀都是秒杀！
 
-{% embed url="https://mp.weixin.qq.com/s/tx\_ZfE3rqbED0pteYEkdkQ" %}
+{% embed url="https://mp.weixin.qq.com/s/tx_ZfE3rqbED0pteYEkdkQ" %}
 
 
 
@@ -22,7 +22,7 @@
 
 我们可以将电商系统的架构简化成下图所示。
 
-![003](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size_16,color_FFFFFF,t_70-234055.jpeg)
+![003](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size\_16,color\_FFFFFF,t\_70-234055.jpeg)
 
 由图所示，我们可以简单的将电商系统的核心层分为：负载均衡层、应用层和持久层。接下来，我们就预估下每一层的并发量。
 
@@ -56,13 +56,13 @@
 
 所以，秒杀系统的流量和并发量我们可以使用下图来表示。
 
-![005](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size_16,color_FFFFFF,t_70-20200713234055688-234055.jpeg)
+![005](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size\_16,color\_FFFFFF,t\_70-20200713234055688-234055.jpeg)
 
 由图可以看出，秒杀系统的并发量存在瞬时凸峰的特点，也叫做流量突刺现象。
 
 我们可以将秒杀系统的特点总结如下。
 
-![006](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size_16,color_FFFFFF,t_70-20200713234056734-234056.jpeg)
+![006](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size\_16,color\_FFFFFF,t\_70-20200713234056734-234056.jpeg)
 
 （1）限时、限量、限价
 
@@ -86,7 +86,7 @@
 
 我们可以将秒杀系统的技术特点总结如下。
 
-![008](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size_16,color_FFFFFF,t_70-20200713234057035-234057.jpeg)
+![008](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size\_16,color\_FFFFFF,t\_70-20200713234057035-234057.jpeg)
 
 （1）瞬时并发量非常高
 
@@ -108,7 +108,7 @@
 
 针对秒杀系统的特点，我们可以采取如下的措施来提升系统的性能。
 
-![007](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size_16,color_FFFFFF,t_70-20200713234057335-234057.jpeg)
+![007](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size\_16,color\_FFFFFF,t\_70-20200713234057335-234057.jpeg)
 
 （1）异步解耦
 
@@ -122,11 +122,11 @@
 
 将整体流程中的资源调度进行控制，扬长避短。
 
-由于应用层能够承载的并发量比缓存的并发量少很多。所以，在高并发系统中，我们可以直接使用OpenResty由负载均衡层访问缓存，避免了调用应用层的性能损耗。大家可以到[https://openresty.org/cn/来了解有关OpenResty更多的知识。同时，由于秒杀系统中，商品数量比较少，我们也可以使用动态渲染技术，CDN技术来加速网站的访问性能。](https://openresty.org/cn/来了解有关OpenResty更多的知识。同时，由于秒杀系统中，商品数量比较少，我们也可以使用动态渲染技术，CDN技术来加速网站的访问性能。)
+由于应用层能够承载的并发量比缓存的并发量少很多。所以，在高并发系统中，我们可以直接使用OpenResty由负载均衡层访问缓存，避免了调用应用层的性能损耗。大家可以到[https://openresty.org/cn/来了解有关OpenResty更多的知识。同时，由于秒杀系统中，商品数量比较少，我们也可以使用动态渲染技术，CDN技术来加速网站的访问性能。](https://openresty.org/cn/%E6%9D%A5%E4%BA%86%E8%A7%A3%E6%9C%89%E5%85%B3OpenResty%E6%9B%B4%E5%A4%9A%E7%9A%84%E7%9F%A5%E8%AF%86%E3%80%82%E5%90%8C%E6%97%B6%EF%BC%8C%E7%94%B1%E4%BA%8E%E7%A7%92%E6%9D%80%E7%B3%BB%E7%BB%9F%E4%B8%AD%EF%BC%8C%E5%95%86%E5%93%81%E6%95%B0%E9%87%8F%E6%AF%94%E8%BE%83%E5%B0%91%EF%BC%8C%E6%88%91%E4%BB%AC%E4%B9%9F%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E5%8A%A8%E6%80%81%E6%B8%B2%E6%9F%93%E6%8A%80%E6%9C%AF%EF%BC%8CCDN%E6%8A%80%E6%9C%AF%E6%9D%A5%E5%8A%A0%E9%80%9F%E7%BD%91%E7%AB%99%E7%9A%84%E8%AE%BF%E9%97%AE%E6%80%A7%E8%83%BD%E3%80%82)
 
 如果在秒杀活动开始时，并发量太高时，我们可以将用户的请求放入队列中进行处理，并为用户弹出排队页面。
 
-![009](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size_16,color_FFFFFF,t_70-20200713234057886-234057.jpeg)
+![009](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size\_16,color\_FFFFFF,t\_70-20200713234057886-234057.jpeg)
 
 注：图片来自魅族！
 
@@ -136,7 +136,7 @@
 
 ### 同步下单流程
 
-![010](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size_16,color_FFFFFF,t_70-20200713234058267-234058.jpeg)
+![010](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size\_16,color\_FFFFFF,t\_70-20200713234058267-234058.jpeg)
 
 **1.用户发起秒杀请求**
 
@@ -180,7 +180,7 @@
 
 如果我们使用上述流程开发了一个秒杀系统，当用户发起秒杀请求时，由于系统每个业务流程都是串行执行的，整体上系统的性能不会太高，当并发量太高时，我们会为用户弹出下面的排队页面，来提示用户进行等待。
 
-![009](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size_16,color_FFFFFF,t_70-20200713234058820-234058.jpeg)
+![009](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size\_16,color\_FFFFFF,t\_70-20200713234058820-234058.jpeg)
 
 注：图片来自魅族！
 
@@ -198,7 +198,7 @@
 
 既然同步下单流程的秒杀系统称不上真正的秒杀系统，那我们就需要采用异步的下单流程了。异步的下单流程不会限制系统的高并发流量。
 
-![011](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size_16,color_FFFFFF,t_70-20200713234105734-234105.jpeg)
+![011](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size\_16,color\_FFFFFF,t\_70-20200713234105734-234105.jpeg)
 
 **1.用户发起秒杀请求**
 
@@ -284,9 +284,9 @@
 
 我们在Redis中存储秒杀商品的库存数量时，可以将秒杀商品的库存进行“分割”存储来提升Redis的读写并发量。
 
-例如，原来的秒杀商品的id为10001，库存为1000件，在Redis中的存储为\(10001, 1000\)，我们将原有的库存分割为5份，则每份的库存为200件，此时，我们在Redia中存储的信息为\(10001\_0, 200\)，\(10001\_1, 200\)，\(10001\_2, 200\)，\(10001\_3, 200\)，\(10001\_4, 200\)。
+例如，原来的秒杀商品的id为10001，库存为1000件，在Redis中的存储为(10001, 1000)，我们将原有的库存分割为5份，则每份的库存为200件，此时，我们在Redia中存储的信息为(10001\_0, 200)，(10001\_1, 200)，(10001\_2, 200)，(10001\_3, 200)，(10001\_4, 200)。
 
-![013](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size_16,color_FFFFFF,t_70-20200713234108299-234108.jpeg)
+![013](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size\_16,color\_FFFFFF,t\_70-20200713234108299-234108.jpeg)
 
 此时，我们将库存进行分割后，每个分割后的库存使用商品id加上一个数字标识来存储，这样，在对存储商品库存的每个Key进行Hash运算时，得出的Hash结果是不同的，这就说明，存储商品库存的Key有很大概率不在Redis的同一个槽位中，这就能够提升Redis处理请求的性能和并发量。
 
@@ -308,5 +308,4 @@
 
 最后，附上并发编程需要掌握的核心技能知识图，祝大家在学习并发编程时，少走弯路。
 
-![sandahexin\_20200322](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size_16,color_FFFFFF,t_70-20200713234111634-234111.jpeg)
-
+![sandahexin\_20200322](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpeg/2020/07/13/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2wxMDI4Mzg2ODA0,size\_16,color\_FFFFFF,t\_70-20200713234111634-234111.jpeg)

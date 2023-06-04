@@ -1,23 +1,23 @@
-# Thread.Sleep\(0\)
+# Thread.Sleep(0)
 
 {% embed url="https://mp.weixin.qq.com/s/heKgYf0mmVn4E9JGn-tCiQ" %}
 
 
 
-作者 \| 走过路过不要错过  
-来源 \|  [https://www.cnblogs.com/keyyang/p/4128424.html](https://www.cnblogs.com/keyyang/p/4128424.html)
+作者 | 走过路过不要错过\
+来源 |  [https://www.cnblogs.com/keyyang/p/4128424.html](https://www.cnblogs.com/keyyang/p/4128424.html)
 
 我们可能经常会用到 Thread.Sleep 函数来吧使线程挂起一段时间。那么你有没有正确的理解这个函数的用法呢？**思考下面这两个问题**
 
 **问题一**：
 
-假设现在是 2008-4-7 12:00:00.000，如果我调用一下 Thread.Sleep\(1000\) ，在 2008-4-7 12:00:01.000 的时候，这个线程会不会被唤醒？
+假设现在是 2008-4-7 12:00:00.000，如果我调用一下 Thread.Sleep(1000) ，在 2008-4-7 12:00:01.000 的时候，这个线程会不会被唤醒？
 
 **问题二**：
 
-某人的代码中用了一句看似莫明其妙的话：Thread.Sleep\(0\) 。既然是 Sleep 0 毫秒，那么他跟去掉这句代码相比，有啥区别么？
+某人的代码中用了一句看似莫明其妙的话：Thread.Sleep(0) 。既然是 Sleep 0 毫秒，那么他跟去掉这句代码相比，有啥区别么？
 
-![](https://mmbiz.qpic.cn/mmbiz_png/R3InYSAIZkF5KXRWz02f3wXE6pu3e1X0UHd59YOib9o4Xk1ogicdI0kLAZQZtWkiaoC6To4xPZrlZ1iaIsibdiabgooQ/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://mmbiz.qpic.cn/mmbiz\_png/R3InYSAIZkF5KXRWz02f3wXE6pu3e1X0UHd59YOib9o4Xk1ogicdI0kLAZQZtWkiaoC6To4xPZrlZ1iaIsibdiabgooQ/640?wx\_fmt=gif\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
 
 **回顾一下操作系统原理**
 
@@ -31,7 +31,7 @@
 
 我们用**分蛋糕的场景**来描述这两种算法。假设有源源不断的蛋糕（源源不断的时间），一副刀叉（一个CPU），10个等待吃蛋糕的人（10 个进程）。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/R3InYSAIZkF5KXRWz02f3wXE6pu3e1X0aBl2yO079RiaaX3gro9EaAkQNDUS4p3v7UPzhL9jb2vRERUXOloyqQA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://mmbiz.qpic.cn/mmbiz\_jpg/R3InYSAIZkF5KXRWz02f3wXE6pu3e1X0aBl2yO079RiaaX3gro9EaAkQNDUS4p3v7UPzhL9jb2vRERUXOloyqQA/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
 
 如果是 **Unix操作系统** 来负责分蛋糕，那么他会这样定规矩：每个人上来吃 1 分钟，时间到了换下一个。最后一个人吃完了就再从头开始。于是，不管这10个人是不是优先级不同、饥饿程度不同、饭量不同，每个人上来的时候都可以吃 1 分钟。当然，如果有人本来不太饿，或者饭量小，吃了30秒钟之后就吃饱了，那么他可以跟操作系统说：我已经吃饱了（挂起）。于是操作系统就会让下一个人接着来。
 
@@ -53,11 +53,9 @@
 
 **对于第二个问题，答案是：有，而且区别很明显**。假设我们刚才的分蛋糕场景里面，有另外一个PPMM 7号，她的优先级也非常非常高（因为非常非常漂亮），所以操作系统总是会叫道她来吃蛋糕。而且，7号也非常喜欢吃蛋糕，而且饭量也很大。不过，7号人品很好，她很善良，她没吃几口就会想：如果现在有别人比我更需要吃蛋糕，那么我就让给他。因此，她可以每吃几口就跟操作系统说：我们来重新计算一下所有人的总优先级吧。不过，操作系统不接受这个建议——因为操作系统不提供这个接口。于是7号mm就换了个说法：“在未来的0毫秒之内不要再叫我上来吃蛋糕了”。这个指令操作系统是接受的，于是此时操作系统就会重新计算大家的总优先级——注意这个时候是连7号一起计算的，因为“0毫秒已经过去了”嘛。因此如果没有比7号更需要吃蛋糕的人出现，那么下一次7号还是会被叫上来吃蛋糕。
 
-因此，**Thread.Sleep\(0\)的作用，就是“触发操作系统立刻重新进行一次CPU竞争”**。竞争的结果也许是当前线程仍然获得CPU控制权，也许会换成别的线程获得CPU控制权。这也是我们在大循环里面经常会写一句Thread.Sleep\(0\) ，因为这样就给了其他线程比如Paint线程获得CPU控制权的权力，这样界面就不会假死在那里。
+因此，**Thread.Sleep(0)的作用，就是“触发操作系统立刻重新进行一次CPU竞争”**。竞争的结果也许是当前线程仍然获得CPU控制权，也许会换成别的线程获得CPU控制权。这也是我们在大循环里面经常会写一句Thread.Sleep(0) ，因为这样就给了其他线程比如Paint线程获得CPU控制权的权力，这样界面就不会假死在那里。
 
 另外，虽然上面提到说“除非它自己放弃使用 CPU ，否则将完全霸占 CPU”，但这个行为仍然是受到制约的——操作系统会监控你霸占CPU的情况，如果发现某个线程长时间霸占CPU，会强制使这个线程挂起，因此在实际上不会出现“一个线程一直霸占着 CPU 不放”的情况。至于我们的大循环造成程序假死，并不是因为这个线程一直在霸占着CPU。实际上在这段时间操作系统已经进行过多次CPU竞争了，只不过其他线程在获得CPU控制权之后很短时间内马上就退出了，于是就又轮到了这个线程继续执行循环，于是就又用了很久才被操作系统强制挂起。。。因此反应到界面上，看起来就好像这个线程一直在霸占着CPU一样。怎么样？跟你的理解一致吗？
 
-欢迎留言说说你的理解与看法  
-  
-
-
+欢迎留言说说你的理解与看法\
+\

@@ -1,6 +1,6 @@
 # 程序员一般可以从什么平台接私活？
 
-{% embed url="https://mp.weixin.qq.com/s?\_\_biz=MzI2MTIzMzY3Mw==&mid=2247488928&idx=1&sn=4c56dd675e1b32a73b698df3d5e8609f&chksm=ea5cd8c6dd2b51d05e6d6d715418241f471ccb3002719263b2d0e092763f68f3691249970a08&scene=21\#wechat\_redirect" %}
+{% embed url="https://mp.weixin.qq.com/s?__biz=MzI2MTIzMzY3Mw==&mid=2247488928&idx=1&sn=4c56dd675e1b32a73b698df3d5e8609f&chksm=ea5cd8c6dd2b51d05e6d6d715418241f471ccb3002719263b2d0e092763f68f3691249970a08&scene=21#wechat_redirect" %}
 
 
 
@@ -10,7 +10,7 @@
 
 ## 国内远程工作平台
 
-1. **程序员客栈：**[**https://www.proginn.com**](https://www.proginn.com)\*\*\*\*
+1. **程序员客栈：**[**https://www.proginn.com**](https://www.proginn.com)
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/19/640-20200719133050064-133050.jpg)
 
@@ -42,7 +42,7 @@ Coding 旗下的互联网软件外包服务平台，平台以外包为主。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/19/640-20200719133050750-133050.jpg)
 
-### _\_6. 快码众包\：kuaima.co
+### _\\_6. 快码众包\：kuaima.co
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/19/640-20200719133050836-133050.jpg)
 
@@ -94,7 +94,7 @@ Upwork 是全球最大的、最优秀的、最规范的综合类人力外包服�
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/19/640-20200719133052280-133052.jpg)
 
-[http://Freelancer.com](http://Freelancer.com) 的工作类型覆盖了很多不同的领域，由程序开发到市场营销、广告、会计、法务等一系列的可以远程的工作。
+[http://Freelancer.com](http://freelancer.com) 的工作类型覆盖了很多不同的领域，由程序开发到市场营销、广告、会计、法务等一系列的可以远程的工作。
 
 ### 3. Dribbble：[https://dribbble.com/jobs](https://dribbble.com/jobs)
 
@@ -137,4 +137,3 @@ AngelList 主要是服务于初创公司和天使投资人的平台，这里还�
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/19/640-20200719133053310-133053.jpg)
 
 Topcoder 通过算法比赛吸引世界顶级的程序员，他会将一下大型项目分割成很多小模块，通过竞赛的模式交给用户来做，优胜者可以拿到制定模块的奖金。
-

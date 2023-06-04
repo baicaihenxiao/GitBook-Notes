@@ -1,6 +1,6 @@
 # 分布式系统互斥性与幂等性问题的分析与解决
 
-[https://mp.weixin.qq.com/s?\_\_biz=MzU0MzQ5MDA0Mw==&mid=2247493072&idx=2&sn=06e1c618dc32a20de530fc86d6660df4&chksm=fb080f44cc7f8652069669d79c308b80137336133fb7aeb04ddadd149dc5571e5ff95b8437ee&mpshare=1&scene=1&srcid=0825aMIWicFtpZBNx4E0wnZ0&sharer\_sharetime=1598346288107&sharer\_shareid=393f249533d421d13c2402bd43e74356&key=2d5df049eab5d7683275156d790b86e508f1ddb27441a0b8c6649ab8080d11b6dde901c447e18c9fd76f0c8db7c5c9f7a76853aa4f2b1ce3f53a3b5cd855ef50705977445edd1ed1af641375ebc8d4e25aa6d2eb1f8d9d0ff6d42cbb35d3184ccad893881dac85d0e1e6e229839b853b9277b75686b670a6e3f723a1dde530bf&ascene=1&uin=MjY3NTU5NjEwMg%3D%3D&devicetype=Windows+10+x64&version=62090070&lang=en&exportkey=AU0uToH2EM6ME5Rlg0XUMm4%3D&pass\_ticket=9np3g0kQtzg82yMTvGXe5XdxY8hg4TrG%2BU63eDh8t7zgRNy8z8Ow%2BdFfMB8JYrxe](https://mp.weixin.qq.com/s?__biz=MzU0MzQ5MDA0Mw==&mid=2247493072&idx=2&sn=06e1c618dc32a20de530fc86d6660df4&chksm=fb080f44cc7f8652069669d79c308b80137336133fb7aeb04ddadd149dc5571e5ff95b8437ee&mpshare=1&scene=1&srcid=0825aMIWicFtpZBNx4E0wnZ0&sharer_sharetime=1598346288107&sharer_shareid=393f249533d421d13c2402bd43e74356&key=2d5df049eab5d7683275156d790b86e508f1ddb27441a0b8c6649ab8080d11b6dde901c447e18c9fd76f0c8db7c5c9f7a76853aa4f2b1ce3f53a3b5cd855ef50705977445edd1ed1af641375ebc8d4e25aa6d2eb1f8d9d0ff6d42cbb35d3184ccad893881dac85d0e1e6e229839b853b9277b75686b670a6e3f723a1dde530bf&ascene=1&uin=MjY3NTU5NjEwMg%3D%3D&devicetype=Windows+10+x64&version=62090070&lang=en&exportkey=AU0uToH2EM6ME5Rlg0XUMm4%3D&pass_ticket=9np3g0kQtzg82yMTvGXe5XdxY8hg4TrG%2BU63eDh8t7zgRNy8z8Ow%2BdFfMB8JYrxe)
+[https://mp.weixin.qq.com/s?\_\_biz=MzU0MzQ5MDA0Mw==\&mid=2247493072\&idx=2\&sn=06e1c618dc32a20de530fc86d6660df4\&chksm=fb080f44cc7f8652069669d79c308b80137336133fb7aeb04ddadd149dc5571e5ff95b8437ee\&mpshare=1\&scene=1\&srcid=0825aMIWicFtpZBNx4E0wnZ0\&sharer\_sharetime=1598346288107\&sharer\_shareid=393f249533d421d13c2402bd43e74356\&key=2d5df049eab5d7683275156d790b86e508f1ddb27441a0b8c6649ab8080d11b6dde901c447e18c9fd76f0c8db7c5c9f7a76853aa4f2b1ce3f53a3b5cd855ef50705977445edd1ed1af641375ebc8d4e25aa6d2eb1f8d9d0ff6d42cbb35d3184ccad893881dac85d0e1e6e229839b853b9277b75686b670a6e3f723a1dde530bf\&ascene=1\&uin=MjY3NTU5NjEwMg%3D%3D\&devicetype=Windows+10+x64\&version=62090070\&lang=en\&exportkey=AU0uToH2EM6ME5Rlg0XUMm4%3D\&pass\_ticket=9np3g0kQtzg82yMTvGXe5XdxY8hg4TrG%2BU63eDh8t7zgRNy8z8Ow%2BdFfMB8JYrxe](https://mp.weixin.qq.com/s?\_\_biz=MzU0MzQ5MDA0Mw==\&mid=2247493072\&idx=2\&sn=06e1c618dc32a20de530fc86d6660df4\&chksm=fb080f44cc7f8652069669d79c308b80137336133fb7aeb04ddadd149dc5571e5ff95b8437ee\&mpshare=1\&scene=1\&srcid=0825aMIWicFtpZBNx4E0wnZ0\&sharer\_sharetime=1598346288107\&sharer\_shareid=393f249533d421d13c2402bd43e74356\&key=2d5df049eab5d7683275156d790b86e508f1ddb27441a0b8c6649ab8080d11b6dde901c447e18c9fd76f0c8db7c5c9f7a76853aa4f2b1ce3f53a3b5cd855ef50705977445edd1ed1af641375ebc8d4e25aa6d2eb1f8d9d0ff6d42cbb35d3184ccad893881dac85d0e1e6e229839b853b9277b75686b670a6e3f723a1dde530bf\&ascene=1\&uin=MjY3NTU5NjEwMg%3D%3D\&devicetype=Windows+10+x64\&version=62090070\&lang=en\&exportkey=AU0uToH2EM6ME5Rlg0XUMm4%3D\&pass\_ticket=9np3g0kQtzg82yMTvGXe5XdxY8hg4TrG%2BU63eDh8t7zgRNy8z8Ow%2BdFfMB8JYrxe)
 
 
 
@@ -69,7 +69,7 @@ Java JDK中提供了两种互斥锁Lock和synchronized。不同的线程之间�
 ReentrantLock主要利用CAS+CLH队列来实现。它支持公平锁和非公平锁，两者的实现类似。
 
 * CAS：Compare and Swap，比较并交换。CAS有3个操作数：内存值V、预期值A、要修改的新值B。当且仅当预期值A和内存值V相同时，将内存值V修改为B，否则什么都不做。该操作是一个原子操作，被广泛的应用在Java的底层实现中。在Java中，CAS主要是由sun.misc.Unsafe这个类通过JNI调用CPU底层指令实现。
-* CLH队列：带头结点的双向非循环链表\(如下图所示\)：
+* CLH队列：带头结点的双向非循环链表(如下图所示)：
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/08/26/640-141938.png)
 
@@ -80,7 +80,7 @@ ReentrantLock的基本实现可以概括为：先通过CAS尝试获取锁。如�
 
 下面分析下两个片段：
 
-```text
+```
 final boolean nonfairTryAcquire(int acquires) {
    final Thread current = Thread.currentThread();
    int c = getState();
@@ -103,7 +103,7 @@ final boolean nonfairTryAcquire(int acquires) {
 
 在尝试获取锁的时候，会先调用上面的方法。如果状态为0，则表明此时无人占有锁。此时尝试进行set，一旦成功，则成功占有锁。如果状态不为0，再判断是否是当前线程获取到锁。如果是的话，将状态+1，因为此时就是当前线程，所以不用CAS。这也就是可重入锁的实现原理。
 
-```text
+```
 final boolean acquireQueued(final Node node, int arg) {
    boolean failed = true;
    try {
@@ -142,7 +142,7 @@ private final boolean parkAndCheckInterrupt() {
 
 在Java虚拟机的specification中，有关于monitorenter和monitorexit字节码指令的详细描述：
 
-[http://docs.oracle.com/Javase/specs/jvms/se7/html/jvms-6.html\#jvms-6.5.monitorenter。](http://docs.oracle.com/Javase/specs/jvms/se7/html/jvms-6.html#jvms-6.5.monitorenter。)
+[http://docs.oracle.com/Javase/specs/jvms/se7/html/jvms-6.html#jvms-6.5.monitorenter。](http://docs.oracle.com/Javase/specs/jvms/se7/html/jvms-6.html#jvms-6.5.monitorenter%E3%80%82)
 
 **monitorenter**
 
@@ -229,7 +229,7 @@ private final boolean parkAndCheckInterrupt() {
 
 伪代码为：
 
-```text
+```
 lock = mysql.get(id);
 while(lock.status == 1) {
    sleep(100);
@@ -268,7 +268,7 @@ mysql.update(lock.status = 0);
 
 ### **典型实现**
 
-_**\**_**ZooKeeper的实现\*\***
+_**\\**_**ZooKeeper的实现\*\***
 
 ZooKeeper（以下简称“ZK”）中有一种节点叫做顺序节点，假如我们在/lock/目录下创建3个节点，ZK集群会按照发起创建的顺序来创建节点，节点分别为/lock/0000000001、/lock/0000000002、/lock/0000000003。
 
@@ -276,8 +276,8 @@ ZK中还有一种名为临时节点的节点，临时节点由某个客户端创
 
 根据ZK中节点是否存在，可以作为分布式锁的锁状态，以此来实现一个分布式锁，下面是分布式锁的基本逻辑：
 
-* 客户端调用create\(\)方法创建名为“/dlm-locks/lockname/lock-”的临时顺序节点。
-* 客户端调用getChildren\(“lockname”\)方法来获取所有已经创建的子节点。
+* 客户端调用create()方法创建名为“/dlm-locks/lockname/lock-”的临时顺序节点。
+* 客户端调用getChildren(“lockname”)方法来获取所有已经创建的子节点。
 * 客户端获取到所有子节点path之后，如果发现自己在步骤1中创建的节点是所有节点中序号最小的，那么就认为这个客户端获得了锁。
 * 如果创建的节点不是所有节点中需要最小的，那么则监视比自己创建节点的序列号小的最大的节点，进入等待。直到下次监视的子节点变更的时候，再进行子节点的获取，判断是否获取锁。
 
@@ -314,7 +314,7 @@ Redis的分布式缓存特性使其成为了分布式锁的一种基础实现。
 
 以上是Redis的一种常见的实现方式，除此以外还可以用SETNX+EXPIRE来实现。Redisson是一个官方推荐的Redis客户端并且实现了很多分布式的功能。它的分布式锁就提供了一种更完善的解决方案，源码：
 
-[https://github.com/mrniko/redisson。](https://github.com/mrniko/redisson。)
+[https://github.com/mrniko/redisson。](https://github.com/mrniko/redisson%E3%80%82)
 
 **Tair的实现**
 
@@ -348,41 +348,39 @@ Cerberus分布式锁将不同引擎的接口抽象为一套，屏蔽了不同引
 
 下面是Cerberus的lock方法，这些方法和JUC的ReentrantLock的方式保持一致，使用非常灵活且不需要额外的学习时间。
 
-**void lock\(\);**
+**void lock();**
 
 获取锁，如果锁被占用，将禁用当前线程，并且在获得锁之前，该线程将一直处于阻塞状态。
 
-**boolean tryLock\(\);**
+**boolean tryLock();**
 
 仅在调用时锁为空闲状态才获取该锁。 如果锁可用，则获取锁，并立即返回值true。如果锁不可用，则此方法将立即返回值false。
 
-**boolean tryLock\(long time, TimeUnit unit\) throws InterruptedException;**
+**boolean tryLock(long time, TimeUnit unit) throws InterruptedException;**
 
 如果锁在给定的等待时间内空闲，并且当前线程未被中断，则获取锁。 如果在给定时间内锁可用，则获取锁，并立即返回值true。如果在给定时间内锁一直不可用，则此方法将立即返回值false。
 
-* void lockInterruptibly\(\) throws InterruptedException; 
+*   void lockInterruptibly() throws InterruptedException;&#x20;
 
-    获取锁，如果锁被占用，则一直等待直到线程被中断或者获取到锁。
+    &#x20; 获取锁，如果锁被占用，则一直等待直到线程被中断或者获取到锁。
+*   void unlock();&#x20;
 
-* void unlock\(\); 
-
-    释放当前持有的锁。
+    &#x20; 释放当前持有的锁。
 
 **特点三：支持一键降级**
 
 Cerberus提供了实时切换引擎的接口:
 
-* String switchEngine\(\) 
+*   String switchEngine()&#x20;
 
-    转换分布式锁引擎，按配置的引擎的顺序循环转换。 
+    &#x20; 转换分布式锁引擎，按配置的引擎的顺序循环转换。&#x20;
 
-    返回值：返回当前的engine名字，如：”zk”。
+    &#x20; 返回值：返回当前的engine名字，如：”zk”。
+*   String switchEngine(String engineName)&#x20;
 
-* String switchEngine\(String engineName\) 
+    &#x20; 转换分布式锁引擎，切换为指定的引擎。&#x20;
 
-    转换分布式锁引擎，切换为指定的引擎。 
-
-    参数：engineName - 引擎的名字，同配置bean的名字，”zk”/”tair”。 返回值：返回当前的engine名字，如：”zk”。
+    &#x20; 参数：engineName - 引擎的名字，同配置bean的名字，”zk”/”tair”。 返回值：返回当前的engine名字，如：”zk”。
 
 当使用方选择了两种引擎，平时分布式锁会工作在主引擎上。一旦所依赖的主引擎出现故障，那么使用方可以通过自动或者手动方式调用该切换引擎接口，平滑的将分布式锁切换到另一个引擎上以将风险降到最低。自动切换方式可以利用Hystrix实现。手动切换推荐的一个方案则是使用美团点评基于Zookeeper的基础组件MCC，通过监听MCC配置项更改，来达到手动将分布式系统所有主机同步切换引擎的目的。需要注意的是，切换引擎目前并不会迁移原引擎已有的锁。
 
@@ -482,4 +480,3 @@ GTIS的实现难点在于如何保证其判断重复的可靠性。由于分布�
 目前Cerberus分布式锁、GTIS都已应用在生产环境并平稳运行。两者提供的解决方案已经能够解决大多数分布式环境中的操作互斥性和幂等性的问题。值得一提的是，分布式锁和GTIS都不是万能的，它们对外部存储系统的强依赖使得在环境不那么稳定的情况下，对可靠性会造成一定的影响。在并发量过高的情况下，如果不能很好的控制锁的粒度，那么使用分布式锁也是不太合适的。
 
 总的来说，分布式环境下的业务场景纷繁复杂，要解决互斥性和幂等性问题还需要结合当前系统架构、业务需求和未来演进综合考虑。Cerberus分布式锁和GTIS也会持续不断地迭代更新，提供更多的引擎选择、更高效可靠的实现方式、更简捷的接入流程，以期满足更复杂的使用场景和业务需求。
-
