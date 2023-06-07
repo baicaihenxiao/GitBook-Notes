@@ -30,6 +30,7 @@
 * [✔️⭐ 魏杰详解“双循环”五个核心逻辑](aisixiang/wei-jie-xiang-jie-shuang-xun-huan-wu-ge-he-xin-luo-ji.md)
 * [✔️⭐  彭姝祎：欧洲主要国家养老金制度改革及其启示](aisixiang/peng-shu-yi-ou-zhou-zhu-yao-guo-jia-yang-lao-jin-zhi-du-gai-ge-ji-qi-qi-shi.md)
 * [✔️⭐ 孙凝晖：新型举国体制下对国家重点实验室重组的战略思考](aisixiang/sun-ning-hui-xin-xing-ju-guo-ti-zhi-xia-dui-guo-jia-zhong-dian-shi-yan-shi-zhong-zu-de-zhan-lve-si-k.md)
+* [基辛格等：安全与世界秩序](aisixiang/ji-xin-ge-deng-an-quan-yu-shi-jie-zhi-xu.md)
 * [张宇燕：站在历史的十字路口 ——关于当前的国际形势与全球治理](aisixiang/zhang-yu-yan-zhan-zai-li-shi-de-shi-zi-lu-kou-guan-yu-dang-qian-de-guo-ji-xing-shi-yu-quan-qiu-zhi-l.md)
 * [唐元：当前经济形势及2022年对策建议](aisixiang/tang-yuan-dang-qian-jing-ji-xing-shi-ji-2022-nian-dui-ce-jian-yi.md)
 * [贾庆国：对国家安全的特点和治理原则之思考](aisixiang/jia-qing-guo-dui-guo-jia-an-quan-de-te-dian-he-zhi-li-yuan-ze-zhi-si-kao.md)
