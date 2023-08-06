@@ -27,6 +27,7 @@
 * [吴增定：利益权衡还是道德意志？](aisixiang/wu-zeng-ding-li-yi-quan-heng-hai-shi-dao-de-yi-zhi.md)
 * [张文显：习近平法治思想的理论体系](aisixiang/zhang-wen-xian-xi-jin-ping-fa-zhi-si-xiang-de-li-lun-ti-xi.md)
 * [中华人民共和国国民经济和社会发展第十四个五年规划和2035年远景目标纲要](aisixiang/zhong-hua-ren-min-gong-he-guo-guo-min-jing-ji-he-she-hui-fa-zhan-di-shi-si-ge-wu-nian-gui-hua-he-203.md)
+* [中国主要职务和权力中心](aisixiang/zhong-guo-zhu-yao-zhi-wu-he-quan-li-zhong-xin.md)
 * [✔️⭐ 魏杰详解“双循环”五个核心逻辑](aisixiang/wei-jie-xiang-jie-shuang-xun-huan-wu-ge-he-xin-luo-ji.md)
 * [✔️⭐  彭姝祎：欧洲主要国家养老金制度改革及其启示](aisixiang/peng-shu-yi-ou-zhou-zhu-yao-guo-jia-yang-lao-jin-zhi-du-gai-ge-ji-qi-qi-shi.md)
 * [✔️⭐ 孙凝晖：新型举国体制下对国家重点实验室重组的战略思考](aisixiang/sun-ning-hui-xin-xing-ju-guo-ti-zhi-xia-dui-guo-jia-zhong-dian-shi-yan-shi-zhong-zu-de-zhan-lve-si-k.md)
