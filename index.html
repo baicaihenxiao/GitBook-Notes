@@ -65,8 +65,8 @@
             //     '.*?/changelog': 'https://cdn.jsdelivr.net/npm/docsify-themeable@0/CHANGELOG.md',
             // },
             auto2top   : false,
-            maxLevel   : 4,
-            subMaxLevel: 5,
+            maxLevel   : 1,
+            subMaxLevel: 1,
 
             // PLUGINS
             // -----------------------------------------------------------------
@@ -76,6 +76,11 @@
                 depth      : 5,
                 noData     : 'No results!',
                 placeholder: 'Search...'
+            },
+
+            toc: {
+                tocMaxLevel: 6,
+                target: 'h1, h2, h3, h4, h5, h6'
             },
 
             // {docsify-updated} 这个变量显示的格式
@@ -150,6 +155,9 @@
     <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script> 原生支持，但要写javascript，不能JavaScript-->
 
     <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+        <!--    https://github.com/justintien/docsify-plugin-toc-->
+    <!--    <script src="//unpkg.com/docsify-plugin-toc"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1.2.1/dist/docsify-plugin-toc.min.js"></script>
 
 </body>
 </html>
