@@ -36,6 +36,7 @@
 * [唐元：当前经济形势及2022年对策建议](aisixiang/tang-yuan-dang-qian-jing-ji-xing-shi-ji-2022-nian-dui-ce-jian-yi.md)
 * [贾庆国：对国家安全的特点和治理原则之思考](aisixiang/jia-qing-guo-dui-guo-jia-an-quan-de-te-dian-he-zhi-li-yuan-ze-zhi-si-kao.md)
 * [基督，犹太，伊斯兰教](aisixiang/ji-du-you-tai-yi-si-lan-jiao.md)
+* [资本主义、社会主义、共产主义 划分](aisixiang/zi-ben-zhu-yi-she-hui-zhu-yi-gong-chan-zhu-yi-hua-fen.md)
 * [阿联酋外交 - “小斯巴达”能撬动中东格局吗？](aisixiang/a-lian-qiu-wai-jiao-xiao-si-ba-da-neng-qiao-dong-zhong-dong-ge-ju-ma.md)
 * [✔️ 陈嘉映：哲学何为](aisixiang/chen-jia-ying-zhe-xue-he-wei.md)
 * [✔️⭐计算机视觉 | 哥大读博五年总结（全）](aisixiang/ji-suan-ji-shi-jue-ge-da-du-bo-wu-nian-zong-jie-quan.md)
