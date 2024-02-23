@@ -1,6 +1,6 @@
 # 攀亲戚？罗马尼亚，和“罗马”有什么关系？
 
-[https://mp.weixin.qq.com/s?\_\_biz=MzU0NTY5NzQzNw==\&mid=2247566803\&idx=1\&sn=c78ee96eb4e8a40d416ac53873189346](https://mp.weixin.qq.com/s?\_\_biz=MzU0NTY5NzQzNw==\&mid=2247566803\&idx=1\&sn=c78ee96eb4e8a40d416ac53873189346\&sharer\_shareinfo=771e3e379fc43275018a09e2e111fa6c\&sharer\_shareinfo\_first=771e3e379fc43275018a09e2e111fa6c#rd)
+[https://mp.weixin.qq.com/s?\_\_biz=MzU0NTY5NzQzNw==\&mid=2247566803\&idx=1\&sn=c78ee96eb4e8a40d416ac53873189346](https://mp.weixin.qq.com/s?\_\_biz=MzU0NTY5NzQzNw==\&mid=2247566803\&idx=1\&sn=c78ee96eb4e8a40d416ac53873189346)
 
 
 
