@@ -59,6 +59,8 @@
 * [✔️⭐ 龚鹏程：得新疆者得天下](aisixiang/gong-peng-cheng-de-xin-jiang-zhe-de-tian-xia.md)
 * [✔️ 美国国运史](aisixiang/mei-guo-guo-yun-shi.md)
 * [“同样被大国做局, 乌克兰崩了, 伊朗为何偏偏能顶住?”](aisixiang/tong-yang-bei-da-guo-zuo-ju-wu-ke-lan-beng-le-yi-lang-wei-he-pian-pian-neng-ding-zhu.md)
+* [哲学](aisixiang/zhe-xue/README.md)
+  * [施一公：生命的本质和生命的极限](aisixiang/zhe-xue/shi-yi-gong-sheng-ming-de-ben-zhi-he-sheng-ming-de-ji-xian.md)
 * [地理 & 历史](aisixiang/di-li-li-shi/README.md)
   * [攀亲戚？罗马尼亚，和“罗马”有什么关系？](aisixiang/di-li-li-shi/pan-qin-qi-luo-ma-ni-ya-he-luo-ma-you-shi-mo-guan-xi.md)
 
