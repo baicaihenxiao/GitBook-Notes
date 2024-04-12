@@ -38,7 +38,6 @@
 * [基督，犹太，伊斯兰教](aisixiang/ji-du-you-tai-yi-si-lan-jiao.md)
 * [资本主义、社会主义、共产主义 划分](aisixiang/zi-ben-zhu-yi-she-hui-zhu-yi-gong-chan-zhu-yi-hua-fen.md)
 * [阿联酋外交 - “小斯巴达”能撬动中东格局吗？](aisixiang/a-lian-qiu-wai-jiao-xiao-si-ba-da-neng-qiao-dong-zhong-dong-ge-ju-ma.md)
-* [✔️ 陈嘉映：哲学何为](aisixiang/chen-jia-ying-zhe-xue-he-wei.md)
 * [✔️⭐计算机视觉 | 哥大读博五年总结（全）](aisixiang/ji-suan-ji-shi-jue-ge-da-du-bo-wu-nian-zong-jie-quan.md)
 * [✔️ 100岁老人讲述战乱时期的故事](aisixiang/100-sui-lao-ren-jiang-shu-zhan-luan-shi-qi-de-gu-shi.md)
 * [✔️⭐为什么有公司愿意花1.6亿请郑爽拍戏?](aisixiang/wei-shen-me-you-gong-si-yuan-yi-hua-1.6-yi-qing-zheng-shuang-pai-xi.md)
@@ -61,8 +60,12 @@
 * [“同样被大国做局, 乌克兰崩了, 伊朗为何偏偏能顶住?”](aisixiang/tong-yang-bei-da-guo-zuo-ju-wu-ke-lan-beng-le-yi-lang-wei-he-pian-pian-neng-ding-zhu.md)
 * [哲学](aisixiang/zhe-xue/README.md)
   * [施一公：生命的本质和生命的极限](aisixiang/zhe-xue/shi-yi-gong-sheng-ming-de-ben-zhi-he-sheng-ming-de-ji-xian.md)
+  * [✔️ 陈嘉映：哲学何为](aisixiang/zhe-xue/chen-jia-ying-zhe-xue-he-wei.md)
 * [地理 & 历史](aisixiang/di-li-li-shi/README.md)
   * [攀亲戚？罗马尼亚，和“罗马”有什么关系？](aisixiang/di-li-li-shi/pan-qin-qi-luo-ma-ni-ya-he-luo-ma-you-shi-mo-guan-xi.md)
+* [生活](aisixiang/sheng-huo/README.md)
+  * [当一位北大教授成为24小时照护者](aisixiang/sheng-huo/dang-yi-wei-bei-da-jiao-shou-cheng-wei-24-xiao-shi-zhao-hu-zhe.md)
+* [Page](aisixiang/page.md)
 
 ## java
 

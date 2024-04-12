@@ -17,7 +17,7 @@
 * [**07、Window 下的版本号管理策略：**](https://mp.weixin.qq.com/s?\_\_biz=MzU2NjIzNDk5NQ==\&mid=2247487217\&idx=1\&sn=a6428305479760448199d89eecc343f3\&scene=21#wechat\_redirect)
 * [**08、正式版，不同类型的软件的正式版本通常也有区别。**](https://mp.weixin.qq.com/s?\_\_biz=MzU2NjIzNDk5NQ==\&mid=2247487217\&idx=1\&sn=a6428305479760448199d89eecc343f3\&scene=21#wechat\_redirect)
 
-
+***
 
 版本控制比较普遍的 3 种命名格式 :
 
