@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Welcome to My Notes](README.md)
-* [➡️　GITBOOK VERSION](https://note.cser.club/)
-* [➡️　DOCSIFY GITHUB VERSION](https://www.cser.club/GitBook-Notes/#/)
+* [➡️　GITBOOK VERSION](https://note.cser.site/)
+* [➡️　DOCSIFY GITHUB VERSION](https://www.cser.site/GitBook-Notes/#/)
 * [➡️　DOCSIFY GITEE VERSION](https://baicaihenxiao.gitee.io/gitbook-notes/#/)
 * [➡️　SUMMARY](https://github.com/baicaihenxiao/GitBook-Notes/blob/master/SUMMARY.md)
 
@@ -12,7 +12,6 @@
 * [世界各地关于国际关系、发展研究、科技政策的主要智库](aisixiang/shi-jie-ge-di-guan-yu-guo-ji-guan-xi-fa-zhan-yan-jiu-ke-ji-zheng-ce-de-zhu-yao-zhi-ku.md)
 * [王逸舟：外交知识刍议](aisixiang/wang-yi-zhou-wai-jiao-zhi-shi-chu-yi.md)
 * [吴增定：利益权衡还是道德意志？](aisixiang/wu-zeng-ding-li-yi-quan-heng-hai-shi-dao-de-yi-zhi.md)
-
 * [基督，犹太，伊斯兰教](aisixiang/ji-du-you-tai-yi-si-lan-jiao.md)
 * [资本主义、社会主义、共产主义 划分](aisixiang/zi-ben-zhu-yi-she-hui-zhu-yi-gong-chan-zhu-yi-hua-fen.md)
 * [--- 政治-国内政经 ---](aisixiang/zheng-zhi-guo-nei-zheng-jing/README.md)
@@ -49,7 +48,7 @@
   * [阿联酋外交 - “小斯巴达”能撬动中东格局吗？](aisixiang/guo-ji-guan-xi/a-lian-qiu-wai-jiao-xiao-si-ba-da-neng-qiao-dong-zhong-dong-ge-ju-ma.md)
   * [张宇燕：站在历史的十字路口 ——关于当前的国际形势与全球治理](aisixiang/guo-ji-guan-xi/zhang-yu-yan-zhan-zai-li-shi-de-shi-zi-lu-kou-guan-yu-dang-qian-de-guo-ji-xing-shi-yu-quan-qiu-zhi-l.md)
   * [基辛格等：安全与世界秩序](aisixiang/ji-xin-ge-deng-an-quan-yu-shi-jie-zhi-xu.md)
-  * [✔️⭐  彭姝祎：欧洲主要国家养老金制度改革及其启示](aisixiang/peng-shu-yi-ou-zhou-zhu-yao-guo-jia-yang-lao-jin-zhi-du-gai-ge-ji-qi-qi-shi.md)
+  * [✔️⭐ 彭姝祎：欧洲主要国家养老金制度改革及其启示](aisixiang/peng-shu-yi-ou-zhou-zhu-yao-guo-jia-yang-lao-jin-zhi-du-gai-ge-ji-qi-qi-shi.md)
   * [徐振伟：打造“生物盾牌”：美国生物国防计划的发展及启示](aisixiang/xu-zhen-wei-da-zao-sheng-wu-dun-pai-mei-guo-sheng-wu-guo-fang-ji-hua-de-fa-zhan-ji-qi-shi.md)
 * [--- 哲学 ---](aisixiang/zhe-xue/README.md)
   * [施一公：生命的本质和生命的极限](aisixiang/zhe-xue/shi-yi-gong-sheng-ming-de-ben-zhi-he-sheng-ming-de-ji-xian.md)
