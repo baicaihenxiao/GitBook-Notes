@@ -65,7 +65,8 @@
   * [攀亲戚？罗马尼亚，和“罗马”有什么关系？](aisixiang/di-li-li-shi/pan-qin-qi-luo-ma-ni-ya-he-luo-ma-you-shi-mo-guan-xi.md)
 * [--- 生活 ---](aisixiang/sheng-huo/README.md)
   * [当一位北大教授成为24小时照护者](aisixiang/sheng-huo/dang-yi-wei-bei-da-jiao-shou-cheng-wei-24-xiao-shi-zhao-hu-zhe.md)
-* [Page](aisixiang/page.md)
+* [科学](aisixiang/ke-xue/README.md)
+  * [frequency wavelength energy](aisixiang/ke-xue/frequency-wavelength-energy.md)
 
 ## java
 
