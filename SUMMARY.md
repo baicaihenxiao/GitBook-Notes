@@ -49,6 +49,7 @@
   * [基辛格等：安全与世界秩序](aisixiang/ji-xin-ge-deng-an-quan-yu-shi-jie-zhi-xu.md)
   * [✔️⭐ 彭姝祎：欧洲主要国家养老金制度改革及其启示](aisixiang/peng-shu-yi-ou-zhou-zhu-yao-guo-jia-yang-lao-jin-zhi-du-gai-ge-ji-qi-qi-shi.md)
   * [徐振伟：打造“生物盾牌”：美国生物国防计划的发展及启示](aisixiang/xu-zhen-wei-da-zao-sheng-wu-dun-pai-mei-guo-sheng-wu-guo-fang-ji-hua-de-fa-zhan-ji-qi-shi.md)
+  * [特朗普为何对它爱不释手？](aisixiang/guo-ji-guan-xi/te-lang-pu-wei-he-dui-ta-ai-bu-shi-shou.md)
 * [--- 哲学 ---](aisixiang/zhe-xue/README.md)
   * [施一公：生命的本质和生命的极限](aisixiang/zhe-xue/shi-yi-gong-sheng-ming-de-ben-zhi-he-sheng-ming-de-ji-xian.md)
   * [✔️ 陈嘉映：哲学何为](aisixiang/zhe-xue/chen-jia-ying-zhe-xue-he-wei.md)
