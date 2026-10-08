@@ -1,14 +1,9 @@
 # Table of contents
 
-* [Welcome to My Notes](README.md)
-* [➡️　GITBOOK VERSION](https://note.cser.site/)
-* [➡️　DOCSIFY GITHUB VERSION](https://www.cser.site/GitBook-Notes/#/)
-* [➡️　DOCSIFY GITEE VERSION](https://baicaihenxiao.gitee.io/gitbook-notes/#/)
-* [➡️　SUMMARY](https://github.com/baicaihenxiao/GitBook-Notes/blob/master/SUMMARY.md)
+* [CSER Knowledge](README.md)
 
 ## 爱思想 <a href="#aisixiang" id="aisixiang"></a>
 
-* [珍惜时间 - 100 Blocks a Day](aisixiang/zhen-xi-shi-jian-100-blocksaday.md)
 * [世界各地关于国际关系、发展研究、科技政策的主要智库](aisixiang/shi-jie-ge-di-guan-yu-guo-ji-guan-xi-fa-zhan-yan-jiu-ke-ji-zheng-ce-de-zhu-yao-zhi-ku.md)
 * [王逸舟：外交知识刍议](aisixiang/wang-yi-zhou-wai-jiao-zhi-shi-chu-yi.md)
 * [基督，犹太，伊斯兰教](aisixiang/ji-du-you-tai-yi-si-lan-jiao.md)
@@ -69,6 +64,7 @@
   * [✔️frequency wavelength energy](aisixiang/ke-xue/frequency-wavelength-energy.md)
   * [✔️⭐火星探测历史科普](aisixiang/huo-xing-tan-ce-li-shi-ke-pu.md)
   * [白春礼：世界科技前沿发展态势](aisixiang/bai-chun-li-shi-jie-ke-ji-qian-yan-fa-zhan-tai-shi.md)
+  * [珍惜时间 - 100 Blocks a Day](aisixiang/ke-xue/zhen-xi-shi-jian-100-blocksaday.md)
 
 ## java
 

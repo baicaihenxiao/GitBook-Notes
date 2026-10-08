@@ -141,7 +141,7 @@ Bean 的解析过程非常复杂，功能被分的很细，因为这里需要被
 
 Context 在 Spring 的 org.springframework.context 包下，前面已经讲解了 Context 组件在 Spring 中的作用，他实际上就是**给 Spring 提供一个运行时的环境，用以保存各个对象的状态**。下面看一下这个环境是如何构建的。
 
-**ApplicationContext 是 Context 的顶级父类，他除了能标识一个应用环境的基本信息外，他还继承了五个接口，这五个接口主要是扩展了 Context 的功能。**下面是 Context 的类结构图：
+**ApplicationContext 是 Context 的顶级父类，他除了能标识一个应用环境的基本信息外，他还继承了五个接口，这五个接口主要是扩展了 Context 的功能。**&#x4E0B;面是 Context 的类结构图：
 
 #### **图 6. Context 相关的类结构图**
 
@@ -191,7 +191,7 @@ Core 组件作为 Spring 的核心组件，他其中包含了很多的关键类�
 
 **如何创建 BeanFactory 工厂**
 
-正如图 2 描述的那样，**Ioc 容器实际上就是 Context 组件结合其他两个组件共同构建了一个 Bean 关系网，如何构建这个关系网？构建的入口就在 AbstractApplicationContext 类的 refresh 方法中。**这个方法的代码如下：
+正如图 2 描述的那样，**Ioc 容器实际上就是 Context 组件结合其他两个组件共同构建了一个 Bean 关系网，如何构建这个关系网？构建的入口就在 AbstractApplicationContext 类的 refresh 方法中。**&#x8FD9;个方法的代码如下：
 
 **清单 1. AbstractApplicationContext.refresh**
 

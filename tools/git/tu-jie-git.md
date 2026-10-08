@@ -14,7 +14,7 @@
    1. [Diff](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#diff)
    2. [Commit](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#commit)
    3. [Checkout](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#checkout)
-   4. [Detached HEAD\(匿名分支提交\)](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#detached)
+   4. [Detached HEAD(匿名分支提交)](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#detached)
    5. [Reset](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#reset)
    6. [Merge](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#merge)
    7. [Cherry Pick](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#cherry-pick)
@@ -25,7 +25,7 @@
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/basic-usage.svg-213248.png)
 
-上面的四条命令在工作目录、暂存目录\(也叫做索引\)和仓库之间复制文件。
+上面的四条命令在工作目录、暂存目录(也叫做索引)和仓库之间复制文件。
 
 * `git add *files*` 把当前文件放入暂存区域。
 * `git commit` 给暂存区域生成快照并提交。
@@ -48,7 +48,7 @@
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/conventions.svg-213249.png)
 
-绿色的5位字符表示提交的ID，分别指向父节点。分支用橘色显示，分别指向特定的提交。当前分支由附在其上的_HEAD_标识。 这张图片里显示最后5次提交，_ed489_是最新提交。 _main_分支指向此次提交，另一个_stable_分支指向祖父提交节点。
+绿色的5位字符表示提交的ID，分别指向父节点。分支用橘色显示，分别指向特定的提交。当前分支由附在其上&#x7684;_&#x48;EA&#x44;_&#x6807;识。 这张图片里显示最后5次提交，_ed48&#x39;_&#x662F;最新提交。 _mai&#x6E;_&#x5206;支指向此次提交，另一&#x4E2A;_&#x73;tabl&#x65;_&#x5206;支指向祖父提交节点。
 
 ## 命令详解
 
@@ -60,11 +60,11 @@
 
 ### Commit
 
-提交时，git用暂存区域的文件创建一个新的提交，并把此时的节点设为父节点。然后把当前分支指向新的提交节点。下图中，当前分支是_main_。 在运行命令之前，_main_指向_ed489_，提交后，_main_指向新的节点_f0cec_并以_ed489_作为父节点。
+提交时，git用暂存区域的文件创建一个新的提交，并把此时的节点设为父节点。然后把当前分支指向新的提交节点。下图中，当前分支&#x662F;_&#x6D;ain_。 在运行命令之前，_mai&#x6E;_&#x6307;&#x5411;_&#x65;d489_，提交后，_mai&#x6E;_&#x6307;向新的节&#x70B9;_&#x66;0ce&#x63;_&#x5E76;&#x4EE5;_&#x65;d48&#x39;_&#x4F5C;为父节点。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/commit-main.svg-213249.png)
 
-即便当前分支是某次提交的祖父节点，git会同样操作。下图中，在_main_分支的祖父节点_stable_分支进行一次提交，生成了_1800b_。 这样，_stable_分支就不再是_main_分支的祖父节点。此时，[合并](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#merge) \(或者 [衍合](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#rebase)\) 是必须的。
+即便当前分支是某次提交的祖父节点，git会同样操作。下图中，&#x5728;_&#x6D;ai&#x6E;_&#x5206;支的祖父节&#x70B9;_&#x73;tabl&#x65;_&#x5206;支进行一次提交，生成&#x4E86;_&#x31;800b_。 这样，_stabl&#x65;_&#x5206;支就不再&#x662F;_&#x6D;ai&#x6E;_&#x5206;支的祖父节点。此时，[合并](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#merge) (或者 [衍合](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#rebase)) 是必须的。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/commit-stable.svg-213250.png)
 
@@ -78,25 +78,25 @@
 
 checkout命令用于从历史提交（或者暂存区域）中拷贝文件到工作目录，也可用于切换分支。
 
-当给定某个文件名（或者打开-p选项，或者文件名和-p选项同时打开）时，git会从指定的提交中拷贝文件到暂存区域和工作目录。比如，`git checkout HEAD~ foo.c`会将提交节点_HEAD~_\(即当前提交节点的父节点\)中的`foo.c`复制到工作目录并且加到暂存区域中。（如果命令中没有指定提交节点，则会从暂存区域中拷贝内容。）注意当前分支不会发生变化。
+当给定某个文件名（或者打开-p选项，或者文件名和-p选项同时打开）时，git会从指定的提交中拷贝文件到暂存区域和工作目录。比如，`git checkout HEAD~ foo.c`会将提交节&#x70B9;_&#x48;EAD\~_(即当前提交节点的父节点)中的`foo.c`复制到工作目录并且加到暂存区域中。（如果命令中没有指定提交节点，则会从暂存区域中拷贝内容。）注意当前分支不会发生变化。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/checkout-files.svg-213250.png)
 
-当不指定文件名，而是给出一个（本地）分支时，那么_HEAD_标识会移动到那个分支（也就是说，我们“切换”到那个分支了），然后暂存区域和工作目录中的内容会和_HEAD_对应的提交节点一致。新提交节点（下图中的a47c3）中的所有文件都会被复制（到暂存区域和工作目录中）；只存在于老的提交节点（ed489）中的文件会被删除；不属于上述两者的文件会被忽略，不受影响。
+当不指定文件名，而是给出一个（本地）分支时，那&#x4E48;_&#x48;EA&#x44;_&#x6807;识会移动到那个分支（也就是说，我们“切换”到那个分支了），然后暂存区域和工作目录中的内容会&#x548C;_&#x48;EA&#x44;_&#x5BF9;应的提交节点一致。新提交节点（下图中的a47c3）中的所有文件都会被复制（到暂存区域和工作目录中）；只存在于老的提交节点（ed489）中的文件会被删除；不属于上述两者的文件会被忽略，不受影响。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/checkout-branch.svg-213250.png)
 
-如果既没有指定文件名，也没有指定分支名，而是一个标签、远程分支、SHA-1值或者是像_main~3_类似的东西，就得到一个匿名分支，称作_detached HEAD_（被分离的_HEAD_标识）。这样可以很方便地在历史版本之间互相切换。比如说你想要编译1.6.6.1版本的git，你可以运行`git checkout v1.6.6.1`（这是一个标签，而非分支名），编译，安装，然后切换回另一个分支，比如说`git checkout main`。然而，当提交操作涉及到“分离的HEAD”时，其行为会略有不同，详情见在[下面](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#detached)。
+如果既没有指定文件名，也没有指定分支名，而是一个标签、远程分支、SHA-1值或者是&#x50CF;_&#x6D;ain\~&#x33;_&#x7C7B;似的东西，就得到一个匿名分支，称&#x4F5C;_&#x64;etached HEAD_（被分离&#x7684;_&#x48;EA&#x44;_&#x6807;识）。这样可以很方便地在历史版本之间互相切换。比如说你想要编译1.6.6.1版本的git，你可以运行`git checkout v1.6.6.1`（这是一个标签，而非分支名），编译，安装，然后切换回另一个分支，比如说`git checkout main`。然而，当提交操作涉及到“分离的HEAD”时，其行为会略有不同，详情见在[下面](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#detached)。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/checkout-detached.svg-213251.png)
 
 ### HEAD标识处于分离状态时的提交操作
 
-当_HEAD_处于分离状态（不依附于任一分支）时，提交操作可以正常进行，但是不会更新任何已命名的分支。\(你可以认为这是在更新一个匿名分支。\)
+&#x5F53;_&#x48;EA&#x44;_&#x5904;于分离状态（不依附于任一分支）时，提交操作可以正常进行，但是不会更新任何已命名的分支。(你可以认为这是在更新一个匿名分支。)
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/commit-detached.svg-213251.png)
 
-一旦此后你切换到别的分支，比如说_main_，那么这个提交节点（可能）再也不会被引用到，然后就会被丢弃掉了。注意这个命令之后就不会有东西引用_2eecb_。
+一旦此后你切换到别的分支，比如&#x8BF4;_&#x6D;ain_，那么这个提交节点（可能）再也不会被引用到，然后就会被丢弃掉了。注意这个命令之后就不会有东西引&#x7528;_&#x32;eecb_。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/checkout-after-detached.svg-213251.png)
 
@@ -112,21 +112,21 @@ reset命令把当前分支指向另一个位置，并且有选择的变动工作
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/reset-commit.svg-213252.png)
 
-如果没有给出提交点的版本号，那么默认用_HEAD_。这样，分支指向不变，但是索引会回滚到最后一次提交，如果用`--hard`选项，工作目录也同样。
+如果没有给出提交点的版本号，那么默认&#x7528;_&#x48;EAD_。这样，分支指向不变，但是索引会回滚到最后一次提交，如果用`--hard`选项，工作目录也同样。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/reset.svg-213252.png)
 
-如果给了文件名\(或者 `-p`选项\), 那么工作效果和带文件名的[checkout](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#checkout)差不多，除了索引被更新。
+如果给了文件名(或者 `-p`选项), 那么工作效果和带文件名的[checkout](http://marklodato.github.io/visual-git-guide/index-zh-cn.html?no-svg#checkout)差不多，除了索引被更新。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/reset-files.svg-213252.png)
 
 ### Merge
 
-merge 命令把不同分支合并起来。合并前，索引必须和当前提交相同。如果另一个分支是当前提交的祖父节点，那么合并命令将什么也不做。 另一种情况是如果当前提交是另一个分支的祖父节点，就导致_fast-forward_合并。指向只是简单的移动，并生成一个新的提交。
+merge 命令把不同分支合并起来。合并前，索引必须和当前提交相同。如果另一个分支是当前提交的祖父节点，那么合并命令将什么也不做。 另一种情况是如果当前提交是另一个分支的祖父节点，就导&#x81F4;_&#x66;ast-forwar&#x64;_&#x5408;并。指向只是简单的移动，并生成一个新的提交。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/merge-ff.svg-213253.png)
 
-否则就是一次真正的合并。默认把当前提交\(_ed489_ 如下所示\)和另一个提交\(_33104_\)以及他们的共同祖父节点\(_b325c_\)进行一次[三方合并](http://en.wikipedia.org/wiki/Three-way_merge)。结果是先保存当前目录和索引，然后和父节点_33104_一起做一次新提交。
+否则就是一次真正的合并。默认把当前提交(_ed489_ 如下所示)和另一个提交(_33104_)以及他们的共同祖父节点(_b325c_)进行一次[三方合并](http://en.wikipedia.org/wiki/Three-way_merge)。结果是先保存当前目录和索引，然后和父节&#x70B9;_&#x33;310&#x34;_&#x4E00;起做一次新提交。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/merge.svg-213253.png)
 
@@ -142,27 +142,27 @@ cherry-pick命令"复制"一个提交节点并在当前分支做一次完全一�
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/rebase.svg-213254.png)
 
-上面的命令都在_topic_分支中进行，而不是_main_分支，在_main_分支上重演，并且把分支指向新的节点。注意旧提交没有被引用，将被回收。
+上面的命令都&#x5728;_&#x74;opi&#x63;_&#x5206;支中进行，而不&#x662F;_&#x6D;ai&#x6E;_&#x5206;支，&#x5728;_&#x6D;ai&#x6E;_&#x5206;支上重演，并且把分支指向新的节点。注意旧提交没有被引用，将被回收。
 
-要限制回滚范围，使用`--onto`选项。下面的命令在_main_分支上重演当前分支从_169a6_以来的最近几个提交，即_2c33a_。
+要限制回滚范围，使用`--onto`选项。下面的命令&#x5728;_&#x6D;ai&#x6E;_&#x5206;支上重演当前分支&#x4ECE;_&#x31;69a&#x36;_&#x4EE5;来的最近几个提交，&#x5373;_&#x32;c33a_。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/06/04/rebase-onto.svg-213254.png)
 
-同样有`git rebase --interactive`让你更方便的完成一些复杂操作，比如丢弃、重排、修改、合并提交。没有图片体现这些，细节看这里:[git-rebase\(1\)](http://www.kernel.org/pub/software/scm/git/docs/git-rebase.html#_interactive_mode)
+同样有`git rebase --interactive`让你更方便的完成一些复杂操作，比如丢弃、重排、修改、合并提交。没有图片体现这些，细节看这里:[git-rebase(1)](http://www.kernel.org/pub/software/scm/git/docs/git-rebase.html#_interactive_mode)
 
 ## 技术说明
 
-文件内容并没有真正存储在索引\(_.git/index_\)或者提交对象中，而是以blob的形式分别存储在数据库中\(_.git/objects_\)，并用SHA-1值来校验。 索引文件用识别码列出相关的blob文件以及别的数据。对于提交来说，以树\(_tree_\)的形式存储，同样用对于的哈希值识别。树对应着工作目录中的文件夹，树中包含的 树或者blob对象对应着相应的子目录和文件。每次提交都存储下它的上一级树的识别码。
+文件内容并没有真正存储在索引(_.git/index_)或者提交对象中，而是以blob的形式分别存储在数据库中(_.git/objects_)，并用SHA-1值来校验。 索引文件用识别码列出相关的blob文件以及别的数据。对于提交来说，以树(_tree_)的形式存储，同样用对于的哈希值识别。树对应着工作目录中的文件夹，树中包含的 树或者blob对象对应着相应的子目录和文件。每次提交都存储下它的上一级树的识别码。
 
 如果用detached HEAD提交，那么最后一次提交会被the reflog for HEAD引用。但是过一段时间就失效，最终被回收，与`git commit --amend`或者`git rebase`很像。
 
 ## Walkthrough: Watching the effect of commands
 
-The following walks you through changes to a repository so you can see the effect of the command in real time, similar to how [Visualizing Git Concepts with D3](http://onlywei.github.io/explain-git-with-d3/#) simulates them visually. Hopefully you find this useful.
+The following walks you through changes to a repository so you can see the effect of the command in real time, similar to how [Visualizing Git Concepts with D3](http://onlywei.github.io/explain-git-with-d3/) simulates them visually. Hopefully you find this useful.
 
 Start by creating some repository:
 
-```text
+```
 $ git init foo
 $ cd foo
 $ echo 1 > myfile
@@ -172,7 +172,7 @@ $ git commit -m "version 1"
 
 Now, define the following functions to help us show information:
 
-```text
+```
 show_status() {
   echo "HEAD:     $(git cat-file -p HEAD:myfile)"
   echo "Stage:    $(git cat-file -p :myfile)"
@@ -189,7 +189,7 @@ initial_setup() {
 
 Initially, everything is at version 1.
 
-```text
+```
 $ show_status
 HEAD:     1
 Stage:    1
@@ -198,7 +198,7 @@ Worktree: 1
 
 We can watch the state change as we add and commit.
 
-```text
+```
 $ echo 2 > myfile
 $ show_status
 HEAD:     1
@@ -220,7 +220,7 @@ Worktree: 2
 
 Now, let's create an initial state where the three are all different.
 
-```text
+```
 $ initial_setup
 HEAD:     2
 Stage:    3
@@ -231,7 +231,7 @@ Let's watch what each command does. You will see that they match the diagrams ab
 
 `git reset -- myfile` copies from HEAD to stage:
 
-```text
+```
 $ initial_setup
 HEAD:     2
 Stage:    3
@@ -247,7 +247,7 @@ Worktree: 4
 
 `git checkout -- myfile` copies from stage to worktree:
 
-```text
+```
 $ initial_setup
 HEAD:     2
 Stage:    3
@@ -261,7 +261,7 @@ Worktree: 3
 
 `git checkout HEAD -- myfile` copies from HEAD to both stage and worktree:
 
-```text
+```
 $ initial_setup
 HEAD:     2
 Stage:    3
@@ -275,7 +275,7 @@ Worktree: 2
 
 `git commit myfile` copies from worktree to both stage and HEAD:
 
-```text
+```
 $ initial_setup
 HEAD:     2
 Stage:    3
@@ -288,8 +288,6 @@ HEAD:     4
 Stage:    4
 Worktree: 4
 ```
-
-
 
 
 

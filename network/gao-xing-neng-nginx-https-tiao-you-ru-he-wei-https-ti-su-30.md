@@ -6,7 +6,7 @@
 
 ## 为什么要优化 Ngin HTTPS 延迟
 
-Nginx 常作为最常见的服务器，常被用作负载均衡 \(Load Balancer\)、反向代理 \(Reverse Proxy\)，以及网关 \(Gateway\) 等等。一个配置得当的 Nginx 服务器单机应该可以[期望承受住 50K 到 80K 左右](https://github.com/denji/nginx-tuning)每秒的请求，同时将 CPU 负载在可控范围内。
+Nginx 常作为最常见的服务器，常被用作负载均衡 (Load Balancer)、反向代理 (Reverse Proxy)，以及网关 (Gateway) 等等。一个配置得当的 Nginx 服务器单机应该可以[期望承受住 50K 到 80K 左右](https://github.com/denji/nginx-tuning)每秒的请求，同时将 CPU 负载在可控范围内。
 
 但在很多时候，负载并不是需要首要优化的重点。比如对于卡拉搜索来说，我们希望用户在每次击键的时候，可以体验即时搜索的感觉，也就是说，**每个搜索请求必须在 100ms - 200ms 的时间**内端对端地返回给用户，才能让用户搜索时没有“卡顿”和“加载”。因此，对于我们来说，优化请求延迟才是最重要的优化方向。
 
@@ -28,7 +28,7 @@ Nginx 常作为最常见的服务器，常被用作负载均衡 \(Load Balancer\
 
 在传输数据前数据已经跑了好几个来回 roundtrip
 
-![&#x5728;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x524D;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x8DD1;&#x4E86;&#x597D;&#x51E0;&#x4E2A;&#x6765;&#x56DE; roundtrip](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/06/roundtrip-before-data-transfer-111752.png)
+![在传输数据前数据已经跑了好几个来回 roundtrip](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/06/roundtrip-before-data-transfer-111752.png)
 
 可以看到，在你的用户拿到他需要的数据前，底层的数据包就已经在用户和你的服务器之间跑了 3 个来回。
 
@@ -36,7 +36,7 @@ Nginx 常作为最常见的服务器，常被用作负载均衡 \(Load Balancer\
 
 同时这个 28 毫秒其实是非常乐观的假设，在国内电信、联通和移动以及各种复杂的网络状况下，用户与服务器之间的延迟更不可控。另一方面，通常一个网页需要数十个请求，这些请求不一定可以全部并行，因此几十乘以 224 毫秒，页面打开可能就是数秒之后了。
 
-所以，原则上如果可能的话，我们需要尽量减少用户和服务器之间的往返程 \(roundtrip\)，在下文的设置中，对于每个设置我们会讨论为什么这个设置有可能帮助减少往返程。
+所以，原则上如果可能的话，我们需要尽量减少用户和服务器之间的往返程 (roundtrip)，在下文的设置中，对于每个设置我们会讨论为什么这个设置有可能帮助减少往返程。
 
 ## Nginx 中的 TLS 设置
 
@@ -46,9 +46,9 @@ Nginx 常作为最常见的服务器，常被用作负载均衡 \(Load Balancer\
 
 HTTP/2 标准是从 Google 的 SPDY 上进行的改进，比起 HTTP 1.1 提升了不少性能，尤其是需要并行多个请求的时候可以显著减少延迟。在现在的网络上，一个网页平均需要请求几十次，而在 HTTP 1.1 时代浏览器能做的就是多开几个连接（通常是 6 个）进行并行请求，而 HTTP 2 中可以在一个连接中进行并行请求。HTTP 2 原生支持多个并行请求，因此大大减少了顺序执行的请求的往返程，可以首要考虑开启。
 
-如果你想自己看一下 HTTP 1.1 和 HTTP 2.0 的速度差异，可以试一下：[https://www.httpvshttps.com/。我的网络测试下来](https://www.httpvshttps.com/。我的网络测试下来) HTTP/2 比 HTTP 1.1 快了 66%。
+如果你想自己看一下 HTTP 1.1 和 HTTP 2.0 的速度差异，可以试一下：[https://www.httpvshttps.com/。我的网络测试下来](https://www.httpvshttps.com/%E3%80%82%E6%88%91%E7%9A%84%E7%BD%91%E7%BB%9C%E6%B5%8B%E8%AF%95%E4%B8%8B%E6%9D%A5) HTTP/2 比 HTTP 1.1 快了 66%。
 
-[![HTTP 1.1 &#x4E0E; HTTP 2.0 &#x901F;&#x5EA6;&#x5BF9;&#x6BD4;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/06/HTTP2-speed-compare-111753.png)](https://kalasearch.cn/static/147fc37e212cbc9ec6d35a7a8560fa05/3e096/HTTP2-speed-compare.png)HTTP 1.1 与 HTTP 2.0 速度对比
+[![HTTP 1.1 与 HTTP 2.0 速度对比](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/06/HTTP2-speed-compare-111753.png)](https://kalasearch.cn/static/147fc37e212cbc9ec6d35a7a8560fa05/3e096/HTTP2-speed-compare.png)HTTP 1.1 与 HTTP 2.0 速度对比
 
 在 Nginx 中开启 HTTP 2.0 非常简单，只需要增加一个 http2 标志即可
 
@@ -65,7 +65,7 @@ listen 443 ssl http2;
 
 在 Chrome 中打开开发者工具，点开 `Protocol` 之后在所有的请求中都可以看到请求用的协议了。如果 `protocol` 这列的值是 `h2` 的话，那么用的就是 HTTP 2 了
 
-[![&#x7528; Chrome &#x786E;&#x8BA4; HTTP/2 &#x5DF2;&#x7ECF;&#x6253;&#x5F00;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/06/chrome-check-http2-111754.png)](https://kalasearch.cn/static/ef19f83c28746d1faa23aa4912d4fc2b/45cee/chrome-check-http2.png)用 Chrome 确认 HTTP/2 已经打开
+[![用 Chrome 确认 HTTP/2 已经打开](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/06/chrome-check-http2-111754.png)](https://kalasearch.cn/static/ef19f83c28746d1faa23aa4912d4fc2b/45cee/chrome-check-http2.png)用 Chrome 确认 HTTP/2 已经打开
 
 当然另一个办法是直接用 `curl` 如果返回的 status 前有 `HTTP/2` 的话自然也就是 HTTP/2 开启了。
 
@@ -118,7 +118,7 @@ ssl_trusted_certificate /path/to/full_chain.pem;
 
 可以通过以下命令
 
-```text
+```
 openssl s_client -connect test.kalasearch.cn:443 -servername kalasearch.cn -status -tlsextdebug < /dev/null 2>&1 | grep -i "OCSP response"
 ```
 
@@ -135,9 +135,9 @@ OCSP Response Data:
 
 ### 调整 `ssl_buffer_size`
 
-ssl_buffer_size 控制在发送数据时的 buffer 大小，默认设置是 16k。这个值越小，则延迟越小，而添加的报头之类会使 overhead 会变大，反之则延迟越大，overhead 越小。
+ss&#x6C;_&#x62;uffe&#x72;_&#x73;ize 控制在发送数据时的 buffer 大小，默认设置是 16k。这个值越小，则延迟越小，而添加的报头之类会使 overhead 会变大，反之则延迟越大，overhead 越小。
 
-因此如果你的服务是 [REST API](https://kalasearch.cn/blog/rest-api-best-practices/) 或者网站的话，将这个值调小可以减小延迟和 TTFB，但如果你的服务器是用来传输大文件的，那么可以维持 16k。关于这个值的讨论和更通用的 TLS Record Size 的讨论，可以参考： [Best value for nginx's ssl_buffer_size option](https://github.com/igrigorik/istlsfastyet.com/issues/63)
+因此如果你的服务是 [REST API](https://kalasearch.cn/blog/rest-api-best-practices/) 或者网站的话，将这个值调小可以减小延迟和 TTFB，但如果你的服务器是用来传输大文件的，那么可以维持 16k。关于这个值的讨论和更通用的 TLS Record Size 的讨论，可以参考： [Best value for nginx's ss&#x6C;_&#x62;uffe&#x72;_&#x73;ize option](https://github.com/igrigorik/istlsfastyet.com/issues/63)
 
 如果是网站或者 REST API，建议值为 4k，但是这个值的最佳取值显然会因为数据的不同而不一样，因此请尝试 2 - 16k 间不同的值。在 Nginx 中调整这个值也非常容易
 
@@ -159,7 +159,7 @@ ssl_session_timeout 4h;
 
 ## 卡拉搜索如何减少 30% 的请求延迟
 
-卡拉搜索是国内的 [Algolia](https://kalasearch.cn/blog/algolia-alternative/)，致力于帮助开发者快速搭建即时搜索功能\(instant search\)，做国内最快最易用的搜索即服务。
+卡拉搜索是国内的 [Algolia](https://kalasearch.cn/blog/algolia-alternative/)，致力于帮助开发者快速搭建即时搜索功能(instant search)，做国内最快最易用的搜索即服务。
 
 开发者接入后，所有搜索请求通过卡拉 API 即可直接返回给终端用户。为了让用户有即时搜索的体验，我们需要在用户每次击键后极短的时间内（通常是 100ms 到 200ms）将结果返回给用户。因此每次搜索需要可以达到 50 毫秒以内的引擎处理时间和 200 毫秒以内的端对端时间。
 
@@ -169,11 +169,11 @@ ssl_session_timeout 4h;
 
 简化一下，每个搜索请求需要经历的延迟有
 
-[![&#x5361;&#x62C9;&#x641C;&#x7D22;&#x7684;&#x7AEF;&#x5BF9;&#x7AEF;&#x5EF6;&#x8FDF;&#x56FE;&#x793A;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/06/kala-diagram-111755.png)](https://kalasearch.cn/static/cb8e18c693e281847293ba13943a631a/efc6e/kala-diagram.png)卡拉搜索的端对端延迟图示
+[![卡拉搜索的端对端延迟图示](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/06/kala-diagram-111755.png)](https://kalasearch.cn/static/cb8e18c693e281847293ba13943a631a/efc6e/kala-diagram.png)卡拉搜索的端对端延迟图示
 
-总延迟 = 用户请求到达服务器\(T1\) + 反代处理\(Nginx T2\) + 数据中心延迟\(T3\) + 服务器处理 \(卡拉引擎 T4\) + 用户请求返回\(T3+T1\)
+总延迟 = 用户请求到达服务器(T1) + 反代处理(Nginx T2) + 数据中心延迟(T3) + 服务器处理 (卡拉引擎 T4) + 用户请求返回(T3+T1)
 
-在上述延迟中，T1 只与用户与服务器的物理距离相关，而 T3 非常小（参考[Jeff Dean Number](https://gist.github.com/jboner/2841832)\)可以忽略不计。
+在上述延迟中，T1 只与用户与服务器的物理距离相关，而 T3 非常小（参考[Jeff Dean Number](https://gist.github.com/jboner/2841832))可以忽略不计。
 
 所以我们能控制的大致只有 T2 和 T4，即 Nginx 服务器的处理时间和卡拉的引擎处理时间。
 
@@ -191,7 +191,7 @@ Nginx 在这里作为反向代理，处理一些安全、流量控制和 TLS 的
 
 我们按照上文中的步骤对 Nginx 设置进行了调整，并将步骤总结出来写了这篇文章。在调整了 Nginx TLS 的设置后，SSL 时间从平均的 140ms 降低到了 110ms 左右（全国所有省份联通和移动测试点），同时苹果设备上首次访问慢的问题也消失了。
 
-[![&#x8C03;&#x6574;&#x540E;&#x5EF6;&#x8FDF;](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/06/latency-after-tuning-111757.png)](https://kalasearch.cn/static/19060d3eede4b951813985b0c86e3e34/cc95c/latency-after-tuning.png)调整后延迟
+[![调整后延迟](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2021/01/06/latency-after-tuning-111757.png)](https://kalasearch.cn/static/19060d3eede4b951813985b0c86e3e34/cc95c/latency-after-tuning.png)调整后延迟
 
 在调整过后，全国范围内测试的搜索延迟降低到了 150 毫秒左右。
 
@@ -201,5 +201,4 @@ Nginx 在这里作为反向代理，处理一些安全、流量控制和 TLS 的
 
 如果你对卡拉搜索感兴趣，欢迎参考
 
-[什么是站内搜索？](https://kalasearch.cn/blog/what-is-site-search/) [少数派 CTO 李曦谈卡拉搜索](https://kalasearch.cn/blog/customer-stories-sspai-cto-interview/) \[什么是 API\]\(
-
+[什么是站内搜索？](https://kalasearch.cn/blog/what-is-site-search/) [少数派 CTO 李曦谈卡拉搜索](https://kalasearch.cn/blog/customer-stories-sspai-cto-interview/) \[什么是 API]\(

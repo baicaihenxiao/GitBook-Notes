@@ -1,9 +1,8 @@
 # mysql数据库时间类型datetime、bigint、timestamp的查询效率比较
 
-[https://mp.weixin.qq.com/s/2GFw-TiPwFy\_ASX\_3axNGA](https://mp.weixin.qq.com/s/2GFw-TiPwFy\_ASX\_3axNGA)
+[https://mp.weixin.qq.com/s/2GFw-TiPwFy\_ASX\_3axNGA](https://mp.weixin.qq.com/s/2GFw-TiPwFy_ASX_3axNGA)
 
-来源：https://juejin.im/post/6844903701094596615\
-
+来源：https://juejin.im/post/6844903701094596615<br>
 
 数据库中可以用datetime、bigint、timestamp来表示时间，那么选择什么类型来存储时间比较合适呢？
 

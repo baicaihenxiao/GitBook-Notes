@@ -1,6 +1,6 @@
 # Linux 三剑客之 awk 实战详解教程
 
-[https://mp.weixin.qq.com/s?\_\_biz=MzI4ODQ3NjE2OA==&mid=2247491339&idx=1&sn=5bc5d550314a8e8dee9ac5b97a7f72d9&chksm=ec3c826cdb4b0b7a7c6c6dfac67f365be1b473af9e4988d9d101b286b08de7c2a127497c7886&mpshare=1&scene=1&srcid=0325JlUbnddluMB50j9qm9dO](https://mp.weixin.qq.com/s?__biz=MzI4ODQ3NjE2OA==&mid=2247491339&idx=1&sn=5bc5d550314a8e8dee9ac5b97a7f72d9&chksm=ec3c826cdb4b0b7a7c6c6dfac67f365be1b473af9e4988d9d101b286b08de7c2a127497c7886&mpshare=1&scene=1&srcid=0325JlUbnddluMB50j9qm9dO)
+[https://mp.weixin.qq.com/s?\_\_biz=MzI4ODQ3NjE2OA==\&mid=2247491339\&idx=1\&sn=5bc5d550314a8e8dee9ac5b97a7f72d9\&chksm=ec3c826cdb4b0b7a7c6c6dfac67f365be1b473af9e4988d9d101b286b08de7c2a127497c7886\&mpshare=1\&scene=1\&srcid=0325JlUbnddluMB50j9qm9dO](https://mp.weixin.qq.com/s?__biz=MzI4ODQ3NjE2OA==\&mid=2247491339\&idx=1\&sn=5bc5d550314a8e8dee9ac5b97a7f72d9\&chksm=ec3c826cdb4b0b7a7c6c6dfac67f365be1b473af9e4988d9d101b286b08de7c2a127497c7886\&mpshare=1\&scene=1\&srcid=0325JlUbnddluMB50j9qm9dO)
 
 
 
@@ -55,7 +55,7 @@ awk 基本命令格式
 
 awk 是输入驱动的，有多少输入行，就会执行多少次 `body` 命令。
 
-我们在下边的示例学习中，要时刻记着：**记录** _\(Record\)_ 就是**行**，**字段** _\(Field\)_ 就是**列**，`BEGIN` 是预处理阶段，`body` 是 awk 真正工作的阶段，`END` 是最后处理阶段。
+我们在下边的示例学习中，要时刻记着：**记录** _(Record)_ 就是**行**，**字段** _(Field)_ 就是**列**，`BEGIN` 是预处理阶段，`body` 是 awk 真正工作的阶段，`END` 是最后处理阶段。
 
 ### 实战 - 入门
 
@@ -73,7 +73,7 @@ awk 是输入驱动的，有多少输入行，就会执行多少次 `body` 命�
 
 ![Image](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/03/25/640-20210325071809135-071809.jpg)
 
-`%s` 表示字符串占位符，`-4`表示列宽度为 `4`，且_左对齐_，我们还可以根据需要，列出更复杂的格式来，这里先不详细举例了。
+`%s` 表示字符串占位符，`-4`表示列宽度为 `4`，&#x4E14;_&#x5DE6;对齐_，我们还可以根据需要，列出更复杂的格式来，这里先不详细举例了。
 
 ### 实战 - 进阶
 
@@ -97,7 +97,7 @@ awk 内置了一些变量，更方便我们对数据的处理
 
 **（三）指定分隔符**
 
-我们的数据，不总是以_空格_为分隔符，我们可以通过 `FS` 变量指定分隔符。
+我们的数据，不总是&#x4EE5;_&#x7A7A;&#x683C;_&#x4E3A;分隔符，我们可以通过 `FS` 变量指定分隔符。
 
 ![Image](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/03/25/640-20210325071809321-071809.jpg)
 
@@ -131,7 +131,7 @@ awk 内置了一些变量，更方便我们对数据的处理
 
 另外，可以这样 `/Aug|Dec/` 匹配多个关键词。
 
-模式_取反_可以使用 `!` 符号
+模&#x5F0F;_&#x53D6;&#x53CD;_&#x53EF;以使用 `!` 符号
 
 ![Image](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2021/03/25/640-20210325071809691-071809.jpg)
 
@@ -259,4 +259,3 @@ awk 内置了大量的有用函数功能，也支持自定义函数，允许你�
 * `toupper(s)` 将字符串转换为大写
 
 这里只简单总结一些常用的字符串功能函数，具体使用方法，还需要你参照前边的示例程序，举一反三，运用到实际问题中。
-

@@ -1,9 +1,8 @@
 # 面试官这夺命连环12问
 
-[https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247496183\&idx=1\&sn=5140d409222d91812f4316ef32897abe\&chksm=fa4a8e46cd3d0750863318cfcaf6dfe777d87380ab2f6ab2b240c59f0a91079cca7f67431709\&scene=0\&xtrack=1#rd](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247496183\&idx=1\&sn=5140d409222d91812f4316ef32897abe\&chksm=fa4a8e46cd3d0750863318cfcaf6dfe777d87380ab2f6ab2b240c59f0a91079cca7f67431709\&scene=0\&xtrack=1#rd)
+[https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247496183\&idx=1\&sn=5140d409222d91812f4316ef32897abe\&chksm=fa4a8e46cd3d0750863318cfcaf6dfe777d87380ab2f6ab2b240c59f0a91079cca7f67431709\&scene=0\&xtrack=1#rd](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==\&mid=2247496183\&idx=1\&sn=5140d409222d91812f4316ef32897abe\&chksm=fa4a8e46cd3d0750863318cfcaf6dfe777d87380ab2f6ab2b240c59f0a91079cca7f67431709\&scene=0\&xtrack=1#rd)
 
-面试官: 同学，我看你每个项目中都用到了Redis,你能说说你是怎样使用Redis的吗？\
-
+面试官: 同学，我看你每个项目中都用到了Redis,你能说说你是怎样使用Redis的吗？<br>
 
 小A同学: 主要用来做缓存，分布式Session, 阅读量/点赞数统计
 
@@ -15,7 +14,7 @@
 
 小A同学：rdb二进制文件启动加载速度可以更快，aof要重放命令，所以速度比较慢
 
-![](https://mmbiz.qpic.cn/mmbiz\_jpg/LJXhQIbo682DgqVEqRiaf9AYkGrwGq9PEVvmZ2icMGGeC1eUUuLRwWnhHDyGuM1P5w6LBapOpaZznuWv2Ns0mqRg/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_jpg/LJXhQIbo682DgqVEqRiaf9AYkGrwGq9PEVvmZ2icMGGeC1eUUuLRwWnhHDyGuM1P5w6LBapOpaZznuWv2Ns0mqRg/640?wx_fmt=jpeg\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 面试官: Redis持久化期间，主进程还能对外提供服务吗？
 
@@ -33,7 +32,7 @@
 
 小A同学：这个不太清楚。
 
-![](https://mmbiz.qpic.cn/mmbiz\_jpg/LJXhQIbo682DgqVEqRiaf9AYkGrwGq9PETFicFcCIKicgLicK8r8zuTxQKS38qb4UkY17Eq5ShwicrGoJEbuDxlcsZw/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_jpg/LJXhQIbo682DgqVEqRiaf9AYkGrwGq9PETFicFcCIKicgLicK8r8zuTxQKS38qb4UkY17Eq5ShwicrGoJEbuDxlcsZw/640?wx_fmt=jpeg\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 面试官: Redis 核心数据类型有哪些？
 
@@ -55,7 +54,7 @@
 
 小A同学：这个不太清楚。&#x20;
 
-![](https://mmbiz.qpic.cn/mmbiz\_jpg/LJXhQIbo682DgqVEqRiaf9AYkGrwGq9PEzb7BPrrlnNUa3pANSs9ZWKzhxOwJViaQFVyngd3wxMl1Ot6au0Gt2ZQ/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_jpg/LJXhQIbo682DgqVEqRiaf9AYkGrwGq9PEzb7BPrrlnNUa3pANSs9ZWKzhxOwJViaQFVyngd3wxMl1Ot6au0Gt2ZQ/640?wx_fmt=jpeg\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 面试官: 你能说说缓存穿透是怎么回事吗？
 
@@ -71,4 +70,4 @@
 
 面试官：好的，感谢你参加我们公司的面试，咱们今天就先到这里
 
-![](https://mmbiz.qpic.cn/mmbiz\_jpg/LJXhQIbo682DgqVEqRiaf9AYkGrwGq9PE0nRQRibRy5CCPHlqXZJnFvUjj9aJlLNc8HSFJVpibsdykfDvhAly0zSA/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_jpg/LJXhQIbo682DgqVEqRiaf9AYkGrwGq9PE0nRQRibRy5CCPHlqXZJnFvUjj9aJlLNc8HSFJVpibsdykfDvhAly0zSA/640?wx_fmt=jpeg\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)

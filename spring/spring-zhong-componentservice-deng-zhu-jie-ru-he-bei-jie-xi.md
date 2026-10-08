@@ -2,9 +2,9 @@
 
 [https://mp.weixin.qq.com/s/QaIftFx7B9qa48a0GVI5-g](https://mp.weixin.qq.com/s/QaIftFx7B9qa48a0GVI5-g)
 
-作者 \| 温安适
+作者 | 温安适
 
-来源 \| [http://8rr.co/EjqL](http://8rr.co/EjqL)
+来源 | [http://8rr.co/EjqL](http://8rr.co/EjqL)
 
 
 
@@ -46,13 +46,13 @@ Spring Framework2.0开始，引入可扩展的XML编程机制，该机制要求X
 
 > // Actually scan for bean definitions and register them.
 >
-> ClassPathBeanDefinitionScanner scanner = configureScanner\(parserContext, element\);
+> ClassPathBeanDefinitionScanner scanner = configureScanner(parserContext, element);
 
-大意是：**ClassPathBeanDefinitionScanner\#doScan是扫描BeanDefinition并注册的实现** **。**
+大意是：**ClassPathBeanDefinitionScanner#doScan是扫描BeanDefinition并注册的实现** **。**
 
 ClassPathBeanDefinitionScanner 的源码如下：
 
-```text
+```
 protected Set<BeanDefinitionHolder> doScan(String... basePackages) {
    Assert.notEmpty(basePackages, "At least one base package must be specified");
    Set<BeanDefinitionHolder> beanDefinitions = new LinkedHashSet<>();
@@ -90,7 +90,7 @@ protected Set<BeanDefinitionHolder> doScan(String... basePackages) {
 
 **findCandidateComponents在其父类ClassPathScanningCandidateComponentProvider 中。**
 
-```text
+```
 public class ClassPathScanningCandidateComponentProvider implements EnvironmentCapable, ResourceLoaderAware {
 //省略其他代码
 public Set<BeanDefinition> findCandidateComponents(String basePackage) {
@@ -129,14 +129,14 @@ private Set<BeanDefinition> scanCandidateComponents(String basePackage) {
 
 **findCandidateComponents大体思路如下：**
 
-1. String packageSearchPath = ResourcePatternResolver.CLASSPATH\_ALL\_URL\_PREFIX resolveBasePackage\(basePackage\) + '/' + this.resourcePattern;                             将package转化为ClassLoader类资源搜索路径packageSearchPath，例如：com.wl.spring.boot转化为classpath_:com/wl/spring/boot/\*\*/_.class
-2. Resource\[\] resources = getResourcePatternResolver\(\).getResources\(packageSearchPath\);  加载搜素路径下的资源。
+1. String packageSearchPath = ResourcePatternResolver.CLASSPATH\_ALL\_URL\_PREFIX resolveBasePackage(basePackage) + '/' + this.resourcePattern;                             将package转化为ClassLoader类资源搜索路径packageSearchPath，例如：com.wl.spring.boot转化为classpat&#x68;_:com/wl/spring/boot/\*\*/_.class
+2. Resource\[] resources = getResourcePatternResolver().getResources(packageSearchPath);  加载搜素路径下的资源。
 3. isCandidateComponent 判断是否是备选组件
-4. candidates.add\(sbd\); 添加到返回结果的list
+4. candidates.add(sbd); 添加到返回结果的list
 
-ClassPathScanningCandidateComponentProvider\#isCandidateComponent其源码如下：
+ClassPathScanningCandidateComponentProvider#isCandidateComponent其源码如下：
 
-```text
+```
 protected boolean isCandidateComponent(MetadataReader metadataReader) throws IOException {
     //省略部分代码
    for (TypeFilter tf : this.includeFilters) {
@@ -148,9 +148,9 @@ protected boolean isCandidateComponent(MetadataReader metadataReader) throws IOE
 }
 ```
 
-includeFilters由registerDefaultFilters\(\)设置初始值，有@Component，没有@Service啊？
+includeFilters由registerDefaultFilters()设置初始值，有@Component，没有@Service啊？
 
-```text
+```
 protected void registerDefaultFilters() {
    this.includeFilters.add(new AnnotationTypeFilter(Component.class));
    ClassLoader cl = ClassPathScanningCandidateComponentProvider.class.getClassLoader();
@@ -179,7 +179,7 @@ Spring如何处理@Service的注解的呢？？？？
 
 查阅官方文档，下面这话：
 
-[https://docs.spring.io/spring/docs/5.0.17.RELEASE/spring-framework-reference/core.html\#beans-meta-annotations](https://docs.spring.io/spring/docs/5.0.17.RELEASE/spring-framework-reference/core.html#beans-meta-annotations)
+[https://docs.spring.io/spring/docs/5.0.17.RELEASE/spring-framework-reference/core.html#beans-meta-annotations](https://docs.spring.io/spring/docs/5.0.17.RELEASE/spring-framework-reference/core.html#beans-meta-annotations)
 
 > @Component is a generic stereotype for any Spring-managed component. @Repository, @Service, and @Controller are specializations of @Component
 
@@ -187,7 +187,7 @@ Spring如何处理@Service的注解的呢？？？？
 
 @Component是任何Spring管理的组件的通用原型。@Repository、@Service和@Controller是派生自@Component。
 
-```text
+```
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
@@ -212,7 +212,7 @@ public @interface Service {
 
 回顾ClassPathScanningCandidateComponentProvider 中的关键的代码片段如下：
 
-```text
+```
 private Set<BeanDefinition> scanCandidateComponents(String basePackage) {
  //省略其他代码
  MetadataReader metadataReader   
@@ -233,9 +233,9 @@ public final MetadataReaderFactory getMetadataReaderFactory() {
 
 CachingMetadataReaderFactory继承自 SimpleMetadataReaderFactory，就是对SimpleMetadataReaderFactory加了一层缓存。
 
-其内部的SimpleMetadataReaderFactory\#getMetadataReader 为：
+其内部的SimpleMetadataReaderFactory#getMetadataReader 为：
 
-```text
+```
 public class SimpleMetadataReaderFactory implements MetadataReaderFactory {
     @Override
 public MetadataReader getMetadataReader(Resource resource) throws IOException {
@@ -246,15 +246,15 @@ public MetadataReader getMetadataReader(Resource resource) throws IOException {
 
 这里可以看出
 
-**MetadataReader metadataReader =new SimpleMetadataReader\(...\);**
+**MetadataReader metadataReader =new SimpleMetadataReader(...);**
 
 ### 2.查看match方法找重点方法
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/07/640-20200807100102104-100102.jpg)
 
-AnnotationTypeFilter\#matchself方法如下：
+AnnotationTypeFilter#matchself方法如下：
 
-```text
+```
 @Override
 protected boolean matchSelf(MetadataReader metadataReader) {
    AnnotationMetadata metadata = metadataReader.getAnnotationMetadata();
@@ -269,13 +269,13 @@ protected boolean matchSelf(MetadataReader metadataReader) {
 
 #### 找metadata.hasMetaAnnotation
 
-metadata=metadataReader.getAnnotationMetadata\(\);
+metadata=metadataReader.getAnnotationMetadata();
 
-metadataReader =new SimpleMetadataReader\(...\)
+metadataReader =new SimpleMetadataReader(...)
 
-metadata= new SimpleMetadataReader\#getAnnotationMetadata\(\)
+metadata= new SimpleMetadataReader#getAnnotationMetadata()
 
-```text
+```
 //SimpleMetadataReader 的构造方法
 SimpleMetadataReader(Resource resource, @Nullable ClassLoader classLoader) throws IOException {
    InputStream is = new BufferedInputStream(resource.getInputStream());
@@ -302,15 +302,15 @@ SimpleMetadataReader(Resource resource, @Nullable ClassLoader classLoader) throw
 }
 ```
 
-metadata=new SimpleMetadataReader\(...\)**.**getAnnotationMetadata\(\)= new AnnotationMetadataReadingVisitor（。。）
+metadata=new SimpleMetadataReader(...)**.**&#x67;etAnnotationMetadata()= new AnnotationMetadataReadingVisitor（。。）
 
 也就是说
 
-**metadata.hasMetaAnnotation=AnnotationMetadataReadingVisitor\#hasMetaAnnotation**
+**metadata.hasMetaAnnotation=AnnotationMetadataReadingVisitor#hasMetaAnnotation**
 
 其方法如下：
 
-```text
+```
 public class AnnotationMetadataReadingVisitor{
     // 省略部分代码
 @Override
@@ -334,7 +334,7 @@ public boolean hasMetaAnnotation(String metaAnnotationType) {
 
 回到SimpleMetadataReader 的方法，
 
-```text
+```
 //这个accept方法，很可疑，在赋值之前执行
 SimpleMetadataReader(Resource resource, @Nullable ClassLoader classLoader) throws IOException {
 //省略其他代码
@@ -348,7 +348,7 @@ classReader.accept(visitor, ClassReader.SKIP_DEBUG);
 
 查看accept方法
 
-```text
+```
 public class ClassReader {
         //省略其他代码
 public void accept(..省略代码){
@@ -364,7 +364,7 @@ public void accept(..省略代码){
 
 查看readElementValues方法
 
-```text
+```
 public class ClassReader{
     //省略其他代码
 private int readElementValues(
@@ -398,15 +398,15 @@ private int readElementValues(
 }
 ```
 
-这里面的核心就是 annotationVisitor.visitEnd\(\);
+这里面的核心就是 annotationVisitor.visitEnd();
 
 **确定annotationVisitor**
 
-这里的annotationVisitor=AnnotationMetadataReadingVisitor\#visitAnnotation
+这里的annotationVisitor=AnnotationMetadataReadingVisitor#visitAnnotation
 
 源码如下，注意这里传递了metaAnnotationMap！！
 
-```text
+```
 public class AnnotationMetadataReadingVisitor{
 @Override
 public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
@@ -421,11 +421,11 @@ public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
 
 **annotationVisitor=AnnotationAttributesReadingVisitor**
 
-**查阅annotationVisitor.visitEnd\(\)**
+**查阅annotationVisitor.visitEnd()**
 
-**annotationVisitor=AnnotationAttributesReadingVisitor\#visitEnd\(\)**
+**annotationVisitor=AnnotationAttributesReadingVisitor#visitEnd()**
 
-```text
+```
 public class AnnotationAttributesReadingVisitor{
 @Override
 public void visitEnd() {
@@ -474,21 +474,19 @@ public void visitEnd() {
 
 大致如下：
 
-ClassPathScanningCandidateComponentProvider\#findCandidateComponents
+ClassPathScanningCandidateComponentProvider#findCandidateComponents
 
 1. 将package转化为ClassLoader类资源搜索路径packageSearchPath
 2. 加载搜素路径下的资源。
-3. isCandidateComponent 判断是否是备选组件。
+3.  isCandidateComponent 判断是否是备选组件。
 
-   内部调用的TypeFilter的match方法：
+    内部调用的TypeFilter的match方法：
 
-   AnnotationTypeFilter\#matchself中metadata.hasMetaAnnotation处理元注解
+    AnnotationTypeFilter#matchself中metadata.hasMetaAnnotation处理元注解
 
-   metadata.hasMetaAnnotation=AnnotationMetadataReadingVisitor\#hasMetaAnnotation
+    metadata.hasMetaAnnotation=AnnotationMetadataReadingVisitor#hasMetaAnnotation
 
-   就是判断当前注解的元注解在不在metaAnnotationMap中。
+    就是判断当前注解的元注解在不在metaAnnotationMap中。
 
-   AnnotationAttributesReadingVisitor\#visitEnd\(\)内部方法recursivelyCollectMetaAnnotations 递归的读取注解，与注解的元注解（读@Service，再读元注解@Component），并设置到metaAnnotationMap
-
+    AnnotationAttributesReadingVisitor#visitEnd()内部方法recursivelyCollectMetaAnnotations 递归的读取注解，与注解的元注解（读@Service，再读元注解@Component），并设置到metaAnnotationMap
 4. 添加到返回结果的list
-

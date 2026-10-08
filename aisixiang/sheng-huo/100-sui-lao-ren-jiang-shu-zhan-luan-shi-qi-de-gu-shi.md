@@ -16,7 +16,7 @@
 
 这篇故事值得我们去看看，百年前的先辈们，是如何青春，如何热血，而后又如何凋零。
 
-![Image](https://mmbiz.qpic.cn/sz\_mmbiz\_jpg/1iaVF6uRibXF8CbKnZiaFImEyUUftmicicvK2HbEXfbTeZibI3niaDMmjibABsD6k7riaC8zHLZahj3Zf0LUe75PEcIaibVw/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1iaVF6uRibXF8CbKnZiaFImEyUUftmicicvK2HbEXfbTeZibI3niaDMmjibABsD6k7riaC8zHLZahj3Zf0LUe75PEcIaibVw/640?wx_fmt=jpeg\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 1938年9月18日，我到达延安，刚18岁。
 
@@ -44,7 +44,7 @@
 
 但是像我们这样的傻瓜，当时不明白这事。
 
-![Image](https://mmbiz.qpic.cn/mmbiz\_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlbzGLiacHxIyBDtniaElgXvbbcAaIpR1o7uJIXBA5ibAWdqm0FykPoKibsrw/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/mmbiz_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlbzGLiacHxIyBDtniaElgXvbbcAaIpR1o7uJIXBA5ibAWdqm0FykPoKibsrw/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 有一天，我们班一个叫顾红的同学问我，说你想不想去新市场？
 
@@ -98,11 +98,11 @@
 
 张昉是张学思的化名，我和张学思就是这么认识了，这时候是1940年，我20岁。
 
-![Image](https://mmbiz.qpic.cn/sz\_mmbiz\_jpg/1iaVF6uRibXF8CbKnZiaFImEyUUftmicicvK2LQCeUDGtdBEsMyibXD7icG8gAYKl4icBtL4ZqmBV7KsQzjQAgXjVRfuIA/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1iaVF6uRibXF8CbKnZiaFImEyUUftmicicvK2LQCeUDGtdBEsMyibXD7icG8gAYKl4icBtL4ZqmBV7KsQzjQAgXjVRfuIA/640?wx_fmt=jpeg\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 张学思照片&#x20;
 
-![Image](https://mmbiz.qpic.cn/mmbiz\_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlbYw8No1Kv5I4bs5qmXl89fN1zFhyXjSV46XTSfwOv70y6LDUD1KDicuA/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/mmbiz_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlbYw8No1Kv5I4bs5qmXl89fN1zFhyXjSV46XTSfwOv70y6LDUD1KDicuA/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 我对这个张学思印象很好的，觉得他是个挺英俊的人，又很美，又很直，一副非常正派的军人架势。
 
@@ -140,7 +140,7 @@
 
 干脆五对新人一起办理集体婚礼吧。
 
-![Image](https://mmbiz.qpic.cn/sz\_mmbiz\_jpg/1iaVF6uRibXF8CbKnZiaFImEyUUftmicicvK2XzEIIB6C9TzAiaRwERRtMYqf0orictXNkojkviaElrIV5cl1gMsPgdicbg/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1iaVF6uRibXF8CbKnZiaFImEyUUftmicicvK2XzEIIB6C9TzAiaRwERRtMYqf0orictXNkojkviaElrIV5cl1gMsPgdicbg/640?wx_fmt=jpeg\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 两人结婚后的合影
 
@@ -150,7 +150,7 @@
 
 婚礼非常俭朴，但给我留下了终生难忘的印象。
 
-![Image](https://mmbiz.qpic.cn/mmbiz\_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlbPq914ObJPU99zT3m3byicCVQwic1ZxBfGYLjQO4XMiblT9QFCic7zdocSg/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/mmbiz_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlbPq914ObJPU99zT3m3byicCVQwic1ZxBfGYLjQO4XMiblT9QFCic7zdocSg/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 1940年9月14号，东干队从延安出发，准备打回东北。谁知中途却留在了冀中。
 
@@ -182,7 +182,7 @@
 
 我和白竟凡，我们在路上就怀孕了，所以这一路非常惨。
 
-![Image](https://mmbiz.qpic.cn/mmbiz\_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlb0oiaL91yE7azicIrLs5b9ibLOnzRr1ekdYcvNB7OR85LvIlzo2ibKStaHw/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/mmbiz_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlb0oiaL91yE7azicIrLs5b9ibLOnzRr1ekdYcvNB7OR85LvIlzo2ibKStaHw/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 女同志怀孕走路你说惨不惨，又不能吃又累得要命，一闻着什么都吐。
 
@@ -264,7 +264,7 @@
 
 我怀第二个孩子时就是钻的梯田，钻了一个反“扫荡”，敌人要来了我们就进去了。
 
-![Image](https://mmbiz.qpic.cn/sz\_mmbiz\_jpg/1iaVF6uRibXF8CbKnZiaFImEyUUftmicicvK2icH4GEywFDPmAvgqkykJ8r5oaHic0RshcR4yOQfLhhoD1dBicR7HhDVFw/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1iaVF6uRibXF8CbKnZiaFImEyUUftmicicvK2icH4GEywFDPmAvgqkykJ8r5oaHic0RshcR4yOQfLhhoD1dBicR7HhDVFw/640?wx_fmt=jpeg\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 一家三口
 
@@ -296,7 +296,7 @@
 
 狼的叫声听得非常惨，嗷敷叫，我们那个同志哭得不得了，你有什么办法。
 
-![Image](https://mmbiz.qpic.cn/mmbiz\_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlbyJHy8D7FPqibgkaWRHKOickXxwR8QSHjd6ps4PyGArHua2cibV0DSG5FA/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/mmbiz_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlbyJHy8D7FPqibgkaWRHKOickXxwR8QSHjd6ps4PyGArHua2cibV0DSG5FA/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 翼中大扫荡非常艰苦，我印象最深的是掌史战斗。
 
@@ -344,7 +344,7 @@
 
 这个事我从来没给张学思讲过，反正我也找回来了。
 
-![Image](https://mmbiz.qpic.cn/mmbiz\_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlbj8dSWx1yJwCNeXEGEP932y4FJcYxmaMW36nelA3iayqWzZ0t9ucaViaw/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/mmbiz_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlbj8dSWx1yJwCNeXEGEP932y4FJcYxmaMW36nelA3iayqWzZ0t9ucaViaw/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 在冀中，睡觉时是不脱衣服不脱鞋，一有情况起身就走，情况严重时甚至不解背包、不进村庄、不进房屋。
 
@@ -398,7 +398,7 @@
 
 “哇——”大家之间闹啊。
 
-![Image](https://mmbiz.qpic.cn/mmbiz\_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlbkOGkpwOYJ5cOF9GBWs6bACGy75AplbuOpyXr91ObvUlnuwjiaPaZ6uw/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/mmbiz_png/1iaVF6uRibXFicKZeWxwUVWk4GZYj7HyMlbkOGkpwOYJ5cOF9GBWs6bACGy75AplbuOpyXr91ObvUlnuwjiaPaZ6uw/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 就这样，我们这才到了沈阳，张学思的老家。
 
@@ -406,7 +406,7 @@
 
 没多久，国民党就打过来。我们就从沈阳撤出去了。
 
-![Image](https://mmbiz.qpic.cn/sz\_mmbiz\_jpg/1iaVF6uRibXF8CbKnZiaFImEyUUftmicicvK2wZEr99Rw3rtsGI38YRovyzsMGW54hTwHMQA6XqHV8XIW0IkJWQvqRA/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1iaVF6uRibXF8CbKnZiaFImEyUUftmicicvK2wZEr99Rw3rtsGI38YRovyzsMGW54hTwHMQA6XqHV8XIW0IkJWQvqRA/640?wx_fmt=jpeg\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 谢雪萍和孩子在一起
 
@@ -452,7 +452,7 @@
 
 我现在已经100岁了，跟我同时代的人，从延安一块走出来的，没有几个活着的了。我要替学思活着，替他看看一生为之奋斗的事业，正在变成现实。
 
-![Image](https://mmbiz.qpic.cn/sz\_mmbiz\_jpg/1iaVF6uRibXF8CbKnZiaFImEyUUftmicicvK21uAHULfNwVQGG9aAwetCOH69rl5TPnhQxicYe3Tf3XggqRNUAGsW9yQ/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1iaVF6uRibXF8CbKnZiaFImEyUUftmicicvK21uAHULfNwVQGG9aAwetCOH69rl5TPnhQxicYe3Tf3XggqRNUAGsW9yQ/640?wx_fmt=jpeg\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 张学良和谢雪萍
 
@@ -460,7 +460,7 @@
 
 我这一辈子，非常丰富，也非常艰苦，这期间变化太大。命运给你带到哪，你就走到哪，随着浪潮发展跟着浪潮走，觉得奋斗挺值得。
 
-![Image](https://mmbiz.qpic.cn/mmbiz\_png/1iaVF6uRibXFib7Wibw44ROstLFWVf34oxqd4D5GXNlvNf6GCrFhUWKn86X9wmyU2HHVffMwq7yrPLZFQPC3kiacAnQ/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/mmbiz_png/1iaVF6uRibXFib7Wibw44ROstLFWVf34oxqd4D5GXNlvNf6GCrFhUWKn86X9wmyU2HHVffMwq7yrPLZFQPC3kiacAnQ/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 **谢老太太的故事后来由朱洪海整理成书，封面写着：她是张作霖儿媳妇，她是张学良弟妹。**
 
@@ -482,4 +482,4 @@
 
 图片均由朱洪海提供  编辑：罗伯特刘
 
-\*本文已获作者授权，未经授权不可转载\
+\*本文已获作者授权，未经授权不可转载<br>

@@ -70,8 +70,7 @@ One common compiler optimization involves having the value read for `r2` reused 
 | `r4 = r3.x;` |             |
 | `r5 = r2;`   |             |
 
-Now consider the case where the assignment to `r6.x` in Thread 2 happens between the first read of `r1.x` and the read of `r3.x` in Thread 1. If the compiler decides to reuse the value of `r2` for the `r5`, then `r2` and `r5` will have the value `0`, and `r4` will have the value `3`. From the perspective of the programmer, the value stored at `p.x` has changed from `0` to `3` and then changed back.\
-
+Now consider the case where the assignment to `r6.x` in Thread 2 happens between the first read of `r1.x` and the read of `r3.x` in Thread 1. If the compiler decides to reuse the value of `r2` for the `r5`, then `r2` and `r5` will have the value `0`, and `r4` will have the value `3`. From the perspective of the programmer, the value stored at `p.x` has changed from `0` to `3` and then changed back.<br>
 
 The memory model determines what values can be read at every point in the program. The actions of each thread in isolation must behave as governed by the semantics of that thread, with the exception that the values seen by each read are determined by the memory model. When we refer to this, we say that the program obeys _intra-thread semantics_. Intra-thread semantics are the semantics for single-threaded programs, and allow the complete prediction of the behavior of a thread based on the values seen by read actions within the thread. To determine if the actions of thread _t_ in an execution are legal, we simply evaluate the implementation of thread _t_ as it would be performed in a single-threaded context, as defined in the rest of this specification.
 
@@ -251,8 +250,7 @@ Another execution order that is happens-before consistent is:
 4: A = 2;
 ```
 
-In this execution, the reads see writes that occur later in the execution order. This may seem counterintuitive, but is allowed by _happens-before_ consistency. Allowing reads to see later writes can sometimes produce unacceptable behaviors.\
-
+In this execution, the reads see writes that occur later in the execution order. This may seem counterintuitive, but is allowed by _happens-before_ consistency. Allowing reads to see later writes can sometimes produce unacceptable behaviors.<br>
 
 #### 17.4.6. Executions
 
@@ -367,8 +365,7 @@ Examples such as the one found in [Table 17.6](https://docs.oracle.com/javase/sp
 
 The memory model takes as input a given execution, and a program, and determines whether that execution is a legal execution of the program. It does this by gradually building a set of "committed" actions that reflect which actions were executed by the program. Usually, the next action to be committed will reflect the next action that can be performed by a sequentially consistent execution. However, to reflect reads that need to see later writes, we allow some actions to be committed earlier than other actions that happen-before them.
 
-Obviously, some actions may be committed early and some may not. If, for example, one of the writes in [Table 17.6](https://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.4.8-table-1) were committed before the read of that variable, the read could see the write, and the "out-of-thin-air" result could occur. Informally, we allow an action to be committed early if we know that the action can occur without assuming some data race occurs. In [Table 17.6](https://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.4.8-table-1), we cannot perform either write early, because the writes cannot occur unless the reads see the result of a data race.\
-
+Obviously, some actions may be committed early and some may not. If, for example, one of the writes in [Table 17.6](https://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.4.8-table-1) were committed before the read of that variable, the read could see the write, and the "out-of-thin-air" result could occur. Informally, we allow an action to be committed early if we know that the action can occur without assuming some data race occurs. In [Table 17.6](https://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.4.8-table-1), we cannot perform either write early, because the writes cannot occur unless the reads see the result of a data race.<br>
 
 #### 17.4.9. Observable Behavior and Nonterminating Executions
 

@@ -1,6 +1,6 @@
 # Git科普文，Git基本原理&各种骚操作
 
-[_**https://mp.weixin.qq.com/s/csEgAjJwH75\_IvAnFBIuvw**_](https://mp.weixin.qq.com/s/csEgAjJwH75\_IvAnFBIuvw)
+[_**https://mp.weixin.qq.com/s/csEgAjJwH75\_IvAnFBIuvw**_](https://mp.weixin.qq.com/s/csEgAjJwH75_IvAnFBIuvw)
 
 **Git简单介绍\*\***
 
@@ -823,7 +823,7 @@ $ git cat-file -p b716c7b049ccd9048b0566a57cfd516c17c1e39f
 
 ### 提交对象
 
-数据对象保存了数据的内容，树对象可以表示当前目录的快照。但是，若想重用这些快照，必须记住树对象的`SHA-1`哈希值。而且，我们也不知道是谁保存了这些快照，在什么时刻保存的，以及为什么保存这些快照。而以上这些，正是**提交对象（commit object）**能保存的基本信息。
+数据对象保存了数据的内容，树对象可以表示当前目录的快照。但是，若想重用这些快照，必须记住树对象的`SHA-1`哈希值。而且，我们也不知道是谁保存了这些快照，在什么时刻保存的，以及为什么保存这些快照。而以上这些，正是**提交对象（commit object）**&#x80FD;保存的基本信息。
 
 我们对当前暂存区进行一次提交，`git commit -m "first commit"`。
 

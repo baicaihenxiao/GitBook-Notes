@@ -6,15 +6,14 @@ https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e
 
 ### 一、前言
 
-大家好，我是架构师杨波，大家都叫我波波老师。\
-
-
+大家好，我是架构师杨波，大家都叫我波波老师。<br>
+--------------------------
 
 波波可以说是一个不折不扣的开源爱好者，在一线企业工作时，波波就花费大量的时间和精力，研究和学习开源代码。即便现在转入技术培训行业，波波仍然会花大量时间，研究github上的开源项目。另外，波波业余时间也开发一些开源小项目。可以这样说，波波今天之所以能够成长为一个资深软件架构师，开源项目对我的帮助是非常大的。
 
 近年，波波在极客时间上输出一些技术课程，这些课程大部分都是基于开源项目开发的。输出过程中，经常有学员会问我该如何高效学习开源项目的问题。为了解答学员的疑问，基于自己这十几年来学习开源项目的经验，我总结出了学习开源项目的一个方法论。这个方法论包括6个层次和8大方法，下面是这个方法论的一个总结表格：
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04QPqJy4ia8WLbo4yJANQfcaYQxoGashofasbNtGibG5TYsXwABqYPyQ7Q/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04QPqJy4ia8WLbo4yJANQfcaYQxoGashofasbNtGibG5TYsXwABqYPyQ7Q/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 上面的表格中的内容很多，可能一下子看不明白，不用着急，波波后面会依次讲解每一种方法。而且在每一种方法中，我都会给出项目案例，其中还包括行业优秀的工程师/架构师，学习开源项目的一些方法和思路。
 
@@ -24,7 +23,7 @@ https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e
 
 我们先来看第一层的方法1，如下表所示：
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04iatBuLCWdpiaKvyG2qtbialTXKDYqprD89gVMkZGcdFib2mBVUS2zUHo6g/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04iatBuLCWdpiaKvyG2qtbialTXKDYqprD89gVMkZGcdFib2mBVUS2zUHo6g/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 方法1很好理解，就是直接看源码，当然也包括看文档，还有跑跑样例代码。
 
@@ -38,7 +37,7 @@ https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e
 
 方法2叫整理源代码，它更进一步到第2层，如下表所示：
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04RJhEjVC1ma90F5Y4FjGfDu0GjwPhZK4uOItIBIvaVtbmTjgKUb5oyg/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04RJhEjVC1ma90F5Y4FjGfDu0GjwPhZK4uOItIBIvaVtbmTjgKUb5oyg/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 怎么理解呢方法2呢？其实它指的是将开源项目的源代码统统整理一遍，包括将包名都改掉，并且编译、测试和运行通过。
 
@@ -50,7 +49,7 @@ https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e
 
 方法3叫整理+输出分享，它更进一步到第3层，如下表所示：
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04vDUgkZebAMZaS8ogM1RWSvURW9SKIlf1Qia2bSX7d4a3GWyQdQ4jXQg/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04vDUgkZebAMZaS8ogM1RWSvURW9SKIlf1Qia2bSX7d4a3GWyQdQ4jXQg/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 方法3是指在方法2整理过源代码的基础上，总结梳理出源码分析或者架构设计类的文档或PPT或视频，在公司或者社区分享。
 
@@ -62,11 +61,11 @@ https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e
 
 下面再讲两个来自YouTube，通过输出分享提升个人技能的例子。这两个例子和开源并不直接相关，但是同样值得参考借鉴。
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04H1ozceW3NL7DYSU8NyAyQZ521LQfWApWYvHuIFQCHfJnWhribs0cNuw/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04H1ozceW3NL7DYSU8NyAyQZ521LQfWApWYvHuIFQCHfJnWhribs0cNuw/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 第一个例子来自一个叫Dylan Israel的美国人，他在Youtube上的频道就叫Dylan Israel，主要内容是关于如何自学编程的。他本人不是科班出身，完全通过自学编程掌握技术。他主要通过美国的Code Cademy和FreeCodeCamp等站点学习技术，每次学习一门课程或技术，他就把自己学习的过程，以live coding(现场编程)的方式，制作成视频，并分享在YouTube的个人频道上。目前他在企业上班，年薪大致在美金6位数，业余时间继续搞他的Youtube频道，既通过视频输出提升自己的技能，同时也分享编程技能。目前他的YouTube频道有74.4k订阅，也是不错的。
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t045BhiavhpulJP1jsNhqBNaTuSebZSQyQL1iapNec4zoHR4JTphZTBU3Bw/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t045BhiavhpulJP1jsNhqBNaTuSebZSQyQL1iapNec4zoHR4JTphZTBU3Bw/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 第二个例子来自一个叫Caleb Curry的美国人，他在Youtube上的频道就叫Caleb Curry，主要内容是关于编程语言学习的。Caleb学习编程语言的方式，就是每学习一种语言，就输出一门该语言的视频课程，并分享在YouTube上，也就是通过视频输出来提升学习效率。通过这种方式，经过超过6年的持续输出，他目前已经掌握了几乎所有主流的编程语言，包括Python/Java/C/C#/C++/JavaScript/SQL等。同时，他在YouTube上的视频内容也变成了他的个人资产积累。目前，他的YouTube频道有超过225k订阅，在技术领域，这个订阅量已经比较牛逼了。
 
@@ -74,7 +73,7 @@ https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e
 
 下面是方法4，叫开发克隆版，它同样在第3层，如下表所示：
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04FzUVdYAI37cLewxk6Zn5Ufxib0ySGytUoiaruTC5R53Libhq8BW7Znobg/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04FzUVdYAI37cLewxk6Zn5Ufxib0ySGytUoiaruTC5R53Libhq8BW7Znobg/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 方法4指的是开发原项目的克隆版，这个和书籍翻译有点类似，比方说，原项目是用go语言开发的，我就克隆出一个Java语言版，并且分享到开源社区。
 
@@ -92,7 +91,7 @@ https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e
 
 方法5叫生产化落地，它更进一步，达到第4层，如下表所示：
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04kv7bl46PRmeMz673asFGq4qIOO2Nytwy3ic4NAibibY784hpyPN6mlG8Q/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04kv7bl46PRmeMz673asFGq4qIOO2Nytwy3ic4NAibibY784hpyPN6mlG8Q/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 方法5指的是在整理开源项目代码和输出分享的基础上，再在企业生产级项目中进行落地，项目要承担实际业务流量。后续根据业务需要，对项目进行进一步定制优化。甚至还可以再进一步，在完全吸收开源项目的基础上，进行创新自研。
 
@@ -114,7 +113,7 @@ https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e
 
 方法6叫开发知识产品，它同样在第四层，见下表：
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04OdLLicy14d6Wr67KYlPwpTS7ZfkgtYcLHxAtr4ENdIK4RJzQNblOPaw/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04OdLLicy14d6Wr67KYlPwpTS7ZfkgtYcLHxAtr4ENdIK4RJzQNblOPaw/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 方法6指的是，在将开源项目代码基本吸收的基础上，开发出应用演示项目(或者克隆项目)，并制作成知识付费产品(包括书籍或视频等)，发布到知识付费平台。
 
@@ -128,7 +127,7 @@ https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e
 
 方法7叫开发自己的开源项目，它属于高级方法，达到第5层，如下表所示：
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04Zj94zLPDTOkKicULYXDPuRFgmiapYq9zrCMcqpxibEadP62ic2oXJ0Vexg/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04Zj94zLPDTOkKicULYXDPuRFgmiapYq9zrCMcqpxibEadP62ic2oXJ0Vexg/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 方法7指的是，在吸收开源项目+企业实践落地的基础上，沉淀出自己的开源项目，并持续推动开源社区建设。
 
@@ -150,7 +149,7 @@ https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e
 
 方法8叫商业化自己的开源项目，它处在顶层第六层，见下表所示：
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04Epxkf2x4SP4CyKicSNVBKIvwpHadsb1R2f9Encjhb6HLEKACtFC9Nyw/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04Epxkf2x4SP4CyKicSNVBKIvwpHadsb1R2f9Encjhb6HLEKACtFC9Nyw/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 方法8指的是，在自己的开源产品的基础上，持续推进社区生态建设，并逐步走上商业化服务的道路，甚至开创一个公司。
 
@@ -168,7 +167,7 @@ https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e
 
 好，上面我把学习开源的8种方法(包括6个层次)，给大家全都介绍完了，下面我来做一个要点心得总结。尽管上面的内容很多，但是这些要点才是需要大家take away(记住带走)的，见下图：
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04mF6snFwRkuicrEq3U3kfrNMxxh7anWtsxtNGnjeps8MjdPgNTFFTmiaw/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04mF6snFwRkuicrEq3U3kfrNMxxh7anWtsxtNGnjeps8MjdPgNTFFTmiaw/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 首先第一点是**输入要有输出，学习要有产出**。不管你学哪种技术，或者学哪个开源项目，最终都要有个产出。这个产出可以是一个ppt+一次技术分享、也可以是一篇文章或一个视频教程，当然也可以是一个落地的企业项目，等等。没有产出的学习，一般效果都比较差。
 
@@ -178,7 +177,7 @@ https://mp.weixin.qq.com/s?__biz=MzIxMTA5NjQyMg==&mid=2647802381&idx=1&sn=64645e
 
 第四，大家都是学习爱好者，平时都会花大量时间进行学习。既然投入了时间，那么一定要让你的**投入产生比最大化**，说白了是要**一举要多得**。波波就是这样的，一旦下定决心投入时间精力去学习某个东西，那么一定要有价值产出，这个产出一定要变成自己的个人沉淀积累，并且这个产出最好要能贡献社区(对社区有价值)，然后能提升自己的影响力，最后能真正的学到东西。当你养成以投入产出比的视角去看待学习以后，你就会对你的学习投入慎之又慎，不会轻易投入价值小的学习方式。
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04mH7esKznljtxJGEvEaCeGKuEZZ9jrpiboWJpGTKJby4Zngr2ic9MSUVA/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/ELH62gpbFmHrPY4NlY53ick2n5icyJ7t04mH7esKznljtxJGEvEaCeGKuEZZ9jrpiboWJpGTKJby4Zngr2ic9MSUVA/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 最后要强调一点，不管是学技术，学英语，做开源，还是做视频课程，都遵循所谓的复利曲线，如上图所示。在复利曲线的底部，成本线以下的那条成长线很平很长，只有到达拐点，成长线才会呈指数级上升。比方说，波波投入技术领域已经超过15年，只是在最近几年，才隐约感觉快到拐点附近了。另外波波发现，在YouTube上做视频输出的比较成功的大V，平均积累周期是5～6年，才会出现拐点，订阅量呈现快速增长。对于方法8提到的从开源到商业公司的案例，底部的成长线更长，一般周期需要超过10，才可能盈利甚至上市。
 

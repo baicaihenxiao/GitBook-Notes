@@ -1,36 +1,33 @@
-# Welcome to My Notes
+# CSER Knowledge
 
-## 收藏的一些文章---
+## CSER
 
-✔️⭐
+> **Knowledge about Asia, shared with the world.**
 
-✔️  已读
+CSER is a non-profit organization dedicated to creating reliable, accessible knowledge about Asia and sharing it with people around the world.
 
-✅   
+### Our Mission
 
-🏷️
+We help people better understand Asia by making its cultures, histories, societies, and ideas easier to discover and learn about.
 
-⭐  好文
+### What We Do
 
-❓
+* **Create knowledge** through research, education, and collaboration.
+* **Share resources** that are clear, trustworthy, and accessible.
+* **Connect communities** across cultures and borders.
+* **Encourage understanding** through respectful dialogue and diverse perspectives.
 
-⚠️
+### Our Vision
 
-❗
+We envision a world where everyone can explore Asia's diversity, learn from its people, and build stronger connections across cultures.
 
-🚫
+### Our Values
 
-◻️ to read
+* **Accuracy** — We value careful research and trustworthy information.
+* **Accessibility** — We make knowledge available to people everywhere.
+* **Respect** — We represent cultures and communities thoughtfully.
+* **Collaboration** — We believe knowledge grows when people work together.
 
-$$
-SCORE(A) = \sum_{i \in S_A}(ai+bi) - (b1+b2+...+bn)
-$$
+### Get Involved
 
-## [Homepage](https://www.cser.club/)
-
-## [Github](https://github.com/baicaihenxiao/gitbooknotes)
-
-## [Docsify](http://docs.cser.club/)
-
-## [GitBook](http://note.cser.club/)
-
+Join CSER as a learner, contributor, researcher, educator, or partner. Together, we can make knowledge about Asia accessible to the world.

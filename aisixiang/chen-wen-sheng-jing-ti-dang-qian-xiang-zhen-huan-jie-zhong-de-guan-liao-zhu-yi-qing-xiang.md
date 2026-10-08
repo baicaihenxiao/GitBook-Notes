@@ -1,9 +1,8 @@
 # 陈文胜：警惕当前乡镇换届中的官僚主义倾向
 
-[https://mp.weixin.qq.com/s?\_\_biz=MzI0OTAzMzA0MA==\&mid=2247493588\&idx=1\&sn=9bc23d0955220469aeaa2dae3a4ac013](https://mp.weixin.qq.com/s?\_\_biz=MzI0OTAzMzA0MA==\&mid=2247493588\&idx=1\&sn=9bc23d0955220469aeaa2dae3a4ac013)
+[https://mp.weixin.qq.com/s?\_\_biz=MzI0OTAzMzA0MA==\&mid=2247493588\&idx=1\&sn=9bc23d0955220469aeaa2dae3a4ac013](https://mp.weixin.qq.com/s?__biz=MzI0OTAzMzA0MA==\&mid=2247493588\&idx=1\&sn=9bc23d0955220469aeaa2dae3a4ac013)
 
-[陈文胜](http://www.aisixiang.com/thinktank/ChenWenSheng.html)，湖南师范大学潇湘学者特聘教授、中国乡村振兴研究院院长，中央农办乡村振兴专家委员，湖南省委农村工作领导小组三农工作专家组组长。点文末“阅读原文”，可访问陈文胜授权专栏。\
-
+[陈文胜](http://www.aisixiang.com/thinktank/ChenWenSheng.html)，湖南师范大学潇湘学者特聘教授、中国乡村振兴研究院院长，中央农办乡村振兴专家委员，湖南省委农村工作领导小组三农工作专家组组长。点文末“阅读原文”，可访问陈文胜授权专栏。<br>
 
 事业兴衰唯在用人；用人之要重在导向。乡镇作为联结城乡的枢纽，无疑是全面推进乡村振兴实现城乡融合发展的前沿阵地，而加强乡镇领导班子和乡镇干部队伍建设，是推进乡村组织振兴的一项基础性工程。乡镇党委、政府换届的如何选人用人，事关“三农”工作重心的历史性转移的战略全局，关乎乡村治理体系和治理能力现代化的实现。根据基层调研发现，当前一些地方在乡镇党委、政府换届工作中，推行年龄“门槛”“一刀切”的硬核政策，是典型的官僚主义和形式主义在基层的蔓延，需要高度警惕。
 

@@ -6,8 +6,7 @@ app [https://144blocks.com/](https://144blocks.com/)
 
 [https://waitbutwhy.com/2016/10/100-blocks-day.html](https://waitbutwhy.com/2016/10/100-blocks-day.html)
 
-&#x20;October 21, 2016 By Tim Urban\
-
+&#x20;October 21, 2016 By Tim Urban<br>
 
 Most people sleep about seven or eight hours a night. That leaves 16 or 17 hours awake each day. Or about 1,000 minutes.
 

@@ -1,6 +1,6 @@
 # ✔️⭐SpringBoot优雅的全局异常处理
 
-[https://mp.weixin.qq.com/s?\_\_biz=MzU0MDEwMjgwNA==&mid=2247489582&idx=1&sn=b13f80ba6ab6fae52b45b0a3036ca6cb&chksm=fb3f01d5cc4888c3f4aec86b079a79501cd18956d909831347a947f104ffa6fb8542a7c4cf55&scene=0&xtrack=1\#rd](https://mp.weixin.qq.com/s?__biz=MzU0MDEwMjgwNA==&mid=2247489582&idx=1&sn=b13f80ba6ab6fae52b45b0a3036ca6cb&chksm=fb3f01d5cc4888c3f4aec86b079a79501cd18956d909831347a947f104ffa6fb8542a7c4cf55&scene=0&xtrack=1#rd)
+[https://mp.weixin.qq.com/s?\_\_biz=MzU0MDEwMjgwNA==\&mid=2247489582\&idx=1\&sn=b13f80ba6ab6fae52b45b0a3036ca6cb\&chksm=fb3f01d5cc4888c3f4aec86b079a79501cd18956d909831347a947f104ffa6fb8542a7c4cf55\&scene=0\&xtrack=1#rd](https://mp.weixin.qq.com/s?__biz=MzU0MDEwMjgwNA==\&mid=2247489582\&idx=1\&sn=b13f80ba6ab6fae52b45b0a3036ca6cb\&chksm=fb3f01d5cc4888c3f4aec86b079a79501cd18956d909831347a947f104ffa6fb8542a7c4cf55\&scene=0\&xtrack=1#rd)
 
 本文来源：[http://8rr.co/Lj3t](http://8rr.co/Lj3t)
 
@@ -14,7 +14,7 @@
 
 ### 开发准备
 
-**环境要求**JDK**：1.8**  SpringBoot：1.5.17.RELEASE
+**环境要求**JD&#x4B;**：1.8**  SpringBoot：1.5.17.RELEASE
 
 首先还是Maven的相关依赖:
 
@@ -380,7 +380,7 @@ public class GlobalExceptionHandler {
 
 #### **实体类**
 
-又是万能的用户表 \(_^▽^_\)
+又是万能的用户表 (_^▽^_)
 
 **代码如下：**
 
@@ -429,7 +429,7 @@ public class User implements Serializable{
 
 #### **Controller 控制层**
 
-控制层这边也比较简单，使用Restful风格实现的CRUD功能，不同的是这里我故意弄出了一些异常，好让这些异常被捕获到然后处理。这些异常中，有自定义的异常抛出，也有空指针的异常抛出，当然也有不可预知的异常抛出\(这里我用类型转换异常代替\)，那么我们在完成代码编写之后，看看这些异常是否能够被捕获处理成功吧！
+控制层这边也比较简单，使用Restful风格实现的CRUD功能，不同的是这里我故意弄出了一些异常，好让这些异常被捕获到然后处理。这些异常中，有自定义的异常抛出，也有空指针的异常抛出，当然也有不可预知的异常抛出(这里我用类型转换异常代替)，那么我们在完成代码编写之后，看看这些异常是否能够被捕获处理成功吧！
 
 **代码如下:**
 
@@ -530,7 +530,7 @@ Body参数为:
 
 > {"code":"-1","message":"用户姓名不能为空！","result":null}
 
-**示例图:**可以看出将我们抛出的异常进行数据封装，然后将异常返回出来。
+**示例图:**&#x53EF;以看出将我们抛出的异常进行数据封装，然后将异常返回出来。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/31/640-20200731093317854-093317.jpg)
 
@@ -548,7 +548,7 @@ Body参数为:
 
 > {"code":"400","message":"请求的数据格式不符!","result":null}
 
-**示例图:**我们可以看到这里的的确是返回空指针的异常护理，可以得出全局异常处理优先处理子类的异常。
+**示例图:**&#x6211;们可以看到这里的的确是返回空指针的异常护理，可以得出全局异常处理优先处理子类的异常。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/31/640-20200731093318140-093318.jpg)
 
@@ -579,4 +579,3 @@ Body参数为:
 SpringBoot全局异常的处理项目工程地址: [https://github.com/xuwujing/springBoot-study/tree/master/springboot-exceptionHandler](https://github.com/xuwujing/springBoot-study/tree/master/springboot-exceptionHandler)
 
 SpringBoot整个集合的地址: [https://github.com/xuwujing/springBoot-study](https://github.com/xuwujing/springBoot-study)
-

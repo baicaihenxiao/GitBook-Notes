@@ -2,7 +2,7 @@
 
 [https://mp.weixin.qq.com/s/t9oQGNtPINa5mOAEvMN9cg](https://mp.weixin.qq.com/s/t9oQGNtPINa5mOAEvMN9cg)
 
-来源 \| [https://juejin.im/post/5e927e27f265da47c8012ed9](https://juejin.im/post/5e927e27f265da47c8012ed9)
+来源 | [https://juejin.im/post/5e927e27f265da47c8012ed9](https://juejin.im/post/5e927e27f265da47c8012ed9)
 
 Spring如何解决的循环依赖，是近两年流行起来的一道Java面试题。
 
@@ -24,9 +24,9 @@ Spring如何解决的循环依赖，是近两年流行起来的一道Java面试�
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/03/640-20200803144009668-144009.jpg)
 
-先说明前提：原型\(Prototype\)的场景是不支持循环依赖的，通常会走到`AbstractBeanFactory`类中下面的判断，抛出异常。
+先说明前提：原型(Prototype)的场景是不支持循环依赖的，通常会走到`AbstractBeanFactory`类中下面的判断，抛出异常。
 
-```text
+```
 if (isPrototypeCurrentlyInCreation(beanName)) {
   throw new BeanCurrentlyInCreationException(beanName);
 }
@@ -60,7 +60,7 @@ Spring怕你不好猜，就先抛出了BeanCurrentlyInCreationException![img](ht
 
 为什么成为后两个Map为垫脚石，假设最终放在singletonObjects的Bean是你想要的一杯“_凉白开_”。
 
-那么Spring准备了两个杯子，即_singletonFactories_和_earlySingletonObjects_来回“倒腾”几番，把热水晾成“_凉白开_”放到singletonObjects中。
+那么Spring准备了两个杯子，&#x5373;_&#x73;ingletonFactorie&#x73;_&#x548C;_earlySingletonObject&#x73;_&#x6765;回“倒腾”几番，把热水晾成“_凉白开_”放到singletonObjects中。
 
 闲话不说，都浓缩在图里。
 
@@ -84,7 +84,7 @@ Spring怕你不好猜，就先抛出了BeanCurrentlyInCreationException![img](ht
 
 举个例子，假设有类A：
 
-```text
+```
 public class A {
     private B b;
 }
@@ -92,7 +92,7 @@ public class A {
 
 类B：
 
-```text
+```
 public class B {
     private A a;
 }
@@ -102,7 +102,7 @@ public class B {
 
 其实非常简单，笔者写了一份粗糙的代码，可供参考：
 
-```text
+```
     /**
      * 放置创建好的bean Map
      */
@@ -177,7 +177,7 @@ two sum是刷题网站leetcode序号为1的题，也就是大多人的算法入�
 
 这道题的优解是，一次遍历+HashMap：
 
-```text
+```
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
@@ -209,4 +209,3 @@ class Solution {
 可能还有盆友有疑问，为什么一道“two-sum”，Spring处理的如此复杂？ 这个想想Spring支持多少功能就知道了，各种实例方式..各种注入方式..各种Bean的加载，校验..各种callback，aop处理等等..
 
 Spring可不只有依赖注入，同样Java也不仅是Spring。如果我们陷入了某个“牛角尖”，不妨跳出来看看，可能会更佳清晰哦。
-

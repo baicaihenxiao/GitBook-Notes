@@ -2,13 +2,13 @@
 
 
 
-[https://mp.weixin.qq.com/s?\_\_biz=MzkwNzI0MzQ2NQ==\&mid=2247491739\&idx=1\&sn=8d83a63e57452ee6595acb030fdd77eb](https://mp.weixin.qq.com/s?\_\_biz=MzkwNzI0MzQ2NQ==\&mid=2247491739\&idx=1\&sn=8d83a63e57452ee6595acb030fdd77eb)
+[https://mp.weixin.qq.com/s?\_\_biz=MzkwNzI0MzQ2NQ==\&mid=2247491739\&idx=1\&sn=8d83a63e57452ee6595acb030fdd77eb](https://mp.weixin.qq.com/s?__biz=MzkwNzI0MzQ2NQ==\&mid=2247491739\&idx=1\&sn=8d83a63e57452ee6595acb030fdd77eb)
 
 
 
 ### 背景
 
-上一篇文章 [保持清洁的Git提交记录，三招就够了](http://mp.weixin.qq.com/s?\_\_biz=MzkwNzI0MzQ2NQ==\&mid=2247491686\&idx=1\&sn=6195b5d076e52280fddbd93197da1eaa\&chksm=c0de9ac0f7a913d6a9d16e4e7a0b93a0171bdd7ae0f93e130da6a4f8d2631195ffa9fb0e95de\&scene=21#wechat\_redirect) ，大家看过后有私下留言说这是非常好用的功能，我突然想到工作中用到的另外一个 Git 功能那也是相当好用，必须全盘托出
+上一篇文章 [保持清洁的Git提交记录，三招就够了](http://mp.weixin.qq.com/s?__biz=MzkwNzI0MzQ2NQ==\&mid=2247491686\&idx=1\&sn=6195b5d076e52280fddbd93197da1eaa\&chksm=c0de9ac0f7a913d6a9d16e4e7a0b93a0171bdd7ae0f93e130da6a4f8d2631195ffa9fb0e95de\&scene=21#wechat_redirect) ，大家看过后有私下留言说这是非常好用的功能，我突然想到工作中用到的另外一个 Git 功能那也是相当好用，必须全盘托出
 
 作为程序员的我们应该都有一个感受，一旦进入某个项目，从开发，到发布生产，到 hotfix，到后期维护，那基本都有你的份，正在开发某个 feature，老板突然跳出来说让你做生产上的 hotfix 更是家常便饭，面对这种情况，使用 Git 的我们通常有两种解决方案：
 
@@ -17,7 +17,7 @@
 
 第二种方式较第一种还好很多，可是面对下面这些场景，stash 依旧不是很好的解决方案
 
-![Image](https://mmbiz.qpic.cn/mmbiz\_png/WGOSCfqtNHq6icuqrfsudRgZrZJF0icGR4mKudbl6mM0qkKAqC70CAblxXjYJ9meR7a34VOXUpj4mPJlO5NnA4mQ/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![Image](https://mmbiz.qpic.cn/mmbiz_png/WGOSCfqtNHq6icuqrfsudRgZrZJF0icGR4mKudbl6mM0qkKAqC70CAblxXjYJ9meR7a34VOXUpj4mPJlO5NnA4mQ/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 ### 我们面对的场景
 
@@ -45,7 +45,7 @@ git worktree --help
 
 就可以快速看到帮助文档说明：
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/WGOSCfqtNHq6icuqrfsudRgZrZJF0icGR4uagQG3toULiaB2Sic4GdIFcuy6naaHoxRjsm91Avibib9Mx0rkeA5adlKg/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/WGOSCfqtNHq6icuqrfsudRgZrZJF0icGR4uagQG3toULiaB2Sic4GdIFcuy6naaHoxRjsm91Avibib9Mx0rkeA5adlKg/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 用简单的话来解释 git-worktree 的作用就是：
 
@@ -124,7 +124,7 @@ git worktree add -b "hotfix/JIRA234-fix-naming" ../hotfix/JIRA234-fix-naming
 
 进入 `JIRA234-fix-naming` 目录，默认是在 `hotfix/JIRA234-fix-naming` 分支上
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/WGOSCfqtNHq6icuqrfsudRgZrZJF0icGR4TbGfJp2w0M4QoiaM6r5s1GbPVhDxGkmI5nOg04uMlulZShLZRsowlOw/640?wx\_fmt=png\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/WGOSCfqtNHq6icuqrfsudRgZrZJF0icGR4TbGfJp2w0M4QoiaM6r5s1GbPVhDxGkmI5nOg04uMlulZShLZRsowlOw/640?wx_fmt=png\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 worktree 建立起来很容易，不加管理，项目目录结构肯定乱糟糟，这是我们不想看到的，所以我们需要清晰的知道某个 repo 都建立了哪些 worktree
 
@@ -189,8 +189,7 @@ git worktree addgit worktree listgit worktree removegit worktree prune
 1. 可以删除 main worktree 吗？为什么
 2. 反复创建和删除worktree， repo/.git/wortree 目录的变化你能理解吗？
 
-\
-
+<br>
 
 
 

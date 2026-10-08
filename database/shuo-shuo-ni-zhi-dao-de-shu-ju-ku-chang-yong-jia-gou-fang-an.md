@@ -1,8 +1,8 @@
 # 说说你知道的数据库常用架构方案？
 
-[https://mp.weixin.qq.com/s?\_\_biz=MzIxMzQzNzMwMw==&mid=2247486578&idx=1&sn=e32d9b370dc4a81806099f57a84cc60f&chksm=97b7926aa0c01b7c4b1cb59f1388a05f238bac434937cfc0726843fddc669d14b52e86437cfb&mpshare=1&scene=1&srcid=0724WqIuH4wnWwSSqad8KKk8&sharer\_sharetime=1595551712078&sharer\_shareid=393f249533d421d13c2402bd43e74356\#rd](https://mp.weixin.qq.com/s?__biz=MzIxMzQzNzMwMw==&mid=2247486578&idx=1&sn=e32d9b370dc4a81806099f57a84cc60f&chksm=97b7926aa0c01b7c4b1cb59f1388a05f238bac434937cfc0726843fddc669d14b52e86437cfb&mpshare=1&scene=1&srcid=0724WqIuH4wnWwSSqad8KKk8&sharer_sharetime=1595551712078&sharer_shareid=393f249533d421d13c2402bd43e74356#rd)
+[https://mp.weixin.qq.com/s?\_\_biz=MzIxMzQzNzMwMw==\&mid=2247486578\&idx=1\&sn=e32d9b370dc4a81806099f57a84cc60f\&chksm=97b7926aa0c01b7c4b1cb59f1388a05f238bac434937cfc0726843fddc669d14b52e86437cfb\&mpshare=1\&scene=1\&srcid=0724WqIuH4wnWwSSqad8KKk8\&sharer\_sharetime=1595551712078\&sharer\_shareid=393f249533d421d13c2402bd43e74356#rd](https://mp.weixin.qq.com/s?__biz=MzIxMzQzNzMwMw==\&mid=2247486578\&idx=1\&sn=e32d9b370dc4a81806099f57a84cc60f\&chksm=97b7926aa0c01b7c4b1cb59f1388a05f238bac434937cfc0726843fddc669d14b52e86437cfb\&mpshare=1\&scene=1\&srcid=0724WqIuH4wnWwSSqad8KKk8\&sharer_sharetime=1595551712078\&sharer_shareid=393f249533d421d13c2402bd43e74356#rd)
 
-来源 \| cnblogs.com/littlecharacter
+来源 | cnblogs.com/littlecharacter
 
 * 一、数据库架构原则
 * 二、常见的架构方案
@@ -32,7 +32,7 @@ jdbc:mysql://vip:3306/xxdb
 
 **4、扩展性分析：** 无法通过加从库来扩展读性能，进而提高整体性能。
 
-**5、可落地分析：** 两点影响落地使用。第一，性能一般，这点可以通过建立高效的索引和引入[缓存](http://mp.weixin.qq.com/s?__biz=MzI4Njc5NjM1NQ==&mid=2247486190&idx=2&sn=9010f6afd882fb89910c9705ff0565ab&chksm=ebd635c2dca1bcd45ec1ebc53735efb60fa1c4f114d9ebb413553b529ddf5ba4c919fa1073b3&scene=21#wechat_redirect)来增加读性能，进而提高性能。这也是通用的方案。第二，扩展性差，这点可以通过分库分表来扩展。
+**5、可落地分析：** 两点影响落地使用。第一，性能一般，这点可以通过建立高效的索引和引入[缓存](http://mp.weixin.qq.com/s?__biz=MzI4Njc5NjM1NQ==\&mid=2247486190\&idx=2\&sn=9010f6afd882fb89910c9705ff0565ab\&chksm=ebd635c2dca1bcd45ec1ebc53735efb60fa1c4f114d9ebb413553b529ddf5ba4c919fa1073b3\&scene=21#wechat_redirect)来增加读性能，进而提高性能。这也是通用的方案。第二，扩展性差，这点可以通过分库分表来扩展。
 
 ### 方案二：双主架构，两个主库同时提供服务，负载均衡
 
@@ -62,7 +62,7 @@ jdbc:mysql://slave2-ip:3306/xxdb
 
 **1、高可用分析：** 主库单点，从库高可用。一旦主库挂了，写服务也就无法提供。
 
-**2、高性能分析：**大 部分互联网应用读多写少，读会先成为瓶颈，进而影响整体性能。读的性能提高了，整体性能也提高了。另外，主库可以不用索引，线上从库和线下从库也可以建立不同的索引（线上从库如果有多个还是要建立相同的索引，不然得不偿失；线下从库是平时开发人员排查线上问题时查的库，可以建更多的索引）。
+**2、高性能分析：**&#x5927; 部分互联网应用读多写少，读会先成为瓶颈，进而影响整体性能。读的性能提高了，整体性能也提高了。另外，主库可以不用索引，线上从库和线下从库也可以建立不同的索引（线上从库如果有多个还是要建立相同的索引，不然得不偿失；线下从库是平时开发人员排查线上问题时查的库，可以建更多的索引）。
 
 **3、一致性分析：** 存在数据一致性问题。请看下面介绍的一致性解决方案。
 
@@ -90,7 +90,7 @@ jdbc:mysql://slave2-ip:3306/xxdb
 
 **3、一致性分析：** 存在数据一致性问题。请看，一致性解决方案。
 
-**4、扩展性分析：**可 以通过加从库来扩展读性能，进而提高整体[性能](http://mp.weixin.qq.com/s?__biz=MzI4Njc5NjM1NQ==&mid=2247486193&idx=2&sn=64b0acf959f7c37220a7677d71780a02&chksm=ebd635dddca1bccbad1458c4afa3ba7aaa75d4d3d3afc74863ad13ecd546dfa34da39d7572a6&scene=21#wechat_redirect)。（带来的问题同方案二）
+**4、扩展性分析：**&#x53EF; 以通过加从库来扩展读性能，进而提高整体[性能](http://mp.weixin.qq.com/s?__biz=MzI4Njc5NjM1NQ==\&mid=2247486193\&idx=2\&sn=64b0acf959f7c37220a7677d71780a02\&chksm=ebd635dddca1bccbad1458c4afa3ba7aaa75d4d3d3afc74863ad13ecd546dfa34da39d7572a6\&scene=21#wechat_redirect)。（带来的问题同方案二）
 
 **5、可落地分析：** 同方案二，但数据同步又多了一层，数据延迟更严重。
 
@@ -116,7 +116,7 @@ jdbc:mysql://slave2-ip:3306/xxdb
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/24/640-20200724090537997-090538.jpg)
 
-4、半同步复制，等主从同步完成，写请求才返回。就是大家常说的“半同步复制”semi-sync。这可以利用[数据库](http://mp.weixin.qq.com/s?__biz=MzI4Njc5NjM1NQ==&mid=2247486193&idx=2&sn=64b0acf959f7c37220a7677d71780a02&chksm=ebd635dddca1bccbad1458c4afa3ba7aaa75d4d3d3afc74863ad13ecd546dfa34da39d7572a6&scene=21#wechat_redirect)原生功能，实现比较简单。代价是写请求时延增长，吞吐量降低。
+4、半同步复制，等主从同步完成，写请求才返回。就是大家常说的“半同步复制”semi-sync。这可以利用[数据库](http://mp.weixin.qq.com/s?__biz=MzI4Njc5NjM1NQ==\&mid=2247486193\&idx=2\&sn=64b0acf959f7c37220a7677d71780a02\&chksm=ebd635dddca1bccbad1458c4afa3ba7aaa75d4d3d3afc74863ad13ecd546dfa34da39d7572a6\&scene=21#wechat_redirect)原生功能，实现比较简单。代价是写请求时延增长，吞吐量降低。
 
 5、数据库中间件，引入开源（mycat等）或自研的数据库中间层。个人理解，思路同选择读主。数据库中间件的成本比较高，并且还多引入了一层。
 
@@ -146,10 +146,10 @@ jdbc:mysql://slave2-ip:3306/xxdb
 
 ### 1、架构演变
 
-* 架构演变一：方案一 -&gt; 方案一+分库分表 -&gt; 方案二+分库分表 -&gt; 方案四+分库分表；
-* 架构演变二：方案一 -&gt; 方案一+分库分表 -&gt; 方案三+分库分表 -&gt; 方案四+分库分表；
-* 架构演变三：方案一 -&gt; 方案二 -&gt; 方案四 -&gt; 方案四+分库分表；
-* 架构演变四：方案一 -&gt; 方案三 -&gt; 方案四 -&gt; 方案四+分库分表；
+* 架构演变一：方案一 -> 方案一+分库分表 -> 方案二+分库分表 -> 方案四+分库分表；
+* 架构演变二：方案一 -> 方案一+分库分表 -> 方案三+分库分表 -> 方案四+分库分表；
+* 架构演变三：方案一 -> 方案二 -> 方案四 -> 方案四+分库分表；
+* 架构演变四：方案一 -> 方案三 -> 方案四 -> 方案四+分库分表；
 
 ### 2、个人见解
 
@@ -160,4 +160,3 @@ jdbc:mysql://slave2-ip:3306/xxdb
 3、不管是主备+分库分表还是主从+读写分离+分库分表，都要考虑具体的业务场景。某8到家发展四年，绝大部分的数据库架构还是采用方案一和方案一+分库分表，只有极少部分用方案三+读写分离+分库分表。另外，阿里云提供的数据库云服务也都是主备方案，要想主从+读写分离需要二次架构。
 
 4、记住一句话：**不考虑业务场景的架构都是耍流氓**。
-

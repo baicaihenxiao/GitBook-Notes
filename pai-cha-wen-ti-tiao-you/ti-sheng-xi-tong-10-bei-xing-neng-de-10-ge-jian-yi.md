@@ -87,7 +87,7 @@ Web应用的缓存可以在Web应用服务器内部或外部实现。首先，�
 
 ▼
 
-可以举一个例子来说明怎么使用缓存，NGINX和NGINX Plus通过两个指令来设置缓存：proxy\_cache\_path和proxy\_cache指定缓存的位置和大小、最长缓存时间以及其他参数。使用第三个（也是很受欢迎的\)指令proxy\_cache\_use\_stale，甚至可以告诉缓存在本来应该提供新鲜内容的服务器太忙或宕机时，提供原来的旧文件，对客户端来说，拿到内容总比拿不到强。从用户角度看，这样也可以树立你的站点或应用非常稳定的形象。
+可以举一个例子来说明怎么使用缓存，NGINX和NGINX Plus通过两个指令来设置缓存：proxy\_cache\_path和proxy\_cache指定缓存的位置和大小、最长缓存时间以及其他参数。使用第三个（也是很受欢迎的)指令proxy\_cache\_use\_stale，甚至可以告诉缓存在本来应该提供新鲜内容的服务器太忙或宕机时，提供原来的旧文件，对客户端来说，拿到内容总比拿不到强。从用户角度看，这样也可以树立你的站点或应用非常稳定的形象。
 
 NGINX Plus支持高级缓存功能，包括缓存净化（caching purging）和通过控制板以可视化的形式展示缓存状态，实现实时监控。
 
@@ -113,7 +113,7 @@ NGINX Plus支持高级缓存功能，包括缓存净化（caching purging）和�
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/06/640-20200706095143778-095143.jpg)
 
-**越**来越多的网站在使用Secure Sockets Layer（SSL）及后来的Transport Layer Security（TLS）协议。SSL/TLS通过加密从源服务器发送给用户的数据来提升网站安全性。Google会提升使用SSL/TLS的网站的搜索引擎排名，将有力地推动这一进程。[点击这里了解SSL/TLS运行机制详解。](http://mp.weixin.qq.com/s?__biz=MzI3ODcxMzQzMw==&mid=2247486419&idx=2&sn=1f1ad3e67ecbc558d45f8813451cf5a7&chksm=eb538ee5dc2407f391c55f3692f63053efe3103141445e16c9a56c405717bbdc572c32fb7783&scene=21#wechat_redirect)
+**越**来越多的网站在使用Secure Sockets Layer（SSL）及后来的Transport Layer Security（TLS）协议。SSL/TLS通过加密从源服务器发送给用户的数据来提升网站安全性。Google会提升使用SSL/TLS的网站的搜索引擎排名，将有力地推动这一进程。[点击这里了解SSL/TLS运行机制详解。](http://mp.weixin.qq.com/s?__biz=MzI3ODcxMzQzMw==\&mid=2247486419\&idx=2\&sn=1f1ad3e67ecbc558d45f8813451cf5a7\&chksm=eb538ee5dc2407f391c55f3692f63053efe3103141445e16c9a56c405717bbdc572c32fb7783\&scene=21#wechat_redirect)
 
 尽管采用率越来越高，但SSL/TLS造成的性能损失也困扰着很多网站。SSL/TLS拖慢网站的原因有两个。
 
@@ -137,7 +137,7 @@ NGINX和NGINX Plus都可以来终止SSL/TLS，即处理客户端信息的加密�
 
 ## **建议六：实现HTTP/2或SPDY**
 
-**已**经使用SSL/TLS的站点，如果再使用HTTP/2或SPDY则很可能提升性能，因为一个连接只要一次握手。尚未使用SSL/TLS、HTTP/2和SPDY的站点切换到SSL/TLS（通常会降低性能），从响应速度方面看，可能是一次倒退。[点击这里了解HTTP/2详解。](http://mp.weixin.qq.com/s?__biz=MzI3ODcxMzQzMw==&mid=2247486710&idx=2&sn=2ebb8532a404f8d7bc295641f253f1d7&chksm=eb5389c0dc2400d68a8adbedb86e30c487261dd4346a7a3c36c15cb75846c3187c42688aff50&scene=21#wechat_redirect)
+**已**经使用SSL/TLS的站点，如果再使用HTTP/2或SPDY则很可能提升性能，因为一个连接只要一次握手。尚未使用SSL/TLS、HTTP/2和SPDY的站点切换到SSL/TLS（通常会降低性能），从响应速度方面看，可能是一次倒退。[点击这里了解HTTP/2详解。](http://mp.weixin.qq.com/s?__biz=MzI3ODcxMzQzMw==\&mid=2247486710\&idx=2\&sn=2ebb8532a404f8d7bc295641f253f1d7\&chksm=eb5389c0dc2400d68a8adbedb86e30c487261dd4346a7a3c36c15cb75846c3187c42688aff50\&scene=21#wechat_redirect)
 
 谷歌2012年开始SPDY项目，致力于在HTTP/1.x之上实现更快的速度。HTTP/2则是IETF最近批准的基于SPDY的标准。SPDY得到了广泛支持，但很快就将被HTTP/2取代。
 
@@ -183,14 +183,14 @@ Linux优化因Web服务器而异。以NGINX为例，可以从以下几方面考�
 
 **无**论使用什么Web服务器，都需要针对应用对其调优。以下建议适用于任何Web服务器，但会给出只有NGINX的设置说明。
 
-* 访问日志。不要每个请求的日志都马上写到磁盘，可以在内存里做个缓存，然后批量定入。对NGINX而言，将buffer=_size_参数添加到access_log指令，等内存缓冲区写满后再把日志写到磁盘。如果你添加了\*\*flush=\_time_\*\*参数，那么缓冲区的内容也会按照指定时间写入磁盘。
+* 访问日志。不要每个请求的日志都马上写到磁盘，可以在内存里做个缓存，然后批量定入。对NGINX而言，将buffer=_siz&#x65;_&#x53C2;数添加到acces&#x73;_&#x6C;og指令，等内存缓冲区写满后再把日志写到磁盘。如果你添加了\*\*flush=\_time_\*\*参数，那么缓冲区的内容也会按照指定时间写入磁盘。
 * 缓冲。缓冲用于在内存里保存部分响应，直到缓冲区被填满，可以实现对客户端更有效的响应。无法写入内存的响应会被写到磁盘，从而降低性能。在NGINX的缓冲启用时，可以使用proxy\_buffer\_size和proxy\_buffers指令来管理它。
 * 客户端活动连接。活动连接可以减少时间消耗，特别是在使用SSL/TLS的情下。对NGINX而言，可以针对客户端提高keepalive\_requests的数值，默认值为100；也可以增大keepalive\_timeout的值，让活动连接持续时间更长，从而让后续请求得到更快响应。
 * 上游活动连接。上游连接，即连接到应用服务器、数据库服务器的连接，同样可以从活动连接的设置中获得好处。对上游连接来说，可以增加活动连接，也就是每个工作进程可用的空闲活动连接的数量。这样可以增进连接重用，减少重开连接。关于活动连接的更多信息，请参考这篇博客。
 * 限制。限制客户端使用的资源可以提升性能和安全性。对NGINX而言，limit\_conn和limit\_conn\_zone指令限制指定源的连接数，而limit\_rate限制带宽。这些设置可以防止合法用户“侵吞”资源，同时也有助于防止攻击。limit\_req和limit\_req\_zone指令限制客户端请求。对于到上游服务器的连接，可以在上游配置区的服务器指令中使用max\_conns参数，它限制对上游服务器的连接，防止过载。相关的队列指令会创建一个队列，在max\_conns限制到达后将指定的请求数保存指定的时间。
 * 工作进程。工作进程负责处理请求。NGINX采用基于事件的模型和OS相关的机制有效地在工作进程间分配请求。建议将worker\_processes的值设置为每个CPU一个工作进程。如果需要，大多数系统都支持提高worker\_connections的值（默认为512）。可以通过试验找到最适合你系统的这个值。
 * 套接字分片。通常，一个套接字监听器向所有工作进程分发新连接。套按字分片则为每个工作进程都创建一个套接字监听器，由内核在套接字监听器可用时为其指定连接。这样可以减少锁争用，提升多核系统上的性能。要启用套接字分片，在listen指令中包含reuseport参数。
-* 线程池。一个费时的操作会阻塞任何计算机进程。对Web服务器软件来说，磁盘访问可能阻碍很多较快的操作，比如内存中的计算和复制。在使用线程池的情况下，慢操作会被指定给一组独立的任务，而主处理循环会继续运行较快的操作。磁盘操作完成后，结果会返回到主处理循环。在NGINX中，read\(\)系统调用和sendfile\(\)被转载到了线程池。
+* 线程池。一个费时的操作会阻塞任何计算机进程。对Web服务器软件来说，磁盘访问可能阻碍很多较快的操作，比如内存中的计算和复制。在使用线程池的情况下，慢操作会被指定给一组独立的任务，而主处理循环会继续运行较快的操作。磁盘操作完成后，结果会返回到主处理循环。在NGINX中，read()系统调用和sendfile()被转载到了线程池。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/06/640-20200706095143990-095144.jpg)
 
@@ -232,4 +232,3 @@ New Relic或Dynatrace等全局性的性能监控工具，可以帮我们监控�
 * 调优Linux和Web服务器。使用优化的缓冲策略、使用活动连接，将耗时的任务转载至独立的线程池，可以显著提升性能。比如线程池可以将磁盘操作密集性任务的性能提升至少一个数量级。
 
 希望大家自己多尝试以上技术，也希望大家分享自己在性能改进方面的心得。
-

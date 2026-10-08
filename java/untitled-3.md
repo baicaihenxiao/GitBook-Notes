@@ -4,26 +4,22 @@
 
 
 
-点击上方“芋道源码”，选择“[设为星标](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486188\&idx=3\&sn=f160d91ea23e5113e6077c500a2e30c4\&chksm=fa49755dcd3efc4bf4f566fbbbf74c191d0b79f2d3222fd211bc52d80b5ef127f52b1158ed71\&scene=21#wechat\_redirect)”
+点击上方“芋道源码”，选择“[设为星标](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==\&mid=2247486188\&idx=3\&sn=f160d91ea23e5113e6077c500a2e30c4\&chksm=fa49755dcd3efc4bf4f566fbbbf74c191d0b79f2d3222fd211bc52d80b5ef127f52b1158ed71\&scene=21#wechat_redirect)”
 
 做积极的人，而不是积极废人！
 
 源码精品专栏&#x20;
 
-* [原创 | Java 2020 超神之路，很肝\~](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&chksm=fa496f8ecd3ee698f4954c00efb80fe955ec9198fff3ef4011e331aa37f55a6a17bc8c0335a8\&scene=21#wechat\_redirect)\
-
-* [中文详细注释的开源项目](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486264\&idx=1\&sn=475ac3f1ef253a33daacf50477203c80\&chksm=fa497489cd3efd9f7298f5da6aad0c443ae15f398436aff57cb2b734d6689e62ab43ae7857ac\&scene=21#wechat\_redirect)\
-
-* [RPC 框架 Dubbo 源码解析](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247484647\&idx=1\&sn=9eb7e47d06faca20d530c70eec3b8d5c\&chksm=fa497b56cd3ef2408f807e66e0903a5d16fbed149ef7374021302901d6e0260ad717d903e8d4\&scene=21#wechat\_redirect)
-* [网络应用框架 Netty 源码解析](https://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247485054\&idx=2\&sn=9f3b85f7b8454634da6c5c2ded9b4dba\&chksm=fa4979cfcd3ef0d9d2dd92d8d1bd8f1553abc6e2095a5d743e0b2c2afe4955ea2bbbd7a4b79d\&token=55862109\&lang=zh\_CN\&scene=21#wechat\_redirect)\
-
-* [消息中间件 RocketMQ 源码解析](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486256\&idx=1\&sn=81daccd3fcd2953456c917630636fb26\&chksm=fa497481cd3efd97d9239f5eab060e49dea9876a6046eadba0effb878d2fb51f3ba5733e4c0b\&scene=21#wechat\_redirect)\
-
-* [数据库中间件 Sharding-JDBC 和 MyCAT 源码解析](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486257\&idx=1\&sn=4d3c9c675f8833157641a2e0b48e498c\&chksm=fa497480cd3efd96fe17975b0b8b141e87fd0a62673e6a30b501460de80b3eb997056f09de08\&scene=21#wechat\_redirect)
-* [作业调度中间件 Elastic-Job 源码解析](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486258\&idx=1\&sn=ae5665ae9c3002b53f87cab44948a096\&chksm=fa497483cd3efd950514da5a37160e7fd07f0a96f39265cf7ba3721985e5aadbdcbe7aafc34a\&scene=21#wechat\_redirect)
-* [分布式事务中间件 TCC-Transaction 源码解析](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486259\&idx=1\&sn=b023cf3dbf97e5da59db2f4ee632f5a6\&chksm=fa497482cd3efd9402d71469f71863f71a6998b27e12ca2e00446b8178d79dcef0721d8e570a\&scene=21#wechat\_redirect)
-* [Eureka 和 Hystrix 源码解析](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486260\&idx=1\&sn=8f14c0c191d6f8df6eb34202f4ad9708\&chksm=fa497485cd3efd93937143a648bc1b530bc7d1f6f8ad4bf2ec112ffe34dee80b474605c22db0\&scene=21#wechat\_redirect)
-* [Java 并发源码](http://mp.weixin.qq.com/s?\_\_biz=MzUzMTA2NTU2Ng==\&mid=2247486261\&idx=1\&sn=bd69f26aadfc826f6313ffbb95e44ee5\&chksm=fa497484cd3efd92352d6fb3d05ccbaebca2fafed6f18edbe5be70c99ba088db5c8a7a8080c1\&scene=21#wechat\_redirect)
+* [原创 | Java 2020 超神之路，很肝\~](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==\&mid=2247487551\&idx=1\&sn=18f64ba49f3f0f9d8be9d1fdef8857d9\&chksm=fa496f8ecd3ee698f4954c00efb80fe955ec9198fff3ef4011e331aa37f55a6a17bc8c0335a8\&scene=21#wechat_redirect)<br>
+* [中文详细注释的开源项目](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==\&mid=2247486264\&idx=1\&sn=475ac3f1ef253a33daacf50477203c80\&chksm=fa497489cd3efd9f7298f5da6aad0c443ae15f398436aff57cb2b734d6689e62ab43ae7857ac\&scene=21#wechat_redirect)<br>
+* [RPC 框架 Dubbo 源码解析](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==\&mid=2247484647\&idx=1\&sn=9eb7e47d06faca20d530c70eec3b8d5c\&chksm=fa497b56cd3ef2408f807e66e0903a5d16fbed149ef7374021302901d6e0260ad717d903e8d4\&scene=21#wechat_redirect)
+* [网络应用框架 Netty 源码解析](https://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==\&mid=2247485054\&idx=2\&sn=9f3b85f7b8454634da6c5c2ded9b4dba\&chksm=fa4979cfcd3ef0d9d2dd92d8d1bd8f1553abc6e2095a5d743e0b2c2afe4955ea2bbbd7a4b79d\&token=55862109\&lang=zh_CN\&scene=21#wechat_redirect)<br>
+* [消息中间件 RocketMQ 源码解析](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==\&mid=2247486256\&idx=1\&sn=81daccd3fcd2953456c917630636fb26\&chksm=fa497481cd3efd97d9239f5eab060e49dea9876a6046eadba0effb878d2fb51f3ba5733e4c0b\&scene=21#wechat_redirect)<br>
+* [数据库中间件 Sharding-JDBC 和 MyCAT 源码解析](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==\&mid=2247486257\&idx=1\&sn=4d3c9c675f8833157641a2e0b48e498c\&chksm=fa497480cd3efd96fe17975b0b8b141e87fd0a62673e6a30b501460de80b3eb997056f09de08\&scene=21#wechat_redirect)
+* [作业调度中间件 Elastic-Job 源码解析](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==\&mid=2247486258\&idx=1\&sn=ae5665ae9c3002b53f87cab44948a096\&chksm=fa497483cd3efd950514da5a37160e7fd07f0a96f39265cf7ba3721985e5aadbdcbe7aafc34a\&scene=21#wechat_redirect)
+* [分布式事务中间件 TCC-Transaction 源码解析](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==\&mid=2247486259\&idx=1\&sn=b023cf3dbf97e5da59db2f4ee632f5a6\&chksm=fa497482cd3efd9402d71469f71863f71a6998b27e12ca2e00446b8178d79dcef0721d8e570a\&scene=21#wechat_redirect)
+* [Eureka 和 Hystrix 源码解析](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==\&mid=2247486260\&idx=1\&sn=8f14c0c191d6f8df6eb34202f4ad9708\&chksm=fa497485cd3efd93937143a648bc1b530bc7d1f6f8ad4bf2ec112ffe34dee80b474605c22db0\&scene=21#wechat_redirect)
+* [Java 并发源码](http://mp.weixin.qq.com/s?__biz=MzUzMTA2NTU2Ng==\&mid=2247486261\&idx=1\&sn=bd69f26aadfc826f6313ffbb95e44ee5\&chksm=fa497484cd3efd92352d6fb3d05ccbaebca2fafed6f18edbe5be70c99ba088db5c8a7a8080c1\&scene=21#wechat_redirect)
 
 来源：cnblogs.com/zer0Black/p/9463206.html
 
@@ -49,7 +45,7 @@
 
 项目质量出现了许多细节性问题。比如：1.上线后，客户那边发现其中一条主流程都走不下去 2.其中申报功能，系统提示成功。但实际上并没有真的申报成功，申报后在国家系统无法查询到 3.打印功能小问题较多，打印获取的数据错误 4.同步数据的功能无法同步或者同步的数据错误 5.执行时间过长的功能，数据库会强制断开连接 等等问题，就不一一列举
 
-**反思：**1.进度和开发速度固然重要，但以质量换速度不可取 2.如果开发时间和质量冲突，优先保质量，毕竟你埋下的坑，总是要坑你自己的 3.再困难的情况下，也要保证基本测试 4.时间极其不允许的情况下，也要保证主线功能顺利执行
+**反思：**&#x31;.进度和开发速度固然重要，但以质量换速度不可取 2.如果开发时间和质量冲突，优先保质量，毕竟你埋下的坑，总是要坑你自己的 3.再困难的情况下，也要保证基本测试 4.时间极其不允许的情况下，也要保证主线功能顺利执行
 
 ### 既要给予信任，也要保持警惕
 
@@ -57,7 +53,7 @@
 
 我在项目中给予了他们非常充分的信任，信任他们可以把一切事情都做好。但我没有在正确的时候给予他们正确的指引，项目中出现的困难点，我也没有帮助他们解决，甚至于没有给出思路。所有的一切，都靠他们自己完成。我在这个项目里做的，就是对接客户，催进度。再无第三件事。
 
-**反思：**1.不论什么原因，都要关注到项目成员的状态 2.给予信任没错，但也要适当保持警惕，他们多少会因为经验问题疏忽遗漏一些问题 3.给予信任，也要给予帮助，不以时间为理由推脱你应该对他们进行的指点和帮助。毕竟现在剩下来一分钟，以后要花一个小时去弥补
+**反思：**&#x31;.不论什么原因，都要关注到项目成员的状态 2.给予信任没错，但也要适当保持警惕，他们多少会因为经验问题疏忽遗漏一些问题 3.给予信任，也要给予帮助，不以时间为理由推脱你应该对他们进行的指点和帮助。毕竟现在剩下来一分钟，以后要花一个小时去弥补
 
 ### 若无法全局掌控，就指派专人负责
 
@@ -65,7 +61,7 @@
 
 由于种种原因，我无法掌握到项目的每个要点和细节。而项目中有三个开发。我并没指明其中某一个来负责整个项目，所有事情都让他们自己商量。从客户对接来的问题，我也是仅告知对应的开发。整个项目中，没有一个人对项目中的每个要点了如指掌。
 
-**反思：**1.手里捏着管理的权利，却没有做到管理的事情。是我在这个项目里最大的问题 2.授权！授权！授权！如果自己无法亲力亲为投入项目管理工作，就授权给团队某个成员管理权限，让他代替你去做管理工作 3.管理一人，总比管理多个人轻松，也更有效
+**反思：**&#x31;.手里捏着管理的权利，却没有做到管理的事情。是我在这个项目里最大的问题 2.授权！授权！授权！如果自己无法亲力亲为投入项目管理工作，就授权给团队某个成员管理权限，让他代替你去做管理工作 3.管理一人，总比管理多个人轻松，也更有效
 
 ### 要控制需求，更要控制流程
 
@@ -79,7 +75,7 @@
 
 整个项目以及其不规范的方式在运行，我也未在其中起到控制作用，项目开发一团乱麻。
 
-**反思：**1.不做设计，不进开发 2.以管理工具指导开发进行，开发过程中所有变更、反馈做记录 3.控制需求变更，拒绝不合理的需求 4.需求变更规范化操作，统一变更，而不是直接压给开发
+**反思：**&#x31;.不做设计，不进开发 2.以管理工具指导开发进行，开发过程中所有变更、反馈做记录 3.控制需求变更，拒绝不合理的需求 4.需求变更规范化操作，统一变更，而不是直接压给开发
 
 ### 无论什么情况下，都要进行code review
 
@@ -91,7 +87,7 @@
 
 代码质量的问题，淋漓尽致的体现的在项目中，项目中的诸多bug，都是因为代码不规范引起的。甚至于开发人员自己对自己写过的东西，都有些拎不清了。
 
-**反思：**1.代码质量非常重要，代码越规范bug越少 2.代码互评能让开发更注重自己代码的质量 3.code review非常有必要，越早期的code review越能有效的节省后期的时间
+**反思：**&#x31;.代码质量非常重要，代码越规范bug越少 2.代码互评能让开发更注重自己代码的质量 3.code review非常有必要，越早期的code review越能有效的节省后期的时间
 
 ## 我在其中占有多重的因素
 
@@ -107,14 +103,11 @@
 
 1.先设计，后开发 2.管理权下放，项目中必须有人全身心负责 3.无论什么情况都要进行code review 4.压缩质量得到的进度保证不可取，开发周期不合理决不答应客户。否则坑了自己坑了同事，更坑了客户
 
-欢迎加入我的知识星球，一起探讨架构，交流源码。加入方式，**长按下方二维码噢**：\
+欢迎加入我的知识星球，一起探讨架构，交流源码。加入方式，**长按下方二维码噢**：<br>
 
+已在知识星球更新源码解析如下：<br>
 
-已在知识星球更新源码解析如下：\
-
-
-最近更新《芋道 SpringBoot 2.X 入门》系列，已经 20 余篇，覆盖了 MyBatis、Redis、MongoDB、ES、分库分表、读写分离、SpringMVC、Webflux、权限、WebSocket、Dubbo、RabbitMQ、RocketMQ、Kafka、性能测试等等内容。\
-
+最近更新《芋道 SpringBoot 2.X 入门》系列，已经 20 余篇，覆盖了 MyBatis、Redis、MongoDB、ES、分库分表、读写分离、SpringMVC、Webflux、权限、WebSocket、Dubbo、RabbitMQ、RocketMQ、Kafka、性能测试等等内容。<br>
 
 提供近 3W 行代码的 SpringBoot 示例，以及超 4W 行代码的电商微服务项目。
 

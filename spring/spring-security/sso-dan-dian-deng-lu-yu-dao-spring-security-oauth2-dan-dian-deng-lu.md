@@ -15,7 +15,7 @@
 * [《芋道 Spring Security OAuth2 入门》](http://www.iocoder.cn/Spring-Security/OAuth2-learning/?self)
 * [《芋道 Spring Security OAuth2 存储器》](http://www.iocoder.cn/Spring-Security/OAuth2-learning-store/?self)
 
-今天我们来搞**波“大”**的，通过 Spring Security OAuth 实现一个**单点登录**的功能。
+今天我们来搞**波“大”**&#x7684;，通过 Spring Security OAuth 实现一个**单点登录**的功能。
 
 可能会有**女**粉丝不太了解单点登录是什么？单点登录，英文是 **Single Sign On**，简称为 **SSO**，指的是当有**多个**系统需要登录时，用户只需要登录一个**统一**的登录系统，而无需在**多个**系统重复登录。
 
@@ -63,7 +63,7 @@
 
 #### 2.1.1 初始化 OAuth 表
 
-① 执行 [`oauth_schema.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/oauth\_schema.sql) 脚本，创建数据库**表结构**。
+① 执行 [`oauth_schema.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/oauth_schema.sql) 脚本，创建数据库**表结构**。
 
 ```
 drop table if exists oauth_client_details;
@@ -134,7 +134,7 @@ create table if not exists oauth_approvals (
 
 > 旁白君：这里的表结构设计，我们可以借鉴参考，实现自己的 OAuth 2.0 的功能。
 
-② 执行 [`oauth_data.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/oauth\_data.sql) 脚本，插入一个客户端记录。
+② 执行 [`oauth_data.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/oauth_data.sql) 脚本，插入一个客户端记录。
 
 ```
 INSERT INTO oauth_client_details
@@ -159,7 +159,7 @@ VALUES
 
 #### 2.1.2 初始化 User 表
 
-① 执行 [`user_schema.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/user\_data.sql) 脚本，创建数据库**表结构**。
+① 执行 [`user_schema.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/user_data.sql) 脚本，创建数据库**表结构**。
 
 ```
 DROP TABLE IF EXISTS `authorities`;
@@ -187,7 +187,7 @@ CREATE TABLE `users` (
 | `users`       | **用户**表           |
 | `authorities` | **授权**表，例如用户拥有的角色 |
 
-② 执行 [`user_data.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/user\_data.sql) 脚本，插入一个用户记录和一个授权记录。
+② 执行 [`user_data.sql`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/lab-68-spring-security-oauth/lab-68-demo21-authorization-server-on-sso/src/main/resources/db/user_data.sql) 脚本，插入一个用户记录和一个授权记录。
 
 ```
 INSERT INTO `authorities` VALUES ('yunai', 'ROLE_USER');

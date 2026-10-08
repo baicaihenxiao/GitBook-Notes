@@ -197,6 +197,6 @@ public SeckillActivityRequestVO seckillHandle(SeckillActivityRequestVO request) 
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/14/640-20200814171534651-171534.jpg)
 
-_作者：\\_浪漫先生\*\*
+_作者：\\_&#x6D6A;漫先生\*\*
 
 _出处：_[http://suo.im/5DEitm](http://suo.im/5DEitm)

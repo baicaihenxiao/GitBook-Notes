@@ -39,7 +39,7 @@ CPU飙升只是一种现象，其中具体的问题可能有很多种，这里�
 
 在一个最简单的SpringBoot Web 项目中增加`CpuReaper`这个类，
 
-```text
+```
 /**
  * 模拟 cpu 飙升场景
  * @author Richard_yyf
@@ -73,7 +73,7 @@ public class CpuReaper {
 
 #### 1.`top` 定位CPU 最高的进程
 
-执行`top`命令，查看所有进程占系统CPU的排序，定位是哪个进程搞的鬼。在本例中就是咱们的java进程。PID那一列就是进程号。\(对指示符含义不清楚的见【附录】\)
+执行`top`命令，查看所有进程占系统CPU的排序，定位是哪个进程搞的鬼。在本例中就是咱们的java进程。PID那一列就是进程号。(对指示符含义不清楚的见【附录】)
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/01/640-20200801215114394-215114.jpg)
 
@@ -83,13 +83,13 @@ public class CpuReaper {
 
 3.`printf '0x%x' tid` 线程 id 转化 16 进制
 
-```text
+```
 > printf '0x%x' 12817> 0x3211
 ```
 
 4.`jstack pid | grep tid` 找到线程堆栈
 
-```text
+```
 > jstack 12816 | grep 0x3211 -A 30
 ```
 
@@ -99,7 +99,7 @@ public class CpuReaper {
 
 这个脚本来自于github上一个开源项目，项目提供了很多有用的脚本，`show-busy-java-threads`就是其中的一个。使用这个脚本，可以直接简化方法A中的繁琐步骤。如下，
 
-```text
+```
 > wget --no-check-certificate https://raw.github.com/oldratlee/useful-scripts/release-2.x/bin/show-busy-java-threads
 > chmod +x show-busy-java-threads
 > ./show-busy-java-threads
@@ -107,7 +107,7 @@ public class CpuReaper {
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/08/01/640-20200801215115341-215115.jpg)
 
-```text
+```
 show-busy-java-threads
 # 从所有运行的Java进程中找出最消耗CPU的线程（缺省5个），打印出其线程栈
 # 缺省会自动从所有的Java进程中找出最消耗CPU的线程，这样用更方便
@@ -121,7 +121,7 @@ show-busy-java-threads -c <要显示的线程栈数>
 
 阿里开源的arthas现在已经几乎包揽了我们线上排查问题的工作，提供了一个很完整的工具集。在这个场景中，也只需要一个`thread -n`命令即可。
 
-```text
+```
 > curl -O https://arthas.gitee.io/arthas-boot.jar # 下载
 ```
 
@@ -137,7 +137,7 @@ show-busy-java-threads -c <要显示的线程栈数>
 
 #### 情况一：发现使用CPU最高的都是GC 线程。
 
-```text
+```
 GC task thread#0 (ParallelGC)" os_prio=0 tid=0x00007fd99001f800 nid=0x779 runnableGC task thread#1 (ParallelGC)" os_prio=0 tid=0x00007fd990021800 nid=0x77a runnable GC task thread#2 (ParallelGC)" os_prio=0 tid=0x00007fd990023000 nid=0x77b runnable GC task thread#3 (ParallelGC)" os_prio=0 tid=0x00007fd990025000 nid=0x77c runnabl
 ```
 
@@ -146,9 +146,11 @@ gc 排查的内容较多，所以我决定在后面单独列一节讲述。
 #### 情况二：发现使用CPU最高的是业务线程
 
 * io wait
-* * 比如此例中，就是因为磁盘空间不够导致的io阻塞
+*
+  * 比如此例中，就是因为磁盘空间不够导致的io阻塞
 * 等待内核态锁，如 synchronized
-* * `jstack -l pid | grep BLOCKED` 查看阻塞态线程堆栈
+*
+  * `jstack -l pid | grep BLOCKED` 查看阻塞态线程堆栈
     * dump 线程栈，分析线程持锁情况。
     * arthas提供了`thread -b`，可以找出当前阻塞其他线程的线程。针对 synchronized 情况
 
@@ -186,17 +188,15 @@ gc 排查的内容较多，所以我决定在后面单独列一节讲述。
 
 可能原因：
 
-* survivor 区太小，对象过早进入老年代
+*   survivor 区太小，对象过早进入老年代
 
-  查看 SurvivorRatio 参数
+    查看 SurvivorRatio 参数
+*   大对象分配，没有足够的内存
 
-* 大对象分配，没有足够的内存
+    dump 堆，profiler/MAT 分析对象占用情况
+*   old 区存在大量对象
 
-  dump 堆，profiler/MAT 分析对象占用情况
-
-* old 区存在大量对象
-
-  dump 堆，profiler/MAT 分析对象占用情况
+    dump 堆，profiler/MAT 分析对象占用情况
 
 你也可以从full GC 的效果来推断问题，正常情况下，一次full GC应该会回收大量内存，所以 **正常的堆内存曲线应该是呈锯齿形**。如果你发现full gc 之后堆内存几乎没有下降，那么可以推断：\*\*堆中有大量不能回收的对象且在不停膨胀，使堆的使用占比超过full GC的触发阈值，但又回收不掉，导致full GC一直执行。换句话来说，可能是内存泄露了。
 
@@ -218,19 +218,18 @@ Java 线程池以有界队列的线程池为例，当新任务提交时，如果
 
 这种线程池异常，一般可以通过开发查看日志查出原因，有以下几种原因：
 
-1. 下游服务 响应时间（RT）过长
+1.  下游服务 响应时间（RT）过长
 
-   这种情况有可能是因为下游服务异常导致的，作为消费者我们要设置合适的超时时间和熔断降级机制。
+    这种情况有可能是因为下游服务异常导致的，作为消费者我们要设置合适的超时时间和熔断降级机制。
 
-   另外针对这种情况，一般都要有对应的监控机制：比如日志监控、metrics监控告警等，不要等到目标用户感觉到异常，从外部反映进来问题才去看日志查。
-
+    另外针对这种情况，一般都要有对应的监控机制：比如日志监控、metrics监控告警等，不要等到目标用户感觉到异常，从外部反映进来问题才去看日志查。
 2. 数据库慢 sql 或者数据库死锁
 
 查看日志中相关的关键词。
 
-1. Java 代码死锁
+1.  Java 代码死锁
 
-   `jstack –l pid | grep -i –E 'BLOCKED | deadlock'`
+    `jstack –l pid | grep -i –E 'BLOCKED | deadlock'`
 
 ## 四、常见问题恢复
 
@@ -259,7 +258,7 @@ Arthas 是阿里巴巴开源的Java 诊断工具，基于 Java Agent 方式，�
 
 > 以上内容节选自Arthas官方文档。
 
-另外，_Arthas_里的 还集成了 _ognl_ 这个轻量级的表达式引擎，通过ognl，你可以用arthas 实现很多的“骚”操作。
+另外，_Artha&#x73;_&#x91CC;的 还集成了 _ognl_ 这个轻量级的表达式引擎，通过ognl，你可以用arthas 实现很多的“骚”操作。
 
 其他的这里就不多说了，感兴趣的可以去看看arthas的官方文档、github issue。
 
@@ -286,22 +285,21 @@ Arthas 是阿里巴巴开源的Java 诊断工具，基于 Java Agent 方式，�
 
 ### top 命令显示的指示符的含义
 
-| 指示符 | 含义 |
-| :--- | :--- |
-| PID | 进程id |
-| USER | 进程所有者 |
-| PR | 进程优先级 |
-| NI | nice值。负值表示高优先级，正值表示低优先级 |
-| VIRT | 进程使用的虚拟内存总量，单位kb。VIRT=SWAP+RES |
-| RES | 进程使用的、未被换出的物理内存大小，单位kb。RES=CODE+DATA |
-| SHR | 共享内存大小，单位kb |
-| S | 进程状态。D=不可中断的睡眠状态 R=运行 S=睡眠 T=跟踪/停止 Z=僵尸进程 |
-| %CPU | 上次更新到现在的CPU时间占用百分比 |
-| %MEM | 进程使用的物理内存百分比 |
-| TIME+ | 进程使用的CPU时间总计，单位1/100秒 |
-| COMMAND | 进程名称（命令名/命令行） |
+| 指示符     | 含义                                        |
+| ------- | ----------------------------------------- |
+| PID     | 进程id                                      |
+| USER    | 进程所有者                                     |
+| PR      | 进程优先级                                     |
+| NI      | nice值。负值表示高优先级，正值表示低优先级                   |
+| VIRT    | 进程使用的虚拟内存总量，单位kb。VIRT=SWAP+RES            |
+| RES     | 进程使用的、未被换出的物理内存大小，单位kb。RES=CODE+DATA      |
+| SHR     | 共享内存大小，单位kb                               |
+| S       | 进程状态。D=不可中断的睡眠状态 R=运行 S=睡眠 T=跟踪/停止 Z=僵尸进程 |
+| %CPU    | 上次更新到现在的CPU时间占用百分比                        |
+| %MEM    | 进程使用的物理内存百分比                              |
+| TIME+   | 进程使用的CPU时间总计，单位1/100秒                     |
+| COMMAND | 进程名称（命令名/命令行）                             |
 
-> 来源 \| [https://ricstudio.top/archives/java-online-question-probe](https://ricstudio.top/archives/java-online-question-probe)
+> 来源 | [https://ricstudio.top/archives/java-online-question-probe](https://ricstudio.top/archives/java-online-question-probe)
 >
 > 版权申明：内容来源网络，版权归原创者所有。除非无法确认，我们都会标明作者及出处，如有侵权烦请告知，我们会立即删除并表示歉意。谢谢
-

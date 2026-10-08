@@ -17,7 +17,7 @@
 
 某人的代码中用了一句看似莫明其妙的话：Thread.Sleep(0) 。既然是 Sleep 0 毫秒，那么他跟去掉这句代码相比，有啥区别么？
 
-![](https://mmbiz.qpic.cn/mmbiz\_png/R3InYSAIZkF5KXRWz02f3wXE6pu3e1X0UHd59YOib9o4Xk1ogicdI0kLAZQZtWkiaoC6To4xPZrlZ1iaIsibdiabgooQ/640?wx\_fmt=gif\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/R3InYSAIZkF5KXRWz02f3wXE6pu3e1X0UHd59YOib9o4Xk1ogicdI0kLAZQZtWkiaoC6To4xPZrlZ1iaIsibdiabgooQ/640?wx_fmt=gif\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 **回顾一下操作系统原理**
 
@@ -31,7 +31,7 @@
 
 我们用**分蛋糕的场景**来描述这两种算法。假设有源源不断的蛋糕（源源不断的时间），一副刀叉（一个CPU），10个等待吃蛋糕的人（10 个进程）。
 
-![](https://mmbiz.qpic.cn/mmbiz\_jpg/R3InYSAIZkF5KXRWz02f3wXE6pu3e1X0aBl2yO079RiaaX3gro9EaAkQNDUS4p3v7UPzhL9jb2vRERUXOloyqQA/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_jpg/R3InYSAIZkF5KXRWz02f3wXE6pu3e1X0aBl2yO079RiaaX3gro9EaAkQNDUS4p3v7UPzhL9jb2vRERUXOloyqQA/640?wx_fmt=jpeg\&tp=webp\&wxfrom=5\&wx_lazy=1\&wx_co=1)
 
 如果是 **Unix操作系统** 来负责分蛋糕，那么他会这样定规矩：每个人上来吃 1 分钟，时间到了换下一个。最后一个人吃完了就再从头开始。于是，不管这10个人是不是优先级不同、饥饿程度不同、饭量不同，每个人上来的时候都可以吃 1 分钟。当然，如果有人本来不太饿，或者饭量小，吃了30秒钟之后就吃饱了，那么他可以跟操作系统说：我已经吃饱了（挂起）。于是操作系统就会让下一个人接着来。
 
@@ -58,4 +58,4 @@
 另外，虽然上面提到说“除非它自己放弃使用 CPU ，否则将完全霸占 CPU”，但这个行为仍然是受到制约的——操作系统会监控你霸占CPU的情况，如果发现某个线程长时间霸占CPU，会强制使这个线程挂起，因此在实际上不会出现“一个线程一直霸占着 CPU 不放”的情况。至于我们的大循环造成程序假死，并不是因为这个线程一直在霸占着CPU。实际上在这段时间操作系统已经进行过多次CPU竞争了，只不过其他线程在获得CPU控制权之后很短时间内马上就退出了，于是就又轮到了这个线程继续执行循环，于是就又用了很久才被操作系统强制挂起。。。因此反应到界面上，看起来就好像这个线程一直在霸占着CPU一样。怎么样？跟你的理解一致吗？
 
 欢迎留言说说你的理解与看法\
-\
+<br>

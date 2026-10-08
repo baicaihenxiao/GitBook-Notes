@@ -2,7 +2,7 @@
 
 
 
-> [https://mp.weixin.qq.com/s?\_\_biz=MzIwMzAwMzQxNw==&mid=2756654546&idx=1&sn=e6869f05bfdbd0b66f39deaeb86422c1&chksm=b76d96a4801a1fb20f639ef0e003823afb42efdb1b653202af25c345c4d4c232d755a0ccb9a8&mpshare=1&scene=1&srcid=0427QcEocNXI4LocI8zGtU0P](https://mp.weixin.qq.com/s?__biz=MzIwMzAwMzQxNw==&mid=2756654546&idx=1&sn=e6869f05bfdbd0b66f39deaeb86422c1&chksm=b76d96a4801a1fb20f639ef0e003823afb42efdb1b653202af25c345c4d4c232d755a0ccb9a8&mpshare=1&scene=1&srcid=0427QcEocNXI4LocI8zGtU0P)
+> [https://mp.weixin.qq.com/s?\_\_biz=MzIwMzAwMzQxNw==\&mid=2756654546\&idx=1\&sn=e6869f05bfdbd0b66f39deaeb86422c1\&chksm=b76d96a4801a1fb20f639ef0e003823afb42efdb1b653202af25c345c4d4c232d755a0ccb9a8\&mpshare=1\&scene=1\&srcid=0427QcEocNXI4LocI8zGtU0P](https://mp.weixin.qq.com/s?__biz=MzIwMzAwMzQxNw==\&mid=2756654546\&idx=1\&sn=e6869f05bfdbd0b66f39deaeb86422c1\&chksm=b76d96a4801a1fb20f639ef0e003823afb42efdb1b653202af25c345c4d4c232d755a0ccb9a8\&mpshare=1\&scene=1\&srcid=0427QcEocNXI4LocI8zGtU0P)
 
 **壹**
 
@@ -134,7 +134,7 @@
 
 接着就是拿破仑的逆袭和七次反法同盟的拉锯战。
 
-七年战争、北美独立、法国大革命、拿破仑横扫欧洲、反法同盟这五件发生在地球两端的历史事件，其实是一个整体，我们不能单独拆解来看，这五件历史事件，**本质上都是英法争夺世界第一而产生的碰撞，**英国首先将法国拉下马来，法国持续反抗，英国坚决摁死，才引起了这一系列历史大事的发生。
+七年战争、北美独立、法国大革命、拿破仑横扫欧洲、反法同盟这五件发生在地球两端的历史事件，其实是一个整体，我们不能单独拆解来看，这五件历史事件，**本质上都是英法争夺世界第一而产生的碰撞，**&#x82F1;国首先将法国拉下马来，法国持续反抗，英国坚决摁死，才引起了这一系列历史大事的发生。
 
 美国的诞生，只是英法争霸的意外产物。
 
@@ -288,7 +288,7 @@
 
 我以前在别的文章里说过，对他们有利时，美国才保护专利，对他们不利时，专利在美国眼里就是用来搞笑的。
 
-**洛维尔跟斯莱特敢从英国窃取技术，是因为\*\***1793**\*\*年美国颁布了专利法，只要你从其他国家获得盗版技术，美国就会授予你专利权，同时禁止外国原创发明家在美国获得该项专利。**
+**洛维尔跟斯莱特敢从英国窃取技术，是因为\*\***&#x31;79&#x33;**\*\*年美国颁布了专利法，只要你从其他国家获得盗版技术，美国就会授予你专利权，同时禁止外国原创发明家在美国获得该项专利。**
 
 这种流氓法律大模大样写在美国历史里，这就是传说中的美国精神。
 
@@ -348,7 +348,7 @@
 
 我们常听说南方奴隶主没有人性，其实北方资本家也一样没人性，每个国家工业革命开始的早期阶段，个个都没人性，只是资本家对奴隶主有道德高地。
 
-今天我们听到什么“南北内战是为了解放黑奴”之类的话，都是胡说八道，**内战的本源是关税问题，**解放黑奴是顺手做了这件事，北方也需要解放这些自由劳动力去工厂上班。
+今天我们听到什么“南北内战是为了解放黑奴”之类的话，都是胡说八道，**内战的本源是关税问题，**&#x89E3;放黑奴是顺手做了这件事，北方也需要解放这些自由劳动力去工厂上班。
 
 1865年打完内战后，美国就是工业的天下了，再也没有种植园来拖他们的后腿，此后美国开始低头狂奔。
 
@@ -456,9 +456,9 @@
 
 相关阅读：
 
-[《两次世界大战爆发的原因》](http://mp.weixin.qq.com/s?__biz=MzIwMzAwMzQxNw==&mid=2756654081&idx=1&sn=6f9a8c4bf6f61ed507a0045c92fb86dd&chksm=b76d9777801a1e61452563a4c13f712597b928fcfbf64692b260a730331e57120f164c44da1a&scene=21#wechat_redirect)
+[《两次世界大战爆发的原因》](http://mp.weixin.qq.com/s?__biz=MzIwMzAwMzQxNw==\&mid=2756654081\&idx=1\&sn=6f9a8c4bf6f61ed507a0045c92fb86dd\&chksm=b76d9777801a1e61452563a4c13f712597b928fcfbf64692b260a730331e57120f164c44da1a\&scene=21#wechat_redirect)
 
-[《苏联帝国灭亡史》](http://mp.weixin.qq.com/s?__biz=MzIwMzAwMzQxNw==&mid=2756651270&idx=1&sn=3abb1db902890e5c677141879cde05ae&chksm=b76d8a70801a0366f84292dd1bf886b40496aea3a3a72290fef1522e526db7f3a124b1f96272&scene=21#wechat_redirect)
+[《苏联帝国灭亡史》](http://mp.weixin.qq.com/s?__biz=MzIwMzAwMzQxNw==\&mid=2756651270\&idx=1\&sn=3abb1db902890e5c677141879cde05ae\&chksm=b76d8a70801a0366f84292dd1bf886b40496aea3a3a72290fef1522e526db7f3a124b1f96272\&scene=21#wechat_redirect)
 
 《美日贸易战往事》
 
@@ -477,4 +477,3 @@
 《剑桥美国史》
 
 《美国史》
-

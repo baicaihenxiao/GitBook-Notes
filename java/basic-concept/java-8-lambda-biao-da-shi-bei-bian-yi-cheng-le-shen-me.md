@@ -1,6 +1,6 @@
 # Java 8 Lambda 表达式被编译成了什么？
 
-[https://mp.weixin.qq.com/s?\_\_biz=MzU0MzQ5MDA0Mw==\&mid=2247493088\&idx=2\&sn=b1d7ef64f886924392d30d15d8bd7134\&chksm=fb080f74cc7f8662b8ebd580ca8eb34fd6a88fcc2bc5c43015fa368f950d38d1aa19d0890ba7\&mpshare=1\&scene=1\&srcid=082604rM0WvdAP5Tb4iVSpIt\&sharer\_sharetime=1598413591075\&sharer\_shareid=393f249533d421d13c2402bd43e74356#rd](https://mp.weixin.qq.com/s?\_\_biz=MzU0MzQ5MDA0Mw==\&mid=2247493088\&idx=2\&sn=b1d7ef64f886924392d30d15d8bd7134\&chksm=fb080f74cc7f8662b8ebd580ca8eb34fd6a88fcc2bc5c43015fa368f950d38d1aa19d0890ba7\&mpshare=1\&scene=1\&srcid=082604rM0WvdAP5Tb4iVSpIt\&sharer\_sharetime=1598413591075\&sharer\_shareid=393f249533d421d13c2402bd43e74356#rd)
+[https://mp.weixin.qq.com/s?\_\_biz=MzU0MzQ5MDA0Mw==\&mid=2247493088\&idx=2\&sn=b1d7ef64f886924392d30d15d8bd7134\&chksm=fb080f74cc7f8662b8ebd580ca8eb34fd6a88fcc2bc5c43015fa368f950d38d1aa19d0890ba7\&mpshare=1\&scene=1\&srcid=082604rM0WvdAP5Tb4iVSpIt\&sharer\_sharetime=1598413591075\&sharer\_shareid=393f249533d421d13c2402bd43e74356#rd](https://mp.weixin.qq.com/s?__biz=MzU0MzQ5MDA0Mw==\&mid=2247493088\&idx=2\&sn=b1d7ef64f886924392d30d15d8bd7134\&chksm=fb080f74cc7f8662b8ebd580ca8eb34fd6a88fcc2bc5c43015fa368f950d38d1aa19d0890ba7\&mpshare=1\&scene=1\&srcid=082604rM0WvdAP5Tb4iVSpIt\&sharer_sharetime=1598413591075\&sharer_shareid=393f249533d421d13c2402bd43e74356#rd)
 
 在了解了Java 8 Lambda的一些基本概念和应用后， 我们会有这样的一个问题: _**Lambda表达式被编译成了什么？\\**_
 
@@ -18,7 +18,7 @@ Brian Goetz是Oracle的Java语言架构师， JSR 335(Lambda Expression)规范�
 
 编译器在编译的时候， 会将Lambda表达式的表达式体 (lambda body)脱糖(desugar) 成一个方法，此方法的参数列表和返回类型和lambda表达式一致， 如果有捕获参数， 脱糖的方法的参数可能会更多一些， 并会产生一个**invokedynamic**调用， 调用一个call site。
 
-这个call site被调用时会返回lambda表达式的目标类型(functional interface)的一个实现类。这个call site称为这个lambda表达式的_lambda factory_。 _lambda factory_的bootstrap方法是一个标准方法， 叫做_lambda metafactory_。
+这个call site被调用时会返回lambda表达式的目标类型(functional interface)的一个实现类。这个call site称为这个lambda表达式&#x7684;_&#x6C;ambda factory_。 _lambda factor&#x79;_&#x7684;bootstrap方法是一个标准方法， 叫&#x505A;_&#x6C;ambda metafactory_。
 
 编译器在转换lambda表达式时， 可以推断出表达式的参数类型，返回类型以及异常， 称之为`natural signature`， 我们将目标类型的方法签名称之为`lambda descriptor`, lambda factory的返回对象实现了函数式接口， 并且关联的表达式的代码逻辑， 称之为`lambda object`。
 

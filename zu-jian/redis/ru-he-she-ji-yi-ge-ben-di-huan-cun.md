@@ -150,7 +150,7 @@ redis更是将持久化功能发挥到极致，慢慢的有点像数据库了；
 
 #### 8.阻塞机制
 
-除了在Mybatis中看到了BlockingCache来实现此功能，之前在看**<>**的时候其中有实现一个很完美的缓存，大致代码如下：
+除了在Mybatis中看到了BlockingCache来实现此功能，之前在&#x770B;**<>**&#x7684;时候其中有实现一个很完美的缓存，大致代码如下：
 
 ```
 public class Memoizerl<A, V> implements Computable<A, V> {

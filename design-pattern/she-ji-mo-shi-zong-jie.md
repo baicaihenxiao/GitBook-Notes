@@ -1,6 +1,6 @@
 # 设计模式总结
 
-[https://mp.weixin.qq.com/s/pjQ6xqDvHHlfANUW\_o2dTQ](https://mp.weixin.qq.com/s/pjQ6xqDvHHlfANUW\_o2dTQ)
+[https://mp.weixin.qq.com/s/pjQ6xqDvHHlfANUW\_o2dTQ](https://mp.weixin.qq.com/s/pjQ6xqDvHHlfANUW_o2dTQ)
 
 作者：HongJie
 
@@ -474,7 +474,7 @@ foodService.makeChicken();
 
 #### 默认适配器模式
 
-首先，我们先看看最简单的适配器模式**默认适配器模式(Default Adapter)**是怎么样的。
+首先，我们先看看最简单的适配器模式**默认适配器模式(Default Adapter)**&#x662F;怎么样的。
 
 我们用 Appache commons-io 包中的 FileAlterationListener 做例子，此接口定义了很多的方法，用于对文件或文件夹进行监控，一旦发生了对应的操作，就会触发相应的方法。
 
@@ -540,7 +540,7 @@ public class FileMonitor extends FileAlterationListenerAdaptor {
 }
 ```
 
-当然，上面说的只是适配器模式的其中一种，也是最简单的一种，无需多言。下面，再介绍**“正统的”**适配器模式。
+当然，上面说的只是适配器模式的其中一种，也是最简单的一种，无需多言。下面，再介&#x7ECD;**“正统的”**&#x9002;配器模式。
 
 #### 对象适配器模式
 
@@ -743,7 +743,7 @@ public static void main(String[] args) {
 
 > 从名字来简单解释下装饰器。既然说是装饰，那么往往就是**添加小功能**这种，而且，我们要满足可以添加多个小功能。最简单的，代理模式就可以实现功能的增强，但是代理不容易实现多个功能的增强，当然你可以说用代理包装代理的多层包装方式，但是那样的话代码就复杂了。
 
-首先明白一些简单的概念，从图中我们看到，所有的具体装饰者们 **ConcreteDecorator\*** 都可以作为 Component 来使用，因为它们都实现了 Component 中的所有接口。它们和 Component 实现类 ConcreteComponent _的区别是，它们只是装饰者，起**装饰**作用，也就是即使它们看上去牛逼轰轰，但是它们都只是在具体的实现中\*加了层皮来装饰_而已。
+首先明白一些简单的概念，从图中我们看到，所有的具体装饰者们 **ConcreteDecorator\*** 都可以作为 Component 来使用，因为它们都实现了 Component 中的所有接口。它们和 Component 实现类 ConcreteComponent _的区别是，它们只是装饰者，起**装饰**作用，也就是即使它们看上去牛逼轰轰，但是它们都只是在具体的实现中\*加了层皮来装&#x9970;_&#x800C;已。
 
 > 注意这段话中混杂在各个名词中的 Component 和 Decorator，别搞混了。
 

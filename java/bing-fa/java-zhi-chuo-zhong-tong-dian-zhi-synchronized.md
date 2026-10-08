@@ -38,7 +38,7 @@ cnblogs.com/JsonShare/p/11433302.html
 
 测试：两个线程同时a++，猜一下结果
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -75,7 +75,7 @@ public class SynchronizedTest1 implements Runnable{
 
 预期是20000，但多次执行的结果都小于20000
 
-```text
+```
 10108
 11526
 10736
@@ -89,7 +89,7 @@ public class SynchronizedTest1 implements Runnable{
 * 代码块形式：手动指定锁对象
 * 方法锁形式：synchronized修饰方法，锁对象默认为this
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -128,7 +128,7 @@ public class SynchronizedTest2 implements Runnable{
 }
 ```
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -168,7 +168,7 @@ public class SynchronizedTest3 implements Runnable{
 
 结果：
 
-```text
+```
 开始执行:Thread-0
 执行结束:Thread-0
 开始执行:Thread-1
@@ -178,17 +178,17 @@ run over
 
 ### 2、类锁
 
-**概念：**Java类可能有多个对象，但只有一个Class对象
+**概念：**&#x4A;ava类可能有多个对象，但只有一个Class对象
 
-**本质：**所谓的类锁，不过是Class对象的锁而已
+**本质：**&#x6240;谓的类锁，不过是Class对象的锁而已
 
-**用法和效果：**类锁只能在同一时刻被一个对象拥有
+**用法和效果：**&#x7C7B;锁只能在同一时刻被一个对象拥有
 
 形式1：synchronized加载static方法上
 
-形式2：synchronized\(\*.class\)代码块
+形式2：synchronized(\*.class)代码块
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -229,7 +229,7 @@ public class SynchronizedTest4 implements Runnable{
 }
 ```
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -273,7 +273,7 @@ public class SynchronizedTest5 implements Runnable{
 
 结果：
 
-```text
+```
 开始执行:Thread-0
 执行结束:Thread-0
 开始执行:Thread-1
@@ -297,7 +297,7 @@ Java知音公众号内回复“面试题聚合”，送你一份面试题宝典
 
 场景1：
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -338,7 +338,7 @@ public class SynchronizedScene1 implements Runnable{
 
 场景2：
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -380,7 +380,7 @@ public class SynchronizedScene2 implements Runnable{
 
 场景3：
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -422,7 +422,7 @@ public class SynchronizedScene3 implements Runnable{
 
 场景4：
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -479,7 +479,7 @@ public class SynchronizedScene4 implements Runnable{
 
 场景5：
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -536,7 +536,7 @@ public class SynchronizedScene5 implements Runnable{
 
 场景6：
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -593,7 +593,7 @@ public class SynchronizedScene6 implements Runnable{
 
 场景7：
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -634,7 +634,7 @@ public class SynchronizedScene7 implements Runnable{
 }
 ```
 
-## 
+##
 
 Java知音公众号内回复“面试题聚合”，送你一份面试题宝典
 
@@ -678,7 +678,7 @@ static同步方法是类锁，非static是对象锁，原理上是不同的锁�
 
 问题：目前进入到被synchronized修饰的方法，这个方法里边调用了非synchronized方法，是线程安全的吗？
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 /**
@@ -722,11 +722,11 @@ public class SynchronizedScene8 {
 
 指的是同一线程的外层函数获取锁之后，内层函数可以直接再次获取该锁
 
-**Java典型的可重入锁：**synchronized、ReentrantLock
+**Java典型的可重入锁：**&#x73;ynchronized、ReentrantLock
 
-**好处：**避免死锁，提升封装性
+**好处：**&#x907F;免死锁，提升封装性
 
-**粒度：**线程而非调用
+**粒度：**&#x7EBF;程而非调用
 
 * 情况1：证明同一方法是可重入的
 * 情况2：证明可重入不要求是同一方法
@@ -742,11 +742,11 @@ public class SynchronizedScene8 {
 
 ### 1、加解锁原理（现象、时机、深入JVM看字节码）
 
-**现象：**每一个类的实例对应一把锁，每一个synchronized方法都必须首先获得调用该方法的类的实例的锁，方能执行，否则就会阻塞，方法执行完成或者抛出异常，锁被释放，被阻塞线程才能获取到该锁，执行。
+**现象：**&#x6BCF;一个类的实例对应一把锁，每一个synchronized方法都必须首先获得调用该方法的类的实例的锁，方能执行，否则就会阻塞，方法执行完成或者抛出异常，锁被释放，被阻塞线程才能获取到该锁，执行。
 
-**获取和释放锁的时机：**内置锁或监视器锁
+**获取和释放锁的时机：**&#x5185;置锁或监视器锁
 
-```text
+```
 package cn.jsonshare.java.base.synchronizedtest;
 
 import java.util.concurrent.locks.Lock;
@@ -788,7 +788,7 @@ public class SynchronizedToLock1 {
 
 深入JVM看字节码：
 
-```text
+```
 ...
 monitorenter指令
 ...
@@ -857,4 +857,3 @@ synchronized关键字实现可见性：
 一句话总结synchronized：
 
 > JVM会自动通过使用monitor来加锁和解锁，保证了同一时刻只有一个线程可以执行指定的代码，从而保证线程安全，同时具有可重入和不可中断的特性。
-

@@ -1,6 +1,6 @@
 # Spring Security 实战干货：从零手写一个验证码登录
 
-[合集](https://mp.weixin.qq.com/mp/appmsgalbum?\_\_biz=MzUzMzQ2MDIyMA==\&action=getalbum\&album\_id=1319904585363980289\&subscene=159\&subscene=\&scenenote=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FB2JgdLMHtaCRPQsgSf2dXA#wechat\_redirect)
+[合集](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUzMzQ2MDIyMA==\&action=getalbum\&album_id=1319904585363980289\&subscene=159\&subscene=\&scenenote=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FB2JgdLMHtaCRPQsgSf2dXA#wechat_redirect)
 
 
 
@@ -8,7 +8,7 @@
 
 ## 1. 前言
 
-前面关于**Spring Security**胖哥又写了两篇文章，分别图文并茂地介绍了[UsernamePasswordAuthenticationFilter](https://mp.weixin.qq.com/s?\_\_biz=MzUzMzQ2MDIyMA==\&mid=2247485877\&idx=1\&sn=247ae5e3a9d88515762b7113f2d73c0d\&scene=21#wechat\_redirect)和 [AuthenticationManager](https://mp.weixin.qq.com/s?\_\_biz=MzUzMzQ2MDIyMA==\&mid=2247485949\&idx=1\&sn=6ad372be495e730e6ad58ac091ca925a\&scene=21#wechat\_redirect)。很多同学表示无法理解这两个东西有什么用，能解决哪些实际问题？所以今天就对这两篇理论进行实战运用，我们从零写一个短信验证码登录并适配到**Spring Security**体系中。如果你在阅读中有什么疑问可以回头看看这两篇文章，能解决很多疑惑。
+前面关于**Spring Security**胖哥又写了两篇文章，分别图文并茂地介绍了[UsernamePasswordAuthenticationFilter](https://mp.weixin.qq.com/s?__biz=MzUzMzQ2MDIyMA==\&mid=2247485877\&idx=1\&sn=247ae5e3a9d88515762b7113f2d73c0d\&scene=21#wechat_redirect)和 [AuthenticationManager](https://mp.weixin.qq.com/s?__biz=MzUzMzQ2MDIyMA==\&mid=2247485949\&idx=1\&sn=6ad372be495e730e6ad58ac091ca925a\&scene=21#wechat_redirect)。很多同学表示无法理解这两个东西有什么用，能解决哪些实际问题？所以今天就对这两篇理论进行实战运用，我们从零写一个短信验证码登录并适配到**Spring Security**体系中。如果你在阅读中有什么疑问可以回头看看这两篇文章，能解决很多疑惑。
 
 > 当然你可以修改成邮箱或者其它通讯设备的验证码登录。
 
@@ -375,7 +375,7 @@ ProviderManager providerManager = new ProviderManager(Collections.singletonList(
 
 ### 3.3 验证码认证过滤器
 
-定制好验证码凭据和验证码认证管理器后我们就可以定义验证码认证过滤器了。修改一下[UsernamePasswordAuthenticationFilter](https://mp.weixin.qq.com/s?\_\_biz=MzUzMzQ2MDIyMA==\&mid=2247485877\&idx=1\&sn=247ae5e3a9d88515762b7113f2d73c0d\&scene=21#wechat\_redirect)就能满足需求：
+定制好验证码凭据和验证码认证管理器后我们就可以定义验证码认证过滤器了。修改一下[UsernamePasswordAuthenticationFilter](https://mp.weixin.qq.com/s?__biz=MzUzMzQ2MDIyMA==\&mid=2247485877\&idx=1\&sn=247ae5e3a9d88515762b7113f2d73c0d\&scene=21#wechat_redirect)就能满足需求：
 
 ```
 package cn.felord.spring.security.captcha;
@@ -626,7 +626,7 @@ public class CaptchaAuthenticationConfiguration {
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/07/25/640-20200725134955322-134955.png)
 
-> **请特别注意：**务必保证登录接口和验证码接口可以匿名访问，如果是动态权限可以给接口添加 `ROLE_ANONYMOUS` 角色。
+> **请特别注意：**&#x52A1;必保证登录接口和验证码接口可以匿名访问，如果是动态权限可以给接口添加 `ROLE_ANONYMOUS` 角色。
 
 大功告成，测试如下：
 
@@ -638,4 +638,4 @@ public class CaptchaAuthenticationConfiguration {
 
 ## 4. 总结
 
-通过对[UsernamePasswordAuthenticationFilter](https://mp.weixin.qq.com/s?\_\_biz=MzUzMzQ2MDIyMA==\&mid=2247485877\&idx=1\&sn=247ae5e3a9d88515762b7113f2d73c0d\&scene=21#wechat\_redirect)和 [AuthenticationManager](https://mp.weixin.qq.com/s?\_\_biz=MzUzMzQ2MDIyMA==\&mid=2247485949\&idx=1\&sn=6ad372be495e730e6ad58ac091ca925a\&scene=21#wechat\_redirect)的系统学习，我们了解了**Spring Security**认证的整个流程，本文是对这两篇的一个实际运用。相信看到这一篇后你就不会对前几篇的图解懵逼了，这也是理论到实践的一次尝试。DEMO 可以通过公众号：**码农小胖哥** 回复**captcha** 获取，如果有用还请关注、点赞、转发给胖哥一个创作的动力。
+通过对[UsernamePasswordAuthenticationFilter](https://mp.weixin.qq.com/s?__biz=MzUzMzQ2MDIyMA==\&mid=2247485877\&idx=1\&sn=247ae5e3a9d88515762b7113f2d73c0d\&scene=21#wechat_redirect)和 [AuthenticationManager](https://mp.weixin.qq.com/s?__biz=MzUzMzQ2MDIyMA==\&mid=2247485949\&idx=1\&sn=6ad372be495e730e6ad58ac091ca925a\&scene=21#wechat_redirect)的系统学习，我们了解了**Spring Security**认证的整个流程，本文是对这两篇的一个实际运用。相信看到这一篇后你就不会对前几篇的图解懵逼了，这也是理论到实践的一次尝试。DEMO 可以通过公众号：**码农小胖哥** 回复**captcha** 获取，如果有用还请关注、点赞、转发给胖哥一个创作的动力。

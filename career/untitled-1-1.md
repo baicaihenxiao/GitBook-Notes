@@ -42,7 +42,7 @@ Coding 旗下的互联网软件外包服务平台，平台以外包为主。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/19/640-20200719133050750-133050.jpg)
 
-### _\\_6. 快码众包\：kuaima.co
+### _\\_&#x36;. 快码众包\：kuaima.co
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/19/640-20200719133050836-133050.jpg)
 

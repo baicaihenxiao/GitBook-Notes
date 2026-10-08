@@ -134,7 +134,7 @@ Session 粘滞-IP Hash
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/jpg/2020/07/29/640-20200729103915376-103915.jpg)
 
-上面这种方式我们使用 Nginx 四层负载均衡方式，其实 Nginx 还可以做到七层负载均衡方式，也就是使用 Http 协议中的一些**业务属性**来做 Hash，常见的有 _userId_,_loginId_等等。
+上面这种方式我们使用 Nginx 四层负载均衡方式，其实 Nginx 还可以做到七层负载均衡方式，也就是使用 Http 协议中的一些**业务属性**来做 Hash，常见的有 _userId_,_loginI&#x64;_&#x7B49;等。
 
 架构图如下：
 

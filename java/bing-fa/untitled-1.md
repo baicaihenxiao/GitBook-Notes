@@ -12,8 +12,7 @@ _However, the ability to write robust concurrent programs is a great tool in a d
 
 In this article we will discuss different types of questions that can be used in a programming interview in order to assess a candidate’s understanding of concurrency and multithreading.
 
-The questions are not only Java specific, but revolve around general programming principles. Enjoy!\
-
+The questions are not only Java specific, but revolve around general programming principles. Enjoy!<br>
 
 ## 1. Processes and Threads
 
@@ -398,8 +397,7 @@ Learn more here:
 
 [Reentrant Lock example of a task runner](https://examples.javacodegeeks.com/core-java/util/concurrent/reentrant-lock-example-of-a-task-runner/)
 
-[Reentrant ReadWriteLock example of value calculator](https://examples.javacodegeeks.com/core-java/util/concurrent/reentrant-readwritelock-example-of-value-calculator/)\
-
+[Reentrant ReadWriteLock example of value calculator](https://examples.javacodegeeks.com/core-java/util/concurrent/reentrant-readwritelock-example-of-value-calculator/)<br>
 
 ### 3.2 Atomic Access
 
@@ -602,8 +600,7 @@ Learn more here:
 
 [java.util.concurrent.RejectedExecutionHandler Example](https://examples.javacodegeeks.com/core-java/util/concurrent/rejectedexecutionhandler/java-util-concurrent-rejectedexecutionhandler-example/)
 
-[java.util.concurrent.ScheduledThreadPoolExecutor Example](https://examples.javacodegeeks.com/core-java/util/concurrent/scheduledthreadpoolexecutor/java-util-concurrent-scheduledthreadpoolexecutor-example/)\
-
+[java.util.concurrent.ScheduledThreadPoolExecutor Example](https://examples.javacodegeeks.com/core-java/util/concurrent/scheduledthreadpoolexecutor/java-util-concurrent-scheduledthreadpoolexecutor-example/)<br>
 
 ### 8.2 Thread Pools
 
@@ -749,6 +746,6 @@ _Ok, so now you are ready for your interview! Don’t forget to check our FREE A
 
 _If you enjoyed this, then_ [_**subscribe to our newsletter**_](http://eepurl.com/xRlkj) _to enjoy weekly updates and complimentary whitepapers! Also, check out_ [_**JCG Academy**_](https://academy.javacodegeeks.com/) _for more advanced training!_
 
-_You are welcome to contribute with your comments and we will include them in the article!_nclude them in the article!
+_You are welcome to contribute with your comments and we will include them in the article!_&#x6E;clude them in the article!
 
 **Last Updated Jan. 26, 2019**

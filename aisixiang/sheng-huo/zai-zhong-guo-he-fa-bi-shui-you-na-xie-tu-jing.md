@@ -6,8 +6,7 @@
 链接： [https://www.zhihu.com/question/19637436/answer/1898502541](https://www.zhihu.com/question/19637436/answer/1898502541)\
 来源：知乎\
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\
-\
-
+<br>
 
 为了避税，阿里花3.5亿买下了一架飞机G550湾流，之后原价转让给了马老师，马老师再租给阿里，然后马老师以阿里公司名义使用这架飞机。这么一操作，马老师套现额度大概是18亿，自己得到14.5亿的回报。
 
@@ -94,12 +93,12 @@
 
 参考资料与转载来源：
 
-1.作者：宏酷商学院；出处：今日头条；原文链接：[宏酷商学院](https://link.zhihu.com/?target=https%3A//www.toutiao.com/w/a1698991412175880/%3Ftraffic\_source%3D%26in\_ogs%3D%26utm\_source%3D%26source%3Dsearch\_tab%26utm\_medium%3Dwap\_search%26original\_source%3D%26in\_tfs%3D%26channel%3D)-公转私的5种方式
+1.作者：宏酷商学院；出处：今日头条；原文链接：[宏酷商学院](https://link.zhihu.com/?target=https%3A//www.toutiao.com/w/a1698991412175880/%3Ftraffic_source%3D%26in_ogs%3D%26utm_source%3D%26source%3Dsearch_tab%26utm_medium%3Dwap_search%26original_source%3D%26in_tfs%3D%26channel%3D)-公转私的5种方式
 
-2.作者：海阔天空；出处：今日头条；原文链接：今日头条：[海阔天空-个人所得税合理避税方法](https://link.zhihu.com/?target=https%3A//www.toutiao.com/w/a1698334647273486/%3Ftraffic\_source%3D%26in\_ogs%3D%26utm\_source%3D%26source%3Dsearch\_tab%26utm\_medium%3Dwap\_search%26original\_source%3D%26in\_tfs%3D%26channel%3D)
+2.作者：海阔天空；出处：今日头条；原文链接：今日头条：[海阔天空-个人所得税合理避税方法](https://link.zhihu.com/?target=https%3A//www.toutiao.com/w/a1698334647273486/%3Ftraffic_source%3D%26in_ogs%3D%26utm_source%3D%26source%3Dsearch_tab%26utm_medium%3Dwap_search%26original_source%3D%26in_tfs%3D%26channel%3D)
 
-3.作者：淡淡稻花香；出处：今日头条；原文链接：今日头条：[淡淡稻花香i8](https://link.zhihu.com/?target=https%3A//www.toutiao.com/w/a1700610893049864/%3Ftraffic\_source%3D%26in\_ogs%3D%26utm\_source%3D%26source%3Dsearch\_tab%26utm\_medium%3Dwap\_search%26original\_source%3D%26in\_tfs%3D%26channel%3D)-阿里避税传言
+3.作者：淡淡稻花香；出处：今日头条；原文链接：今日头条：[淡淡稻花香i8](https://link.zhihu.com/?target=https%3A//www.toutiao.com/w/a1700610893049864/%3Ftraffic_source%3D%26in_ogs%3D%26utm_source%3D%26source%3Dsearch_tab%26utm_medium%3Dwap_search%26original_source%3D%26in_tfs%3D%26channel%3D)-阿里避税传言
 
-4.作者：亿德晟集团；出处：搜狐网；原文链接：税务筹划 | [它山之石：美国富豪们的花式避税大全](https://link.zhihu.com/?target=https%3A//m.sohu.com/a/364993902\_100014622/%3Fpvid%3D000115\_3w\_a)
+4.作者：亿德晟集团；出处：搜狐网；原文链接：税务筹划 | [它山之石：美国富豪们的花式避税大全](https://link.zhihu.com/?target=https%3A//m.sohu.com/a/364993902_100014622/%3Fpvid%3D000115_3w_a)
 
 5.其他参考源于网络，如有雷同，联系侵删。

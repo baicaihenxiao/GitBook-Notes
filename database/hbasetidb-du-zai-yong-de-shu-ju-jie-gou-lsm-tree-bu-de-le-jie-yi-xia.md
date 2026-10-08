@@ -1,6 +1,6 @@
 # HBase/TiDB都在用的数据结构：LSM Tree，不得了解一下？
 
-[https://mp.weixin.qq.com/s?\_\_biz=MzU3NzU0NjYzMA==&mid=2247484240&idx=1&sn=6af9c7c662b8afcad04bfb09a531a66a&chksm=fd03b3b9ca743aaf2ab4ce3a66909b32eaec24dc752728e9fbf4dfe2aa0c2f7352a32d6d58e1&mpshare=1&scene=1&srcid=0810YWQxZIYhBC9SqKN0YzXJ&sharer\_sharetime=1597113204611&sharer\_shareid=393f249533d421d13c2402bd43e74356\#rd](https://mp.weixin.qq.com/s?__biz=MzU3NzU0NjYzMA==&mid=2247484240&idx=1&sn=6af9c7c662b8afcad04bfb09a531a66a&chksm=fd03b3b9ca743aaf2ab4ce3a66909b32eaec24dc752728e9fbf4dfe2aa0c2f7352a32d6d58e1&mpshare=1&scene=1&srcid=0810YWQxZIYhBC9SqKN0YzXJ&sharer_sharetime=1597113204611&sharer_shareid=393f249533d421d13c2402bd43e74356#rd)
+[https://mp.weixin.qq.com/s?\_\_biz=MzU3NzU0NjYzMA==\&mid=2247484240\&idx=1\&sn=6af9c7c662b8afcad04bfb09a531a66a\&chksm=fd03b3b9ca743aaf2ab4ce3a66909b32eaec24dc752728e9fbf4dfe2aa0c2f7352a32d6d58e1\&mpshare=1\&scene=1\&srcid=0810YWQxZIYhBC9SqKN0YzXJ\&sharer\_sharetime=1597113204611\&sharer\_shareid=393f249533d421d13c2402bd43e74356#rd](https://mp.weixin.qq.com/s?__biz=MzU3NzU0NjYzMA==\&mid=2247484240\&idx=1\&sn=6af9c7c662b8afcad04bfb09a531a66a\&chksm=fd03b3b9ca743aaf2ab4ce3a66909b32eaec24dc752728e9fbf4dfe2aa0c2f7352a32d6d58e1\&mpshare=1\&scene=1\&srcid=0810YWQxZIYhBC9SqKN0YzXJ\&sharer_sharetime=1597113204611\&sharer_shareid=393f249533d421d13c2402bd43e74356#rd)
 
 LSM Tree（Log-structured merge-tree）广泛应用在HBase，TiDB等诸多数据库和存储引擎上，我们先来看一下它的一些应用：
 
@@ -18,7 +18,7 @@ LSM Tree（Log-structured merge-tree）广泛应用在HBase，TiDB等诸多数�
 
 事务性可简单理解为：1.数据必须持久化。2.一次数据的写入返回给用户 写入成功就一定成功，失败就一定失败。
 
-读写性能可简单理解为：一次读 或 一次写 需要的IO次数，因为访问速率：CPU&gt;&gt;内存&gt;&gt;SSD/磁盘。
+读写性能可简单理解为：一次读 或 一次写 需要的IO次数，因为访问速率：CPU>>内存>>SSD/磁盘。
 
 对于单机存储，最简单的方式当然是：写一条就持久化一条，读一条就遍历一遍所有数据，然后返回。当然没人这么干，在内存中我们都还知道用个HashMap呢。
 
@@ -42,7 +42,7 @@ redo log是数据增删改的实时增量数据，顺序写入保证了写性能
 
 RUM（Read,Write,Memory）类似分布式领域的CAP定理。如果想得到三者中的两者性能，必须以牺牲第三者的性能为代价。衡量这三者的性能指标有：读放大、写放大、空间放大。
 
-**读放大**：是指每次查询读取磁盘的次数。如果每次查询需要查询5个page \(或block\)，则读放大是5.
+**读放大**：是指每次查询读取磁盘的次数。如果每次查询需要查询5个page (或block)，则读放大是5.
 
 **写放大**：是指数据写入存储设备的量和数据写入数据库的量之比。如果用户写入数据库的大小是10MB，而实际写入磁盘的大小是30MB，则写放大是3.另外SSD的写入次数是有限的，写放大会减少SSD的寿命。
 
@@ -54,7 +54,7 @@ RUM（Read,Write,Memory）类似分布式领域的CAP定理。如果想得到三
 
 ## 为什么要有LSM Tree
 
-LSM Tree（Log-structured merge-tree）起源于1996年的一篇论文：The log-structured merge-tree \(LSM-tree\)。
+LSM Tree（Log-structured merge-tree）起源于1996年的一篇论文：The log-structured merge-tree (LSM-tree)。
 
 当时的背景是：为一张数据增长很快的历史数据表设计一种存储结构，使得它能够解决：在内存不足，磁盘随机IO太慢下的严重写入性能问题。
 
@@ -82,21 +82,21 @@ merge所做的事情有：当上一棵树容量不足时，1.将上棵树中要�
 
 ### LSM Tree读数据
 
-读数据 包括点读和范围读，我们分开讨论。假设LSM Tree中的key为\[0-99\]，
+读数据 包括点读和范围读，我们分开讨论。假设LSM Tree中的key为\[0-99]，
 
-**点读**：是指准确地取出一条数据，如get\(23\),则其示意图为：
+**点读**：是指准确地取出一条数据，如get(23),则其示意图为：
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/08/11/640-20200811215505676-215505.png)
 
 按照图中标示的顺序，会先读取内存，在从Level0依次往高层读取，直到找到key=23的数据。
 
-**范围读**：是指读取一个范围内的数据，如读取\[23-40\]内的所有数据（ select \* from t where key &gt;= 23 && key &lt;=40\),
+**范围读**：是指读取一个范围内的数据，如读取\[23-40]内的所有数据（ select \* from t where key >= 23 && key <=40),
 
 则需要做的是在每一层SSTable找到这个范围内的第一个block,然后遍历block块的数据，直到不符合范围条件。
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/08/11/640-20200811215505832-215505.png)参考资料【4】
 
-**“\*\***ReadOnly MemTable\*\*：如RocksDB，在MemTable 和 Level0数据之间还有一个内存的ReadOnly MemTable结构。它是LSM Tree在内存中还未刷盘的写入数据，这里面的数据不可以修改。是当MemTable到达一定量需要刷到SSTable时，由MemTable完整copy下来的。这样可避免从MemTable直接刷到SSTable时的并发竞争问题。
+**“\*\***&#x52;eadOnly MemTable\*\*：如RocksDB，在MemTable 和 Level0数据之间还有一个内存的ReadOnly MemTable结构。它是LSM Tree在内存中还未刷盘的写入数据，这里面的数据不可以修改。是当MemTable到达一定量需要刷到SSTable时，由MemTable完整copy下来的。这样可避免从MemTable直接刷到SSTable时的并发竞争问题。
 
 ### LSM Tree写数据
 
@@ -104,7 +104,7 @@ merge所做的事情有：当上一棵树容量不足时，1.将上棵树中要�
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/08/11/640-20200811215505943-215506.png)
 
-### 
+###
 
 当有写请求时，数据会先写入MemTable,同时写入 WAL Log；当MemTable空间不足时，触发ReadOnly MemTable copy,同时写入WAL Log；然后刷新到磁盘Level0的SSTable中。当低层SSTable空间不足时，不断通过Compaction和高层SSTable进行Merge。
 
@@ -124,17 +124,17 @@ Leveling这种策略可以减小读放大和空间放大，但以写放大为代
 
 ## LSM Tree的优化
 
-参考资料\[2-4\]中的大佬们提到了不少优化方式，我这里从读，合并方面简要总结下LSM Tree的优化。
+参考资料\[2-4]中的大佬们提到了不少优化方式，我这里从读，合并方面简要总结下LSM Tree的优化。
 
 ### 点读的优化
 
-尽管我们可以通过SSTable的内存block稀疏索引结构简单判断key是否可能存在于block中，但如上get\(23\)，如果level1读不到，仍需要往下读level2,level3。（因为数据是按照增删改的时间顺序一层层往下落盘的，如果一个key不存在低level中，可能存在于更早的高level中）。这样的点读IO次数较多，读放大严重。
+尽管我们可以通过SSTable的内存block稀疏索引结构简单判断key是否可能存在于block中，但如上get(23)，如果level1读不到，仍需要往下读level2,level3。（因为数据是按照增删改的时间顺序一层层往下落盘的，如果一个key不存在低level中，可能存在于更早的高level中）。这样的点读IO次数较多，读放大严重。
 
 **布隆过滤器**
 
-对于精确查询，hash的时间复杂度为 O\(1\)，那么可以通过布隆过滤器来优化。我们只需要查询时先过一遍布隆过滤器，就能排除掉一定不存在的key了，避免不必要的IO查询。
+对于精确查询，hash的时间复杂度为 O(1)，那么可以通过布隆过滤器来优化。我们只需要查询时先过一遍布隆过滤器，就能排除掉一定不存在的key了，避免不必要的IO查询。
 
-**“**布隆过滤器：是通过hash算法来判断一个key是否存在于某个集合中，布隆过滤器通常是一个bit数组，用针对一个key多次hash算法确定的多个bit值来表示key是否存在。多个bit值全为1，则表示key可能存在，否则不存在。好处是多个bit值通常比直接存储一个存在的key占用空间小，省内存。
+**“**&#x5E03;隆过滤器：是通过hash算法来判断一个key是否存在于某个集合中，布隆过滤器通常是一个bit数组，用针对一个key多次hash算法确定的多个bit值来表示key是否存在。多个bit值全为1，则表示key可能存在，否则不存在。好处是多个bit值通常比直接存储一个存在的key占用空间小，省内存。
 
 **分层布隆过滤器**
 
@@ -144,7 +144,7 @@ Leveling这种策略可以减小读放大和空间放大，但以写放大为代
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/08/11/640-20200811215506224-215506.png)
 
-### 
+###
 
 ### 范围读的优化
 
@@ -172,7 +172,7 @@ Hash的不足就是无法支持范围查询索引，优化方式有：
 
 ![img](https://gitee.com/baicaihenxiao/imageDB/raw/master/uPic/png/2020/08/11/640-20200811215506550-215506.png)
 
-### 
+###
 
 ### RUM的取舍
 
@@ -194,13 +194,12 @@ LSM Tree是这两年一直听到的名词，但是一直没有花时间了解它
 
 参考资料：
 
-\[1\].[https://kernelmaker.github.io/lsm-tree](https://kernelmaker.github.io/lsm-tree)
+\[1].[https://kernelmaker.github.io/lsm-tree](https://kernelmaker.github.io/lsm-tree)
 
-\[2\].[https://www.youtube.com/watch?v=aKAJMd0iKtI](https://www.youtube.com/watch?v=aKAJMd0iKtI)
+\[2].[https://www.youtube.com/watch?v=aKAJMd0iKtI](https://www.youtube.com/watch?v=aKAJMd0iKtI)
 
-\[3\].[https://www.youtube.com/watch?v=b6SI8VbcT4w](https://www.youtube.com/watch?v=b6SI8VbcT4w)
+\[3].[https://www.youtube.com/watch?v=b6SI8VbcT4w](https://www.youtube.com/watch?v=b6SI8VbcT4w)
 
-\[4\].[https://www.bilibili.com/video/BV1fb411x7zz?from=search&seid=8679886514280300283](https://www.bilibili.com/video/BV1fb411x7zz?from=search&seid=8679886514280300283)
+\[4].[https://www.bilibili.com/video/BV1fb411x7zz?from=search\&seid=8679886514280300283](https://www.bilibili.com/video/BV1fb411x7zz?from=search\&seid=8679886514280300283)
 
-\[5\].[https://tikv.github.io/deep-dive-tikv/key-value-engine/B-Tree-vs-Log-Structured-Merge-Tree.html](https://tikv.github.io/deep-dive-tikv/key-value-engine/B-Tree-vs-Log-Structured-Merge-Tree.html)
-
+\[5].[https://tikv.github.io/deep-dive-tikv/key-value-engine/B-Tree-vs-Log-Structured-Merge-Tree.html](https://tikv.github.io/deep-dive-tikv/key-value-engine/B-Tree-vs-Log-Structured-Merge-Tree.html)
